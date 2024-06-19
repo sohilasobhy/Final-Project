@@ -1,0 +1,49 @@
+#SideMenu {
+  .filter {
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .menuItems {
+    top: 0;
+    left: 0;
+    height: 100vh;
+
+    .LINKS {
+      a {
+        font-size: 20px;
+        font-weight: 500;
+        color: #777487;
+        border-bottom: 1px solid #eeeeee;
+        &:hover {
+          color: #2db87f;
+        }
+      }
+    }
+  }
+  .logo {
+    cursor: pointer;
+  }
+  .topMenu {
+    border-bottom: 1px solid #eeeeee;
+  }
+  .siteName {
+    color: #2db87f;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .close {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    box-shadow: -1px 2px 11px 0px rgba(0, 0, 0, 0.5098039216);
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+
+    svg {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,343 @@
+@keyframes moving {
+  0% {
+    right: 30%;
+  }
+  50% {
+    right: 40%;
+  }
+  100% {
+    right: 30%;
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: 200px;
+  }
+}
+#HeroSection {
+  background-color: #eaf0f2;
+  background-image: url(https://demo.edublink.co/wp-content/uploads/2023/05/BG-1.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .left {
+    h1 {
+      font-size: 55px;
+      font-weight: bold;
+      span {
+        color: #ee4a62;
+        font-weight: 700;
+        font-size: 60px;
+      }
+    }
+    p {
+      font-size: 18px;
+    }
+    button {
+      background-color: #1ab69d;
+      border: none;
+      overflow: hidden;
+      .btnBG {
+        top: 0;
+        left: -100%;
+        background-color: #2eb87b;
+
+        transition: 1s;
+      }
+      &:hover {
+        .btnBG {
+          left: 0;
+        }
+      }
+    }
+  }
+  .circle {
+    background-color: #f8b81f;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px 50px 50px 50px;
+    bottom: 42%;
+    right: 42%;
+  }
+  .blueCircle {
+    height: 70px;
+    width: 70px;
+    border-style: solid;
+    border-width: 10px 10px 10px 10px;
+    border-color: #6956ff;
+    border-radius: 50px 50px 50px 50px;
+    bottom: 5%;
+    right: -1%;
+  }
+  .shape2 {
+    top: 20%;
+    right: 0;
+  }
+  .shape3 {
+    top: 25%;
+    right: 16%;
+  }
+  .shape4 {
+    top: 15%;
+    right: 30%;
+    animation: moving 7s linear infinite;
+  }
+  .shape5 {
+    top: 30%;
+    right: 30%;
+  }
+  .shape6 {
+    bottom: 20%;
+    right: 7%;
+  }
+  .shape1 {
+    top: 15%;
+    left: 10%;
+  }
+}
+#Features {
+  background-image: linear-gradient(-90deg, #31b978 0%, #1ab69d 100%);
+  .leftIcon {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #4bc395;
+  }
+  .putBorder {
+    border-right: 1px solid #4bc395;
+  }
+  .instructors {
+    border-right: 1px solid #4bc395;
+    @media screen and (max-width: 992px) {
+      border: 0;
+    }
+  }
+  .rightDiv {
+    p {
+      font-size: 25px;
+      color: white;
+    }
+  }
+}
+#Categories {
+  .topPart {
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  .courses {
+    .cat {
+      border-radius: 0.4rem;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover .img2 {
+        display: block;
+      }
+      &:hover p {
+        color: white;
+      }
+      &:hover .img1 {
+        display: none;
+      }
+      .img2 {
+        display: none;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+      .img1,
+      .img2 {
+        width: 15%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .business-management {
+      background-color: #effaf8;
+      &:hover {
+        background-color: #1ab69d;
+      }
+    }
+    .Design {
+      background-color: #fef2f4;
+      &:hover {
+        background-color: #ee4a62;
+      }
+    }
+    .development {
+      background-color: #eefbf5;
+      &:hover {
+        background-color: #0ecd73;
+      }
+    }
+    .health {
+      background-color: #fffaef;
+      &:hover {
+        background-color: #f8b81f;
+      }
+    }
+    .data {
+      background-color: #f7f3ff;
+      &:hover {
+        background-color: #8e56ff;
+      }
+    }
+    .marketing {
+      background-color: #fff0f8;
+      &:hover {
+        background-color: #f92596;
+      }
+    }
+    .finance {
+      background-color: #f3f4fe;
+      &:hover {
+        background-color: #5866eb;
+      }
+    }
+    .computer {
+      background-color: #fff7ef;
+      &:hover {
+        background-color: #f8941f;
+      }
+    }
+    .video {
+      background-color: #f1fbff;
+      &:hover {
+        background-color: #39c0fa;
+      }
+    }
+  }
+}
+#Edges {
+  .yellowCircle {
+    height: 101px;
+    width: 101px;
+    border-style: solid;
+    border-width: 15px 15px 15px 15px;
+    border-color: #f8b81f;
+    border-radius: 50px 50px 50px 50px;
+    top: 5%;
+    right: -2%;
+  }
+  .img1 {
+    object-fit: contain;
+    height: 60vh;
+    border-radius: 1rem;
+  }
+  .videoCon {
+    top: -25%;
+    right: 0;
+    cursor: pointer;
+    @media (max-width: 992px) {
+      right: 15%;
+    }
+    .pause {
+      right: 35%;
+      top: 25%;
+      border-radius: 50%;
+      background-color: white;
+      transition: 0.5s;
+      .hovImg {
+        display: none;
+      }
+      &:hover {
+        background-color: #1bb69d;
+      }
+      &:hover .hovImg {
+        display: block;
+      }
+      &:hover .img3 {
+        display: none;
+      }
+    }
+  }
+  .videoConImg {
+    border-radius: 1rem;
+    box-shadow: 0px 40px 70px 0px rgba(26.999999999999993, 20, 78, 0.1);
+  }
+  .right {
+    .p1 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #808080;
+    }
+    h1 {
+      line-height: 1.2;
+      span {
+        color: #ee4a62;
+        font-weight: 700;
+      }
+    }
+    .p2 {
+      line-height: 1.5;
+      font-size: 18px;
+      color: #808080;
+    }
+    .about {
+      p {
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+  }
+  .awards {
+    box-shadow: 0 40px 70px rgba(27, 20, 78, 0.1);
+    border-radius: 0.5rem;
+    bottom: 0;
+    right: 0;
+
+    transform: translateX(-50%);
+    animation: bounce 3s infinite;
+
+    @media (max-width: 992px) {
+      bottom: -10%;
+      right: 15%;
+    }
+    .awardCon {
+      background: #e8f8f5;
+      border-radius: 50%;
+    }
+    .numbers {
+      font-size: 30px;
+      color: #1ab69d;
+      font-weight: 600;
+    }
+    .text {
+      color: #808080;
+      font-size: 20px;
+    }
+  }
+}
+#Video {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.63);
+  z-index: 9;
+  .CloseMark {
+    top: 4%;
+    right: 2%;
+    z-index: 10;
+    cursor: pointer;
+    color: white;
+  }
+  .VideoCon {
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    height: 70vh;
+  }
+}
