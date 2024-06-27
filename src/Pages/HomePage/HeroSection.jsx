@@ -59,7 +59,7 @@ export default function HeroSection() {
         className="shape6 position-absolute d-none d-xxl-block"
       />
       <div className="circle position-absolute  d-none d-xxl-block"></div>
-      <div className="blueCircle position-absolute d-none d-xxl-block"></div>
+      <div className="blueCircle position-absolute d-none "></div>
     </div>
   );
 }

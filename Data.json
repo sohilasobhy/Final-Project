@@ -48,7 +48,7 @@
       "name": "Mastering Digital Marketing: From Strategy to Execution",
       "rating": "4.9",
       "category": "Marketing",
-      "price": "$75",
+      "price": "Free",
       "lessons": "16",
       "students": "512",
       "Duration": "10 Weeks",
@@ -132,7 +132,7 @@
       "name": "Public Speaking: Overcome Your Fear and Speak with Confidence",
       "rating": "4.8",
       "category": "Communication",
-      "price": "$45",
+      "price": "Free",
       "lessons": "10",
       "students": "320",
       "Duration": "8 Weeks",
@@ -216,7 +216,7 @@
       "name": "Blockchain Technology: Beyond Cryptocurrency",
       "rating": "4.8",
       "category": "Technology",
-      "price": "$100",
+      "price": "Free",
       "lessons": "20",
       "students": "340",
       "Duration": "16 Weeks",
@@ -314,6 +314,92 @@
         "Explore creative effects and enhancements for professional quality images."
       ],
       "desc": "This course takes your Photoshop skills to the next level, focusing on advanced editing techniques, layers, masks, filters, retouching, compositing, and digital painting. Learn to create professional-quality images with creative effects."
+    }
+  ],
+  "HomeCourses": [
+    {
+      "id": "1",
+      "level": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "rating": "5.0",
+      "category": "Business",
+      "price": "$30",
+      "lessons": "11",
+      "students": "227",
+      "Duration": "15 Weeks",
+      "Instructor": "Edward Norton",
+      "Language": "English",
+      "Certification": "Yes",
+      "Objectives": [
+        "Understand the fundamentals of SEO and how search engines work.",
+        "Learn to conduct effective keyword research and analysis.",
+        "Master on-page and off-page optimization techniques.",
+        "Develop strategies for local SEO, mobile SEO, and technical SEO."
+      ],
+      "desc": "This course provides a comprehensive guide to launching and managing a successful SEO (Search Engine Optimization) business from home. It is designed for individuals who are interested in understanding the principles of SEO and want to leverage this knowledge to build a profitable home-based business."
+    },
+    {
+      "id": "2",
+      "level": "Beginner",
+      "name": "Build Your First Website: A Beginner's Guide to Web Development",
+      "rating": "4.8",
+      "category": "Technology",
+      "price": "$50",
+      "lessons": "14",
+      "students": "341",
+      "Duration": "12 Weeks",
+      "Instructor": "Jane Smith",
+      "Language": "English",
+      "Certification": "Yes",
+      "Objectives": [
+        "Understand the basics of HTML, CSS, and JavaScript.",
+        "Learn to create responsive web designs.",
+        "Master the use of popular web development frameworks.",
+        "Develop and deploy a fully functional website."
+      ],
+      "desc": "This course provides a step-by-step guide to building your first website from scratch. It covers essential web development technologies such as HTML, CSS, and JavaScript, and introduces popular frameworks. Designed for beginners, it aims to equip learners with the skills needed to create, design, and deploy a fully functional website."
+    },
+    {
+      "id": "3",
+      "level": "Intermediate",
+      "name": "Mastering Digital Marketing: From Strategy to Execution",
+      "rating": "4.9",
+      "category": "Marketing",
+      "price": "Free",
+      "lessons": "16",
+      "students": "512",
+      "Duration": "10 Weeks",
+      "Instructor": "Michael Johnson",
+      "Language": "English",
+      "Certification": "Yes",
+      "Objectives": [
+        "Develop a comprehensive digital marketing strategy.",
+        "Learn to execute campaigns across various digital channels.",
+        "Master the use of analytics tools to measure campaign success.",
+        "Understand the fundamentals of SEO, SEM, social media, and email marketing."
+      ],
+      "desc": "This course offers an in-depth exploration of digital marketing strategies and execution. Participants will learn how to create effective digital marketing campaigns, utilize analytics tools, and integrate various digital channels such as SEO, SEM, social media, and email marketing to achieve their marketing goals."
+    },
+    {
+      "id": "4",
+      "level": "Beginner",
+      "name": "Introduction to Graphic Design: From Concept to Creation",
+      "rating": "4.7",
+      "category": "Design",
+      "price": "$40",
+      "lessons": "12",
+      "students": "289",
+      "Duration": "8 Weeks",
+      "Instructor": "Sarah Lee",
+      "Language": "English",
+      "Certification": "Yes",
+      "Objectives": [
+        "Understand the fundamentals of graphic design.",
+        "Learn to use key design software such as Adobe Photoshop and Illustrator.",
+        "Develop skills in creating visual content.",
+        "Apply design principles to create compelling graphics."
+      ],
+      "desc": "This course is designed to introduce beginners to the world of graphic design. Covering the basics of design principles and software like Adobe Photoshop and Illustrator, it aims to equip learners with the skills needed to create visually appealing graphics for various purposes."
     }
   ]
 }

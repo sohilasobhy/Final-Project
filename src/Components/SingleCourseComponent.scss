@@ -1,0 +1,126 @@
+#SingleCourseComponent {
+  overflow: hidden;
+  height: 80vh;
+  border-radius: 1rem;
+  @media screen and (max-width: 768px) {
+    height: 90vh;
+  }
+  .imgCon {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  &:hover {
+    .courseDetails {
+      opacity: 1;
+    }
+    .mainImage {
+      scale: 1.2;
+    }
+  }
+  .mainImage {
+    transition: 0.6s;
+  }
+  .hours {
+    background-color: #f8b81f;
+    right: 3%;
+    top: 3%;
+    border-radius: 0.2rem;
+    svg {
+      fill: white;
+      font-size: 30px;
+    }
+    p {
+      font-size: 18px;
+      color: white;
+    }
+  }
+  .contant {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+  .level {
+    background-color: #ddf4f0;
+    color: #21b99f;
+    width: fit-content;
+    border-radius: 0.3rem;
+  }
+  .courseName {
+    font-size: 20px;
+  }
+  .price {
+    font-size: 20px;
+    color: #ee4a62;
+    font-weight: 600;
+  }
+  .line {
+    width: 2px;
+    height: 22px;
+    background-color: #e5e5e5;
+  }
+  .courseDetails {
+    background-color: #1ab69d;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 0.3rem;
+    height: 70vh;
+    .wishHeart {
+      top: 2%;
+      right: 2%;
+      font-size: 25px;
+      padding: 0.5rem;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.301);
+      transition: 0.5s;
+      path {
+        fill: white;
+      }
+
+      &:hover {
+        background-color: #ee4a62;
+      }
+    }
+    .levelHov {
+      background-color: white;
+      color: black;
+      width: fit-content;
+      border-radius: 0.3rem;
+    }
+    .courseDesc {
+      font-size: 18px;
+      color: white;
+    }
+    .lineHov {
+      width: 1px;
+      height: 22px;
+      background-color: #e5e5e5;
+    }
+    .courseNameHov {
+      font-size: 20px;
+      color: white;
+    }
+    .priceHov {
+      font-size: 20px;
+      color: white;
+      font-weight: 600;
+    }
+    .lessonsHov,
+    .studentsHov {
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
+    .enrollBtn {
+      width: fit-content;
+      background-color: #ee4a62;
+      color: white;
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
