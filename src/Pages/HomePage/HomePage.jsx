@@ -8,6 +8,8 @@ import HeroSection from "./HeroSection";
 import Video from "./Video";
 import "./HomePage.scss";
 import HomeCourses from "./HomeCourses";
+import Stat from "./Stat";
+import HomeReviews from "./HomeReviews";
 
 export default function HomePage() {
   return (
@@ -21,6 +23,8 @@ export default function HomePage() {
       <Categories />
       <Edges />
       <HomeCourses />
+      <Stat />
+      <HomeReviews />
     </div>
   );
 }

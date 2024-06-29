@@ -401,5 +401,161 @@
       ],
       "desc": "This course is designed to introduce beginners to the world of graphic design. Covering the basics of design principles and software like Adobe Photoshop and Illustrator, it aims to equip learners with the skills needed to create visually appealing graphics for various purposes."
     }
+  ],
+  "Reviews": [
+    {
+      "id": "1",
+      "name": "Tom Hurley",
+      "comment": "The hands-on projects and interactive elements really helped me understand the concepts better. Highly recommend!",
+      "Job": "Content Creator",
+      "rating": "5",
+      "courseID": "1"
+    },
+    {
+      "id": "2",
+      "name": "Alice Johnson",
+      "comment": "This course provided me with invaluable skills that I could immediately apply to my job.",
+      "Job": "Marketing Specialist",
+      "rating": "5",
+      "courseID": "2"
+    },
+    {
+      "id": "3",
+      "name": "Michael Smith",
+      "comment": "The instructors were very knowledgeable and the content was well-organized.",
+      "Job": "Software Engineer",
+      "rating": "4",
+      "courseID": "3"
+    },
+    {
+      "id": "4",
+      "name": "Emily Davis",
+      "comment": "I loved the flexibility of the courses. I could learn at my own pace and revisit topics as needed.",
+      "Job": "Graphic Designer",
+      "rating": "5",
+      "courseID": "4"
+    },
+    {
+      "id": "5",
+      "name": "John Brown",
+      "comment": "Great course material and excellent support from the instructors!",
+      "Job": "Project Manager",
+      "rating": "4",
+      "courseID": "5"
+    },
+    {
+      "id": "6",
+      "name": "Laura Wilson",
+      "comment": "The course content was current and relevant to industry standards.",
+      "Job": "Data Analyst",
+      "rating": "5",
+      "courseID": "6"
+    },
+    {
+      "id": "7",
+      "name": "David Miller",
+      "comment": "A comprehensive and engaging learning experience. Highly recommended!",
+      "Job": "Business Analyst",
+      "rating": "5",
+      "courseID": "7"
+    },
+    {
+      "id": "8",
+      "name": "Sarah Lee",
+      "comment": "The platform is easy to navigate and the course material is top-notch.",
+      "Job": "HR Manager",
+      "rating": "4",
+      "courseID": "8"
+    },
+    {
+      "id": "9",
+      "name": "James Martinez",
+      "comment": "I gained a lot of practical knowledge that I could directly apply to my job.",
+      "Job": "Consultant",
+      "rating": "5",
+      "courseID": "9"
+    },
+    {
+      "id": "10",
+      "name": "Emma Garcia",
+      "comment": "The interactive elements and real-world examples were very helpful.",
+      "Job": "Content Writer",
+      "rating": "5",
+      "courseID": "10"
+    },
+    {
+      "id": "11",
+      "name": "Robert Jones",
+      "comment": "An excellent learning platform with well-structured courses.",
+      "Job": "Financial Analyst",
+      "rating": "4",
+      "courseID": "11"
+    },
+    {
+      "id": "12",
+      "name": "Olivia Hernandez",
+      "comment": "The community aspect of the platform is great. It's nice to connect with other learners.",
+      "Job": "Web Developer",
+      "rating": "5",
+      "courseID": "12"
+    },
+    {
+      "id": "13",
+      "name": "William Clark",
+      "comment": "The quizzes and assignments were challenging but very rewarding.",
+      "Job": "Digital Marketer",
+      "rating": "4",
+      "courseID": "13"
+    },
+    {
+      "id": "14",
+      "name": "Sophia Lewis",
+      "comment": "Clear and concise course material that made learning easy and enjoyable.",
+      "Job": "Teacher",
+      "rating": "5",
+      "courseID": "14"
+    },
+    {
+      "id": "15",
+      "name": "Daniel Walker",
+      "comment": "The platform offers a great variety of courses that are very informative.",
+      "Job": "Entrepreneur",
+      "rating": "4",
+      "courseID": "15"
+    }
+  ],
+  "HomeReviews": [
+    {
+      "id": "1",
+      "name": "Tom Hurley",
+      "comment": "The hands-on projects and interactive elements really helped me understand the concepts better. Highly recommend!",
+      "Job": "Content Creator",
+      "rating": "5",
+      "courseID": "1"
+    },
+    {
+      "id": "2",
+      "name": "Alice Johnson",
+      "comment": "This course provided me with invaluable skills that I could immediately apply to my job.",
+      "Job": "Marketing Specialist",
+      "rating": "5",
+      "courseID": "2"
+    },
+    {
+      "id": "4",
+      "name": "Emily Davis",
+      "comment": "I loved the flexibility of the courses. I could learn at my own pace and revisit topics as needed.",
+      "Job": "Graphic Designer",
+      "rating": "5",
+      "courseID": "4"
+    },
+    {
+      "id": "6",
+      "name": "Laura Wilson",
+      "comment": "The course content was current and relevant to industry standards.",
+      "Job": "Data Analyst",
+      "rating": "5",
+      "courseID": "6"
+    }
   ]
 }
