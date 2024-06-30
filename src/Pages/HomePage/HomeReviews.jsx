@@ -6,17 +6,17 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/scrollbar";
-import man from "../../assets/images/testimonial-02.png";
 import stars from "../../assets/images/rating.png";
 import quotation from "../../assets/images/quotation-right-mark.png";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
+import man from "../../assets/images/testimonial-02.png";
 export default function HomeReviews() {
   const [array, setArray] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/Reviews")
+      .get("http://localhost:3000/HomeReviews")
       .then((response) => {
         setArray(response.data);
         console.log(array);
@@ -72,11 +72,11 @@ export default function HomeReviews() {
             slidesPerView={2}
             autoplay={{ delay: 5000 }}
             loop={true}>
-            {array.map((course, index) => {
+            {array.map((review, index) => {
               return (
                 <SwiperSlide
-                  className="col-6 h-100 d-flex flex-column gap-3 p-4"
-                  key={course.id}>
+                  className="col-6 d-flex flex-column gap-3 p-4"
+                  key={review.id}>
                   <div className="position-relative col-12">
                     <img
                       src={man}
@@ -89,12 +89,12 @@ export default function HomeReviews() {
                       </div>
                     </div>
                   </div>
-                  <div className="comment">{course.comment}</div>
+                  <div className="comment">{review.comment}</div>
                   <img src={stars} alt="" className="col-6" />
                   <div className="name">
-                    <p>{course.name}</p>
+                    <p>{review.name}</p>
                   </div>
-                  <div className="job">{course.Job}</div>
+                  <div className="job">{review.Job}</div>
                 </SwiperSlide>
               );
             })}

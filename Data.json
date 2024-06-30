@@ -531,7 +531,8 @@
       "comment": "The hands-on projects and interactive elements really helped me understand the concepts better. Highly recommend!",
       "Job": "Content Creator",
       "rating": "5",
-      "courseID": "1"
+      "courseID": "1",
+      "img": "../../assets/images/testimonial-02.png"
     },
     {
       "id": "2",
@@ -556,6 +557,298 @@
       "Job": "Data Analyst",
       "rating": "5",
       "courseID": "6"
+    }
+  ],
+  "Instractuors": [
+    {
+      "id": "1",
+      "name": "Jane Seymour",
+      "job": "UI Designer",
+      "img": "../../assets/images/testimonial-02.png",
+      "students": "20",
+      "rateing": "5",
+      "About": "Hi, I'm Edward Narton, a Developer and Teacher with over 5 years of experience. I love coding and sharing my knowledge with others. I've worked on various projects, from web applications to mobile apps, and I believe in hands-on learning. I've helped over 20 students achieve their goals in programming.In my courses, you'll find a blend of theory and practical application to ensure you understand and can apply what you learn. Join me, and let's build something amazing together!",
+      "coursesID": [1, 5, 9],
+      "Contact": {
+        "address": " North Helenavile, FV77 8WS",
+        "Email": "Edward@gmail",
+        "phone": "01236987452",
+        "facebook": "ُEdward Narton",
+        "twiter": "Edward Narton",
+        "linkedIn": "Edward Narton"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Alice Johnson",
+      "job": "Data Scientist",
+      "img": "../../assets/images/testimonial-03.png",
+      "students": "45",
+      "rating": "4.8",
+      "About": "Hi, I'm Alice Johnson, a Data Scientist with 7 years of experience. I love working with data and helping others unlock its potential. My courses focus on practical applications and real-world projects.",
+      "coursesID": [2, 3, 7],
+      "Contact": {
+        "address": "123 Data St, San Francisco, CA",
+        "Email": "alice@example.com",
+        "phone": "9876543210",
+        "facebook": "Alice Johnson",
+        "twitter": "AliceJ_Data",
+        "linkedIn": "Alice Johnson"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Michael Smith",
+      "job": "Cybersecurity Expert",
+      "img": "../../assets/images/testimonial-04.png",
+      "students": "30",
+      "rating": "4.9",
+      "About": "Hello, I'm Michael Smith, a Cybersecurity Expert with a decade of experience. I enjoy teaching the intricacies of online security and helping others protect their digital assets.",
+      "coursesID": [4, 5, 10],
+      "Contact": {
+        "address": "456 Security Blvd, Austin, TX",
+        "Email": "michael@example.com",
+        "phone": "8765432109",
+        "facebook": "Michael Smith",
+        "twitter": "Michael_Cyber",
+        "linkedIn": "Michael Smith"
+      }
+    },
+    {
+      "id": "4",
+      "name": "Emily Davis",
+      "job": "Project Manager",
+      "img": "../../assets/images/testimonial-05.png",
+      "students": "25",
+      "rating": "4.7",
+      "About": "Hi, I'm Emily Davis, a Project Manager with over 8 years of experience. I specialize in Agile methodologies and enjoy teaching others how to effectively manage projects.",
+      "coursesID": [1, 6, 11],
+      "Contact": {
+        "address": "789 Agile Lane, Seattle, WA",
+        "Email": "emily@example.com",
+        "phone": "7654321098",
+        "facebook": "Emily Davis",
+        "twitter": "Emily_PM",
+        "linkedIn": "Emily Davis"
+      }
+    },
+    {
+      "id": "5",
+      "name": "David Brown",
+      "job": "Full Stack Developer",
+      "img": "../../assets/images/testimonial-06.png",
+      "students": "50",
+      "rating": "4.9",
+      "About": "Hello, I'm David Brown, a Full Stack Developer with 6 years of experience. I love building applications and teaching others how to create their own full stack projects.",
+      "coursesID": [7, 8, 12],
+      "Contact": {
+        "address": "101 Dev Street, New York, NY",
+        "Email": "david@example.com",
+        "phone": "6543210987",
+        "facebook": "David Brown",
+        "twitter": "David_FullStack",
+        "linkedIn": "David Brown"
+      }
+    },
+    {
+      "id": "6",
+      "name": "Sophia Williams",
+      "job": "Machine Learning Engineer",
+      "img": "../../assets/images/testimonial-07.png",
+      "students": "35",
+      "rating": "4.8",
+      "About": "Hi, I'm Sophia Williams, a Machine Learning Engineer with 5 years of experience. I enjoy working with algorithms and data to create intelligent systems. My courses are hands-on and project-based.",
+      "coursesID": [2, 9, 13],
+      "Contact": {
+        "address": "202 AI Blvd, Boston, MA",
+        "Email": "sophia@example.com",
+        "phone": "5432109876",
+        "facebook": "Sophia Williams",
+        "twitter": "Sophia_ML",
+        "linkedIn": "Sophia Williams"
+      }
+    },
+    {
+      "id": "7",
+      "name": "James Wilson",
+      "job": "Cloud Architect",
+      "img": "../../assets/images/testimonial-08.png",
+      "students": "40",
+      "rating": "5",
+      "About": "Hello, I'm James Wilson, a Cloud Architect with over 7 years of experience. I specialize in designing scalable cloud solutions and enjoy sharing my knowledge with others.",
+      "coursesID": [3, 10, 14],
+      "Contact": {
+        "address": "303 Cloud Ave, Denver, CO",
+        "Email": "james@example.com",
+        "phone": "4321098765",
+        "facebook": "James Wilson",
+        "twitter": "James_Cloud",
+        "linkedIn": "James Wilson"
+      }
+    },
+    {
+      "id": "8",
+      "name": "Olivia Martinez",
+      "job": "Business Analyst",
+      "img": "../../assets/images/testimonial-09.png",
+      "students": "28",
+      "rating": "4.6",
+      "About": "Hi, I'm Olivia Martinez, a Business Analyst with 4 years of experience. I love analyzing data to drive business decisions and enjoy teaching others how to do the same.",
+      "coursesID": [5, 11, 15],
+      "Contact": {
+        "address": "404 Analysis St, Miami, FL",
+        "Email": "olivia@example.com",
+        "phone": "3210987654",
+        "facebook": "Olivia Martinez",
+        "twitter": "Olivia_BA",
+        "linkedIn": "Olivia Martinez"
+      }
+    },
+    {
+      "id": "9",
+      "name": "Daniel Harris",
+      "job": "DevOps Engineer",
+      "img": "../../assets/images/testimonial-10.png",
+      "students": "32",
+      "rating": "5",
+      "About": "Hello, I'm Daniel Harris, a DevOps Engineer with 5 years of experience. I specialize in automating workflows and enjoy helping others streamline their development processes.",
+      "coursesID": [6, 8, 12],
+      "Contact": {
+        "address": "505 DevOps Lane, Chicago, IL",
+        "Email": "daniel@example.com",
+        "phone": "2109876543",
+        "facebook": "Daniel Harris",
+        "twitter": "Daniel_DevOps",
+        "linkedIn": "Daniel Harris"
+      }
+    },
+    {
+      "id": "10",
+      "name": "Grace Lee",
+      "job": "Blockchain Developer",
+      "img": "../../assets/images/testimonial-11.png",
+      "students": "37",
+      "rating": "4.7",
+      "About": "Hi, I'm Grace Lee, a Blockchain Developer with 4 years of experience. I enjoy exploring blockchain technology and teaching others how to build decentralized applications.",
+      "coursesID": [1, 7, 13],
+      "Contact": {
+        "address": "606 Blockchain Blvd, San Diego, CA",
+        "Email": "grace@example.com",
+        "phone": "1098765432",
+        "facebook": "Grace Lee",
+        "twitter": "Grace_Blockchain",
+        "linkedIn": "Grace Lee"
+      }
+    },
+    {
+      "id": "11",
+      "name": "Henry Clark",
+      "job": "AI Researcher",
+      "img": "../../assets/images/testimonial-12.png",
+      "students": "29",
+      "rating": "4.8",
+      "About": "Hello, I'm Henry Clark, an AI Researcher with 6 years of experience. I specialize in developing intelligent algorithms and enjoy teaching others about AI and machine learning.",
+      "coursesID": [4, 9, 14],
+      "Contact": {
+        "address": "707 AI Lane, Los Angeles, CA",
+        "Email": "henry@example.com",
+        "phone": "0987654321",
+        "facebook": "Henry Clark",
+        "twitter": "Henry_AI",
+        "linkedIn": "Henry Clark"
+      }
+    },
+    {
+      "id": "12",
+      "name": "Natalie Thompson",
+      "job": "Digital Marketing Expert",
+      "img": "../../assets/images/testimonial-13.png",
+      "students": "33",
+      "rating": "5",
+      "About": "Hi, I'm Natalie Thompson, a Digital Marketing Expert with 5 years of experience. I enjoy crafting marketing strategies and teaching others how to grow their online presence.",
+      "coursesID": [2, 10, 15],
+      "Contact": {
+        "address": "808 Market St, Philadelphia, PA",
+        "Email": "natalie@example.com",
+        "phone": "8765432190",
+        "facebook": "Natalie Thompson",
+        "twitter": "Natalie_Marketing",
+        "linkedIn": "Natalie Thompson"
+      }
+    }
+  ],
+  "HomeInsrtractuors": [
+    {
+      "id": "1",
+      "name": "Jane Seymour",
+      "job": "UI Designer",
+      "img": "../../assets/images/testimonial-02.png",
+      "students": "20",
+      "rateing": "5",
+      "About": "Hi, I'm Edward Narton, a Developer and Teacher with over 5 years of experience. I love coding and sharing my knowledge with others. I've worked on various projects, from web applications to mobile apps, and I believe in hands-on learning. I've helped over 20 students achieve their goals in programming.In my courses, you'll find a blend of theory and practical application to ensure you understand and can apply what you learn. Join me, and let's build something amazing together!",
+      "coursesID": [1, 5, 9],
+      "Contact": {
+        "address": " North Helenavile, FV77 8WS",
+        "Email": "Edward@gmail",
+        "phone": "01236987452",
+        "facebook": "ُEdward Narton",
+        "twiter": "Edward Narton",
+        "linkedIn": "Edward Narton"
+      }
+    },
+    {
+      "id": "9",
+      "name": "Daniel Harris",
+      "job": "DevOps Engineer",
+      "img": "../../assets/images/testimonial-10.png",
+      "students": "32",
+      "rating": "5",
+      "About": "Hello, I'm Daniel Harris, a DevOps Engineer with 5 years of experience. I specialize in automating workflows and enjoy helping others streamline their development processes.",
+      "coursesID": [6, 8, 12],
+      "Contact": {
+        "address": "505 DevOps Lane, Chicago, IL",
+        "Email": "daniel@example.com",
+        "phone": "2109876543",
+        "facebook": "Daniel Harris",
+        "twitter": "Daniel_DevOps",
+        "linkedIn": "Daniel Harris"
+      }
+    },
+    {
+      "id": "12",
+      "name": "Natalie Thompson",
+      "job": "Digital Marketing Expert",
+      "img": "../../assets/images/testimonial-13.png",
+      "students": "33",
+      "rating": "5",
+      "About": "Hi, I'm Natalie Thompson, a Digital Marketing Expert with 5 years of experience. I enjoy crafting marketing strategies and teaching others how to grow their online presence.",
+      "coursesID": [2, 10, 15],
+      "Contact": {
+        "address": "808 Market St, Philadelphia, PA",
+        "Email": "natalie@example.com",
+        "phone": "8765432190",
+        "facebook": "Natalie Thompson",
+        "twitter": "Natalie_Marketing",
+        "linkedIn": "Natalie Thompson"
+      }
+    },
+    {
+      "id": "7",
+      "name": "James Wilson",
+      "job": "Cloud Architect",
+      "img": "../../assets/images/testimonial-08.png",
+      "students": "40",
+      "rating": "5",
+      "About": "Hello, I'm James Wilson, a Cloud Architect with over 7 years of experience. I specialize in designing scalable cloud solutions and enjoy sharing my knowledge with others.",
+      "coursesID": [3, 10, 14],
+      "Contact": {
+        "address": "303 Cloud Ave, Denver, CO",
+        "Email": "james@example.com",
+        "phone": "4321098765",
+        "facebook": "James Wilson",
+        "twitter": "James_Cloud",
+        "linkedIn": "James Wilson"
+      }
     }
   ]
 }

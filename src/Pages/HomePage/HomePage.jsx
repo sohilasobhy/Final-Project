@@ -10,6 +10,9 @@ import "./HomePage.scss";
 import HomeCourses from "./HomeCourses";
 import Stat from "./Stat";
 import HomeReviews from "./HomeReviews";
+import GetInTouch from "./GetInTouch";
+import HomeInstractor from "./HomeInstractor";
+import Add from "./Add";
 
 export default function HomePage() {
   return (
@@ -25,6 +28,9 @@ export default function HomePage() {
       <HomeCourses />
       <Stat />
       <HomeReviews />
+      <GetInTouch />
+      <HomeInstractor />
+      <Add />
     </div>
   );
 }

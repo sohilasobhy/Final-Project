@@ -515,6 +515,7 @@
       .swiper-slide {
         box-shadow: 0px 10px 50px 0px rgba(26, 46, 85, 0.1);
         border-radius: 1rem;
+        height: 50vh;
         .comment {
           font-size: 18px;
           color: #8d8d8d;
@@ -545,4 +546,185 @@
       }
     }
   }
+}
+#GetInTouch {
+  .contact {
+    background: rgb(27, 182, 156);
+    background: linear-gradient(
+      141deg,
+      rgba(27, 182, 156, 1) 0%,
+      rgba(47, 184, 122, 1) 97%
+    );
+    border-radius: 0.5rem;
+    .left {
+      text-align: right;
+      color: white;
+      font-size: 25px;
+      span {
+        font-weight: 900;
+      }
+      @media (max-width: 992px) {
+        text-align: center;
+      }
+    }
+    .middle {
+      padding: 0.4rem 0.7rem;
+      background-color: white;
+      border-radius: 50%;
+      border: solid 4px #1ab69d33;
+      p {
+        font-size: 30px;
+        color: #1ab69d;
+      }
+    }
+    .right {
+      color: white;
+      font-size: 25px;
+      span {
+        font-weight: 900;
+      }
+      @media (max-width: 992px) {
+        text-align: center;
+      }
+    }
+  }
+}
+#HomeInstractor {
+  .header {
+    p {
+      color: #868686;
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 35px;
+    }
+  }
+  .instractour {
+    .imgCon {
+      position: relative;
+      .instratourImg {
+        border-radius: 1rem;
+      }
+      .shareIcon {
+        padding: 0.5rem;
+        right: 5%;
+        top: 3%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid #1ab69d;
+        z-index: 1;
+      }
+      .greenFilter {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        border-radius: 1rem;
+        background-color: #1ab69c59;
+        opacity: 0;
+      }
+      .socialMedia {
+        padding: 0.5rem;
+        right: 5%;
+        top: 3%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid white;
+        opacity: 0;
+        &:hover {
+          background-color: white;
+        }
+      }
+      .facebook {
+        transition: 0.7s;
+      }
+      .twitter {
+        transition: 0.9s;
+      }
+      .linkedIn {
+        transition: 1.1s;
+      }
+    }
+    p {
+      font-size: 20px;
+      font-weight: 600;
+      span {
+        font-size: 18px;
+        color: #808080;
+      }
+    }
+    &:hover {
+      .shareIcon {
+        background-color: white;
+        border: 0;
+      }
+      .greenFilter {
+        opacity: 1;
+      }
+      .facebook {
+        opacity: 1;
+        top: 17%;
+      }
+      .twitter {
+        opacity: 1;
+        top: 30%;
+      }
+      .linkedIn {
+        opacity: 1;
+        top: 43%;
+      }
+    }
+  }
+}
+#Add {
+  .Browse {
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    background-color: #1ab69d;
+    overflow: hidden;
+    button {
+      p {
+        font-size: 20px;
+        color: white;
+        z-index: 88;
+      }
+    }
+    &:hover {
+      .BTNFilter {
+        left: 0;
+      }
+    }
+  }
+  .BTNFilter {
+    background: rgb(27, 182, 156);
+    background: linear-gradient(
+      141deg,
+      rgba(27, 182, 156, 1) 0%,
+      rgba(47, 184, 122, 1) 97%
+    );
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transition: 0.5s;
+  }
+  .mainContant {
+    font-size: 36px;
+    font-weight: 600;
+    width: 40%;
+    span {
+      font-weight: bold;
+      color: #ee4a62;
+    }
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      font-size: 26px;
+    }
+  }
+  background-image: url("../../assets/images/cta-bg-1.jpg");
 }
