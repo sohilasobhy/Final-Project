@@ -728,3 +728,91 @@
   }
   background-image: url("../../assets/images/cta-bg-1.jpg");
 }
+#Partners,
+#Events {
+  .header {
+    font-size: 18px;
+    font-weight: 600;
+    color: #808080;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  .contant {
+    color: #868686;
+  }
+}
+#Events {
+  .eventPicCon {
+    overflow: hidden;
+    border-radius: 0.8rem;
+    .eventPic {
+      transition: 0.4s;
+    }
+    .filter {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.43);
+      display: none;
+    }
+    .eventBtn {
+      position: absolute;
+      top: 50%;
+      right: 15%;
+      display: flex;
+      justify-content: center;
+      padding: 1.5rem;
+      border-radius: 50%;
+      background-color: #009688;
+      z-index: 1;
+      opacity: 0;
+      transition: 0.3s;
+      &:hover {
+        background-color: #ee4a62;
+      }
+      svg {
+        color: white;
+        font-size: 25px;
+      }
+    }
+    &:hover {
+      .eventPic {
+        scale: 1.1;
+      }
+      .filter {
+        display: block;
+      }
+      .eventBtn {
+        opacity: 1;
+        top: 53%;
+      }
+    }
+  }
+  .eventDetail {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 1.2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0px 10px 50px 0px rgba(26, 46, 85, 0.1);
+    .category,
+    .desc {
+      font-size: 18px;
+      color: grey;
+    }
+    .name {
+      font-size: 25px;
+      font-weight: 600;
+    }
+    .date {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+}

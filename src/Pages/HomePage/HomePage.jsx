@@ -13,6 +13,8 @@ import HomeReviews from "./HomeReviews";
 import GetInTouch from "./GetInTouch";
 import HomeInstractor from "./HomeInstractor";
 import Add from "./Add";
+import Partners from "./Partners";
+import Events from "./Events";
 
 export default function HomePage() {
   return (
@@ -31,6 +33,8 @@ export default function HomePage() {
       <GetInTouch />
       <HomeInstractor />
       <Add />
+      <Partners />
+      <Events />
     </div>
   );
 }
