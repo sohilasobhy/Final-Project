@@ -1,7 +1,7 @@
-import icon1 from "../../assets/images/online-training.png";
-import icon2 from "../../assets/images/computer.png";
+import icon1 from "../../assets/images/video-conference.png";
+import icon2 from "../../assets/images/male.png";
 import icon3 from "../../assets/images/certificate.png";
-import icon4 from "../../assets/images/group.png";
+import icon4 from "../../assets/images/membership.png";
 export default function Features() {
   return (
     <div id="Features" className="col-12 p-0 px-xxl-5">

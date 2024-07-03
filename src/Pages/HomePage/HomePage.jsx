@@ -15,6 +15,8 @@ import HomeInstractor from "./HomeInstractor";
 import Add from "./Add";
 import Partners from "./Partners";
 import Events from "./Events";
+import Footer from "../../Components/Footer";
+import CircleProgress from "../../Components/CircleProgress";
 
 export default function HomePage() {
   return (
@@ -22,11 +24,11 @@ export default function HomePage() {
       <Search />
       <SideMenu />
       <Video />
-      <NavBar />
+      <CircleProgress />
       <HeroSection />
       <Features />
-      <Categories />
       <Edges />
+      <Categories />
       <HomeCourses />
       <Stat />
       <HomeReviews />

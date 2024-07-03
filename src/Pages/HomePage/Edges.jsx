@@ -41,7 +41,7 @@ export default function Edges() {
             <img src={img1} alt="" className=" img1 " />
           </div>
           <div className="col-12 col-lg-6">
-            <div className=" d-flex flex-column justify-content-center gap-3 right py-5 ">
+            <div className=" d-flex flex-column justify-content-center gap-3 right py-5 px-5 px-lg-0">
               <p className="p1">About Us</p>
               <div className="col-10 d-flex flex-column gap-2">
                 <h1>

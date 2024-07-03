@@ -27,12 +27,12 @@ export default function HomeReviews() {
   }, []);
   return (
     <div className="col-12 container py-5" id="HomeReviews">
-      <div className="col-12 d-flex justify-content-center flex-wrap gap-5">
-        <div className="col-12 col-lg-4 d-flex flex-column gap-3">
+      <div className="col-12 d-flex justify-content-center  flex-wrap gap-5">
+        <div className="col-12 col-lg-4 d-flex flex-column gap-3 align-items-center align-items-lg-start ">
           <h5>TESTIMONIALS</h5>
-          <div>
-            <h2 className="col-11">What Our Students Have To Say</h2>
-            <div className="col-3 mt-1">
+          <div className="d-flex flex-column align-items-center align-items-lg-start">
+            <h2 className="col-12 text-center text-lg-start">What Our Students Have To Say</h2>
+            <div className="col-3 mt-1 ">
               <svg
                 style={{
                   fill: "none",
@@ -52,7 +52,7 @@ export default function HomeReviews() {
               </svg>
             </div>
           </div>
-          <p className="studentsReviews">
+          <p className="studentsReviews text-center text-lg-start">
             Our students love the comprehensive and engaging courses we offer.
             Here's what they have to say about their learning experiences.
           </p>

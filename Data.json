@@ -13,6 +13,7 @@
       "Instructor": "Edward Norton",
       "Language": "English",
       "Certification": "Yes",
+      "img": "src/assets/images/course1.jpg",
       "Objectives": [
         "Understand the fundamentals of SEO and how search engines work.",
         "Learn to conduct effective keyword research and analysis.",
@@ -34,6 +35,7 @@
       "Instructor": "Jane Smith",
       "Language": "English",
       "Certification": "Yes",
+      "img": "src/assets/images/course2.jpg",
       "Objectives": [
         "Understand the basics of HTML, CSS, and JavaScript.",
         "Learn to create responsive web designs.",
@@ -55,6 +57,7 @@
       "Instructor": "Michael Johnson",
       "Language": "English",
       "Certification": "Yes",
+      "img": "src/assets/images/course4.jpg",
       "Objectives": [
         "Develop a comprehensive digital marketing strategy.",
         "Learn to execute campaigns across various digital channels.",
@@ -76,6 +79,7 @@
       "Instructor": "Sarah Lee",
       "Language": "English",
       "Certification": "Yes",
+      "img": "src/assets/images/course3.jpg",
       "Objectives": [
         "Understand the fundamentals of graphic design.",
         "Learn to use key design software such as Adobe Photoshop and Illustrator.",
@@ -97,6 +101,7 @@
       "Instructor": "David Brown",
       "Language": "English",
       "Certification": "Yes",
+      "img":"src/assets/images/course5.jpg",
       "Objectives": [
         "Understand the basics of personal finance and budgeting.",
         "Learn strategies for saving and investing.",
@@ -118,6 +123,7 @@
       "Instructor": "Emma White",
       "Language": "English",
       "Certification": "Yes",
+      "img":"src/assets/images/course-12-590x430.jpg",
       "Objectives": [
         "Understand the fundamentals of data science.",
         "Learn to use data science tools such as Python and R.",
@@ -139,6 +145,7 @@
       "Instructor": "John Doe",
       "Language": "English",
       "Certification": "Yes",
+      "img":"src/assets/images/course-06-590x430.jpg",
       "Objectives": [
         "Understand the fundamentals of public speaking.",
         "Learn techniques to overcome fear and anxiety.",
@@ -160,6 +167,7 @@
       "Instructor": "Alice Green",
       "Language": "English",
       "Certification": "Yes",
+      "img":"src/assets/images/course-07-590x430.jpg",
       "Objectives": [
         "Deepen your knowledge of Excel functions and formulas.",
         "Learn advanced data analysis techniques.",
@@ -181,6 +189,7 @@
       "Instructor": "Laura King",
       "Language": "English",
       "Certification": "Yes",
+      "img":"src/assets/images/course-83-590x430.jpg",
       "Objectives": [
         "Understand the basics of photography techniques.",
         "Learn to use your camera settings effectively.",
@@ -202,6 +211,7 @@
       "Instructor": "Sophia Lee",
       "Language": "English",
       "Certification": "Yes",
+      "img":"src/assets/images/course-10-590x430.jpg",
       "Objectives": [
         "Develop a comprehensive social media marketing strategy.",
         "Learn to create engaging content for various platforms.",
@@ -223,6 +233,7 @@
       "Instructor": "Robert Brown",
       "Language": "English",
       "Certification": "Yes",
+      "img":"src/assets/images/course-09-590x430.jpg",
       "Objectives": [
         "Understand the fundamentals of blockchain technology.",
         "Explore blockchain applications beyond cryptocurrencies.",
@@ -244,6 +255,7 @@
       "Instructor": "Maria Lopez",
       "Language": "English",
       "Certification": "Yes",
+      "img":"src/assets/images/course-35-590x430.jpg",
       "Objectives": [
         "Learn essential cooking techniques and skills.",
         "Understand kitchen safety and hygiene practices.",
@@ -265,6 +277,7 @@
       "Instructor": "James Wilson",
       "Language": "English",
       "Certification": "Yes",
+      "img":"src/assets/images/course-11-590x430.jpg",
       "Objectives": [
         "Develop your creative writing skills and style.",
         "Learn to craft compelling characters and plots.",
@@ -286,6 +299,7 @@
       "Instructor": "Anna Green",
       "Language": "English",
       "Certification": "Yes",
+      "img":"src/assets/images/course-13-590x430.jpg",
       "Objectives": [
         "Learn the basics of yoga postures and breathing techniques.",
         "Develop flexibility, strength, and mindfulness.",
@@ -307,6 +321,7 @@
       "Instructor": "Michael Turner",
       "Language": "English",
       "Certification": "Yes",
+      "img":"src/assets/images/course-33-590x430.jpg",
       "Objectives": [
         "Master advanced photo editing techniques in Photoshop.",
         "Learn to use layers, masks, and advanced filters.",

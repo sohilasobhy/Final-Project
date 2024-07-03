@@ -1,11 +1,8 @@
-import girl from "../../assets/images/course-79-750x750.jpg";
-import calender from "../../assets/images/calender.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Events2 from "./Events2";
 export default function Events() {
   return (
     <div
-      className="col-12 d-flex flex-column align-items-center justify-content-center mt-5 p-5"
+      className="col-12 d-flex flex-column align-items-center justify-content-center mt-5 px-5 pt-5"
       id="Events">
       <div className="d-flex flex-column align-items-center gap-3">
         <p className="header">LATEST EVENTS</p>
@@ -31,72 +28,11 @@ export default function Events() {
         </div>
       </div>
       <div className="d-flex mt-5">
-        <div className="row g-4">
-          <div className="col-4">
-            <div className=" position-relative">
-              <div className="eventPicCon position-relative">
-                <img src={girl} alt="event-pic" className="col-12 eventPic" />
-                <div className="filter"></div>
-                <div className="eventBtn">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                </div>
-              </div>
-              <div className=" position-absolute bg-white col-10 eventDetail">
-                <p className="category">SIENCE</p>
-                <p className="name">Crafting Effective Learning Guide Line</p>
-                <p className="date d-flex gap-1 align-items-center">
-                  <img src={calender} alt="calender" /> 15 Nov, 2023
-                </p>
-                <p className="desc">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Rerum commodi cupiditate tempore dignissimos
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-4">
-            <div className=" position-relative">
-              <div className="eventPicCon position-relative">
-                <img src={girl} alt="event-pic" className="col-12 eventPic" />
-                <div className="filter"></div>
-                <div className="eventBtn">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                </div>
-              </div>
-              <div className=" position-absolute bg-white col-10 eventDetail">
-                <p className="category">SIENCE</p>
-                <p className="name">Crafting Effective Learning Guide Line</p>
-                <p className="date d-flex gap-1 align-items-center">
-                  <img src={calender} alt="calender" /> 15 Nov, 2023
-                </p>
-                <p className="desc">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Rerum commodi cupiditate tempore dignissimos
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-4">
-            <div className=" position-relative">
-              <div className="eventPicCon position-relative">
-                <img src={girl} alt="event-pic" className="col-12 eventPic" />
-                <div className="filter"></div>
-                <div className="eventBtn">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                </div>
-              </div>
-              <div className=" position-absolute bg-white col-10 eventDetail">
-                <p className="category">SIENCE</p>
-                <p className="name">Crafting Effective Learning Guide Line</p>
-                <p className="date d-flex gap-1 align-items-center">
-                  <img src={calender} alt="calender" /> 15 Nov, 2023
-                </p>
-                <p className="desc">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Rerum commodi cupiditate tempore dignissimos
-                </p>
-              </div>
-            </div>
+        <div className="container">
+          <div className="row g-5">
+            <Events2 />
+            <Events2 />
+            <Events2 />
           </div>
         </div>
       </div>

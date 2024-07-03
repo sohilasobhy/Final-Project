@@ -19,7 +19,7 @@ import icon9Hov from "../../assets/images/gallery (1).png";
 
 export default function Categories() {
   return (
-    <div id="Categories" className="col-12">
+    <div id="Categories" className="overflow-hidden">
       <div className="col-12 d-flex flex-column pt-5 justify-content-center align-items-center gap-4 topPart">
         <h2>Top Categories</h2>
         <div className="col-1">
@@ -41,7 +41,7 @@ export default function Categories() {
             <path className="st0" d="M1,13.5C21,4.2,72-3,118,6" />
           </svg>
         </div>
-        <p>
+        <p className="p-4 text-center">
           Explore a world of knowledge with courses across all disciplines and
           interests
         </p>
@@ -49,63 +49,63 @@ export default function Categories() {
       <div className="container">
         <div className="row courses p-5 g-5 justify-content-center flex-wrap">
           <div className="col-12 col-md-6 col-lg-4">
-            <div className="d-flex justify-content-start gap-4 align-items-center cat business-management col-12 h-100 py-3 px-4">
+            <div className="d-flex justify-content-start gap-2 align-items-center cat business-management col-12 h-100 py-3 ps-2">
               <img src={icon1} alt="" className="img1" />
               <img src={icon1Hov} alt="" className="img2" />
               <p>Business Management</p>
             </div>
           </div>
           <div className="col-12 col-md-6 col-lg-4">
-            <div className="d-flex  justify-content-start gap-4 align-items-center cat Design col-12 h-100 py-3 px-4">
+            <div className="d-flex justify-content-start gap-2 align-items-center cat business-management col-12 h-100 py-3 ps-2">
               <img src={icon2} alt="" className="img1" />
               <img src={icon2Hov} alt="" className="img2" />
               <p>Arts & Design</p>
             </div>
           </div>
           <div className="col-12 col-md-6 col-lg-4">
-            <div className="d-flex  justify-content-start gap-4 align-items-center cat development  col-12 h-100 py-3 px-4">
+            <div className="d-flex justify-content-start gap-2 align-items-center cat business-management col-12 h-100 py-3 ps-2">
               <img src={icon3} alt="" className="img1" />
               <img src={icon3Hov} alt="" className="img2" />
               <p>Arts & Design</p>
             </div>
           </div>
           <div className="col-12 col-md-6 col-lg-4">
-            <div className="d-flex justify-content-start gap-4 align-items-center cat health col-12 h-100 py-3 px-4">
+            <div className="d-flex justify-content-start gap-2 align-items-center cat business-management col-12 h-100 py-3 ps-2">
               <img src={icon4} alt="" className="img1" />
               <img src={icon4Hov} alt="" className="img2" />
               <p>Health and Fitness</p>
             </div>
           </div>
           <div className="col-12 col-md-6 col-lg-4">
-            <div className="d-flex  justify-content-start gap-4 align-items-center cat data col-12 h-100 py-3 px-4">
+            <div className="d-flex justify-content-start gap-2 align-items-center cat business-management col-12 h-100 py-3 ps-2">
               <img src={icon5} alt="" className="img1" />
               <img src={icon5Hov} alt="" className="img2" />
               <p>Data Science</p>
             </div>
           </div>
           <div className="col-12 col-md-6 col-lg-4">
-            <div className="d-flex  justify-content-start gap-4 align-items-center cat marketing  col-12 h-100 py-3 px-4">
+            <div className="d-flex justify-content-start gap-2 align-items-center cat business-management col-12 h-100 py-3 ps-2">
               <img src={icon6} alt="" className="img1" />
               <img src={icon6Hov} alt="" className="img2" />
               <p>Arts & Design</p>
             </div>
           </div>
           <div className="col-12 col-md-6 col-lg-4">
-            <div className="d-flex  justify-content-start gap-4 align-items-center cat finance  col-12 h-100 py-3 px-4">
+            <div className="d-flex justify-content-start gap-2 align-items-center cat business-management col-12 h-100 py-3 ps-2">
               <img src={icon7} alt="" className="img1" />
               <img src={icon7Hov} alt="" className="img2" />
               <p>Business & Finance </p>
             </div>
           </div>
           <div className="col-12 col-md-6 col-lg-4">
-            <div className="d-flex  justify-content-start gap-4 align-items-center cat computer  col-12 h-100 py-3 px-4">
+            <div className="d-flex justify-content-start gap-2 align-items-center cat business-management col-12 h-100 py-3 ps-2">
               <img src={icon8} alt="" className="img1" />
               <img src={icon8Hov} alt="" className="img2" />
               <p>Computer Science </p>
             </div>
           </div>
           <div className="col-12 col-md-6 col-lg-4">
-            <div className="d-flex  justify-content-start gap-4 align-items-center cat video  col-12 h-100 py-3 px-4">
+            <div className="d-flex justify-content-start gap-2 align-items-center cat business-management col-12 h-100 py-3 ps-2">
               <img src={icon9} alt="" className="img1" />
               <img src={icon9Hov} alt="" className="img2" />
               <p>Video & Photography </p>

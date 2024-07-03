@@ -6,9 +6,11 @@ import shape5 from "../../assets/images/shape5.png";
 import girl from "../../assets/images/girl-1.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 export default function HeroSection() {
+  let navigate = useNavigate();
   return (
-    <div id="HeroSection" className="col-12">
+    <div id="HeroSection" className="col-12 overflow-hidden">
       <div className="col-12 px-5 pt-5 d-flex justify-content-between align-items-center gap-5 container flex-wrap ">
         <div className="left col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start gap-5 gap-lg-4 z-1 position-relative ">
           <h1 className="col-12 col-lg-9 ">
@@ -18,7 +20,7 @@ export default function HeroSection() {
             Unlock Your Potential with EduJourney's Online Courses. Join a
             Community of Learners and Start Achieving Your Goals Today.
           </p>
-          <button className="btn btn-primary col-6 col-lg-4 py-3 d-flex align-items-center gap-2 justify-content-center position-relative">
+          <button className="btn btn-primary col-6 col-lg-4 py-3 d-flex align-items-center gap-2 justify-content-center position-relative" >
             <div className="position-absolute btnBG w-100 h-100"></div>
             <p className=" z-2">Find courses</p>
             <FontAwesomeIcon icon={faArrowRight} className=" z-2" />

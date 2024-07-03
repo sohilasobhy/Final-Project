@@ -2,7 +2,7 @@ import background from "../../assets/images/cta-bg-imgae-07.png";
 export default function GetInTouch() {
   return (
     <div
-      className="col-12 d-flex justify-content-center p-5 mt-5"
+      className="col-12 d-flex justify-content-center p-5 mt-5 overflow-hidden"
       id="GetInTouch">
       <div className="col-12 col-lg-8 contact d-flex justify-content-center flex-column flex-lg-row align-items-center gap-3 gap-lg-5 p-5 position-relative">
         <p className="left">

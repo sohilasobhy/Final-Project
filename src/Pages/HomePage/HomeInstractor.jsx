@@ -1,7 +1,7 @@
 import girl from "../../assets/images/team-01.webp";
 import shareIcon from "../../assets/images/share.png";
-import linkedIn from "../../assets/images/linkedin-logo.png";
-import facebook from "../../assets/images/facebook-app-symbol.png";
+import linkedIn from "../../assets/images/linkedin(3).png";
+import facebook2 from "../../assets/images/facebook-app-symbol(1).png";
 import twitter from "../../assets/images/twitter.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -56,12 +56,13 @@ export default function HomeInstractor() {
                     alt=""
                     className="col-12 h-100 object-fit-cover instratourImg"
                   />
+
                   <div className="position-absolute shareIcon">
                     <img src={shareIcon} />
                   </div>
                   <div className="position-absolute greenFilter"></div>
                   <div className="position-absolute facebook socialMedia">
-                    <img src={facebook} alt="" />
+                    <img src={facebook2} alt="" className="facebookBlue" />
                   </div>
                   <div className="position-absolute twitter socialMedia">
                     <img src={twitter} alt="" />

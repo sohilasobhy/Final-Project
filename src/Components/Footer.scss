@@ -1,0 +1,85 @@
+#Footer {
+  padding: 5rem;
+  background-color: #f0f4f5;
+  .logo,
+  .searchIcon,
+  .menuIcon {
+    cursor: pointer;
+  }
+  .menuIcon svg {
+    font-size: 24px;
+  }
+  .siteName {
+    color: #2db87f;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .footer {
+    padding: 2rem;
+    .platformDesc {
+      margin-top: 0.5rem;
+      font-size: 18px;
+    }
+    .contact {
+      font-size: 18px;
+      span {
+        font-weight: 700;
+      }
+    }
+    .links {
+      margin-top: 2rem;
+      .top {
+        font-size: 20px;
+        font-weight: 700;
+        a {
+          font-size: 18px;
+        }
+      }
+    }
+    .contact {
+      .top {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 2rem;
+      }
+      .Browse {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: #1ab69d;
+        overflow: hidden;
+        button {
+          p {
+            font-size: 18px;
+            color: white;
+            z-index: 88;
+          }
+        }
+        &:hover {
+          .BTNFilter {
+            left: 0;
+          }
+        }
+      }
+      .BTNFilter {
+        background: rgb(27, 182, 156);
+        background: linear-gradient(
+          141deg,
+          rgba(27, 182, 156, 1) 0%,
+          rgba(47, 184, 122, 1) 97%
+        );
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        transition: 0.5s;
+      }
+      input {
+        border: 0;
+        outline: 0;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

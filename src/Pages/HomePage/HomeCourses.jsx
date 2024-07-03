@@ -4,12 +4,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 export default function HomeCourses() {
+  let navigate = useNavigate()
   const [array, setArray] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/HomeCourses")
+      .get("http://localhost:3000/Courses")
       .then((response) => {
         setArray(response.data);
         console.log(array);
@@ -46,23 +48,22 @@ export default function HomeCourses() {
         </div>
       </div>
       <div className="row g-4 justify-content-center">
-        {array.map((course, index) => {
+        {array.slice(0, 4).map((course, index) => {
           return (
-            <SingleCourseComponent
-              key={course.id}
-              name={course.name}
-              price={course.price}
-              level={course.level}
-              rating={course.rating}
-              hours={course.Duration}
-              desc={course.desc}
-              lessons={course.lessons}
-              students={course.students}
-            />
+            <div
+              className="col-sm-9 col-md-6 col-lg-5 col-xl-4 col-xxl-3 position-relative"
+              key={course.id}>
+              <SingleCourseComponent
+                color={"white"}
+                course={course}
+              />
+            </div>
           );
         })}
       </div>
-      <div className="position-relative Browse  mt-5">
+      <div className="position-relative Browse  mt-5" onClick={() => {
+        navigate("/courses")
+      }}>
         <button className="d-flex align-items-center  gap-3   btn">
           <p>
             Browse More Courses <FontAwesomeIcon icon={faArrowRight} />
