@@ -13,7 +13,7 @@ export default function Edges() {
   return (
     <div className="col-12 mt-5 pt-5 position-relative" id="Edges">
       <div className="yellowCircle position-absolute d-none"></div>
-      <div className=" my-5 py-5">
+      <div className=" my-md-5 py-md-5">
         <div className="d-flex justify-content-center flex-wrap gap-5">
           <div className="col-12 col-lg-5 d-flex justify-content-center position-relative ">
             <div className=" position-absolute videoCon d-none d-md-block ">
@@ -67,7 +67,7 @@ export default function Edges() {
                   </svg>
                 </div>
               </div>
-              <p className="p2">
+              <p className="p2 mb-3 mb-md-0">
                 Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod
                 ex tempor incididunt labore dolore magna aliquaenim minim veniam
                 quis nostrud exercitation ullamco laboris.

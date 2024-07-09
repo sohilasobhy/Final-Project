@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Courses.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -9,6 +9,8 @@ import axios from "axios";
 import SingleCourseComponent from "../../Components/SingleCourseComponent";
 import NavBar from "../../Components/NavBar";
 export default function Courses() {
+  const { page } = useParams();
+  console.log(page)
   const [array, setArray] = useState([]);
   useEffect(() => {
     axios
@@ -45,7 +47,7 @@ export default function Courses() {
               <div
                 className="col-12 col-md-6 col-lg-4  position-relative"
                 key={course.id}>
-                <SingleCourseComponent course={course} color={"#f7f5f2"} />
+                <SingleCourseComponent course={course} color={"#f7f5f2"} img={course.img} />
               </div>
             );
           })}

@@ -21,7 +21,6 @@ import CircleProgress from "../../Components/CircleProgress";
 export default function HomePage() {
   return (
     <div className="col-12 HomePage position-relative">
-      <Search />
       <SideMenu />
       <Video />
       <CircleProgress />

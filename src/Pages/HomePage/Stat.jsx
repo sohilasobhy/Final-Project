@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import shape3 from "../../assets/images/shape3.png";
 import shape1 from "../../assets/images/shape1.png";
 import shape2 from "../../assets/images/shape-04.png";
+import Counter from "./Counter";
 
 export default function Stat() {
   const [play, setPlay] = useState(false);
@@ -18,19 +19,19 @@ export default function Stat() {
       id="Stat">
       <div className="bg-white d-flex flex-wrap p-5 position-relative section">
         <div className="col-12 col-md-6 px-2 py-5 topLeft box d-flex flex-column align-items-center">
-          <p className="num">45.2K</p>
+          <p className="num d-flex">  <Counter initialCount={0} targetValue={45} incrementValue={1} updateInterval={30} duration={2000} />.<Counter initialCount={0} targetValue={2} incrementValue={1} updateInterval={100} duration={2000} />K</p>
           <p>Student Enrolled</p>
         </div>
         <div className="col-12 col-md-6 px-2 py-5 topRight box d-flex flex-column align-items-center">
-          <p className="num">32.4K</p>
+          <p className="num d-flex"> <Counter initialCount={0} targetValue={32} incrementValue={1} updateInterval={30} duration={2000} />.<Counter initialCount={0} targetValue={4} incrementValue={1} updateInterval={100} duration={2000} />K</p>
           <p>CLASS COMPLETED</p>
         </div>
         <div className="col-12 col-md-6 px-2 py-5 bottomLeft box d-flex flex-column align-items-center">
-          <p className="num">354+</p>
+          <p className="num d-flex"><Counter initialCount={0} targetValue={354} incrementValue={10} updateInterval={30} duration={2000} />+</p>
           <p>TOP INSTRUCTORS</p>
         </div>
         <div className="col-12 col-md-6 px-2 py-5 bottomRight box d-flex flex-column align-items-center">
-          <p className="num">99.9%</p>
+          <p className="num d-flex"><Counter initialCount={0} targetValue={99} incrementValue={2} updateInterval={30} duration={2000} />.<Counter initialCount={0} targetValue={9} incrementValue={1} updateInterval={30} duration={2000} />%</p>
           <p>SATISFACTION RATE</p>
         </div>
       </div>

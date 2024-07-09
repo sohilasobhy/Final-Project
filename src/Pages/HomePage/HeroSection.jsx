@@ -20,13 +20,13 @@ export default function HeroSection() {
             Unlock Your Potential with EduJourney's Online Courses. Join a
             Community of Learners and Start Achieving Your Goals Today.
           </p>
-          <button className="btn btn-primary col-6 col-lg-4 py-3 d-flex align-items-center gap-2 justify-content-center position-relative" >
+          <button className="btn btn-primary col-6 col-lg-4 py-3 d-flex align-items-center gap-2 justify-content-center position-relative" onClick={()=>{navigate("/courses")}}>
             <div className="position-absolute btnBG w-100 h-100"></div>
             <p className=" z-2">Find courses</p>
             <FontAwesomeIcon icon={faArrowRight} className=" z-2" />
           </button>
         </div>
-        <div className="right col-12 col-lg-5 d-flex justify-content-center ">
+        <div className="right col-12 col-lg-5 d-flex justify-content-center" >
           <img src={girl} alt="" className=" z-1" />
         </div>
         <img

@@ -10,7 +10,7 @@ import instagram from "../assets/images/instagram.png";
 import "./Footer.scss";
 export default function Footer() {
   return (
-    <div className="col-12" id="Footer">
+    <div className="col-12 px-5" id="Footer">
       <div className="footer d-flex flex-wrap gap-5">
         <div className="d-flex flex-column col-12 col-md-6 col-lg-3 gap-3">
           <div
@@ -46,7 +46,7 @@ export default function Footer() {
           <Link to={"/Events"}>Events</Link>
           <Link to={"/Purchase"}>Purchase Guide</Link>
         </div>
-        <div className="d-flex flex-column col-12 col-md-6 col-lg-4 gap-3 contact">
+        <div className="d-flex flex-column col-12 col-md-6 col-lg-4 gap-3 contact px-5">
           <p className="top">Contacts</p>
           <p>
             Enter your email address to register to our newsletter subscription

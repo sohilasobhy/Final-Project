@@ -9,7 +9,7 @@ export default function HomeInstractor() {
   const [array, setArray] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/HomeInsrtractuors")
+      .get("http://localhost:3000/Instructors")
       .then((response) => {
         setArray(response.data);
         console.log(array);
@@ -46,13 +46,13 @@ export default function HomeInstractor() {
         </div>
       </div>
       <div className="col-12 row g-3 px-5">
-        {array.map((instractour, index) => {
+        {array.splice(0, 4).map((instractour, index) => {
           return (
             <div className="col-12 col-md-6 col-lg-3" key={instractour.id}>
               <div className="instractour">
                 <div className="col-12 imgCon">
                   <img
-                    src={girl}
+                    src={instractour.img}
                     alt=""
                     className="col-12 h-100 object-fit-cover instratourImg"
                   />

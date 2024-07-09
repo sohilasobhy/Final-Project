@@ -43,28 +43,28 @@ export default function Partners() {
       </div>
       <div className="col-12 col-lg-6 d-flex flex-wrap justify-content-center">
         <div className="col-6 col-md-3 p-3 d-flex justify-content-center">
-          <img src={collage1} alt="" />
+          <img className="w-100 partnerLogo" src={collage1} alt="" />
         </div>
         <div className="col-6 col-md-3 p-3 d-flex justify-content-center">
-          <img src={collage2} alt="" />
+          <img className="w-100 partnerLogo" src={collage2} alt="" />
         </div>
         <div className="col-6 col-md-3 p-3 d-flex justify-content-center">
-          <img src={collage3} alt="" />
+          <img className="w-100 partnerLogo" src={collage3} alt="" />
         </div>
         <div className="col-6 col-md-3 p-3 d-flex justify-content-center">
-          <img src={collage4} alt="" />
+          <img className="w-100 partnerLogo" src={collage4} alt="" />
         </div>
         <div className="col-6 col-md-3 p-3 d-flex justify-content-center">
-          <img src={collage5} alt="" />
+          <img className="w-100 partnerLogo" src={collage5} alt="" />
         </div>
         <div className="col-6 col-md-3 p-3 d-flex justify-content-center">
-          <img src={collage6} alt="" />
+          <img className="w-100 partnerLogo" src={collage6} alt="" />
         </div>
         <div className="col-6 col-md-3 p-3 d-flex justify-content-center">
-          <img src={collage7} alt="" />
+          <img className="w-100 partnerLogo" src={collage7} alt="" />
         </div>
         <div className="col-6 col-md-3 p-3 d-flex justify-content-center">
-          <img src={collage8} alt="" />
+          <img className="w-100 partnerLogo" src={collage8} alt="" />
         </div>
       </div>
     </div>

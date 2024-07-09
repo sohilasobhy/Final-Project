@@ -12,8 +12,12 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import man from "../../assets/images/testimonial-02.png";
+import { useNavigate } from "react-router-dom";
+
 export default function HomeReviews() {
+  let navigate = useNavigate();
   const [array, setArray] = useState([]);
+
   useEffect(() => {
     axios
       .get("http://localhost:3000/HomeReviews")
@@ -25,14 +29,15 @@ export default function HomeReviews() {
         console.error("There was an error fetching the data!", error);
       });
   }, []);
+
   return (
     <div className="col-12 container py-5" id="HomeReviews">
-      <div className="col-12 d-flex justify-content-center  flex-wrap gap-5">
-        <div className="col-12 col-lg-4 d-flex flex-column gap-3 align-items-center align-items-lg-start ">
+      <div className="col-12 d-flex justify-content-center flex-wrap gap-5">
+        <div className="col-12 col-lg-4 d-flex flex-column gap-3 align-items-center align-items-lg-start">
           <h5>TESTIMONIALS</h5>
           <div className="d-flex flex-column align-items-center align-items-lg-start">
             <h2 className="col-12 text-center text-lg-start">What Our Students Have To Say</h2>
-            <div className="col-3 mt-1 ">
+            <div className="col-3 mt-1">
               <svg
                 style={{
                   fill: "none",
@@ -56,7 +61,9 @@ export default function HomeReviews() {
             Our students love the comprehensive and engaging courses we offer.
             Here's what they have to say about their learning experiences.
           </p>
-          <div className="position-relative Browse d-flex justify-content-center col-6 mt-5">
+          <div
+            className="position-relative Browse d-flex justify-content-center col-6 mt-5"
+            onClick={() => { navigate("/courses") }}>
             <button className="d-flex align-items-center gap-3 btn">
               <p>
                 View All <FontAwesomeIcon icon={faArrowRight} />
@@ -69,35 +76,46 @@ export default function HomeReviews() {
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={50}
-            slidesPerView={2}
+            slidesPerView={1}
             autoplay={{ delay: 5000 }}
-            loop={true}>
-            {array.map((review, index) => {
-              return (
-                <SwiperSlide
-                  className="col-6 d-flex flex-column gap-3 p-4"
-                  key={review.id}>
-                  <div className="position-relative col-12">
-                    <img
-                      src={man}
-                      alt=""
-                      className="col-3 object-fit-cover reviewerImg"
-                    />
-                    <div className="bg-white firstLayer quotationCon">
-                      <div className="secondLayer">
-                        <img src={quotation} alt="" className="quotation" />
-                      </div>
+            loop={true}
+            breakpoints={{
+              786: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              992: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+              },
+            }}
+          >
+            {array.map((review) => (
+              <SwiperSlide className="col-6 d-flex flex-column gap-2 gap-lg-3 p-4" key={review.id}>
+                <div className="position-relative col-12">
+                  <img
+                    src={man}
+                    alt=""
+                    className="col-3 object-fit-cover reviewerImg"
+                  />
+                  <div className="bg-white firstLayer quotationCon">
+                    <div className="secondLayer">
+                      <img src={quotation} alt="" className="quotation" />
                     </div>
                   </div>
-                  <div className="comment">{review.comment}</div>
-                  <img src={stars} alt="" className="col-6" />
-                  <div className="name">
-                    <p>{review.name}</p>
-                  </div>
-                  <div className="job">{review.Job}</div>
-                </SwiperSlide>
-              );
-            })}
+                </div>
+                <div className="comment">{review.comment}</div>
+                <img src={stars} alt="" className="col-6" />
+                <div className="name">
+                  <p>{review.name}</p>
+                </div>
+                <div className="job">{review.Job}</div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

@@ -9,7 +9,7 @@ export default function SideMenu() {
   const [menuIndex, setMenuIndex] = useRecoilState($menu);
   if (menuIndex) {
     return (
-      <div className="col-12 position-relative" id="SideMenu">
+      <div className="col-12 position-fixed" id="SideMenu">
         <div
           className="col-12 filter position-fixed"
           onClick={(event) => {

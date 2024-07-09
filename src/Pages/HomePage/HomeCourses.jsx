@@ -56,6 +56,7 @@ export default function HomeCourses() {
               <SingleCourseComponent
                 color={"white"}
                 course={course}
+                img={course.img}
               />
             </div>
           );

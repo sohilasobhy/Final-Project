@@ -1,6 +1,5 @@
 #SingleCourseComponent {
   overflow: hidden;
-  height: 80vh;
   border-radius: 1rem;
   @media screen and (max-width: 768px) {
     height: 85vh;
@@ -38,6 +37,7 @@
   .contant {
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+    height: 60%;
   }
   .level {
     background-color: #ddf4f0;

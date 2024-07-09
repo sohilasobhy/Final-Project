@@ -20,7 +20,7 @@ export default function NavBar() {
             window.location.href = "/";
           }}>
           <img src={logo} alt="" />
-          <p className=" mt-3 siteName">EduJourney</p>
+          <p className="siteName">EduJourney</p>
         </div>
         <div className="d-none d-lg-flex gap-5 navLinks justify-content-center pe-3 py-2">
           <NavLink to={"/"}>Home</NavLink>
@@ -29,7 +29,7 @@ export default function NavBar() {
           <NavLink to={"/contact"}>Contact Us</NavLink>
         </div>
       </div>
-      <div className="d-flex gap-3">
+      <div className="d-flex gap-0 align-items-center">
         <div className="d-flex justify-content-center align-items-center p-2 rounded-2 searchIcon">
           <img
             src={search}
