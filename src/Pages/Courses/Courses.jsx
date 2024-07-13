@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import SingleCourseComponent from "../../Components/SingleCourseComponent";
 import NavBar from "../../Components/NavBar";
+import PaginatedCourses from "./CoursePagination";
 export default function Courses() {
   const { page } = useParams();
   console.log(page)
@@ -42,15 +43,7 @@ export default function Courses() {
       </div>
       <div className="container p-5">
         <div className="row g-4 justify-content-center">
-          {array.map((course, index) => {
-            return (
-              <div
-                className="col-12 col-md-6 col-lg-4  position-relative"
-                key={course.id}>
-                <SingleCourseComponent course={course} color={"#f7f5f2"} img={course.img} />
-              </div>
-            );
-          })}
+          <PaginatedCourses />
         </div>
       </div>
     </div>

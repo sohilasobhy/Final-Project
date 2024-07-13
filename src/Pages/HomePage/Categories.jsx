@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
-// import icon9Hov from "../../assets/images/gallery (1).png";
+import { useNavigate } from "react-router-dom";
 export default function Categories() {
+  let navigate = useNavigate()
   const [isloading, setIsloading] = useState(false)
   const [categories, setCategories] = useState([])
   useEffect(() => {
@@ -59,7 +60,7 @@ export default function Categories() {
             categories?.map((category) => {
               return (
                 <div className="col-12 col-md-6 col-lg-4" key={category.categoryId}>
-                  <div className="d-flex justify-content-start gap-2 align-items-center cat business-management col-12 h-100 py-3 ps-2"  onClick={()=>{console.log(category.categoryId)}}>
+                  <div className="d-flex justify-content-start gap-2 align-items-center cat business-management col-12 h-100 py-3 ps-2"  onClick={()=>{navigate(`/one-category/${category.categoryId}`)}}>
                     <img src={category.categoryImg} alt="category image" className="img1" />
                     <img src={category.categoryImg2} alt="category image" className="img2" />
                     <p>{category.categoryName}</p>

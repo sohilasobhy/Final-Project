@@ -14,15 +14,16 @@ import { useEffect } from "react";
 import man from "../../assets/images/testimonial-02.png";
 import { useNavigate } from "react-router-dom";
 
-export default function HomeReviews() {
+export default function HomeReviews(props) {
   let navigate = useNavigate();
   const [array, setArray] = useState([]);
+  const [reviewer, setReviewer] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/HomeReviews")
+      .get("http://localhost:3000/Reviews")
       .then((response) => {
-        setArray(response.data);
+        setArray(response.data.slice(0, 4));
         console.log(array);
       })
       .catch((error) => {
@@ -31,7 +32,7 @@ export default function HomeReviews() {
   }, []);
 
   return (
-    <div className="col-12 container py-5" id="HomeReviews">
+    <div className="col-12 container py-5" id="HomeReviews" style={{ marginTop: props.number }}>
       <div className="col-12 d-flex justify-content-center flex-wrap gap-5">
         <div className="col-12 col-lg-4 d-flex flex-column gap-3 align-items-center align-items-lg-start">
           <h5>TESTIMONIALS</h5>
@@ -94,8 +95,8 @@ export default function HomeReviews() {
               },
             }}
           >
-            {array.map((review) => (
-              <SwiperSlide className="col-6 d-flex flex-column gap-2 gap-lg-3 p-4" key={review.id}>
+            {array?.map((review) => (
+              <SwiperSlide className="col-6 d-flex flex-column  gap-2 gap-lg-3 p-4" key={review.id}>
                 <div className="position-relative col-12">
                   <img
                     src={man}

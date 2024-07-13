@@ -334,7 +334,8 @@
 #Video {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.63);
-  z-index: 9;
+  z-index: 999;
+  top: 0;
   .CloseMark {
     top: 4%;
     right: 2%;
@@ -464,7 +465,6 @@
   }
 }
 #HomeReviews {
-  margin-top: 10%;
   h2 {
     font-size: 45px;
   }
@@ -515,7 +515,7 @@
       .swiper-slide {
         box-shadow: 0px 10px 50px 0px rgba(26, 46, 85, 0.1);
         border-radius: 1rem;
-        height: 60vh;
+        height: 50vh;
         .comment {
           font-size: 18px;
           color: #8d8d8d;
@@ -545,6 +545,12 @@
           @media (max-width: 992px) {
             bottom: -10%;
           }
+        }
+        @media (max-width: 992px) {
+          height: 60vh;
+        }
+        @media (max-width: 768px) {
+          height: 50vh;
         }
       }
       @media (max-width: 992px) {

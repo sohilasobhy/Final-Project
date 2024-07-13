@@ -13,6 +13,7 @@ export default function HomeInstractor() {
       .then((response) => {
         setArray(response.data);
         console.log(array);
+        console.log(array?.Contact?.facebook)
       })
       .catch((error) => {
         console.error("There was an error fetching the data!", error);
@@ -56,18 +57,23 @@ export default function HomeInstractor() {
                     alt=""
                     className="col-12 h-100 object-fit-cover instratourImg"
                   />
-
                   <div className="position-absolute shareIcon">
                     <img src={shareIcon} />
                   </div>
                   <div className="position-absolute greenFilter"></div>
-                  <div className="position-absolute facebook socialMedia">
+                  <div className="position-absolute facebook socialMedia" onClick={() => {
+                    window.open(`${instractour?.Contact?.facebook}`, '_blank')
+                  }} >
                     <img src={facebook2} alt="" className="facebookBlue" />
                   </div>
-                  <div className="position-absolute twitter socialMedia">
+                  <div className="position-absolute twitter socialMedia" onClick={() => {
+                    window.open(`${instractour?.Contact?.twitter}`, '_blank')
+                  }} >
                     <img src={twitter} alt="" />
                   </div>
-                  <div className="position-absolute linkedIn socialMedia">
+                  <div className="position-absolute linkedIn socialMedia" onClick={() => {
+                    window.open(`${instractour?.Contact?.linkedIn}`, '_blank')
+                  }} >
                     <img src={linkedIn} alt="" />
                   </div>
                 </div>

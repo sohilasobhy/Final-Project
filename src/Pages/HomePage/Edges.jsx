@@ -73,15 +73,15 @@ export default function Edges() {
                 quis nostrud exercitation ullamco laboris.
               </p>
               <div className="d-flex flex-column gap-3">
-                <div className="d-flex justify-content-start gap-2 align-content-center col-5 about">
+                <div className="d-flex justify-content-start gap-2 align-content-center about">
                   <img src={img2} alt="" />
                   <p>Expert Trainers</p>
                 </div>
-                <div className="d-flex justify-content-start gap-2 align-content-center col-5 about">
+                <div className="d-flex justify-content-start gap-2 align-content-center  about">
                   <img src={img2} alt="" />
                   <p>Online Remote Learning</p>
                 </div>
-                <div className="d-flex justify-content-start gap-2 align-content-center col-5 about">
+                <div className="d-flex justify-content-start gap-2 align-content-center about">
                   <img src={img2} alt="" />
                   <p>Lifetime Access</p>
                 </div>

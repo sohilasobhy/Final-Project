@@ -6,22 +6,13 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Spinner } from "react-bootstrap";
-import business from "../../assets/images/project-manager.png"
-import art from "../../assets/images/vector.png"
-import development from "../../assets/images/web-programming.png"
-import health from "../../assets/images/pill.png"
-import data from "../../assets/images/database.png"
-import marketing from "../../assets/images/promotion.png"
-import finance from "../../assets/images/handshake.png"
-import computer from "../../assets/images/monitor.png"
-import video from "../../assets/images/photo.png"
 import CourseDetails from "./CourseDetails"
 import CourseOverview from "./CourseOverview"
 export default function SingleCourse() {
     let { id } = useParams();
     const [array, setArray] = useState();
     const [isloading, setIsloading] = useState(false)
-    const [category, setCategory] = useState("")
+    const [category, setCategory] = useState([])
     useEffect(() => {
         setIsloading(true)
         axios
@@ -35,6 +26,17 @@ export default function SingleCourse() {
                 setIsloading(false);
             });
     }, [id]);
+    useEffect(() => {
+        axios
+            .get(`http://localhost:3000/Categories?categoryId=${array?.CtegoryId}`)
+            .then((response) => {
+                setCategory(response.data[0]);
+            })
+            .catch((error) => {
+                console.error("There was an error fetching the data!", error);
+            })
+    }, [array]);
+    console.log(category)
     let content;
     if (isloading) {
         content = <div className="d-flex align-items-center justify-content-center min-vh-100"><Spinner style={{ width: '5rem', height: '5rem' }} size="lg" animation="border" variant="primary" /></div>
@@ -55,18 +57,8 @@ export default function SingleCourse() {
                                         <p>By {array.Instructor}</p>
                                     </div>
                                     <div className="d-flex gap-2 align-items-center category">
-                                        <img style={{ "width": "32px" }} src={
-                                            array.category === "Business" ? business
-                                                : array.category === "Art" ? art
-                                                    : array.category == "Development" ? development
-                                                        : array.category == "Marketing" ? marketing
-                                                            : array.category == "Finance" ? finance
-                                                                : array.category == "Data Science" ? data
-                                                                    : array.category == "Computer Science" ? computer
-                                                                        : array.category == "Health" ? health
-                                                                            : array.category == "Video and Photography" ? video
-                                                                                : "no category"} />
-                                        <p>{array.category}</p>
+                                        <img src={`../${category?.categoryImg}`} alt="category image" width={24}/>
+                                        <p>{array?.category}</p>
                                     </div>
                                 </div>
                             </div>

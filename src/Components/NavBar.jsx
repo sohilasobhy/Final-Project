@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavBar.scss";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../assets/images/graduation.png";
 import search from "../assets/images/search.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +9,7 @@ import { useRecoilState } from "recoil";
 import { $Search, $menu } from "../Store/Store";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 export default function NavBar() {
+  const navigate = useNavigate()
   const [, setSearch] = useRecoilState($Search);
   const [menuIndex, setMenuIndex] = useRecoilState($menu);
   return (
@@ -39,7 +40,7 @@ export default function NavBar() {
             }}
           />
         </div>
-        <div className=" d-none d-sm-flex justify-content-center align-items-center py-2 px-3 rounded-2 bg-white menuIcon">
+        <div className="d-none d-sm-flex justify-content-center align-items-center py-2 px-3 rounded-2 bg-white menuIcon" onClick={() => navigate("/login")} >
           <FontAwesomeIcon icon={faUser} />
         </div>
         <div

@@ -1,5 +1,5 @@
 import icon1 from "../../assets/images/video-conference.png";
-import icon2 from "../../assets/images/male.png";
+import icon2 from "../../assets/images/instructor(3).png";
 import icon3 from "../../assets/images/certificate.png";
 import icon4 from "../../assets/images/membership.png";
 export default function Features() {

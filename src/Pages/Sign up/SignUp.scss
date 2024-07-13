@@ -1,19 +1,19 @@
-#LoginPage {
+#SignUp {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem;
-  height: 85vh;
+  padding: 2rem;
   position: relative;
   background-image: url("../../assets/images/BG-3.webp");
   background-color: #f0f4f5;
-  min-height: 100vh;
+  z-index: 22;
+  height: 100vh;
   form {
     inset: 4px;
     background-color: #2eb980;
-    padding: 50px 40px;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    padding: 40px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -76,6 +76,18 @@
         pointer-events: none;
       }
     }
+    .imageInput {
+      span {
+        pointer-events: none;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+        transition: 0.5s;
+        font-weight: 600;
+      }
+    }
+    .userName {
+      margin-top: 10px;
+    }
     .links {
       display: flex;
       justify-content: space-between;
@@ -101,6 +113,7 @@
       font-weight: 600;
       width: 100px;
       margin-top: 10px;
+      align-self: center;
       &:active {
         opacity: 0.8;
       }
@@ -108,17 +121,17 @@
   }
   .imgCon {
     border: 1px solid #2eb980;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    width: 30%;
-    height: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 35%;
     background-color: #fff;
+    height: 100%;
     img {
       border-bottom-right-radius: 8px;
       border-top-right-radius: 8px;
       height: 100%;
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
   @media (max-width: 992px) {
@@ -135,11 +148,10 @@
   @media (max-width: 768px) {
     padding: 0;
     form {
-      border-top-right-radius: 8px;
-      border-bottom-right-radius: 8px;
-      height: auto;
-      padding-bottom: 10rem;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
       width: 380px;
+      height: auto;
       .inputBox {
         width: auto;
       }

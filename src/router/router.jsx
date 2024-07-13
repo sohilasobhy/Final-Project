@@ -6,6 +6,8 @@ import Courses from "../Pages/Courses/Courses";
 import SingleCourse from "../Pages/SingleCourse/SingleCourseDetails";
 import LoginPage from "../Pages/LoginPage/LoginPage";
 import Categories from "../Pages/Categories/Categories";
+import SignUp from "../Pages/Sign up/SignUp";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 
 const router = createBrowserRouter([
@@ -29,11 +31,17 @@ const router = createBrowserRouter([
             }, {
                 path: "/one-category/:categorId",
                 element: <Categories />
-            }
+            }, {
+                path: "/contact",
+                element: <ContactUs />
+            },
         ],
     }, {
         path: "/login",
         element: <LoginPage />
+    }, {
+        path: "/signup",
+        element: <SignUp />
     }
 ])
 export default router;

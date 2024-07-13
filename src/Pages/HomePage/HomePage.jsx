@@ -30,7 +30,7 @@ export default function HomePage() {
       <Categories />
       <HomeCourses />
       <Stat />
-      <HomeReviews />
+      <HomeReviews number={"10%"} />
       <GetInTouch />
       <HomeInstractor />
       <Add />

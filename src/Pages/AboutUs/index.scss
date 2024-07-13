@@ -1,0 +1,212 @@
+#AboutPage {
+  #Header {
+    background-image: url("../../assets/images/about-background.webp");
+    background-size: cover;
+    padding: 5rem;
+    .backgroundFilter {
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    h1 {
+      width: 60%;
+      text-align: center;
+      font-size: 3.5rem;
+      color: #ffffff;
+      z-index: 2;
+    }
+    p,
+    a,
+    svg {
+      text-align: center;
+      color: #ffffff;
+      z-index: 2;
+      font-size: 1.5rem;
+    }
+    a:hover {
+      color: #1ab69d;
+    }
+    @media (max-width: 992px) {
+      h1 {
+        font-size: 2rem;
+        width: 100%;
+      }
+    }
+  }
+  #AboutFeatures {
+    padding: 8rem 4rem;
+    .contentCon {
+      gap: 7rem;
+    }
+    .title {
+      font-size: 18px;
+      color: grey;
+    }
+    h2 {
+      font-size: 36px;
+      font-weight: 600;
+      span {
+        color: #ee4a62;
+        font-weight: 600;
+      }
+    }
+    .desc {
+      color: gray;
+      font-size: 18px;
+    }
+    .about {
+      p {
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+    .imgSec {
+      img {
+        border-radius: 1rem;
+      }
+      .groupPhoto {
+        width: 100%;
+      }
+      .manPhoto {
+        top: -25%;
+        right: -15%;
+      }
+    }
+    @media (max-width: 768px) {
+      .groupPhoto {
+        width: 100% !important;
+      }
+      .manPhoto {
+        width: 50%;
+        right: -9% !important;
+      }
+    }
+  }
+  #aboutPartners {
+    .img1,
+    .img2,
+    .img3,
+    .img4,
+    .img5 {
+      border-right: 1px solid #f0f0f0;
+    }
+    @media (max-width: 992px) {
+      .img3,
+      .img6 {
+        border: none;
+      }
+    }
+    @media (max-width: 768px) {
+      .img6,
+      .img2,
+      .img4 {
+        border: none;
+      }
+      .img3 {
+        border-right: 1px solid #f0f0f0;
+      }
+    }
+    @media (max-width: 575px) {
+      .img1,
+      .img2,
+      .img3,
+      .img4,
+      .img5,
+      .img6 {
+        border-right: none;
+      }
+    }
+  }
+  #WhyUs {
+    .mainTitle {
+      padding: 1.5rem 1.5rem 10rem 1.5rem;
+      background-color: #f7f5f2;
+      width: 100%;
+    }
+    .title {
+      span {
+        color: #ee4a62;
+        font-weight: 600;
+      }
+    }
+    .body {
+      margin-top: -10%;
+      .contentCon {
+        background-color: #ffffff;
+        border-radius: 0.5rem;
+        padding: 3rem;
+        box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+        .imgCon1,
+        .imgCon2,
+        .imgCon3 {
+          padding: 0.8rem;
+          border-radius: 50%;
+          transition: 0.5s;
+          .imgHov {
+            display: none;
+          }
+        }
+        .imgCon1 {
+          background-color: #e8f8f5;
+        }
+        .imgCon2 {
+          background-color: #fdedef;
+        }
+        .imgCon3 {
+          background-color: #eceffc;
+        }
+        &:hover {
+          .imgCon1 {
+            background-color: #1ab69d !important;
+            .img {
+              display: none;
+            }
+            .imgHov {
+              display: block;
+            }
+          }
+          .imgCon2 {
+            background-color: #ee4a62 !important;
+            .img {
+              display: none;
+            }
+            .imgHov {
+              display: block;
+            }
+          }
+          .imgCon3 {
+            background-color: #4664e4 !important;
+            .img {
+              display: none;
+            }
+            .imgHov {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      .body {
+        margin-top: -20%;
+      }
+    }
+    @media (max-width: 768px) {
+      .body {
+        margin-top: -30%;
+      }
+    }
+  }
+  #Numbers {
+    background-image: url("../../assets/images/map-shape-3.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    .contentCon {
+      padding: 2rem;
+      background-color: #ffffff;
+      border-radius: 0.5rem;
+      box-shadow: 0px 30px 70px 0px
+        rgba(15.99999999999999, 12.000000000000002, 47, 0.05);
+    }
+  }
+}

@@ -2194,7 +2194,7 @@
       "address": " North Helenavile, FV77 8WS",
       "Email": "Edward@gmail",
       "phone": "01236987452",
-      "facebook": "ُhttps://www.facebook.com/jane.a.amistoso/",
+      "facebook": "https://www.facebook.com/jane.a.amistoso/",
       "twitter": "https://x.com/janemarielynch",
       "linkedIn": "https://www.linkedin.com/in/janewachnin/"
     }
@@ -2212,9 +2212,9 @@
       "address": "123 Data St, San Francisco, CA",
       "Email": "alice@example.com",
       "phone": "9876543210",
-      "facebook": "ُ/https://www.facebook.com/jane.a.amistoso/",
-      "twitter": "/https://x.com/janemarielynch",
-      "linkedIn": "/https://www.linkedin.com/in/janewachnin/"
+      "facebook": "https://www.facebook.com/jane.a.amistoso/",
+      "twitter": "https://x.com/janemarielynch",
+      "linkedIn": "https://www.linkedin.com/in/janewachnin/"
     }
   },
   {
@@ -2407,7 +2407,7 @@
 "Reviews": [
   {
     "id": "1",
-    "name": "Tom Hurley",
+    "userId": "5",
     "comment": "The hands-on projects and interactive elements really helped me understand the concepts better. Highly recommend!",
     "Job": "Content Creator",
     "rating": "5",
@@ -2415,7 +2415,7 @@
   },
   {
     "id": "2",
-    "name": "Alice Johnson",
+    "userId": "7",
     "comment": "This course provided me with invaluable skills that I could immediately apply to my job.",
     "Job": "Marketing Specialist",
     "rating": "5",
@@ -2423,7 +2423,7 @@
   },
   {
     "id": "3",
-    "name": "Michael Smith",
+    "userId": "20",
     "comment": "The instructors were very knowledgeable and the content was well-organized.",
     "Job": "Software Engineer",
     "rating": "4",
@@ -2431,7 +2431,7 @@
   },
   {
     "id": "4",
-    "name": "Emily Davis",
+    "userId": "8",
     "comment": "I loved the flexibility of the courses. I could learn at my own pace and revisit topics as needed.",
     "Job": "Graphic Designer",
     "rating": "5",
@@ -2439,7 +2439,7 @@
   },
   {
     "id": "5",
-    "name": "John Brown",
+    "userId": "30",
     "comment": "Great course material and excellent support from the instructors!",
     "Job": "Project Manager",
     "rating": "4",
@@ -2447,7 +2447,7 @@
   },
   {
     "id": "6",
-    "name": "Laura Wilson",
+    "userId": "18",
     "comment": "The course content was current and relevant to industry standards.",
     "Job": "Data Analyst",
     "rating": "5",
@@ -2455,7 +2455,7 @@
   },
   {
     "id": "7",
-    "name": "David Miller",
+    "userId": "4",
     "comment": "A comprehensive and engaging learning experience. Highly recommended!",
     "Job": "Business Analyst",
     "rating": "5",
@@ -2463,7 +2463,7 @@
   },
   {
     "id": "8",
-    "name": "Sarah Lee",
+    "userId": "10",
     "comment": "The platform is easy to navigate and the course material is top-notch.",
     "Job": "HR Manager",
     "rating": "4",
@@ -2471,7 +2471,7 @@
   },
   {
     "id": "9",
-    "name": "James Martinez",
+    "userId": "31",
     "comment": "I gained a lot of practical knowledge that I could directly apply to my job.",
     "Job": "Consultant",
     "rating": "5",
@@ -2479,7 +2479,7 @@
   },
   {
     "id": "10",
-    "name": "Emma Garcia",
+    "userId": "16",
     "comment": "The interactive elements and real-world examples were very helpful.",
     "Job": "Content Writer",
     "rating": "5",
@@ -2487,7 +2487,7 @@
   },
   {
     "id": "11",
-    "name": "Robert Jones",
+    "userId": "21",
     "comment": "An excellent learning platform with well-structured courses.",
     "Job": "Financial Analyst",
     "rating": "4",
@@ -2495,7 +2495,7 @@
   },
   {
     "id": "12",
-    "name": "Olivia Hernandez",
+    "userId": "26",
     "comment": "The community aspect of the platform is great. It's nice to connect with other learners.",
     "Job": "Web Developer",
     "rating": "5",
@@ -2503,7 +2503,7 @@
   },
   {
     "id": "13",
-    "name": "William Clark",
+    "userId": "17",
     "comment": "The quizzes and assignments were challenging but very rewarding.",
     "Job": "Digital Marketer",
     "rating": "4",
@@ -2511,7 +2511,7 @@
   },
   {
     "id": "14",
-    "name": "Sophia Lewis",
+    "userId": "18",
     "comment": "Clear and concise course material that made learning easy and enjoyable.",
     "Job": "Teacher",
     "rating": "5",
@@ -2519,46 +2519,11 @@
   },
   {
     "id": "15",
-    "name": "Daniel Walker",
+    "userId": "20",
     "comment": "The platform offers a great variety of courses that are very informative.",
     "Job": "Entrepreneur",
     "rating": "4",
     "courseID": "15"
-  }
-],
-"HomeReviews": [
-  {
-    "id": "1",
-    "name": "Tom Hurley",
-    "comment": "The hands-on projects and interactive elements really helped me understand the concepts better. Highly recommend!",
-    "Job": "Content Creator",
-    "rating": "5",
-    "courseID": "1",
-    "img": "../../assets/images/testimonial-02.png"
-  },
-  {
-    "id": "2",
-    "name": "Alice Johnson",
-    "comment": "This course provided me with invaluable skills that I could immediately apply to my job.",
-    "Job": "Marketing Specialist",
-    "rating": "5",
-    "courseID": "2"
-  },
-  {
-    "id": "4",
-    "name": "Emily Davis",
-    "comment": "I loved the flexibility of the courses. I could learn at my own pace and revisit topics as needed.",
-    "Job": "Graphic Designer",
-    "rating": "5",
-    "courseID": "4"
-  },
-  {
-    "id": "6",
-    "name": "Laura Wilson",
-    "comment": "The course content was current and relevant to industry standards.",
-    "Job": "Data Analyst",
-    "rating": "5",
-    "courseID": "6"
   }
 ],
 "Categories":[
@@ -2616,5 +2581,255 @@
     "categoryImg":"src/assets/images/gallery.png",
     "categoryImg2":"src/assets/images/gallery (1).png"
   }
-]
+],
+"Users":[
+    {
+      "id": 1,
+      "name": "Emily Meson",
+      "email": "Emily@gmail.com",
+      "img": "src/assets/images/testimonial-02.png",
+      "password": "123455678",
+      "validCoursesId": [1, 5, 9]
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "img": "",
+      "password": "password123",
+      "validCoursesId": [3, 7, 12]
+    },
+    {
+      "id": 3,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "img": "",
+      "password": "mypassword",
+      "validCoursesId": [4, 10, 15]
+    },
+    {
+      "id": 4,
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "img": "",
+      "password": "alicepass",
+      "validCoursesId": [2, 6, 8]
+    },
+    {
+      "id": 5,
+      "name": "Bob Brown",
+      "email": "bob.brown@example.com",
+      "img": "",
+      "password": "bobspassword",
+      "validCoursesId": [9, 11, 14]
+    },
+    {
+      "id": 6,
+      "name": "Charlie Davis",
+      "email": "charlie.davis@example.com",
+      "img": "",
+      "password": "charlie123",
+      "validCoursesId": [5, 13, 20]
+    },
+    {
+      "id": 7,
+      "name": "Diana Evans",
+      "email": "diana.evans@example.com",
+      "img": "",
+      "password": "dianapass",
+      "validCoursesId": [1, 7, 22]
+    },
+    {
+      "id": 8,
+      "name": "Frank Green",
+      "email": "frank.green@example.com",
+      "img": "",
+      "password": "frankpass",
+      "validCoursesId": [2, 15, 19]
+    },
+    {
+      "id": 9,
+      "name": "Grace Hill",
+      "email": "grace.hill@example.com",
+      "img": "",
+      "password": "gracepass",
+      "validCoursesId": [3, 18, 21]
+    },
+    {
+      "id": 10,
+      "name": "Henry Jones",
+      "email": "henry.jones@example.com",
+      "img": "",
+      "password": "henrypass",
+      "validCoursesId": [6, 11, 25]
+    },
+    {
+      "id": 11,
+      "name": "Ivy King",
+      "email": "ivy.king@example.com",
+      "img": "",
+      "password": "ivypass",
+      "validCoursesId": [4, 10, 16]
+    },
+    {
+      "id": 12,
+      "name": "Jack Lee",
+      "email": "jack.lee@example.com",
+      "img": "",
+      "password": "jackpass",
+      "validCoursesId": [5, 13, 17]
+    },
+    {
+      "id": 13,
+      "name": "Karen Miller",
+      "email": "karen.miller@example.com",
+      "img": "",
+      "password": "karenpass",
+      "validCoursesId": [8, 14, 20]
+    },
+    {
+      "id": 14,
+      "name": "Liam Nelson",
+      "email": "liam.nelson@example.com",
+      "img": "",
+      "password": "liampass",
+      "validCoursesId": [9, 21, 24]
+    },
+    {
+      "id": 15,
+      "name": "Mia Owens",
+      "email": "mia.owens@example.com",
+      "img": "",
+      "password": "miapass",
+      "validCoursesId": [1, 5, 7]
+    },
+    {
+      "id": 16,
+      "name": "Nathan Perez",
+      "email": "nathan.perez@example.com",
+      "img": "",
+      "password": "nathanpass",
+      "validCoursesId": [3, 11, 18]
+    },
+    {
+      "id": 17,
+      "name": "Olivia Quinn",
+      "email": "olivia.quinn@example.com",
+      "img": "",
+      "password": "oliviapass",
+      "validCoursesId": [6, 15, 23]
+    },
+    {
+      "id": 18,
+      "name": "Peter Roberts",
+      "email": "peter.roberts@example.com",
+      "img": "",
+      "password": "peterpass",
+      "validCoursesId": [2, 8, 14]
+    },
+    {
+      "id": 19,
+      "name": "Quinn Smith",
+      "email": "quinn.smith@example.com",
+      "img": "",
+      "password": "quinnpass",
+      "validCoursesId": [7, 12, 19]
+    },
+    {
+      "id": 20,
+      "name": "Rachel Taylor",
+      "email": "rachel.taylor@example.com",
+      "img": "",
+      "password": "rachelpass",
+      "validCoursesId": [4, 16, 22]
+    },
+    {
+      "id": 21,
+      "name": "Steve Underwood",
+      "email": "steve.underwood@example.com",
+      "img": "",
+      "password": "stevepass",
+      "validCoursesId": [10, 17, 21]
+    },
+    {
+      "id": 22,
+      "name": "Tina Valdez",
+      "email": "tina.valdez@example.com",
+      "img": "",
+      "password": "tinapass",
+      "validCoursesId": [5, 13, 20]
+    },
+    {
+      "id": 23,
+      "name": "Umar Watson",
+      "email": "umar.watson@example.com",
+      "img": "",
+      "password": "umarpass",
+      "validCoursesId": [1, 11, 25]
+    },
+    {
+      "id": 24,
+      "name": "Vera Xavier",
+      "email": "vera.xavier@example.com",
+      "img": "",
+      "password": "verapass",
+      "validCoursesId": [3, 9, 14]
+    },
+    {
+      "id": 25,
+      "name": "William Young",
+      "email": "william.young@example.com",
+      "img": "",
+      "password": "williampass",
+      "validCoursesId": [6, 15, 23]
+    },
+    {
+      "id": 26,
+      "name": "Xena Zane",
+      "email": "xena.zane@example.com",
+      "img": "",
+      "password": "xenapass",
+      "validCoursesId": [2, 8, 19]
+    },
+    {
+      "id": 27,
+      "name": "Yvonne Adams",
+      "email": "yvonne.adams@example.com",
+      "img": "",
+      "password": "yvonnepass",
+      "validCoursesId": [5, 12, 24]
+    },
+    {
+      "id": 28,
+      "name": "Zach Brown",
+      "email": "zach.brown@example.com",
+      "img": "",
+      "password": "zachpass",
+      "validCoursesId": [1, 7, 18]
+    },
+    {
+      "id": 29,
+      "name": "Anna Clark",
+      "email": "anna.clark@example.com",
+      "img": "",
+      "password": "annapass",
+      "validCoursesId": [3, 10, 16]
+    },
+    {
+      "id": 30,
+      "name": "Brian Davis",
+      "email": "brian.davis@example.com",
+      "img": "",
+      "password": "brianpass",
+      "validCoursesId": [4, 13, 21]
+    },
+    {
+      "id": 31,
+      "name": "Cara Evans",
+      "email": "cara.evans@example.com",
+      "img": "",
+      "password": "carapass",
+      "validCoursesId": [9, 17, 22]
+    }
+  ]  
 }

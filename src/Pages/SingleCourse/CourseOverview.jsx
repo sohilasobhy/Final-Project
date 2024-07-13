@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Accordion from 'react-bootstrap/Accordion';
 import React, { useEffect, useState } from 'react';
-import { Tabs, Tab, Spinner } from 'react-bootstrap';
+import { Tabs, Tab, Spinner, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import right from "../../assets/images/check-mark(1).png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,15 +13,15 @@ import { IoIosPaper } from "react-icons/io";
 import SingleCourseComponent from '../../Components/SingleCourseComponent';
 import { RateStarsClick } from '../../Components/RateStarsClick/RateStarsClick';
 import { Field, Form, Formik } from 'formik';
+import { RateStars } from '../RateStars/RateStars';
 const CourseOverview = () => {
     const [key, setKey] = useState('home');
     let { id } = useParams();
-    console.log(id)
     const [array, setArray] = useState();
     const [instractour, setInstructor] = useState();
     const [Reviews, setReviews] = useState();
     const [Cateories, setCategories] = useState();
-    const [courseReviews, setCourseReviews] = useState();
+    const [reviewsShow, setReviewsShow] = useState(3)
     const [isloading, setIsloading] = useState(false);
     useEffect(() => {
         setIsloading(true)
@@ -55,20 +55,6 @@ const CourseOverview = () => {
     useEffect(() => {
         if (array) {
             axios
-                .get(`http://localhost:3000/Reviews`)
-                .then((response) => {
-                    setReviews(response.data);
-                })
-                .catch((error) => {
-                    console.error("There was an error fetching the data!", error);
-                }).finally(() => {
-                    setIsloading(false);
-                });
-        }
-    }, [array])
-    useEffect(() => {
-        if (array) {
-            axios
                 .get(`http://localhost:3000/Courses?category=${array.category}`)
                 .then((response) => {
                     setCategories(response.data);
@@ -80,12 +66,13 @@ const CourseOverview = () => {
                 });
         }
     }, [array])
+
     useEffect(() => {
         if (array) {
             axios
-                .get(`http://localhost:3000/Courses?id=${Reviews?.courseID}`)
+                .get(`http://localhost:3000/Reviews?courseID=${array?.id}`)
                 .then((response) => {
-                    setCourseReviews(response.data);
+                    setReviews(response.data);
                 })
                 .catch((error) => {
                     console.error("There was an error fetching the data!", error);
@@ -94,12 +81,9 @@ const CourseOverview = () => {
                 });
         }
     }, [array])
-    console.log(array)
-    console.log(instractour)
-    console.log(Reviews)
-    console.log(courseReviews)
-    console.log(Cateories)
+
     let content;
+
     if (isloading) {
         content = <div className="d-flex align-items-center justify-content-center min-vh-100"><Spinner style={{ width: '5rem', height: '5rem' }} size="lg" animation="border" variant="primary" /></div>
     } else if (!array) {
@@ -168,16 +152,18 @@ const CourseOverview = () => {
                                 <p className='col-12 col-lg-10 about'>{instractour?.About}</p>
                                 <div className='d-flex gap-3 col-6'>
                                     <div className='d-flex justify-content-center align-items-center  socialMediaIcons' onClick={() => {
-                                        window.location.href = `${instractour?.Contact?.facebook}`
+                                        window.open(`${instractour?.Contact?.facebook}`, '_blank')
                                     }}>
                                         <FontAwesomeIcon icon={faFacebookF} />
                                     </div>
                                     <div className='d-flex justify-content-center align-items-center socialMediaIcons' onClick={() => {
-                                        window.location.href = `${instractour?.Contact?.twitter}`
+                                        window.open(`${instractour?.Contact?.twitter}`, '_blank')
                                     }}>
                                         <FontAwesomeIcon icon={faTwitter} />
                                     </div>
-                                    <a className='d-flex justify-content-center align-items-center   socialMediaIcons' onClick={() => { window.location.href = `${instractour?.Contact?.linkedIn}`; }}
+                                    <a className='d-flex justify-content-center align-items-center   socialMediaIcons' onClick={() => {
+                                        window.open(`${instractour?.Contact?.linkedIn}`, '_blank')
+                                    }}
                                     >
                                         <FontAwesomeIcon icon={faLinkedinIn} />
                                     </a>
@@ -191,9 +177,9 @@ const CourseOverview = () => {
                             <div className="top  d-flex flex-column flex-md-row align-items-center gap-5 col-12">
                                 <div className='rating d-flex flex-column align-items-center justify-content-center gap-3'>
                                     <p>{array.rating}</p>
-                                    <img src={stars} alt="" />
+                                    <RateStars rate={array.rating} />
                                 </div>
-                                <div className='d-flex flex-column col-8 gap-2 align-items-center'>
+                                {/* <div className='d-flex flex-column col-8 gap-2 align-items-center'>
                                     <div className='d-flex align-items-center col-12 gap-1 ratingBar  m-auto'>
                                         <p>5</p>
                                         <FaStar />
@@ -224,18 +210,7 @@ const CourseOverview = () => {
                                         <div className='rateBar notRated col-12'></div>
                                         <p>0</p>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="Reviews mt-5">
-                                <h4>Reviews:</h4>
-                                <div className='d-flex flex-column flex-md-row  p-3 gap-3'>
-                                    <img src={reviewer1} alt="" className='reviewerImg' />
-                                    <div>
-                                        <img src={stars} alt="" />
-                                        <p className='reviewerName'>Edward Norton</p>
-                                        <p className='ReviewComment'>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="leaveReview mt-5">
                                 <Formik
@@ -248,7 +223,6 @@ const CourseOverview = () => {
                                     {({ setFieldValue }) => (
                                         <Form className='col-12'>
                                             <h4>Leave a review:</h4>
-                                            {/* {console.log(error)} */}
                                             <div className='d-flex flex-column align-items-center gap-2 p-3 ms-3'>
                                                 <RateStarsClick setFieldValue={setFieldValue} />
                                                 <Field name="comment" type="text" placeholder='Write your review' className='col-8  comment' />
@@ -259,38 +233,67 @@ const CourseOverview = () => {
                                         </Form>
                                     )}
                                 </Formik>
+                            </div>
+                            <div className="Reviews mt-5">
+                                <h4>Reviews:</h4>
+                                {Reviews?.length > 0 ?
+                                    Reviews.slice(0, reviewsShow).map((item, idx) => {
+                                        return (
+                                            <div key={item.id} className='d-flex flex-column flex-md-row  p-3 gap-3'>
+                                                <img src={reviewer1} alt="" className='reviewerImg' />
+                                                <div>
+                                                    <RateStars rate={item.rating} />
+                                                    <p className='reviewerName'>{item.name}</p>
+                                                    <p className='ReviewComment'>{item.comment}</p>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                    : <h5 className='text-muted py-3'>No Reviews To Show</h5>}
 
+                                <div className="d-flex align-items-center gap-3 buttons">
+                                    {reviewsShow < Reviews?.length &&
+                                        <Button onClick={() => setReviewsShow(reviewsShow + 3)} className='btn1'>Show More</Button>
+                                    }
+                                    {reviewsShow >= 6 &&
+                                        <Button variant='danger' onClick={() => setReviewsShow(reviewsShow - 3)}>Show Less</Button>
+                                    }
+                                </div>
                             </div>
                         </div>
                     </Tab>
                 </Tabs>
                 <div className='p-5'>
-                    <h3>Courses You May Like</h3>
-                    <div className='row align-items-stretch mt-3 g-5 g-lg-3'>
-                        {Cateories?.slice(0, 3).map((course, index) => {
-                            return (
-                                <div
-                                    className="col-12 col-md-6 col-lg-4 position-relative"
-                                    key={course.id}>
-                                    <SingleCourseComponent
-                                        color={"#f0f4f5"}
-                                        course={course}
-                                    />
+                    {
+                        Cateories?.length > 1 ?
+                            <div>
+                                <h3>Courses You May Like</h3>
+                                <div className='row align-items-stretch mt-3 g-5 g-lg-3'>
+                                    {Cateories?.slice(0, 3).map((course, index) => {
+                                        return (
+                                            <div
+                                                className="col-12 col-md-6 col-lg-4 position-relative"
+                                                key={course.id}>
+                                                <SingleCourseComponent
+                                                    color={"#f0f4f5"}
+                                                    course={course}
+                                                />
+                                            </div>
+                                        );
+                                    })}
                                 </div>
-                            );
-                        })}
-                    </div>
+                            </div>
+                            : ""
+                    }
                 </div>
             </div >
     }
     let handleSubmit = (values) => {
         console.log(values)
-
     }
     return (
         <div>
             {content}
-
         </div>
     );
 }
