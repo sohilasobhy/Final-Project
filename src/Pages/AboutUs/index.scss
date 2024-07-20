@@ -201,6 +201,11 @@
     background-image: url("../../assets/images/map-shape-3.png");
     background-repeat: no-repeat;
     background-position: 50%;
+    .point {
+      font-size: 32px;
+      margin-bottom: 5px;
+      font-weight: 400;
+    }
     .contentCon {
       padding: 2rem;
       background-color: #ffffff;

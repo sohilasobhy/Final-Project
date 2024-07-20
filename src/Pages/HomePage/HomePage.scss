@@ -11,11 +11,15 @@
 }
 @keyframes bounce {
   0%,
+  75%,
   100% {
-    top: 0;
+    bottom: 0;
   }
   50% {
-    top: 200px;
+    bottom: 200px;
+  }
+  90% {
+    bottom: 50px;
   }
 }
 @keyframes spin {
@@ -170,8 +174,8 @@
       }
       .img1,
       .img2 {
-        width: 15%;
-        height: 100%;
+        width: 36px;
+        height: 36px;
         object-fit: cover;
       }
     }
@@ -306,7 +310,6 @@
   .awards {
     box-shadow: 0 40px 70px rgba(27, 20, 78, 0.1);
     border-radius: 0.5rem;
-    bottom: 0;
     right: 0;
 
     transform: translateX(-50%);
@@ -409,60 +412,65 @@
     .num {
       font-size: 50px;
       font-weight: bolder;
-    }
-    p {
-      font-size: 20px;
-    }
-  }
-  .topLeft {
-    border-right: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
-    @media (max-width: 768px) {
-      border: 0;
-    }
-    .num {
-      color: #1ab69d;
+      .point {
+        font-size: 50px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
     }
   }
-  .topRight {
-    border-bottom: 1px solid #e5e5e5;
-    @media (max-width: 768px) {
-      border: 0;
-    }
-    .num {
-      color: #ee4a62;
-    }
+  p {
+    font-size: 20px;
   }
-  .bottomLeft {
-    border-right: 1px solid #e5e5e5;
-    @media (max-width: 768px) {
-      border: 0;
-    }
-    .num {
-      color: #f8941f;
-    }
+}
+.topLeft {
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  @media (max-width: 768px) {
+    border: 0;
   }
-  .bottomRight {
-    .num {
-      color: #8e56ff;
-    }
+  .num {
+    color: #1ab69d;
   }
-  .spin {
-    left: 20%;
-    top: -15%;
-    animation: spin 8s linear infinite;
-    z-index: 2;
+}
+.topRight {
+  border-bottom: 1px solid #e5e5e5;
+  @media (max-width: 768px) {
+    border: 0;
   }
-  .shape1 {
-    left: 20%;
-    top: -14%;
-    z-index: 0;
+  .num {
+    color: #ee4a62;
   }
-  .shape2 {
-    bottom: -14%;
-    right: 20%;
-    z-index: 0;
+}
+.bottomLeft {
+  border-right: 1px solid #e5e5e5;
+  @media (max-width: 768px) {
+    border: 0;
   }
+  .num {
+    color: #f8941f;
+  }
+}
+.bottomRight {
+  .num {
+    color: #8e56ff;
+  }
+}
+.spin {
+  left: 20%;
+  top: -15%;
+  animation: spin 8s linear infinite;
+  z-index: 2;
+}
+.shape1 {
+  left: 20%;
+  top: -14%;
+  z-index: 0;
+}
+.shape2 {
+  bottom: -14%;
+  right: 20%;
+  z-index: 0;
 }
 #HomeReviews {
   h2 {
@@ -530,11 +538,13 @@
         }
         .reviewerImg {
           border-radius: 50%;
+          width: 50px;
+          height: 50px;
         }
         .quotationCon {
           position: absolute;
-          bottom: -20%;
-          left: 17%;
+          bottom: -30%;
+          left: 13%;
           border-radius: 50%;
           padding: 5px;
           .secondLayer {
@@ -543,7 +553,10 @@
             border-radius: 50%;
           }
           @media (max-width: 992px) {
-            bottom: -10%;
+            left: 5%;
+          }
+          @media (max-width: 768px) {
+            left: 9%;
           }
         }
         @media (max-width: 992px) {

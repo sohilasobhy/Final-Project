@@ -8,6 +8,9 @@ import LoginPage from "../Pages/LoginPage/LoginPage";
 import Categories from "../Pages/Categories/Categories";
 import SignUp from "../Pages/Sign up/SignUp";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import LessonsList from "../Pages/CourseLessons/LessonsList";
+import CourseLessons from "../Pages/CourseLessons/Index";
+import Purchase from "../Pages/Purchase/Purchase";
 
 
 const router = createBrowserRouter([
@@ -35,6 +38,10 @@ const router = createBrowserRouter([
                 path: "/contact",
                 element: <ContactUs />
             },
+            {
+                path: "/Purchase",
+                element: <Purchase />
+            },
         ],
     }, {
         path: "/login",
@@ -42,6 +49,9 @@ const router = createBrowserRouter([
     }, {
         path: "/signup",
         element: <SignUp />
-    }
+    }, {
+        path: "/lessons/:courseId",
+        element: <CourseLessons />
+    },
 ])
 export default router;

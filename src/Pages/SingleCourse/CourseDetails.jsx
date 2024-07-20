@@ -13,12 +13,14 @@ import language from "../../assets/images/internet.png"
 import certificate from "../../assets/images/award2.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import SingleCourseComponent from "../../Components/SingleCourseComponent";
+import { useRecoilState } from "recoil";
+import { $commercialVid } from "../../Store/Store";
 export default function CourseDetails() {
     let navigate = useNavigate()
     let { id } = useParams();
     const [array, setArray] = useState();
     const [isloading, setIsloading] = useState(false)
+    const [, setCommercialVid] = useRecoilState($commercialVid)
     useEffect(() => {
         setIsloading(true)
         axios
@@ -43,7 +45,7 @@ export default function CourseDetails() {
             <div className="position-relative">
                 <img src={`../../../${array.img}`} className="col-12 courseImg" />
                 <div className="d-flex justify-content-center align-items-center pause position-absolute" onClick={() => {
-                    <SingleCourseComponent />
+                    setCommercialVid(array)
                 }}>
                     <img src={pause} alt="" className="pauseImg" />
                     <img src={pauseHov} alt="" className="pauseImgHov" />

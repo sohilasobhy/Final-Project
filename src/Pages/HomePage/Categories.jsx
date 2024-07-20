@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 export default function Categories() {
+  const colors = ["#effaf8", "#fef2f4", "#eefbf5", "#fffaef", "#f7f3ff", "#fff0f8", "#f3f4fe", "#fff7ef", "#f1fbff"];
+  const classes = ["business-management", "Design", "development", "health", "data", "marketing", "finance", "computer", "video"];
   let navigate = useNavigate()
   const [isloading, setIsloading] = useState(false)
   const [categories, setCategories] = useState([])
@@ -57,10 +59,10 @@ export default function Categories() {
       <div className="container">
         <div className="row courses p-5 g-5 justify-content-center flex-wrap">
           {
-            categories?.map((category) => {
+            categories?.map((category, index) => {
               return (
-                <div className="col-12 col-md-6 col-lg-4" key={category.categoryId}>
-                  <div className="d-flex justify-content-start gap-2 align-items-center cat business-management col-12 h-100 py-3 ps-2"  onClick={()=>{navigate(`/one-category/${category.categoryId}`)}}>
+                <div className="col-12 col-md-6 col-lg-4" key={category.categoryId} >
+                  <div className={`d-flex justify-content-start gap-2 align-items-center cat  col-12 h-100 py-3 ps-2 ${classes[index % classes.length]}`} onClick={() => { navigate(`/one-category/${category.categoryId}`) }}>
                     <img src={category.categoryImg} alt="category image" className="img1" />
                     <img src={category.categoryImg2} alt="category image" className="img2" />
                     <p>{category.categoryName}</p>

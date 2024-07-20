@@ -14,13 +14,13 @@ export default function HeroSection() {
       <div className="col-12 px-5 pt-5 d-flex justify-content-between align-items-center gap-5 container flex-wrap ">
         <div className="left col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start gap-5 gap-lg-4 z-1 position-relative ">
           <h1 className="col-12 col-lg-9 ">
-            Get <span>2500+</span> Best Online Courses From EduBlink
+            Get <span>1000+</span> Best Online Courses From EduBlink
           </h1>
           <p>
             Unlock Your Potential with EduJourney's Online Courses. Join a
             Community of Learners and Start Achieving Your Goals Today.
           </p>
-          <button className="btn btn-primary col-6 col-lg-4 py-3 d-flex align-items-center gap-2 justify-content-center position-relative" onClick={()=>{navigate("/courses")}}>
+          <button className="btn btn-primary col-6 col-lg-4 py-3 d-flex align-items-center gap-2 justify-content-center position-relative" onClick={() => { navigate("/courses") }}>
             <div className="position-absolute btnBG w-100 h-100"></div>
             <p className=" z-2">Find courses</p>
             <FontAwesomeIcon icon={faArrowRight} className=" z-2" />

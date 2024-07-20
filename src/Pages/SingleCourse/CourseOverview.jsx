@@ -6,14 +6,14 @@ import { useParams } from 'react-router-dom';
 import right from "../../assets/images/check-mark(1).png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faLinkedinIn, faTwitch, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import stars from "../../assets/images/rating.png"
-import { FaStar } from "react-icons/fa";
-import reviewer1 from "../../assets/images/reviewer1.webp"
+import reviewer1 from "../../assets/images/user.png"
 import { IoIosPaper } from "react-icons/io";
 import SingleCourseComponent from '../../Components/SingleCourseComponent';
 import { RateStarsClick } from '../../Components/RateStarsClick/RateStarsClick';
 import { Field, Form, Formik } from 'formik';
 import { RateStars } from '../RateStars/RateStars';
+import CommercialVid from './CommercialVid';
+import CourseDetails from './CourseDetails';
 const CourseOverview = () => {
     const [key, setKey] = useState('home');
     let { id } = useParams();
@@ -21,6 +21,7 @@ const CourseOverview = () => {
     const [instractour, setInstructor] = useState();
     const [Reviews, setReviews] = useState();
     const [Cateories, setCategories] = useState();
+    const [reviewers, setreviewers] = useState();
     const [reviewsShow, setReviewsShow] = useState(3)
     const [isloading, setIsloading] = useState(false);
     useEffect(() => {
@@ -43,6 +44,7 @@ const CourseOverview = () => {
                 .get(`http://localhost:3000/Instructors?id=${array?.instructorId}`)
                 .then((response) => {
                     setInstructor(response.data[0]);
+                    console.log(array)
                 })
                 .catch((error) => {
                     console.error("There was an error fetching the data!", error);
@@ -70,6 +72,20 @@ const CourseOverview = () => {
     useEffect(() => {
         if (array) {
             axios
+                .get(`http://localhost:3000/Users`)
+                .then((response) => {
+                    setreviewers(response.data);
+                })
+                .catch((error) => {
+                    console.error("There was an error fetching the data!", error);
+                }).finally(() => {
+                    setIsloading(false);
+                });
+        }
+    }, [array])
+    useEffect(() => {
+        if (array) {
+            axios
                 .get(`http://localhost:3000/Reviews?courseID=${array?.id}`)
                 .then((response) => {
                     setReviews(response.data);
@@ -81,6 +97,12 @@ const CourseOverview = () => {
                 });
         }
     }, [array])
+    function getReviewerImage(userId) {
+        let x = reviewers.find((ele) => ele.id == userId);
+        console.log(x);
+        return x;
+    }
+
 
     let content;
 
@@ -127,8 +149,9 @@ const CourseOverview = () => {
                                                 <Accordion.Body>
                                                     {
                                                         course.lessons.map((lesson, index) => {
+                                                            console.log(lesson)
                                                             return (
-                                                                <div key={index} className='lessonName d-flex gap-2 align-items-center' onClick={() => { window.location.href = `${lesson.Link}` }}> <IoIosPaper /> <p>{lesson.LessonName}</p></div>
+                                                                <div key={index} className='lessonName d-flex gap-2 align-items-center' onClick={() => { window.location.href = `/lessons/${id}` }}> <IoIosPaper /> <p>{lesson.LessonName}</p></div>
                                                             )
                                                         })
                                                     }
@@ -237,10 +260,13 @@ const CourseOverview = () => {
                             <div className="Reviews mt-5">
                                 <h4>Reviews:</h4>
                                 {Reviews?.length > 0 ?
-                                    Reviews.slice(0, reviewsShow).map((item, idx) => {
+                                    Reviews.slice(0, reviewsShow).map((item, index) => {
                                         return (
-                                            <div key={item.id} className='d-flex flex-column flex-md-row  p-3 gap-3'>
-                                                <img src={reviewer1} alt="" className='reviewerImg' />
+                                            <div key={item.id} className='d-flex flex-column flex-md-row align-items-lg-center justify-content-lg-center  p-3 gap-3'>
+                                                <img
+                                                    src={`../../${getReviewerImage(item.userId).img ? getReviewerImage(item.userId).img : reviewer1}`}
+                                                    alt="reviewer image"
+                                                    className='reviewerImg' />
                                                 <div>
                                                     <RateStars rate={item.rating} />
                                                     <p className='reviewerName'>{item.name}</p>
@@ -250,7 +276,6 @@ const CourseOverview = () => {
                                         )
                                     })
                                     : <h5 className='text-muted py-3'>No Reviews To Show</h5>}
-
                                 <div className="d-flex align-items-center gap-3 buttons">
                                     {reviewsShow < Reviews?.length &&
                                         <Button onClick={() => setReviewsShow(reviewsShow + 3)} className='btn1'>Show More</Button>
@@ -263,6 +288,7 @@ const CourseOverview = () => {
                         </div>
                     </Tab>
                 </Tabs>
+                <CourseDetails />
                 <div className='p-5'>
                     {
                         Cateories?.length > 1 ?
@@ -286,6 +312,7 @@ const CourseOverview = () => {
                             : ""
                     }
                 </div>
+                <CommercialVid />
             </div >
     }
     let handleSubmit = (values) => {

@@ -6,31 +6,53 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/scrollbar";
-import stars from "../../assets/images/rating.png";
-import quotation from "../../assets/images/quotation-right-mark.png";
 import axios from "axios";
-import { useState } from "react";
-import { useEffect } from "react";
-import man from "../../assets/images/testimonial-02.png";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { RateStars } from "../RateStars/RateStars";
+import quotation from "../../assets/images/quotation-right-mark.png";
+import man from "../../assets/images/user.png";
 
 export default function HomeReviews(props) {
   let navigate = useNavigate();
   const [array, setArray] = useState([]);
   const [reviewer, setReviewer] = useState([]);
+  console.log(reviewer)
+  const sliceTextByWords = (text, start, end) => {
+    const wordsArray = text.split(' ');
+    const slicedArray = wordsArray.slice(start, end);
+    return slicedArray.join(' ');
+  };
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/Users")
+      .then((response) => {
+        setReviewer(response.data);
+      })
+      .catch((error) => {
+        console.error("There was an error fetching the data!", error);
+      });
+  }, []);
+  // users
 
   useEffect(() => {
     axios
       .get("http://localhost:3000/Reviews")
       .then((response) => {
         setArray(response.data.slice(0, 4));
-        console.log(array);
       })
       .catch((error) => {
         console.error("There was an error fetching the data!", error);
       });
   }, []);
+  // Reviews
 
+  function getImage(userId) {
+    let x = reviewer.find((ele) => ele.id == userId);
+    console.log(x);
+    return x;
+  }
   return (
     <div className="col-12 container py-5" id="HomeReviews" style={{ marginTop: props.number }}>
       <div className="col-12 d-flex justify-content-center flex-wrap gap-5">
@@ -96,11 +118,11 @@ export default function HomeReviews(props) {
             }}
           >
             {array?.map((review) => (
-              <SwiperSlide className="col-6 d-flex flex-column  gap-2 gap-lg-3 p-4" key={review.id}>
+              <SwiperSlide className="col-6 d-flex flex-column gap-2 gap-lg-3 p-4" key={review.id}>
                 <div className="position-relative col-12">
                   <img
-                    src={man}
-                    alt=""
+                    src={getImage(review.userId)?.img ? getImage(review.userId)?.img : man}
+                    alt="user image"
                     className="col-3 object-fit-cover reviewerImg"
                   />
                   <div className="bg-white firstLayer quotationCon">
@@ -109,8 +131,10 @@ export default function HomeReviews(props) {
                     </div>
                   </div>
                 </div>
-                <div className="comment">{review.comment}</div>
-                <img src={stars} alt="" className="col-6" />
+                <div className="comment">
+                  {review.comment}
+                </div>
+                <RateStars rate={review.rating} />
                 <div className="name">
                   <p>{review.name}</p>
                 </div>

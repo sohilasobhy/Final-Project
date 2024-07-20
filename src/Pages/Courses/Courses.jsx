@@ -2,12 +2,9 @@ import { Link, useParams } from "react-router-dom";
 import "./Courses.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faSearch } from "@fortawesome/free-solid-svg-icons";
-import Footer from "../../Components/Footer";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
-import SingleCourseComponent from "../../Components/SingleCourseComponent";
-import NavBar from "../../Components/NavBar";
 import PaginatedCourses from "./CoursePagination";
 export default function Courses() {
   const { page } = useParams();
@@ -41,7 +38,7 @@ export default function Courses() {
         />
         <FontAwesomeIcon icon={faSearch} className="position-absolute search" />
       </div>
-      <div className="container p-5">
+      <div className="container p-3">
         <div className="row g-4 justify-content-center">
           <PaginatedCourses />
         </div>

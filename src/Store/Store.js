@@ -19,3 +19,14 @@ export const $Video = atom({
   key: "$Video",
   default: false,
 });
+
+export const $commercialVid = atom({
+  key: "$commercialVid",
+  default: false,
+});
+
+export const $lessonData = atom({
+  key: "$lessonData",
+  default: false,
+});
+

@@ -57,7 +57,7 @@ export default function SingleCourse() {
                                         <p>By {array.Instructor}</p>
                                     </div>
                                     <div className="d-flex gap-2 align-items-center category">
-                                        <img src={`../${category?.categoryImg}`} alt="category image" width={24}/>
+                                        <img src={`../${category?.categoryImg}`} alt="category image" width={24} />
                                         <p>{array?.category}</p>
                                     </div>
                                 </div>
@@ -66,7 +66,6 @@ export default function SingleCourse() {
                     </div>
                 </div>
                 <CourseOverview />
-                <CourseDetails />
             </>
 
     }

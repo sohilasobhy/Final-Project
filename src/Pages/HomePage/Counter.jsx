@@ -7,6 +7,7 @@ const Counter = ({ initialCount = 0, targetValue = 45.2, incrementValue = 0.1, u
   const odometerRef = useRef(null);
   const countRef = useRef(initialCount);
   const observerRef = useRef(null);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
     const odometer = new Odometer({
@@ -20,7 +21,7 @@ const Counter = ({ initialCount = 0, targetValue = 45.2, incrementValue = 0.1, u
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const interval = setInterval(() => {
+          intervalRef.current = setInterval(() => {
             if (countRef.current < targetValue) {
               countRef.current += incrementValue;
               if (countRef.current > targetValue) {
@@ -28,11 +29,10 @@ const Counter = ({ initialCount = 0, targetValue = 45.2, incrementValue = 0.1, u
               }
               odometer.update(countRef.current.toFixed(1));
             } else {
-              clearInterval(interval);
+              clearInterval(intervalRef.current);
             }
           }, updateInterval);
 
-          // Stop observing once the counter starts
           if (observerRef.current) {
             observerRef.current.disconnect();
           }
@@ -41,7 +41,7 @@ const Counter = ({ initialCount = 0, targetValue = 45.2, incrementValue = 0.1, u
     };
 
     observerRef.current = new IntersectionObserver(handleIntersection, {
-      threshold: 0.1, // Trigger when 10% of the component is visible
+      threshold: 0.1,
     });
 
     if (odometerRef.current) {
@@ -49,6 +49,9 @@ const Counter = ({ initialCount = 0, targetValue = 45.2, incrementValue = 0.1, u
     }
 
     return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
       if (observerRef.current) {
         observerRef.current.disconnect();
       }

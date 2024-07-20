@@ -22,7 +22,7 @@ export default function HomeCourses() {
   }, []);
   return (
     <div
-      className="col-12 pt-5 pe-5 ps-5 d-flex flex-column justify-content-center align-items-center"
+      className="col-12 pt-3 pe-3 ps-3 d-flex flex-column justify-content-center align-items-center"
       id="HomeCourses">
       <div className="p-5 d-flex flex-column align-items-center header gap-2">
         <p className="text-center">POPULAR COURSES</p>

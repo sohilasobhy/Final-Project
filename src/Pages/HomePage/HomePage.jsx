@@ -1,5 +1,3 @@
-import NavBar from "../../Components/NavBar";
-import Search from "../../Components/Search";
 import SideMenu from "../../Components/SideMenu";
 import Categories from "./Categories";
 import Edges from "./Edges";
@@ -14,8 +12,6 @@ import GetInTouch from "./GetInTouch";
 import HomeInstractor from "./HomeInstractor";
 import Add from "./Add";
 import Partners from "./Partners";
-import Events from "./Events";
-import Footer from "../../Components/Footer";
 import CircleProgress from "../../Components/CircleProgress";
 
 export default function HomePage() {
@@ -35,7 +31,7 @@ export default function HomePage() {
       <HomeInstractor />
       <Add />
       <Partners />
-      <Events />
+      {/* <Events /> */}
     </div>
   );
 }
