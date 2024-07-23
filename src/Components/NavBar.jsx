@@ -13,8 +13,8 @@ export default function NavBar() {
   const [, setSearch] = useRecoilState($Search);
   const [menuIndex, setMenuIndex] = useRecoilState($menu);
   return (
-    <div className="col-12 d-flex justify-content-between justify-content-lg-center gap-lg-3 align-items-center NavBar px-3 py-1 position-sticky">
-      <div className="d-flex align-items-center justify-content-between col-lg-9 navLeft">
+    <div className="col-12 d-flex justify-content-between gap-lg-3 align-items-center NavBar px-lg-5 py-1 position-sticky">
+      <div className="d-flex align-items-center justify-content-between gap-5 navLeft">
         <div
           className="d-flex align-items-center gap-2 logo col-3"
           onClick={() => {
@@ -23,14 +23,15 @@ export default function NavBar() {
           <img src={logo} alt="" />
           <p className="siteName">EduJourney</p>
         </div>
-        <div className="d-none d-lg-flex gap-5 navLinks justify-content-center pe-3 py-2">
+      </div>
+      <div className="d-flex gap-0 align-items-center">
+        <div className="d-none d-lg-flex gap-4 navLinks justify-content-center pe-3 py-2">
           <NavLink to={"/"}>Home</NavLink>
           <NavLink to={"/about"}>About</NavLink>
           <NavLink to={"/courses"}>Courses</NavLink>
           <NavLink to={"/contact"}>Contact Us</NavLink>
+          <NavLink to={"/purchase"}>Subscribe</NavLink>
         </div>
-      </div>
-      <div className="d-flex gap-0 align-items-center">
         <div className="d-flex justify-content-center align-items-center p-2 rounded-2 searchIcon">
           <img
             src={search}

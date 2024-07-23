@@ -1,2 +1,56 @@
 #Purchase {
+  #Plans {
+    .plan {
+      height: 180px;
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      background-color: #e9e9e9;
+      div {
+        h3,
+        p {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+      .charge {
+        font-style: italic;
+        font-size: 14px;
+      }
+      @media (max-width: 992px) {
+        height: 130px;
+      }
+    }
+  }
+  #payment {
+    .accordion-item:first-of-type > .accordion-header .accordion-button,
+    .accordion-item:last-of-type
+      > .accordion-header
+      .accordion-button.collapsed,
+    .accordion-button {
+      background-color: #e9e9e9;
+      outline: none !important;
+      --bs-accordion-btn-focus-box-shadow: 0;
+    }
+    .header {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .body {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .phone {
+      border-radius: 0.3rem;
+      padding: 0.5rem;
+      border: 0;
+      background-color: #e9e9e9;
+      &:focus {
+        outline: 3px solid #ffdadd;
+      }
+    }
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
 }
