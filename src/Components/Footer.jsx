@@ -43,8 +43,7 @@ export default function Footer() {
           <Link to={"/about"}>About</Link>
           <Link to={"/Courses"}>Courses</Link>
           <Link to={"/Instractours"}>Instractours</Link>
-          <Link to={"/Events"}>Events</Link>
-          <Link to={"/Purchase"}>Purchase Guide</Link>
+          <Link to={"/Purchase"}>Subscribe</Link>
         </div>
         <div className="d-flex flex-column col-12 col-md-6 col-lg-4 gap-3 contact px-5">
           <p className="top">Contacts</p>
