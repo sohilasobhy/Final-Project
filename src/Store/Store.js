@@ -30,3 +30,8 @@ export const $lessonData = atom({
   default: false,
 });
 
+export const $SearchResult = atom({
+  key: "$SearchResult",
+  default: "",
+});
+
