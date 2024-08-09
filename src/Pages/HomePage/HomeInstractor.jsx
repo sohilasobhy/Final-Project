@@ -1,15 +1,15 @@
-import girl from "../../assets/images/team-01.webp";
 import shareIcon from "../../assets/images/share.png";
 import linkedIn from "../../assets/images/linkedin(3).png";
 import facebook2 from "../../assets/images/facebook-app-symbol(1).png";
 import twitter from "../../assets/images/twitter.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import SingleInstructor from "../../Components/SingleInstructorComponent/SingleInstructor";
 export default function HomeInstractor() {
   const [array, setArray] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/Instructors")
+      .get("http://localhost:3000/HomeInstructors")
       .then((response) => {
         setArray(response.data);
         console.log(array);
@@ -47,41 +47,9 @@ export default function HomeInstractor() {
         </div>
       </div>
       <div className="col-12 row g-3 px-5">
-        {array.splice(0, 4).map((instractour, index) => {
+        {array?.splice(0, 4).map((item, index) => {
           return (
-            <div className="col-12 col-md-6 col-lg-3" key={instractour.id}>
-              <div className="instractour">
-                <div className="col-12 imgCon">
-                  <img
-                    src={instractour.img}
-                    alt=""
-                    className="col-12 h-100 object-fit-cover instratourImg"
-                  />
-                  <div className="position-absolute shareIcon">
-                    <img src={shareIcon} />
-                  </div>
-                  <div className="position-absolute greenFilter"></div>
-                  <div className="position-absolute facebook socialMedia" onClick={() => {
-                    window.open(`${instractour?.Contact?.facebook}`, '_blank')
-                  }} >
-                    <img src={facebook2} alt="" className="facebookBlue" />
-                  </div>
-                  <div className="position-absolute twitter socialMedia" onClick={() => {
-                    window.open(`${instractour?.Contact?.twitter}`, '_blank')
-                  }} >
-                    <img src={twitter} alt="" />
-                  </div>
-                  <div className="position-absolute linkedIn socialMedia" onClick={() => {
-                    window.open(`${instractour?.Contact?.linkedIn}`, '_blank')
-                  }} >
-                    <img src={linkedIn} alt="" />
-                  </div>
-                </div>
-                <p className="text-center mt-3">
-                  {instractour.name} <br /> <span>{instractour.job}</span>
-                </p>
-              </div>
-            </div>
+            <SingleInstructor instractour={item} key={item.id} />
           );
         })}
       </div>

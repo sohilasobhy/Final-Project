@@ -7,8 +7,20 @@ import girl from "../../assets/images/girl-1.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 export default function HeroSection() {
   let navigate = useNavigate();
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
   return (
     <div id="HeroSection" className="col-12 overflow-hidden">
       <div className="col-12 px-5 pt-5 d-flex justify-content-between align-items-center gap-5 container flex-wrap ">
@@ -33,32 +45,46 @@ export default function HeroSection() {
           src={shape1}
           alt=""
           className="shape1 position-absolute d-none d-xxl-block"
+          style={{
+            transform: `translate(${mousePosition.x * -0.1}px, ${mousePosition.y * -0.1}px)`
+          }}
         />
       </div>
       <img
         src={shape2}
         alt=""
         className="shape2 position-absolute d-none d-xxl-block"
+        style={{
+          transform: `translate(${mousePosition.x * 0}px, ${mousePosition.y * -0.1}px)`
+        }}
       />
       <img
         src={shape3}
         alt=""
         className="shape3 position-absolute z-2 d-none d-xxl-block"
+
       />
       <img
         src={shape4}
         alt=""
         className="shape4 position-absolute d-none d-xxl-block"
+
       />
       <img
         src={shape5}
         alt=""
         className="shape5 position-absolute d-none d-xxl-block"
+        style={{
+          transform: `translate(${mousePosition.x * 0.1}px, ${mousePosition.y * 0.1}px)`
+        }}
       />
       <img
         src={shape1}
         alt=""
         className="shape6 position-absolute d-none d-xxl-block"
+        style={{
+          transform: `translate(${mousePosition.x * -0.1}px, ${mousePosition.y * -0.1}px)`
+        }}
       />
       <div className="circle position-absolute  d-none d-xxl-block"></div>
       <div className="blueCircle position-absolute d-none "></div>

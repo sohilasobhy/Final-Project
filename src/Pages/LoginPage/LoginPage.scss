@@ -121,6 +121,18 @@
       object-fit: contain;
     }
   }
+  .error {
+    color: #d93025;
+    margin-top: 5px;
+    font-weight: 600;
+  }
+  .wrongPass {
+    span {
+      font-size: 13px;
+      font-weight: 600;
+      color: white;
+    }
+  }
   @media (max-width: 992px) {
     form {
       width: 50%;

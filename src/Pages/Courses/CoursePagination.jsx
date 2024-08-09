@@ -1,37 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
-import axios from 'axios';
 import SingleCourseComponent from '../../Components/SingleCourseComponent';
-
-const PaginatedCourses = () => {
+const PaginatedCourses = ({ courses }) => {
+    console.log(courses)
     const itemsPerPage = 12;
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
-    const [courses, setCourses] = useState([]);
     const [currentItems, setCurrentItems] = useState([]);
-
-    useEffect(() => {
-        axios
-            .get(`http://localhost:3000/Courses`)
-            .then((response) => {
-                setCourses(response.data);
-            })
-            .catch((error) => {
-                console.error("There was an error fetching the data!", error);
-            });
-    }, []);
-
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
-        setCurrentItems(courses.slice(itemOffset, endOffset));
-        setPageCount(Math.ceil(courses.length / itemsPerPage));
+        setCurrentItems(courses?.slice(itemOffset, endOffset));
+        setPageCount(Math.ceil(courses?.length / itemsPerPage));
     }, [itemOffset, itemsPerPage, courses]);
-
     const handlePageClick = (event) => {
-        const newOffset = (event.selected * itemsPerPage) % courses.length;
+        const newOffset = (event.selected * itemsPerPage) % courses?.length;
         setItemOffset(newOffset);
     };
-
     return (
         <>
             {currentItems.map((course) => (

@@ -18,14 +18,11 @@ export default function SideMenu() {
           }}></div>
         <div className=" bg-white position-absolute menuItems  animate__animated animate__fadeInLeft col-12 col-sm-8 col-md-6 col-lg-4">
           <div className="d-flex justify-content-between align-items-center topMenu">
-            <div
-              className="d-flex align-items-center gap-2 logo p-3"
-              onClick={() => {
-                window.location.href = "/";
-              }}>
+            <Link to={"/"}
+              className="d-flex align-items-center gap-2 logo p-3">
               <img src={logo} alt="" />
               <p className=" mt-3 siteName">EduJourney</p>
-            </div>
+            </Link>
             <div>
               <div
                 className="rounded-5 close d-flex justify-content-center align-items-center align-self-start position-absolute"

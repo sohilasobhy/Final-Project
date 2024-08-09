@@ -1,0 +1,28 @@
+#Progress {
+  .messages {
+    border: 1px solid #0a8db1;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    svg {
+      fill: #0a8db1;
+    }
+    p {
+      color: #0a8db1;
+    }
+  }
+  .stat {
+    background-color: #d8edf2;
+    border-radius: 0.5rem;
+    .num {
+      color: #0a8db1;
+    }
+    .hours {
+      background-color: #c4e4eb;
+      border-radius: 0.5rem;
+    }
+  }
+  .courses {
+    background-color: #f7f7f7;
+    border-radius: 0.5rem;
+  }
+}

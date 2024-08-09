@@ -2,7 +2,7 @@ import axios from 'axios';
 import Accordion from 'react-bootstrap/Accordion';
 import React, { useEffect, useState } from 'react';
 import { Tabs, Tab, Spinner, Button } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import right from "../../assets/images/check-mark(1).png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faLinkedinIn, faTwitch, faTwitter } from '@fortawesome/free-brands-svg-icons';
@@ -151,7 +151,7 @@ const CourseOverview = () => {
                                                         course.lessons.map((lesson, index) => {
                                                             console.log(lesson)
                                                             return (
-                                                                <div key={index} className='lessonName d-flex gap-2 align-items-center' onClick={() => { window.location.href = `/lessons/${id}` }}> <IoIosPaper /> <p>{lesson.LessonName}</p></div>
+                                                                <Link to={`/lessons/${id}`} key={index} className='lessonName d-flex gap-2 align-items-center'> <IoIosPaper /> <p>{lesson.LessonName}</p></Link>
                                                             )
                                                         })
                                                     }

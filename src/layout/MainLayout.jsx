@@ -6,14 +6,16 @@ import Search from '../Components/Search'
 import CircleProgress from '../Components/CircleProgress'
 import SideMenu from '../Components/SideMenu'
 import ScrollToTop from '../Components/ScrollToTop'
+import Profile from '../Components/Profile'
 
 export const MainLayout = () => {
     return (
         <>
             <NavBar />
-            <ScrollToTop/>
+            <ScrollToTop />
+            <Profile />
             <Search />
-            <SideMenu/>
+            <SideMenu />
             <CircleProgress />
             <Outlet />
             <Footer />

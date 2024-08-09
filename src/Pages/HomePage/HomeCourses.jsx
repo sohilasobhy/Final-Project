@@ -11,7 +11,7 @@ export default function HomeCourses() {
   const [array, setArray] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/Courses")
+      .get("http://localhost:3000/HomeCourses")
       .then((response) => {
         setArray(response.data);
         console.log(array);
@@ -48,7 +48,7 @@ export default function HomeCourses() {
         </div>
       </div>
       <div className="row g-4 justify-content-center">
-        {array.slice(0, 4).map((course, index) => {
+        {array?.splice(0, 4).map((course, index) => {
           return (
             <div
               className="col-sm-9 col-md-6 col-lg-5 col-xl-4 col-xxl-3 position-relative"

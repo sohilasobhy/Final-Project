@@ -38,7 +38,7 @@ export default function HomeReviews(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/Reviews")
+      .get("http://localhost:3000/HomeReviews")
       .then((response) => {
         setArray(response.data.slice(0, 4));
       })

@@ -1,0 +1,35 @@
+#InstructorsPage {
+  .header {
+    padding: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f9fa;
+    p {
+      font-size: 30px;
+    }
+  }
+  input {
+    background-color: #f7f5f2;
+    border: 0;
+    border-radius: 0.5rem;
+    outline: 0;
+    &::placeholder {
+      font-size: 18px;
+      color: #757575;
+    }
+  }
+  .search {
+    top: 65%;
+    right: 5%;
+    @media (max-width: 1200px) {
+      right: 8%;
+    }
+    @media (max-width: 992px) {
+      right: 10%;
+    }
+    @media (max-width: 768px) {
+      right: 15%;
+    }
+  }
+}

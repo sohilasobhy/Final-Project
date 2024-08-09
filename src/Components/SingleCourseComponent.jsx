@@ -12,7 +12,6 @@ export default function SingleCourseComponent({ course, color }) {
   const [isReadMore] = useState(true);
   const maxTextLength = 140;
   const maxNameLength = 44;
-  console.log(course)
   return (
     <div className="h-100" id="SingleCourseComponent" style={{ backgroundColor: `${color}` }}>
       <div className="h-100">

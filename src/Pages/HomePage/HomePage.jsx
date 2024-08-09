@@ -31,7 +31,6 @@ export default function HomePage() {
       <HomeInstractor />
       <Add />
       <Partners />
-      {/* <Events /> */}
     </div>
   );
 }

@@ -2377,6 +2377,391 @@
       "desc": "This intermediate course takes you through advanced Photoshop techniques, equipping you with the skills needed for professional image editing and graphic design."
     }
   ],
+  "HomeCourses": [
+    {
+      "id": "1",
+      "level": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "rating": "5.0",
+      "category": "Business Management",
+      "CtegoryId": "1",
+      "price": "$30",
+      "lessons": "11",
+      "students": "227",
+      "Duration": "15 Weeks",
+      "Instructor": "Edward Norton",
+      "Language": "English",
+      "Certification": "Yes",
+      "img": "src/assets/images/course1.jpg",
+      "comVideo": "../../src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
+      "instructorId": "1",
+      "courseContent": [
+        {
+          "category": "On-Page SEO",
+          "lessons": [
+            {
+              "LessonName": "Lesson 1: On-Page SEO Basics",
+              "desc": "In this lesson, you'll learn the fundamental elements of on-page SEO, including keyword research, optimizing title tags and meta descriptions, using header tags effectively, and creating SEO-friendly content. Mastering these basics will help improve your website's visibility in search engine results, driving more organic traffic to your site.",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
+            },
+            {
+              "LessonName": "Lesson 2: Understanding Keywords",
+              "desc": "This lesson dives into the importance of keywords in SEO, covering how to identify and select the right keywords for your content. You'll learn about keyword research tools, the difference between short-tail and long-tail keywords, and how to incorporate keywords naturally into your website to improve search engine rankings and attract your target audience.",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
+            }
+          ]
+        },
+        {
+          "category": "SEO Fundamentals",
+          "lessons": [
+            {
+              "LessonName": "Lesson 3: Introduction to SEO",
+              "desc": "In this lesson, you'll gain a comprehensive overview of SEO (Search Engine Optimization), including its history, key concepts, and importance in digital marketing. You'll explore how search engines work, the difference between on-page and off-page SEO, and the role of SEO in driving organic traffic to websites. This foundational knowledge will set the stage for more advanced SEO strategies in future lessons.",
+              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4"
+            },
+            {
+              "LessonName": "Lesson 4: Understanding Keywords",
+              "desc": "This lesson delves deeper into the significance of keywords in SEO. You will learn advanced techniques for keyword research, the importance of keyword intent, and how to analyze keyword competition. Additionally, you'll explore how to effectively integrate keywords into your content strategy to enhance your website's search engine rankings and attract the right audience.",
+              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4"
+            }
+          ]
+        },
+        {
+          "category": "Content Optimization",
+          "lessons": [
+            {
+              "LessonName": "Lesson 5: Content Creation and Optimization",
+              "desc": "In this lesson, you'll discover the essentials of creating high-quality, SEO-friendly content. Learn how to write compelling and relevant content that engages your audience while incorporating SEO best practices. You'll cover techniques for optimizing content with keywords, using multimedia effectively, and ensuring readability and structure to boost your website's search engine performance.",
+              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4"
+            },
+            {
+              "LessonName": "Lesson 6: Content Promotion",
+              "desc": "This lesson focuses on strategies for promoting your content to reach a wider audience and drive more traffic to your website. You'll explore various content promotion techniques, including social media marketing, email marketing, influencer outreach, and leveraging online communities. By the end of this lesson, you'll know how to create a content promotion plan that maximizes your content's visibility and engagement.",
+              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4"
+            }
+          ]
+        },
+        {
+          "category": " Technical SEO",
+          "lessons": [
+            {
+              "LessonName": "Lesson 7: Technical SEO",
+              "desc": "In this lesson, you'll explore the technical aspects of SEO that ensure your website is easily crawlable and indexable by search engines. Topics include website speed optimization, mobile-friendliness, XML sitemaps, robots.txt files, and structured data. Understanding and implementing these technical SEO elements will help improve your site's performance and search engine rankings.",
+              "Link": "src/assets/images/Start your dreams with us!.mp4"
+            },
+            {
+              "LessonName": "Lesson 8: Off-Page SEO",
+              "desc": "This lesson covers the strategies and techniques involved in off-page SEO, focusing on activities outside of your website that can improve its search engine rankings. You'll learn about the importance of backlinks, how to build a strong backlink profile, and other off-page factors like social signals and online reputation management. Mastering off-page SEO will help enhance your website's authority and visibility.",
+              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4"
+            }
+          ]
+        },
+        {
+          "category": "Local SEO",
+          "lessons": [
+            {
+              "LessonName": "Lesson 9: Local SEO",
+              "desc": "In this lesson, you'll learn how to optimize your website for local search results, making it easier for customers in your area to find you online. Topics include setting up and optimizing your Google My Business profile, using local keywords, managing online reviews, and building local citations. Implementing these local SEO strategies will help increase your visibility and attract more local customers to your business.",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
+            },
+            {
+              "LessonName": "Lesson 10: SEO Tools and Analytics",
+              "desc": "This lesson introduces essential SEO tools and analytics that help you measure and improve your website’s performance. You'll explore tools for keyword research, site audits, backlink analysis, and tracking rankings. Additionally, you'll learn how to interpret data from Google Analytics and other platforms to make informed decisions and refine your SEO strategy.",
+              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4"
+            }
+          ]
+        },
+        {
+          "category": " Business Building",
+          "lessons": [
+            {
+              "LessonName": "Lesson 11: Building Your SEO Business",
+              "desc": "In this lesson, you'll discover how to start and grow a successful SEO business. Topics include identifying your niche, developing a business plan, acquiring clients, setting pricing strategies, and delivering effective SEO services. You'll also learn about building a strong brand, creating a portfolio, and leveraging client testimonials to establish credibility and attract more business.",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
+            }
+          ]
+        }
+      ],
+      "Objectives": [
+        "Understand the fundamentals of SEO and how search engines work.",
+        "Learn to conduct effective keyword research and analysis.",
+        "Master on-page and off-page optimization techniques.",
+        "Develop strategies for local SEO, mobile SEO, and technical SEO."
+      ],
+      "desc": "This course provides a comprehensive guide to launching and managing a successful SEO (Search Engine Optimization) business from home. It is designed for individuals who are interested in understanding the principles of SEO and want to leverage this knowledge to build a profitable home-based business."
+    },
+    {
+      "id": "2",
+      "level": "Beginner",
+      "name": "Build Your First Website: A Beginner's Guide to Web Development",
+      "rating": "4.8",
+      "category": "Personal Development",
+      "CtegoryId": "3",
+      "price": "$50",
+      "lessons": "11",
+      "students": "341",
+      "Duration": "12 Weeks",
+      "Instructor": "Jane Smith",
+      "Language": "English",
+      "Certification": "Yes",
+      "img": "src/assets/images/course2.jpg",
+      "comVideo": "../../src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
+      "instructorId": "1",
+      "courseContent": [
+        {
+          "category": "Introduction to Web Development",
+          "lessons": [
+            {
+              "LessonName": "Lesson 1: What is Web Development?",
+              "desc": "In this lesson, you'll get an introduction to web development, covering the basics of building and maintaining websites. You'll learn about the different components involved, including front-end and back-end development, and the technologies and languages used, such as HTML, CSS, and JavaScript. This foundational knowledge will set the stage for more detailed exploration of web development concepts and practices in future lessons.",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
+            },
+            {
+              "LessonName": "Lesson 2: Overview of Web Technologies",
+              "desc": "This lesson provides a broad overview of the key technologies used in web development. You'll explore the roles and functions of essential technologies such as HTML for structuring web pages, CSS for styling, and JavaScript for adding interactivity. Additionally, you'll learn about server-side technologies and frameworks, databases, and content management systems (CMS). Understanding these technologies will help you grasp how they work together to build dynamic and functional websites.",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
+            }
+          ]
+        },
+        {
+          "category": "HTML Basics",
+          "lessons": [
+            {
+              "LessonName": "Lesson 3: Getting Started with HTML",
+              "desc": "In this lesson, you'll learn the fundamentals of HTML (Hypertext Markup Language), the backbone of web development. You'll cover basic HTML tags and elements, such as headings, paragraphs, links, images, and lists. By the end of the lesson, you'll be able to create a simple web page using HTML and understand how it forms the structure of web content.",
+              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4"
+            },
+            {
+              "LessonName": "Lesson 4: Structuring a Web Page",
+              "desc": "This lesson focuses on organizing and structuring a web page using HTML. You'll learn about key HTML elements such as <header>, <nav>, <main>, <section>, <article>, and <footer>, and how to use them to create a well-organized layout. You'll also explore the importance of semantic HTML for improving accessibility and SEO, ensuring your web pages are both user-friendly and search-engine friendly.",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
+            }
+          ]
+        },
+        {
+          "category": "CSS Styling",
+          "lessons": [
+            {
+              "LessonName": "Lesson 5: Introduction to CSS",
+              "desc": "In this lesson, you'll be introduced to CSS (Cascading Style Sheets), which is used to style and layout web pages. You'll learn the basics of CSS syntax, including how to apply styles to HTML elements, use selectors, and understand properties and values. By the end of the lesson, you'll be able to enhance the appearance of your web pages by controlling colors, fonts, spacing, and layout.",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
+            },
+            {
+              "LessonName": "Lesson 6: Styling Your Web Page",
+              "desc": "This lesson covers techniques for applying and refining styles on your web page using CSS. You'll explore how to use CSS to style text, create layouts with margins and padding, and design responsive elements. You'll also learn about CSS best practices, including the use of classes and IDs, as well as how to leverage external stylesheets for cleaner code and easier maintenance.",
+              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4"
+            }
+          ]
+        },
+        {
+          "category": "JavaScript Fundamentals",
+          "lessons": [
+            {
+              "LessonName": "Lesson 7: Basics of JavaScript",
+              "desc": "In this lesson, you'll be introduced to JavaScript, the programming language that adds interactivity and dynamic behavior to web pages. You'll learn the fundamentals of JavaScript, including variables, data types, operators, functions, and control structures like loops and conditionals. By the end of the lesson, you'll be able to write basic scripts to enhance your web pages and interact with HTML elements.",
+              "Link": "src/assets/images/Start your dreams with us!.mp4"
+            },
+            {
+              "LessonName": "Lesson 8: Adding Interactivity",
+              "desc": "This lesson focuses on using JavaScript to add interactivity to your web pages. You'll learn how to handle user events such as clicks, form submissions, and keyboard inputs. Topics include manipulating the DOM (Document Object Model), creating dynamic content updates, and implementing interactive features like dropdown menus and image sliders. By the end of the lesson, you'll be able to make your web pages more engaging and responsive to user actions.",
+              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4"
+            }
+          ]
+        },
+        {
+          "category": "Building Your First Website",
+          "lessons": [
+            {
+              "LessonName": "Lesson 9: Planning Your Website",
+              "desc": "In this lesson, you'll learn how to effectively plan and organize a website before diving into development. You'll cover the key steps of the planning process, including defining your website's goals, identifying your target audience, creating a site map, and developing wireframes or mockups. Proper planning will ensure a clear structure and cohesive design, setting the stage for a successful website build.",
+              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4"
+            },
+            {
+              "LessonName": "Lesson 10: Developing Your Website",
+              "desc": "This lesson covers the practical aspects of building your website based on the plans and designs created in previous lessons. You'll learn how to integrate HTML, CSS, and JavaScript to bring your website to life. Topics include coding best practices, debugging techniques, and testing your site across different browsers and devices. By the end of this lesson, you'll have a functional website that aligns with your initial planning and design.",
+              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4"
+            }
+          ]
+        },
+        {
+          "category": "Deployment and Maintenance",
+          "lessons": [
+            {
+              "LessonName": "Lesson 11: Launching and Maintaining Your Website",
+              "desc": "This lesson focuses on the final steps of getting your website live and ensuring its ongoing performance. You'll learn how to prepare for launch, including domain registration, web hosting, and deploying your site. Additionally, you'll explore best practices for website maintenance, such as regular updates, backups, monitoring performance, and addressing security issues. By the end of the lesson, you'll be equipped to manage and sustain a successful website.",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
+            }
+          ]
+        }
+      ],
+      "Objectives": [
+        "Understand the basics of HTML, CSS, and JavaScript.",
+        "Learn to create responsive web designs.",
+        "Master the use of popular web development frameworks.",
+        "Develop and deploy a fully functional website."
+      ],
+      "desc": "This course provides a step-by-step guide to building your first website from scratch. It covers essential web development technologies such as HTML, CSS, and JavaScript, and introduces popular frameworks. Designed for beginners, it aims to equip learners with the skills needed to create, design, and deploy a fully functional website."
+    },
+    {
+      "id": "3",
+      "level": "Intermediate",
+      "name": "Mastering Digital Marketing: From Strategy to Execution",
+      "rating": "4.9",
+      "category": "Marketing",
+      "CtegoryId": "6",
+      "price": "Free",
+      "lessons": "8",
+      "students": "512",
+      "Duration": "10 Weeks",
+      "Instructor": "Michael Johnson",
+      "Language": "English",
+      "Certification": "Yes",
+      "comVideo": "../../src/assets/images/Start your dreams with us!.mp4",
+      "instructorId": "1",
+      "courseContent": [
+        {
+          "category": "Digital Marketing Fundamentals",
+          "lessons": [
+            {
+              "LessonName": "Lesson 1: Introduction to Digital Marketing",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
+              "desc": "This lesson introduces the fundamental concepts of digital marketing, including its significance in the modern business landscape, key strategies, and how it differs from traditional marketing. You'll gain an understanding of various digital marketing channels and their roles in a comprehensive marketing strategy."
+            },
+            {
+              "LessonName": "Lesson 2: Understanding Digital Marketing Channels",
+              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
+              "desc": "In this lesson, you'll explore different digital marketing channels such as SEO, PPC, social media, email marketing, and content marketing. You'll learn how each channel works, their unique benefits, and how to integrate them into a cohesive digital marketing strategy."
+            }
+          ]
+        },
+        {
+          "category": "Content Marketing",
+          "lessons": [
+            {
+              "LessonName": "Lesson 3: Creating Engaging Content",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
+              "desc": "This lesson focuses on the principles of creating compelling and valuable content that resonates with your audience. You'll learn techniques for brainstorming content ideas, writing engaging copy, and using visuals effectively to capture and maintain audience interest."
+            },
+            {
+              "LessonName": "Lesson 4: Content Distribution Strategies",
+              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
+              "desc": "In this lesson, you'll explore strategies for distributing your content to maximize reach and engagement. Topics include leveraging social media platforms, email marketing, and content syndication. You'll also learn how to identify and target your audience to ensure your content reaches the right people."
+            }
+          ]
+        },
+        {
+          "category": "Social Media Marketing",
+          "lessons": [
+            {
+              "LessonName": "Lesson 5: Social Media Strategies",
+              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
+              "desc": "This lesson covers the development and implementation of effective social media strategies. You'll learn about setting goals, choosing the right platforms, creating content calendars, and engaging with your audience. The focus will be on building a strong social media presence that aligns with your marketing objectives."
+            },
+            {
+              "LessonName": "Lesson 6: Measuring Social Media Success",
+              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
+              "desc": "In this lesson, you'll explore methods for evaluating the success of your social media efforts. You'll learn about key performance indicators (KPIs), analytics tools, and techniques for tracking engagement, reach, and conversion rates. Understanding these metrics will help you refine your strategies and improve your social media campaigns."
+            }
+          ]
+        },
+        {
+          "category": "Search Engine Marketing",
+          "lessons": [
+            {
+              "LessonName": "Lesson 7: SEO and SEM Basics",
+              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
+              "desc": "This lesson introduces the fundamental concepts of Search Engine Optimization (SEO) and Search Engine Marketing (SEM). You'll learn about the differences and similarities between SEO and SEM, basic strategies for improving search engine rankings, and how to use paid search advertising effectively to drive traffic to your website."
+            },
+            {
+              "LessonName": "Lesson 8: Implementing and Analyzing Campaigns",
+              "Link": "src/assets/images/Start your dreams with us!.mp4",
+              "desc": "In this lesson, you'll explore the practical aspects of implementing and analyzing search engine marketing campaigns. Topics include setting up SEM campaigns, optimizing ad performance, and using analytics tools to track and measure campaign effectiveness. You'll learn how to adjust your strategies based on data to achieve better results."
+            }
+          ]
+        }
+      ],
+      "img": "src/assets/images/course4.jpg",
+      "Objectives": [
+        "Develop a comprehensive digital marketing strategy.",
+        "Learn to execute campaigns across various digital channels.",
+        "Master the use of analytics tools to measure campaign success.",
+        "Understand the fundamentals of SEO, SEM, social media, and email marketing."
+      ],
+      "desc": "This course offers an in-depth exploration of digital marketing strategies and execution. Participants will learn how to create effective digital marketing campaigns, utilize analytics tools, and integrate various digital channels such as SEO, SEM, social media, and email marketing to achieve their marketing goals."
+    },
+    {
+      "id": "4",
+      "level": "Beginner",
+      "name": "Introduction to Graphic Design: From Concept to Creation",
+      "rating": "4.7",
+      "category": "Art & Design",
+      "CtegoryId": "2",
+      "price": "$40",
+      "lessons": "6",
+      "students": "289",
+      "Duration": "8 Weeks",
+      "Instructor": "Sarah Lee",
+      "Language": "English",
+      "instructorId": "2",
+      "comVideo": "../../src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
+      "Certification": "Yes",
+      "courseContent": [
+        {
+          "category": "Graphic Design Fundamentals",
+          "lessons": [
+            {
+              "LessonName": "Lesson 1: What is Graphic Design?",
+              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
+              "desc": "This lesson introduces the field of graphic design, including its definition, history, and importance in visual communication. You'll explore various types of graphic design, such as branding, advertising, and digital media, and understand the role graphic design plays in conveying messages and creating visual impact."
+            },
+            {
+              "LessonName": "Lesson 2: Principles of Design",
+              "Link": "src/assets/images/Start your dreams with us!.mp4",
+              "desc": "In this lesson, you'll learn about the fundamental principles of design, such as balance, contrast, alignment, repetition, and proximity. These principles are essential for creating visually appealing and effective designs. You'll explore how to apply these principles to enhance your design projects and achieve better visual outcomes."
+            }
+          ]
+        },
+        {
+          "category": "Design Tools and Techniques",
+          "lessons": [
+            {
+              "LessonName": "Lesson 3: Introduction to Design Software",
+              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
+              "desc": "This lesson provides an overview of popular design software tools used in graphic design, such as Adobe Photoshop, Illustrator, and InDesign. You'll learn about the features and functions of each tool, how to choose the right software for different design tasks, and basic navigation and usage tips to get started with your design projects."
+            },
+            {
+              "LessonName": "Lesson 4: Basic Design Techniques",
+              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
+              "desc": "In this lesson, you'll explore fundamental design techniques that are essential for creating effective and visually appealing graphics. Topics include working with typography, color theory, and image manipulation. You'll learn how to apply these techniques to enhance your design skills and produce professional-quality designs."
+            }
+          ]
+        },
+        {
+          "category": "Creating Your First Design",
+          "lessons": [
+            {
+              "LessonName": "Lesson 5: Planning and Conceptualizing a Design",
+              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
+              "desc": "This lesson focuses on the initial stages of the design process, including planning and conceptualizing your design project. You'll learn how to gather inspiration, define project goals, create mood boards, and develop design concepts. Effective planning is crucial for ensuring your design meets its objectives and aligns with your vision."
+            },
+            {
+              "LessonName": "Lesson 6: Creating and Refining Your Design",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
+              "desc": "In this lesson, you'll move from concept to creation by developing and refining your design. You'll explore techniques for translating your ideas into a finished design, including layout, color schemes, and typography. The lesson will also cover how to review and iterate on your design to enhance its quality and effectiveness."
+            }
+          ]
+        }
+      ],
+      "img": "src/assets/images/course3.jpg",
+      "Objectives": [
+        "Understand the fundamentals of graphic design.",
+        "Learn to use key design software such as Adobe Photoshop and Illustrator.",
+        "Develop skills in creating visual content.",
+        "Apply design principles to create compelling graphics."
+      ],
+      "desc": "This course is designed to introduce beginners to the world of graphic design. Covering the basics of design principles and software like Adobe Photoshop and Illustrator, it aims to equip learners with the skills needed to create visually appealing graphics for various purposes."
+    }
+  ],
   "Instructors": [
     {
       "id": "1",
@@ -2419,7 +2804,6 @@
       "name": "Michael Smith",
       "job": "Cybersecurity Expert",
       "img": "src/assets/images/team-03.webp",
-
       "students": "30",
       "rating": "4.9",
       "About": "Hello, I'm Michael Smith, a Cybersecurity Expert with a decade of experience. I enjoy teaching the intricacies of online security and helping others protect their digital assets.",
@@ -2455,8 +2839,7 @@
       "id": "5",
       "name": "David Brown",
       "job": "Full Stack Developer",
-      "img": "src/assets/images/team-01.webp",
-
+      "img": "src/assets/images/instructors-300.png",
       "students": "50",
       "rating": "4.9",
       "About": "Hello, I'm David Brown, a Full Stack Developer with 6 years of experience. I love building applications and teaching others how to create their own full stack projects.",
@@ -2474,8 +2857,7 @@
       "id": "6",
       "name": "Sophia Williams",
       "job": "Machine Learning Engineer",
-      "img": "src/assets/images/team-02.webp",
-
+      "img": "src/assets/images/2-5-how-do-i-apply-block.jpg",
       "students": "35",
       "rating": "4.8",
       "About": "Hi, I'm Sophia Williams, a Machine Learning Engineer with 5 years of experience. I enjoy working with algorithms and data to create intelligent systems. My courses are hands-on and project-based.",
@@ -2493,7 +2875,7 @@
       "id": "7",
       "name": "James Wilson",
       "job": "Cloud Architect",
-      "img": "src/assets/images/team-03.webp",
+      "img": "src/assets/images/tfs-quickstart-for-instructors.png",
       "students": "40",
       "rating": "5",
       "About": "Hello, I'm James Wilson, a Cloud Architect with over 7 years of experience. I specialize in designing scalable cloud solutions and enjoy sharing my knowledge with others.",
@@ -2511,7 +2893,7 @@
       "id": "8",
       "name": "Olivia Martinez",
       "job": "Business Analyst",
-      "img": "src/assets/images/team-04.webp",
+      "img": "src/assets/images/kumonfranchise-press-2022-1001.jpeg",
       "students": "28",
       "rating": "4.6",
       "About": "Hi, I'm Olivia Martinez, a Business Analyst with 4 years of experience. I love analyzing data to drive business decisions and enjoy teaching others how to do the same.",
@@ -2529,8 +2911,7 @@
       "id": "9",
       "name": "Daniel Harris",
       "job": "DevOps Engineer",
-      "img": "src/assets/images/team-01.webp",
-
+      "img": "src/assets/images/how-much-does-udemy-pay-instructors-1200x750.png",
       "students": "32",
       "rating": "5",
       "About": "Hello, I'm Daniel Harris, a DevOps Engineer with 5 years of experience. I specialize in automating workflows and enjoy helping others streamline their development processes.",
@@ -2548,8 +2929,7 @@
       "id": "10",
       "name": "Grace Lee",
       "job": "Blockchain Developer",
-      "img": "src/assets/images/team-02.webp",
-
+      "img": "src/assets/images/istock_000036898774_small.jpg",
       "students": "37",
       "rating": "4.7",
       "About": "Hi, I'm Grace Lee, a Blockchain Developer with 4 years of experience. I enjoy exploring blockchain technology and teaching others how to build decentralized applications.",
@@ -2567,8 +2947,7 @@
       "id": "11",
       "name": "Henry Clark",
       "job": "AI Researcher",
-      "img": "src/assets/images/team-03.webp",
-
+      "img": "src/assets/images/360_F_665093017_sb9OKpEw2CnNkqV3TDr6VUxpauA93SJZ.jpg",
       "students": "29",
       "rating": "4.8",
       "About": "Hello, I'm Henry Clark, an AI Researcher with 6 years of experience. I specialize in developing intelligent algorithms and enjoy teaching others about AI and machine learning.",
@@ -2586,7 +2965,7 @@
       "id": "12",
       "name": "Natalie Thompson",
       "job": "Digital Marketing Expert",
-      "img": "src/assets/images/team-04.webp",
+      "img": "src/assets/images/istockphoto-1430390602-612x612.jpg",
       "students": "33",
       "rating": "5",
       "About": "Hi, I'm Natalie Thompson, a Digital Marketing Expert with 5 years of experience. I enjoy crafting marketing strategies and teaching others how to grow their online presence.",
@@ -2599,6 +2978,114 @@
         "twitter": "https://x.com/",
         "linkedIn": "https://www.linkedin.com/"
       }
+    }
+  ],
+  "HomeInstructors": [
+    {
+      "id": "1",
+      "name": "Jane Seymour",
+      "job": "UI Designer",
+      "img": "src/assets/images/team-01.webp",
+      "students": "20",
+      "rating": "5",
+      "About": "Hi, I'm Edward Narton, a Developer and Teacher with over 5 years of experience. I love coding and sharing my knowledge with others. I've worked on various projects, from web applications to mobile apps, and I believe in hands-on learning. I've helped over 20 students achieve their goals in programming.In my courses, you'll find a blend of theory and practical application to ensure you understand and can apply what you learn. Join me, and let's build something amazing together!",
+      "coursesID": [1, 2, 3],
+      "Contact": {
+        "address": " North Helenavile, FV77 8WS",
+        "Email": "Edward@gmail",
+        "phone": "01236987452",
+        "facebook": "https://www.facebook.com/jane.a.amistoso/",
+        "twitter": "https://x.com/janemarielynch",
+        "linkedIn": "https://www.linkedin.com/in/janewachnin/"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Alice Johnson",
+      "job": "Data Scientist",
+      "img": "src/assets/images/team-02.webp",
+      "students": "45",
+      "rating": "4.8",
+      "About": "Hi, I'm Alice Johnson, a Data Scientist with 7 years of experience. I love working with data and helping others unlock its potential. My courses focus on practical applications and real-world projects.",
+      "coursesID": [4, 5, 6],
+      "Contact": {
+        "address": "123 Data St, San Francisco, CA",
+        "Email": "alice@example.com",
+        "phone": "9876543210",
+        "facebook": "https://www.facebook.com/jane.a.amistoso/",
+        "twitter": "https://x.com/janemarielynch",
+        "linkedIn": "https://www.linkedin.com/in/janewachnin/"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Michael Smith",
+      "job": "Cybersecurity Expert",
+      "img": "src/assets/images/team-03.webp",
+      "students": "30",
+      "rating": "4.9",
+      "About": "Hello, I'm Michael Smith, a Cybersecurity Expert with a decade of experience. I enjoy teaching the intricacies of online security and helping others protect their digital assets.",
+      "coursesID": [7, 8],
+      "Contact": {
+        "address": "456 Security Blvd, Austin, TX",
+        "Email": "michael@example.com",
+        "phone": "8765432109",
+        "facebook": "https://www.facebook.com/michael.smith.robots",
+        "twitter": "https://x.com/michaelsmith",
+        "linkedIn": "https://www.linkedin.com/in/michael-smith-26086242/"
+      }
+    },
+    {
+      "id": "4",
+      "name": "Emily Davis",
+      "job": "Project Manager",
+      "img": "src/assets/images/team-04.webp",
+      "students": "25",
+      "rating": "4.7",
+      "About": "Hi, I'm Emily Davis, a Project Manager with over 8 years of experience. I specialize in Agile methodologies and enjoy teaching others how to effectively manage projects.",
+      "coursesID": [9, 10],
+      "Contact": {
+        "address": "789 Agile Lane, Seattle, WA",
+        "Email": "emily@example.com",
+        "phone": "7654321098",
+        "facebook": "https://www.facebook.com/",
+        "twitter": "https://x.com/",
+        "linkedIn": "https://www.linkedin.com/"
+      }
+    }
+  ],
+  "HomeReviews": [
+    {
+      "id": "1",
+      "userId": "5",
+      "comment": "The hands-on projects and interactive elements really helped me understand the concepts better. Highly recommend!",
+      "Job": "Content Creator",
+      "rating": "5",
+      "courseID": "1"
+    },
+    {
+      "id": "2",
+      "userId": "7",
+      "comment": "This course provided me with invaluable skills that I could immediately apply to my job.",
+      "Job": "Marketing Specialist",
+      "rating": "5",
+      "courseID": "2"
+    },
+    {
+      "id": "3",
+      "userId": "20",
+      "comment": "The instructors were very knowledgeable and the content was well-organized.",
+      "Job": "Software Engineer",
+      "rating": "4",
+      "courseID": "3"
+    },
+    {
+      "id": "4",
+      "userId": "8",
+      "comment": "I loved the flexibility of the courses. I could learn at my own pace and revisit topics as needed.",
+      "Job": "Graphic Designer",
+      "rating": "5",
+      "courseID": "4"
     }
   ],
   "Reviews": [
@@ -2812,7 +3299,7 @@
       "name": "Alice Johnson",
       "email": "alice.johnson@example.com",
       "img": " src/assets/images/bohemian-man-with-his-arms-crossed.jpg",
-      "password": "alicepass",
+      "password": "alice.johnson@example.com",
       "subscribed": "no"
     },
     {
@@ -3046,6 +3533,41 @@
       "password": "carapass",
       "subscribed": "yes",
       "validCoursesId": [9, 17, 22]
+    },
+    {
+      "name": "RAHMA",
+      "email": "rahma@gmail.com",
+      "img": "",
+      "password": "666",
+      "subscribed": "no",
+      "confirmPassword": "666",
+      "id": 35
+    },
+    {
+      "name": "sohila sobhy sadek",
+      "email": "SohilaSobhySadek@gmail.com",
+      "img": "src/assets/images/bohemian-man-with-his-arms-crossed.jpg",
+      "password": "123",
+      "subscribed": "no",
+      "confirmPassword": "123",
+      "id": 36
+    }
+  ],
+  "SubPlans": [
+    {
+      "duration": "Monthly",
+      "price": "399.00",
+      "charge": "Charged monthly"
+    },
+    {
+      "duration": "Quarterly",
+      "price": "266.33",
+      "charge": "Charged every 3 months as a payment of 799 EGP"
+    },
+    {
+      "duration": "Yearly ",
+      "price": "199.92",
+      "charge": "Charged as annual payment of 2,399 EGP"
     }
   ]
 }

@@ -6,21 +6,25 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import PaginatedCourses from "./CoursePagination";
+import { useRecoilState } from "recoil";
+import { $SearchResult } from "../../Store/Store";
 export default function Courses() {
+  const [value, setValue] = useRecoilState($SearchResult)
   const { page } = useParams();
-  console.log(page)
-  const [array, setArray] = useState([]);
+  const [courses, setCourses] = useState([]);
+  const [SearchData, setSearchData] = useState([])
+
   useEffect(() => {
     axios
-      .get("http://localhost:3000/Courses")
+      .get(`http://localhost:3000/Courses?q=${value}`)
       .then((response) => {
-        setArray(response.data);
-        console.log(array);
+        setCourses(response.data);
       })
       .catch((error) => {
         console.error("There was an error fetching the data!", error);
       });
-  }, []);
+  }, [value]);
+
   return (
     <div className="col-12" id="Courses">
       <div className="header">
@@ -35,12 +39,12 @@ export default function Courses() {
           type="Search"
           placeholder="Search Courses..."
           className="py-3 px-4 col-md-6 col-lg-3"
+          onChange={(e) => { setValue(e.target.value) }}
         />
-        <FontAwesomeIcon icon={faSearch} className="position-absolute search" />
       </div>
       <div className="container p-3">
         <div className="row g-4 justify-content-center">
-          <PaginatedCourses />
+          <PaginatedCourses courses={courses} />
         </div>
       </div>
     </div>

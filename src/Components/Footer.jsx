@@ -13,14 +13,11 @@ export default function Footer() {
     <div className="col-12 px-5" id="Footer">
       <div className="footer d-flex flex-wrap gap-5">
         <div className="d-flex flex-column col-12 col-md-6 col-lg-3 gap-3">
-          <div
-            className="d-flex align-items-center gap-2 logo col-3"
-            onClick={() => {
-              window.location.href = "/";
-            }}>
-            <img src={logo} alt="" />
+          <Link to={"/"}
+            className="d-flex align-items-center gap-2 logo col-3">
+            <img src={logo} alt="logo" />
             <p className="mt-3 siteName">EduJourney</p>
-          </div>
+          </Link>
           <p className="platformDesc">
             EduJourney is a comprehensive online learning platform offering a
             wide range of courses to help you achieve your educational goals.

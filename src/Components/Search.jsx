@@ -2,26 +2,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Search.scss";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useRecoilState } from "recoil";
-import { $Search, $SearchResult } from "../Store/Store";
+import { $Search } from "../Store/Store";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Search() {
   const [search, setSearch] = useRecoilState($Search);
-  const [input, setInput] = useRecoilState($SearchResult);
-  const [box, setBox] = useState(false)
+  const [input, setInput] = useState(null);
   const [courses, setCourses] = useState()
   useEffect(() => {
     axios
-      .get("http://localhost:3000/Courses")
+      .get(`http://localhost:3000/Courses?q=${input}`)
       .then((response) => {
         setCourses(response.data);
       })
       .catch((error) => {
         console.error("There was an error fetching the data!", error);
       });
-  }, [])
+  }, [input])
+
   if (search) {
     return (
       <div className="col-12 h-100 Search position-fixed animate__animated animate__fadeInDown">
@@ -38,35 +38,21 @@ export default function Search() {
               value={input}
               onChange={(e) => {
                 setInput(e.target.value)
-                console.log(input)
               }}
             />
-            <div className="col-12 bg-white coursesBox mt-3 p-3 d-flex flex-column  overflow-auto" >
-              <p>
-                {
-                  courses?.filter((item) => {
-                    return (
-                      input.toLowerCase() === '' ? '' : item.name.toLowerCase().includes(input)
-                    )
-                  }).map((course) => {
-                    {
-                      if (input != '') {
-                        return (
-                          <div>
-                            <Link to={`/single-course/${course.id}`} onClick={() => setSearch(false)}>
-                              {course.name}
-                            </Link>
-                          </div>
-                        )
-                      } else {
-                        return (
-                          <h3>We couldn't find any search results for{input}</h3>
-                        )
-                      }
-                    }
-                  })
-                }
-              </p>
+            {!courses.length >= 1 && input !== "" ? <span className="text-white">No data</span> : ""}
+            <div className={`col-12 bg-white coursesBox mt-3 p-3 flex-column overflow-auto ${courses?.length >= 1 && input !== "" ? `d-flex` : `d-none`}`} >
+              {
+                courses?.map((course) => {
+                  return (
+                    <div key={course.id}>
+                      <Link to={`/single-course/${course.id}`} onClick={() => setSearch(false)}>
+                        {course.name}
+                      </Link>
+                    </div>
+                  )
+                })
+              }
             </div>
           </div>
         </div>

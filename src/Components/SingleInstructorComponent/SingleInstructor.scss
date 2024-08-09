@@ -1,0 +1,84 @@
+#SingleInstructor {
+  .instractour {
+    .imgCon {
+      position: relative;
+      .instratourImg {
+        border-radius: 1rem;
+      }
+      .shareIcon {
+        padding: 0.5rem;
+        right: 5%;
+        top: 3%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid #1ab69d;
+        z-index: 1;
+      }
+      .greenFilter {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        border-radius: 1rem;
+        background-color: #1ab69c59;
+        opacity: 0;
+      }
+      .socialMedia {
+        padding: 0.5rem;
+        right: 5%;
+        top: 3%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid white;
+        opacity: 0;
+        &:hover {
+          background-color: white;
+        }
+      }
+      .facebook {
+        transition: 0.7s;
+      }
+      .facebookGreen {
+        transition: 0.7s;
+        display: none;
+      }
+      .twitter {
+        transition: 0.9s;
+      }
+      .linkedIn {
+        transition: 1.1s;
+      }
+    }
+    p {
+      font-size: 20px;
+      font-weight: 600;
+      span {
+        font-size: 18px;
+        color: #808080;
+      }
+    }
+    &:hover {
+      .shareIcon {
+        background-color: white;
+        border: 0;
+      }
+      .greenFilter {
+        opacity: 1;
+      }
+      .facebook {
+        opacity: 1;
+        top: 19%;
+      }
+      .twitter {
+        opacity: 1;
+        top: 34%;
+      }
+      .linkedIn {
+        opacity: 1;
+        top: 49%;
+      }
+    }
+  }
+}

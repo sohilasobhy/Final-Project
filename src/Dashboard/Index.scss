@@ -1,0 +1,60 @@
+#Dashboard {
+  #Menu {
+    left: 0;
+    background-color: #2db87f;
+    z-index: 9999;
+    top: 0;
+    .LINKS {
+      a {
+        font-size: 20px;
+        font-weight: 500;
+        color: white;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+    .logo {
+      cursor: pointer;
+    }
+    .topMenu {
+      border-bottom: 1px solid #eeeeee;
+    }
+    .siteName {
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  #DashHome,
+  #AllCourses,
+  #Categories,
+  #Reviews,
+  #InstrucorsDash,
+  #UsersDash {
+    right: 0;
+    table {
+      tr {
+        td {
+          background-color: #eff4f5;
+          border-color: white;
+        }
+      }
+      thead {
+        td {
+          font-weight: 500;
+          font-size: 18px;
+        }
+      }
+      tbody {
+        td {
+          a {
+            &:hover {
+              color: #2db87f;
+            }
+          }
+        }
+      }
+    }
+  }
+}

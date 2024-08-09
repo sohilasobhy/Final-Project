@@ -1,0 +1,18 @@
+#SavedCourses {
+  .noCourses {
+    .empty {
+      color: #676f6f;
+      font-weight: 600;
+    }
+    .save {
+      color: #757e7e;
+      font-size: 14px;
+    }
+  }
+  .backBtn {
+    background-color: #36bb85;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    color: white;
+  }
+}

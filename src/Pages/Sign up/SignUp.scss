@@ -27,7 +27,7 @@
     .inputBox {
       position: relative;
       width: 300px;
-      margin-top: 35px;
+      margin-top: 13px;
       input {
         position: relative;
         width: 100%;
@@ -133,6 +133,11 @@
       width: 100%;
       object-fit: cover;
     }
+  }
+  .error {
+    color: #d93025;
+    margin-top: 5px;
+    font-weight: 600;
   }
   @media (max-width: 992px) {
     form {

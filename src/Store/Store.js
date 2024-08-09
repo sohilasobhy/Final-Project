@@ -35,3 +35,25 @@ export const $SearchResult = atom({
   default: "",
 });
 
+export const $profile = atom({
+  key: "$profile",
+  default: false,
+});
+
+export const $UserInfo = atom({
+  key: "$UserInfo",
+  default: JSON.parse(localStorage.getItem(`user`)) || JSON.parse(sessionStorage.getItem(`user`)) || null,
+});
+
+export const $subPlans = atom({
+  key: "$subPlans",
+  default: {
+    "duration": "Monthly",
+    "price": "399.00",
+    "charge": "Charged monthly"
+  },
+});
+
+
+
+

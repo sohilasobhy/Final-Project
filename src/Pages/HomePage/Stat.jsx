@@ -6,6 +6,17 @@ import Counter from "./Counter";
 
 export default function Stat() {
   const [play, setPlay] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   useEffect(() => {
     setTimeout(() => {
@@ -68,6 +79,9 @@ export default function Stat() {
         src={shape1}
         alt=""
         className="shape1 position-absolute d-none d-xl-block"
+        style={{
+          transform: `translate(${mousePosition.x * -0.1}px, ${mousePosition.y * -0.1}px)`
+        }}
       />
     </div>
   );
