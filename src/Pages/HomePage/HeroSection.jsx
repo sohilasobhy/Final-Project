@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div className="col-12 px-5 pt-5 d-flex justify-content-between align-items-center gap-5 container flex-wrap ">
         <div className="left col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start gap-5 gap-lg-4 z-1 position-relative ">
           <h1 className="col-12 col-lg-9 ">
-            Get <span>1000+</span> Best Online Courses From EduBlink
+            Get <span>1000+</span> Best Online Courses From EduJourney
           </h1>
           <p>
             Unlock Your Potential with EduJourney's Online Courses. Join a

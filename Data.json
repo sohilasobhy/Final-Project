@@ -1,17 +1,17 @@
 {
   "Courses": [
     {
-      "id": "1",
+      "id": 1,
       "level": "Beginner",
       "name": "Starting SEO as your Home Based Business",
-      "rating": "5.0",
+      "rating": "4",
       "category": "Business Management",
       "CtegoryId": "1",
       "price": "$30",
       "lessons": "11",
       "students": "227",
       "Duration": "15 Weeks",
-      "Instructor": "Edward Norton",
+      "Instructor": "Jane Seymour",
       "Language": "English",
       "Certification": "Yes",
       "img": "src/assets/images/course1.jpg",
@@ -116,14 +116,14 @@
       "id": "2",
       "level": "Beginner",
       "name": "Build Your First Website: A Beginner's Guide to Web Development",
-      "rating": "4.8",
+      "rating": "3",
       "category": "Personal Development",
       "CtegoryId": "3",
       "price": "$50",
       "lessons": "11",
       "students": "341",
       "Duration": "12 Weeks",
-      "Instructor": "Jane Smith",
+      "Instructor": "Jane Seymour",
       "Language": "English",
       "Certification": "Yes",
       "img": "src/assets/images/course2.jpg",
@@ -228,14 +228,14 @@
       "id": "3",
       "level": "Intermediate",
       "name": "Mastering Digital Marketing: From Strategy to Execution",
-      "rating": "4.9",
+      "rating": "4",
       "category": "Marketing",
       "CtegoryId": "6",
       "price": "Free",
       "lessons": "8",
       "students": "512",
       "Duration": "10 Weeks",
-      "Instructor": "Michael Johnson",
+      "Instructor": "Jane Seymour",
       "Language": "English",
       "Certification": "Yes",
       "comVideo": "../../src/assets/images/Start your dreams with us!.mp4",
@@ -315,14 +315,14 @@
       "id": "4",
       "level": "Beginner",
       "name": "Introduction to Graphic Design: From Concept to Creation",
-      "rating": "4.7",
+      "rating": "3.7",
       "category": "Art & Design",
       "CtegoryId": "2",
       "price": "$40",
       "lessons": "6",
       "students": "289",
       "Duration": "8 Weeks",
-      "Instructor": "Sarah Lee",
+      "Instructor": "Alice Johnson",
       "Language": "English",
       "instructorId": "2",
       "comVideo": "../../src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
@@ -387,14 +387,14 @@
       "id": "5",
       "level": "Beginner",
       "name": "Personal Finance Management: Building Your Financial Future",
-      "rating": "5.0",
+      "rating": "2",
       "category": "Business & Finance",
       "CtegoryId": "7",
       "price": "$35",
       "lessons": "10",
       "students": "420",
       "Duration": "6 Weeks",
-      "Instructor": "David Brown",
+      "Instructor": "Alice Johnson",
       "Language": "English",
       "instructorId": "2",
       "comVideo": "../../src/assets/images/Mississippi State University 2019 National Commercial.mp4",
@@ -489,14 +489,14 @@
       "id": "6",
       "level": "Beginner",
       "name": "Data Science for Everyone: A Beginner's Guide",
-      "rating": "4.9",
+      "rating": "3",
       "category": "Data Science",
       "CtegoryId": "5",
       "price": "$60",
       "lessons": "8",
       "students": "410",
       "Duration": "12 Weeks",
-      "Instructor": "Emma White",
+      "Instructor": "Alice Johnson",
       "Language": "English",
       "instructorId": "2",
       "Certification": "Yes",
@@ -573,17 +573,17 @@
       "desc": "This course introduces beginners to the exciting field of data science. It covers the basics of data analysis, visualization, and machine learning using popular tools like Python and R. Participants will learn to clean, analyze, and visualize data, and build predictive models."
     },
     {
-      "id": "7",
+      "id": 7,
       "level": "Beginner",
       "name": "Public Speaking: Overcome Your Fear and Speak with Confidence",
-      "rating": "4.8",
+      "rating": "4",
       "category": "Computer Science",
       "CtegoryId": "8",
       "price": "Free",
       "lessons": "10",
       "students": "320",
       "Duration": "8 Weeks",
-      "Instructor": "John Doe",
+      "Instructor": "Michael Smith",
       "Language": "English",
       "instructorId": "3",
       "Certification": "Yes",
@@ -665,7 +665,7 @@
       "lessons": "12",
       "students": "280",
       "Duration": "10 Weeks",
-      "Instructor": "Alice Green",
+      "Instructor": "Michael Smith",
       "instructorId": "3",
       "Language": "English",
       "comVideo": "../../src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
@@ -772,17 +772,17 @@
       "desc": "This course takes your Excel skills to the next level, focusing on advanced functions, formulas, and data analysis techniques. You will also learn to use pivot tables, macros, and VBA scripting to automate tasks and streamline your workflow."
     },
     {
-      "id": "9",
+      "id": 9,
       "level": "Beginner",
       "name": "Introduction to Photography: Capture the World Around You",
-      "rating": "4.6",
+      "rating": "3.6",
       "category": "Video and Photography",
       "CtegoryId": "9",
       "price": "$55",
       "lessons": "8",
       "students": "390",
       "Duration": "8 Weeks",
-      "Instructor": "Laura King",
+      "Instructor": "Emily Davis",
       "instructorId": "4",
       "Language": "English",
       "comVideo": "../../src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
@@ -857,14 +857,14 @@
       "id": "10",
       "level": "Intermediate",
       "name": "Social Media Marketing: Building Your Online Presence",
-      "rating": "4.9",
+      "rating": "2.5",
       "category": "Marketing",
       "CtegoryId": "6",
       "price": "$80",
       "lessons": "7",
       "students": "510",
       "Duration": "14 Weeks",
-      "Instructor": "Sophia Lee",
+      "Instructor": "Emily Davis",
       "Language": "English",
       "instructorId": "4",
       "Certification": "Yes",
@@ -945,7 +945,7 @@
       "lessons": "9",
       "students": "340",
       "Duration": "16 Weeks",
-      "Instructor": "Robert Brown",
+      "Instructor": "David Brown",
       "Language": "English",
       "comVideo": "../../src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
       "instructorId": "5",
@@ -1042,7 +1042,7 @@
       "lessons": "9",
       "students": "510",
       "Duration": "6 Weeks",
-      "Instructor": "Maria Lopez",
+      "Instructor": "David Brown",
       "Language": "English",
       "instructorId": "5",
       "Certification": "Yes",
@@ -1139,7 +1139,7 @@
       "lessons": "8",
       "students": "380",
       "Duration": "10 Weeks",
-      "Instructor": "James Wilson",
+      "Instructor": "Sophia Williams",
       "Language": "English",
       "comVideo": "../../src/assets/images/Start your dreams with us!.mp4",
       "instructorId": "6",
@@ -1226,7 +1226,7 @@
       "lessons": "10",
       "students": "420",
       "Duration": "8 Weeks",
-      "Instructor": "Anna Green",
+      "Instructor": "Sophia Williams",
       "Language": "English",
       "instructorId": "6",
       "comVideo": "../../src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
@@ -1340,7 +1340,7 @@
       "Duration": "12 Weeks",
       "instructorId": "6",
       "comVideo": "../../src/assets/images/Mississippi State University 2019 National Commercial.mp4",
-      "Instructor": "Michael Turner",
+      "Instructor": "Sophia Williams",
       "Language": "English",
       "Certification": "Yes",
       "img": "src/assets/images/course-33-590x430.jpg",
@@ -1450,7 +1450,7 @@
       "lessons": "10",
       "students": "350",
       "Duration": "8 Weeks",
-      "Instructor": "Linda Johnson",
+      "Instructor": "James Wilson",
       "Language": "English",
       "instructorId": "7",
       "comVideo": "../../src/assets/images/VIT University - 1Min Ad Film.mp4",
@@ -1537,7 +1537,7 @@
       "lessons": "12",
       "students": "280",
       "Duration": "10 Weeks",
-      "Instructor": "Daniel Thompson",
+      "Instructor": "James Wilson",
       "instructorId": "7",
       "Language": "English",
       "Certification": "Yes",
@@ -1610,7 +1610,7 @@
       "instructorId": "8",
       "students": "310",
       "Duration": "14 Weeks",
-      "Instructor": "Kevin Lee",
+      "Instructor": "Olivia Martinez",
       "Language": "English",
       "comVideo": "../../src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
       "Certification": "Yes",
@@ -1696,7 +1696,7 @@
       "lessons": "8",
       "students": "300",
       "Duration": "6 Weeks",
-      "Instructor": "Rachel Martin",
+      "Instructor": "Daniel Harris",
       "Language": "English",
       "comVideo": "../../src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
       "instructorId": "9",
@@ -1778,7 +1778,7 @@
       "lessons": "10",
       "students": "270",
       "Duration": "10 Weeks",
-      "Instructor": "Laura Rodriguez",
+      "Instructor": "Daniel Harris",
       "instructorId": "9",
       "Language": "English",
       "Certification": "Yes",
@@ -1894,7 +1894,7 @@
       "lessons": "10",
       "students": "330",
       "Duration": "8 Weeks",
-      "Instructor": "Emily Davis",
+      "Instructor": "Grace Lee",
       "instructorId": "10",
       "comVideo": "../../src/assets/images/Mississippi State University 2019 National Commercial.mp4",
       "Language": "English",
@@ -1977,7 +1977,7 @@
       "students": "290",
       "instructorId": "10",
       "Duration": "10 Weeks",
-      "Instructor": "Mark Wilson",
+      "Instructor": "Grace Lee",
       "Language": "English",
       "comVideo": "../../src/assets/images/Start your dreams with us!.mp4",
       "Certification": "Yes",
@@ -2078,7 +2078,7 @@
       "lessons": "7",
       "students": "310",
       "Duration": "12 Weeks",
-      "Instructor": "William Harris",
+      "Instructor": "Henry Clark",
       "Language": "English",
       "Certification": "Yes",
       "comVideo": "../../src/assets/images/Start your dreams with us!.mp4",
@@ -2165,7 +2165,7 @@
       "lessons": "10",
       "students": "290",
       "Duration": "8 Weeks",
-      "Instructor": "Jessica Brown",
+      "Instructor": "Natalie Thompson",
       "Language": "English",
       "instructorId": "12",
       "Certification": "Yes",
@@ -2276,7 +2276,7 @@
       "lessons": "6",
       "students": "150",
       "Duration": "10 Weeks",
-      "Instructor": "David Smith",
+      "Instructor": "Natalie Thompson",
       "Language": "English",
       "instructorId": "12",
       "Certification": "Yes",
@@ -2389,7 +2389,7 @@
       "lessons": "11",
       "students": "227",
       "Duration": "15 Weeks",
-      "Instructor": "Edward Norton",
+      "Instructor": "Jane Seymour",
       "Language": "English",
       "Certification": "Yes",
       "img": "src/assets/images/course1.jpg",
@@ -2501,7 +2501,7 @@
       "lessons": "11",
       "students": "341",
       "Duration": "12 Weeks",
-      "Instructor": "Jane Smith",
+      "Instructor": "Jane Seymour",
       "Language": "English",
       "Certification": "Yes",
       "img": "src/assets/images/course2.jpg",
@@ -2613,7 +2613,7 @@
       "lessons": "8",
       "students": "512",
       "Duration": "10 Weeks",
-      "Instructor": "Michael Johnson",
+      "Instructor": "Jane Seymour",
       "Language": "English",
       "Certification": "Yes",
       "comVideo": "../../src/assets/images/Start your dreams with us!.mp4",
@@ -2700,7 +2700,7 @@
       "lessons": "6",
       "students": "289",
       "Duration": "8 Weeks",
-      "Instructor": "Sarah Lee",
+      "Instructor": "Alice Johnson",
       "Language": "English",
       "instructorId": "2",
       "comVideo": "../../src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
@@ -2771,7 +2771,11 @@
       "students": "20",
       "rating": "5",
       "About": "Hi, I'm Edward Narton, a Developer and Teacher with over 5 years of experience. I love coding and sharing my knowledge with others. I've worked on various projects, from web applications to mobile apps, and I believe in hands-on learning. I've helped over 20 students achieve their goals in programming.In my courses, you'll find a blend of theory and practical application to ensure you understand and can apply what you learn. Join me, and let's build something amazing together!",
-      "coursesID": [1, 2, 3],
+      "coursesID": [
+        1,
+        2,
+        3
+      ],
       "Contact": {
         "address": " North Helenavile, FV77 8WS",
         "Email": "Edward@gmail",
@@ -2789,7 +2793,11 @@
       "students": "45",
       "rating": "4.8",
       "About": "Hi, I'm Alice Johnson, a Data Scientist with 7 years of experience. I love working with data and helping others unlock its potential. My courses focus on practical applications and real-world projects.",
-      "coursesID": [4, 5, 6],
+      "coursesID": [
+        4,
+        5,
+        6
+      ],
       "Contact": {
         "address": "123 Data St, San Francisco, CA",
         "Email": "alice@example.com",
@@ -2807,7 +2815,10 @@
       "students": "30",
       "rating": "4.9",
       "About": "Hello, I'm Michael Smith, a Cybersecurity Expert with a decade of experience. I enjoy teaching the intricacies of online security and helping others protect their digital assets.",
-      "coursesID": [7, 8],
+      "coursesID": [
+        7,
+        8
+      ],
       "Contact": {
         "address": "456 Security Blvd, Austin, TX",
         "Email": "michael@example.com",
@@ -2825,7 +2836,10 @@
       "students": "25",
       "rating": "4.7",
       "About": "Hi, I'm Emily Davis, a Project Manager with over 8 years of experience. I specialize in Agile methodologies and enjoy teaching others how to effectively manage projects.",
-      "coursesID": [9, 10],
+      "coursesID": [
+        9,
+        10
+      ],
       "Contact": {
         "address": "789 Agile Lane, Seattle, WA",
         "Email": "emily@example.com",
@@ -2843,7 +2857,10 @@
       "students": "50",
       "rating": "4.9",
       "About": "Hello, I'm David Brown, a Full Stack Developer with 6 years of experience. I love building applications and teaching others how to create their own full stack projects.",
-      "coursesID": [11, 12],
+      "coursesID": [
+        11,
+        12
+      ],
       "Contact": {
         "address": "101 Dev Street, New York, NY",
         "Email": "david@example.com",
@@ -2861,7 +2878,11 @@
       "students": "35",
       "rating": "4.8",
       "About": "Hi, I'm Sophia Williams, a Machine Learning Engineer with 5 years of experience. I enjoy working with algorithms and data to create intelligent systems. My courses are hands-on and project-based.",
-      "coursesID": [13, 14, 15],
+      "coursesID": [
+        13,
+        14,
+        15
+      ],
       "Contact": {
         "address": "202 AI Blvd, Boston, MA",
         "Email": "sophia@example.com",
@@ -2879,7 +2900,10 @@
       "students": "40",
       "rating": "5",
       "About": "Hello, I'm James Wilson, a Cloud Architect with over 7 years of experience. I specialize in designing scalable cloud solutions and enjoy sharing my knowledge with others.",
-      "coursesID": [16, 17],
+      "coursesID": [
+        16,
+        17
+      ],
       "Contact": {
         "address": "303 Cloud Ave, Denver, CO",
         "Email": "james@example.com",
@@ -2897,7 +2921,9 @@
       "students": "28",
       "rating": "4.6",
       "About": "Hi, I'm Olivia Martinez, a Business Analyst with 4 years of experience. I love analyzing data to drive business decisions and enjoy teaching others how to do the same.",
-      "coursesID": [18],
+      "coursesID": [
+        18
+      ],
       "Contact": {
         "address": "404 Analysis St, Miami, FL",
         "Email": "olivia@example.com",
@@ -2915,7 +2941,10 @@
       "students": "32",
       "rating": "5",
       "About": "Hello, I'm Daniel Harris, a DevOps Engineer with 5 years of experience. I specialize in automating workflows and enjoy helping others streamline their development processes.",
-      "coursesID": [19, 20],
+      "coursesID": [
+        19,
+        20
+      ],
       "Contact": {
         "address": "505 DevOps Lane, Chicago, IL",
         "Email": "daniel@example.com",
@@ -2933,7 +2962,10 @@
       "students": "37",
       "rating": "4.7",
       "About": "Hi, I'm Grace Lee, a Blockchain Developer with 4 years of experience. I enjoy exploring blockchain technology and teaching others how to build decentralized applications.",
-      "coursesID": [21, 22],
+      "coursesID": [
+        21,
+        22
+      ],
       "Contact": {
         "address": "606 Blockchain Blvd, San Diego, CA",
         "Email": "grace@example.com",
@@ -2951,7 +2983,9 @@
       "students": "29",
       "rating": "4.8",
       "About": "Hello, I'm Henry Clark, an AI Researcher with 6 years of experience. I specialize in developing intelligent algorithms and enjoy teaching others about AI and machine learning.",
-      "coursesID": [23],
+      "coursesID": [
+        23
+      ],
       "Contact": {
         "address": "707 AI Lane, Los Angeles, CA",
         "Email": "henry@example.com",
@@ -2969,7 +3003,10 @@
       "students": "33",
       "rating": "5",
       "About": "Hi, I'm Natalie Thompson, a Digital Marketing Expert with 5 years of experience. I enjoy crafting marketing strategies and teaching others how to grow their online presence.",
-      "coursesID": [24, 25],
+      "coursesID": [
+        24,
+        25
+      ],
       "Contact": {
         "address": "808 Market St, Philadelphia, PA",
         "Email": "natalie@example.com",
@@ -2989,7 +3026,11 @@
       "students": "20",
       "rating": "5",
       "About": "Hi, I'm Edward Narton, a Developer and Teacher with over 5 years of experience. I love coding and sharing my knowledge with others. I've worked on various projects, from web applications to mobile apps, and I believe in hands-on learning. I've helped over 20 students achieve their goals in programming.In my courses, you'll find a blend of theory and practical application to ensure you understand and can apply what you learn. Join me, and let's build something amazing together!",
-      "coursesID": [1, 2, 3],
+      "coursesID": [
+        1,
+        2,
+        3
+      ],
       "Contact": {
         "address": " North Helenavile, FV77 8WS",
         "Email": "Edward@gmail",
@@ -3007,7 +3048,11 @@
       "students": "45",
       "rating": "4.8",
       "About": "Hi, I'm Alice Johnson, a Data Scientist with 7 years of experience. I love working with data and helping others unlock its potential. My courses focus on practical applications and real-world projects.",
-      "coursesID": [4, 5, 6],
+      "coursesID": [
+        4,
+        5,
+        6
+      ],
       "Contact": {
         "address": "123 Data St, San Francisco, CA",
         "Email": "alice@example.com",
@@ -3025,7 +3070,10 @@
       "students": "30",
       "rating": "4.9",
       "About": "Hello, I'm Michael Smith, a Cybersecurity Expert with a decade of experience. I enjoy teaching the intricacies of online security and helping others protect their digital assets.",
-      "coursesID": [7, 8],
+      "coursesID": [
+        7,
+        8
+      ],
       "Contact": {
         "address": "456 Security Blvd, Austin, TX",
         "Email": "michael@example.com",
@@ -3043,7 +3091,10 @@
       "students": "25",
       "rating": "4.7",
       "About": "Hi, I'm Emily Davis, a Project Manager with over 8 years of experience. I specialize in Agile methodologies and enjoy teaching others how to effectively manage projects.",
-      "coursesID": [9, 10],
+      "coursesID": [
+        9,
+        10
+      ],
       "Contact": {
         "address": "789 Agile Lane, Seattle, WA",
         "Email": "emily@example.com",
@@ -3090,7 +3141,7 @@
   ],
   "Reviews": [
     {
-      "id": "1",
+      "id": 1,
       "userId": "5",
       "comment": "The hands-on projects and interactive elements really helped me understand the concepts better. Highly recommend!",
       "Job": "Content Creator",
@@ -3098,7 +3149,7 @@
       "courseID": "1"
     },
     {
-      "id": "2",
+      "id": 2,
       "userId": "7",
       "comment": "This course provided me with invaluable skills that I could immediately apply to my job.",
       "Job": "Marketing Specialist",
@@ -3106,7 +3157,7 @@
       "courseID": "2"
     },
     {
-      "id": "3",
+      "id": 3,
       "userId": "20",
       "comment": "The instructors were very knowledgeable and the content was well-organized.",
       "Job": "Software Engineer",
@@ -3114,7 +3165,7 @@
       "courseID": "3"
     },
     {
-      "id": "4",
+      "id": 4,
       "userId": "8",
       "comment": "I loved the flexibility of the courses. I could learn at my own pace and revisit topics as needed.",
       "Job": "Graphic Designer",
@@ -3122,7 +3173,7 @@
       "courseID": "4"
     },
     {
-      "id": "5",
+      "id": 5,
       "userId": "30",
       "comment": "Great course material and excellent support from the instructors!",
       "Job": "Project Manager",
@@ -3130,7 +3181,7 @@
       "courseID": "5"
     },
     {
-      "id": "6",
+      "id": 6,
       "userId": "18",
       "comment": "The course content was current and relevant to industry standards.",
       "Job": "Data Analyst",
@@ -3138,7 +3189,7 @@
       "courseID": "6"
     },
     {
-      "id": "7",
+      "id": 7,
       "userId": "4",
       "comment": "A comprehensive and engaging learning experience. Highly recommended!",
       "Job": "Business Analyst",
@@ -3146,7 +3197,7 @@
       "courseID": "7"
     },
     {
-      "id": "8",
+      "id": 8,
       "userId": "10",
       "comment": "The platform is easy to navigate and the course material is top-notch.",
       "Job": "HR Manager",
@@ -3154,7 +3205,7 @@
       "courseID": "8"
     },
     {
-      "id": "9",
+      "id": 9,
       "userId": "31",
       "comment": "I gained a lot of practical knowledge that I could directly apply to my job.",
       "Job": "Consultant",
@@ -3162,7 +3213,7 @@
       "courseID": "9"
     },
     {
-      "id": "10",
+      "id": 10,
       "userId": "16",
       "comment": "The interactive elements and real-world examples were very helpful.",
       "Job": "Content Writer",
@@ -3170,7 +3221,7 @@
       "courseID": "10"
     },
     {
-      "id": "11",
+      "id": 11,
       "userId": "21",
       "comment": "An excellent learning platform with well-structured courses.",
       "Job": "Financial Analyst",
@@ -3178,7 +3229,7 @@
       "courseID": "11"
     },
     {
-      "id": "12",
+      "id": 12,
       "userId": "26",
       "comment": "The community aspect of the platform is great. It's nice to connect with other learners.",
       "Job": "Web Developer",
@@ -3186,7 +3237,7 @@
       "courseID": "12"
     },
     {
-      "id": "13",
+      "id": 13,
       "userId": "17",
       "comment": "The quizzes and assignments were challenging but very rewarding.",
       "Job": "Digital Marketer",
@@ -3194,7 +3245,7 @@
       "courseID": "13"
     },
     {
-      "id": "14",
+      "id": 14,
       "userId": "18",
       "comment": "Clear and concise course material that made learning easy and enjoyable.",
       "Job": "Teacher",
@@ -3202,7 +3253,7 @@
       "courseID": "14"
     },
     {
-      "id": "15",
+      "id": 15,
       "userId": "20",
       "comment": "The platform offers a great variety of courses that are very informative.",
       "Job": "Entrepreneur",
@@ -3210,7 +3261,7 @@
       "courseID": "15"
     }
   ],
-  "Categories": [
+"Categories": [
     {
       "categoryId": "1",
       "categoryName": "Business Management",
@@ -3273,8 +3324,13 @@
       "email": "Emily@gmail.com",
       "img": "src/assets/images/testimonial-02.png",
       "password": "123455678",
-      "validCoursesId": [1, 5, 9],
-      "subscribed": "yes"
+      "subscribed": "1",
+      "role": "user",
+      "favouriteCoursesId": [
+        1,
+        5,
+        8
+      ]
     },
     {
       "id": 2,
@@ -3282,8 +3338,12 @@
       "email": "john.doe@example.com",
       "img": "src/assets/images/smiley-handsome-man-posing.jpg",
       "password": "password123",
-      "subscribed": "yes",
-      "validCoursesId": [3, 7, 12]
+      "subscribed": "1",
+      "role": "user",
+      "favouriteCoursesId": [
+        7,
+        10
+      ]
     },
     {
       "id": 3,
@@ -3291,16 +3351,27 @@
       "email": "jane.smith@example.com",
       "img": "",
       "password": "mypassword",
-      "subscribed": "yes",
-      "validCoursesId": [4, 10, 15]
+      "subscribed": "1",
+      "favouriteCoursesId": [],
+      "role": "user"
     },
     {
       "id": 4,
       "name": "Alice Johnson",
       "email": "alice.johnson@example.com",
-      "img": " src/assets/images/bohemian-man-with-his-arms-crossed.jpg",
+      "img": "src/assets/images/bohemian-man-with-his-arms-crossed.jpg",
       "password": "alice.johnson@example.com",
-      "subscribed": "no"
+      "subscribed": "2",
+      "role": "user",
+      "favouriteCoursesId": [
+        3,
+        15
+      ],
+      "validCoursesId": [
+        4,
+        10,
+        15
+      ]
     },
     {
       "id": 5,
@@ -3308,7 +3379,14 @@
       "email": "bob.brown@example.com",
       "img": "src/assets/images/full-length-portrait-relaxed-smiling-man.jpg",
       "password": "bobspassword",
-      "subscribed": "no"
+      "subscribed": "2",
+      "favouriteCoursesId": [],
+      "role": "user",
+      "validCoursesId": [
+        2,
+        7,
+        10
+      ]
     },
     {
       "id": 6,
@@ -3316,24 +3394,46 @@
       "email": "charlie.davis@example.com",
       "img": "",
       "password": "charlie123",
-      "subscribed": "yes",
-      "validCoursesId": [5, 13, 20]
+      "favouriteCoursesId": [
+        17,
+        22
+      ],
+      "subscribed": "2",
+      "validCoursesId": [
+        5,
+        13,
+        20
+      ]
     },
     {
       "id": 7,
       "name": "Diana Evans",
       "email": "diana.evans@example.com",
-      "img": "../../src/assets/images/portrait-stylish-african-american-man.jpg",
+      "img": "src/assets/images/portrait-stylish-african-american-man.jpg",
+      "favouriteCoursesId": [],
       "password": "dianapass",
-      "subscribed": "no"
+      "subscribed": "2",
+      "role": "user",
+      "validCoursesId": [
+        10,
+        15,
+        20
+      ]
     },
     {
       "id": 8,
       "name": "Frank Green",
       "email": "frank.green@example.com",
       "img": "",
+      "favouriteCoursesId": [],
       "password": "frankpass",
-      "subscribed": "no"
+      "subscribed": "2",
+      "role": "user",
+      "validCoursesId": [
+        17,
+        15,
+        20
+      ]
     },
     {
       "id": 9,
@@ -3341,8 +3441,14 @@
       "email": "grace.hill@example.com",
       "img": "",
       "password": "gracepass",
-      "subscribed": "yes",
-      "validCoursesId": [3, 18, 21]
+      "favouriteCoursesId": [],
+      "role": "user",
+      "subscribed": "2",
+      "validCoursesId": [
+        3,
+        18,
+        21
+      ]
     },
     {
       "id": 10,
@@ -3350,16 +3456,24 @@
       "email": "henry.jones@example.com",
       "img": "",
       "password": "henrypass",
-      "subscribed": "yes",
-      "validCoursesId": [6, 11, 25]
+      "favouriteCoursesId": [],
+      "role": "user",
+      "subscribed": "2",
+      "validCoursesId": [
+        6,
+        11,
+        25
+      ]
     },
     {
       "id": 11,
+      "favouriteCoursesId": [],
       "name": "Ivy King",
       "email": "ivy.king@example.com",
       "img": "",
       "password": "ivypass",
-      "subscribed": "no"
+      "role": "user",
+      "subscribed": "3"
     },
     {
       "id": 12,
@@ -3367,7 +3481,9 @@
       "email": "jack.lee@example.com",
       "img": "",
       "password": "jackpass",
-      "subscribed": "no"
+      "favouriteCoursesId": [],
+      "subscribed": "3",
+      "role": "user"
     },
     {
       "id": 13,
@@ -3375,52 +3491,79 @@
       "email": "karen.miller@example.com",
       "img": "",
       "password": "karenpass",
-      "subscribed": "yes",
-      "validCoursesId": [8, 14, 20]
+      "favouriteCoursesId": [],
+      "subscribed": "2",
+      "role": "user",
+      "validCoursesId": [
+        8,
+        14,
+        20
+      ]
     },
     {
       "id": 14,
       "name": "Liam Nelson",
       "email": "liam.nelson@example.com",
       "img": "",
+      "favouriteCoursesId": [],
       "password": "liampass",
-      "subscribed": "yes",
-      "validCoursesId": [9, 21, 24]
+      "subscribed": "3",
+      "role": "user"
     },
     {
       "id": 15,
       "name": "Mia Owens",
       "email": "mia.owens@example.com",
       "img": "",
+      "favouriteCoursesId": [],
       "password": "miapass",
-      "subscribed": "no"
+      "subscribed": "3",
+      "role": "user"
     },
     {
       "id": 16,
       "name": "Nathan Perez",
       "email": "nathan.perez@example.com",
       "img": "",
+      "favouriteCoursesId": [],
       "password": "nathanpass",
-      "subscribed": "yes",
-      "validCoursesId": [3, 11, 18]
+      "subscribed": "2",
+      "role": "user",
+      "validCoursesId": [
+        3,
+        11,
+        18
+      ]
     },
     {
       "id": 17,
       "name": "Olivia Quinn",
       "email": "olivia.quinn@example.com",
       "img": "",
+      "favouriteCoursesId": [],
       "password": "oliviapass",
-      "subscribed": "yes",
-      "validCoursesId": [6, 15, 23]
+      "subscribed": "2",
+      "role": "user",
+      "validCoursesId": [
+        6,
+        15,
+        23
+      ]
     },
     {
       "id": 18,
       "name": "Peter Roberts",
       "email": "peter.roberts@example.com",
       "img": "",
+      "favouriteCoursesId": [],
       "password": "peterpass",
-      "subscribed": "yes",
-      "validCoursesId": [2, 8, 14]
+      "role": "user",
+      "subscribed": "2",
+      "validCoursesId": [
+        2,
+        8,
+        14
+      ]
     },
     {
       "id": 19,
@@ -3428,8 +3571,9 @@
       "email": "quinn.smith@example.com",
       "img": "",
       "password": "quinnpass",
-      "subscribed": "yes",
-      "validCoursesId": [7, 12, 19]
+      "favouriteCoursesId": [],
+      "subscribed": "1",
+      "role": "user"
     },
     {
       "id": 20,
@@ -3437,16 +3581,24 @@
       "email": "rachel.taylor@example.com",
       "img": "",
       "password": "rachelpass",
-      "subscribed": "no"
+      "favouriteCoursesId": [],
+      "subscribed": "1",
+      "role": "user"
     },
     {
       "id": 21,
       "name": "Steve Underwood",
       "email": "steve.underwood@example.com",
       "img": "",
-      "password": "stevepass",
-      "subscribed": "yes",
-      "validCoursesId": [10, 17, 21]
+      "password": "steve.underwood@example.com",
+      "subscribed": "2",
+      "favouriteCoursesId": [],
+      "role": "user",
+      "validCoursesId": [
+        10,
+        17,
+        21
+      ]
     },
     {
       "id": 22,
@@ -3454,8 +3606,14 @@
       "email": "tina.valdez@example.com",
       "img": "",
       "password": "tinapass",
-      "subscribed": "yes",
-      "validCoursesId": [5, 13, 20]
+      "favouriteCoursesId": [],
+      "subscribed": "2",
+      "role": "user",
+      "validCoursesId": [
+        5,
+        13,
+        20
+      ]
     },
     {
       "id": 23,
@@ -3463,7 +3621,9 @@
       "email": "umar.watson@example.com",
       "img": "",
       "password": "umarpass",
-      "subscribed": "no"
+      "favouriteCoursesId": [],
+      "role": "user",
+      "subscribed": "3"
     },
     {
       "id": 24,
@@ -3471,8 +3631,9 @@
       "email": "vera.xavier@example.com",
       "img": "",
       "password": "verapass",
-      "subscribed": "yes",
-      "validCoursesId": [3, 9, 14]
+      "favouriteCoursesId": [],
+      "role": "user",
+      "subscribed": "3"
     },
     {
       "id": 25,
@@ -3480,8 +3641,9 @@
       "email": "william.young@example.com",
       "img": "",
       "password": "williampass",
-      "subscribed": "yes",
-      "validCoursesId": [6, 15, 23]
+      "role": "user",
+      "favouriteCoursesId": [],
+      "subscribed": "3"
     },
     {
       "id": 26,
@@ -3489,7 +3651,9 @@
       "email": "xena.zane@example.com",
       "img": "",
       "password": "xenapass",
-      "subscribed": "no"
+      "role": "user",
+      "favouriteCoursesId": [],
+      "subscribed": "3"
     },
     {
       "id": 27,
@@ -3497,8 +3661,9 @@
       "email": "yvonne.adams@example.com",
       "img": "",
       "password": "yvonnepass",
-      "subscribed": "yes",
-      "validCoursesId": [5, 12, 24]
+      "role": "user",
+      "favouriteCoursesId": [],
+      "subscribed": "3"
     },
     {
       "id": 28,
@@ -3506,7 +3671,9 @@
       "email": "zach.brown@example.com",
       "img": "",
       "password": "zachpass",
-      "subscribed": "no"
+      "role": "user",
+      "favouriteCoursesId": [],
+      "subscribed": "3"
     },
     {
       "id": 29,
@@ -3514,8 +3681,9 @@
       "email": "anna.clark@example.com",
       "img": "",
       "password": "annapass",
-      "subscribed": "yes",
-      "validCoursesId": [3, 10, 16]
+      "role": "user",
+      "favouriteCoursesId": [],
+      "subscribed": "3"
     },
     {
       "id": 30,
@@ -3523,7 +3691,9 @@
       "email": "brian.davis@example.com",
       "img": "",
       "password": "brianpass",
-      "subscribed": "no"
+      "role": "user",
+      "favouriteCoursesId": [],
+      "subscribed": "3"
     },
     {
       "id": 31,
@@ -3531,26 +3701,216 @@
       "email": "cara.evans@example.com",
       "img": "",
       "password": "carapass",
-      "subscribed": "yes",
-      "validCoursesId": [9, 17, 22]
+      "favouriteCoursesId": [],
+      "role": "user",
+      "subscribed": "3"
     },
     {
       "name": "RAHMA",
       "email": "rahma@gmail.com",
       "img": "",
       "password": "666",
-      "subscribed": "no",
+      "favouriteCoursesId": [],
+      "role": "user",
+      "subscribed": "3",
+      "confirmPassword": "666",
+      "id": 32
+    },
+    {
+      "name": "sohila sobhy sadek",
+      "email": "sohilasobhysadek@gmail.com",
+      "img": "src/assets/images/bohemian-man-with-his-arms-crossed.jpg",
+      "password": "123",
+      "role": "admin",
+      "subscribed": 2,
+      "confirmPassword": "123",
+      "id": 33,
+      "favouriteCoursesId": [
+        1,
+        4
+      ],
+      "validCoursesId": [
+        2,
+        1,
+        5
+      ]
+    },
+    {
+      "name": "Jane Seymour",
+      "email": "Edward@gmail",
+      "img": "src/assets/images/team-01.webp",
+      "password": "666",
+      "favouriteCoursesId": [],
+      "role": "instructor",
+      "subscribed": "4",
+      "confirmPassword": "666",
+      "id": 34
+    },
+    {
+      "name": "Alice Johnson",
+      "img": "src/assets/images/team-02.webp",
+      "email": "alice@example.com",
+      "favouriteCoursesId": [],
+      "password": "666",
+      "role": "instructor",
+      "subscribed": "4",
       "confirmPassword": "666",
       "id": 35
     },
     {
-      "name": "sohila sobhy sadek",
-      "email": "SohilaSobhySadek@gmail.com",
-      "img": "src/assets/images/bohemian-man-with-his-arms-crossed.jpg",
-      "password": "123",
-      "subscribed": "no",
-      "confirmPassword": "123",
+      "name": "Michael Smith",
+      "img": "src/assets/images/team-03.webp",
+      "email": "michael@example.com",
+      "favouriteCoursesId": [],
+      "password": "666",
+      "role": "instructor",
+      "subscribed": "4",
+      "confirmPassword": "666",
       "id": 36
+    },
+    {
+      "name": "Emily Davis",
+      "img": "src/assets/images/team-04.webp",
+      "email": "emily@example.com",
+      "favouriteCoursesId": [],
+      "password": "666",
+      "role": "instructor",
+      "subscribed": "4",
+      "confirmPassword": "666",
+      "id": 37
+    },
+    {
+      "name": "David Brown",
+      "img": "src/assets/images/instructors-300.png",
+      "email": "david@example.com",
+      "password": "666",
+      "role": "instructor",
+      "subscribed": "4",
+      "favouriteCoursesId": [],
+      "confirmPassword": "666",
+      "id": 38
+    },
+    {
+      "name": "Sophia Williams",
+      "img": "src/assets/images/2-5-how-do-i-apply-block.jpg",
+      "email": "sophia@example.com",
+      "password": "666",
+      "role": "instructor",
+      "subscribed": "4",
+      "favouriteCoursesId": [],
+      "confirmPassword": "666",
+      "id": 39
+    },
+    {
+      "name": "James Wilson",
+      "img": "src/assets/images/tfs-quickstart-for-instructors.png",
+      "email": "james@example.com",
+      "password": "666",
+      "role": "instructor",
+      "subscribed": "4",
+      "favouriteCoursesId": [],
+      "confirmPassword": "666",
+      "id": 40
+    },
+    {
+      "name": "Olivia Martinez",
+      "img": "src/assets/images/kumonfranchise-press-2022-1001.jpeg",
+      "email": "olivia@example.com",
+      "password": "666",
+      "role": "instructor",
+      "subscribed": "4",
+      "favouriteCoursesId": [],
+      "confirmPassword": "666",
+      "id": 41
+    },
+    {
+      "name": "Daniel Harris",
+      "img": "src/assets/images/how-much-does-udemy-pay-instructors-1200x750.png",
+      "email": "daniel@example.com",
+      "password": "666",
+      "role": "instructor",
+      "subscribed": "4",
+      "favouriteCoursesId": [],
+      "confirmPassword": "666",
+      "id": 41
+    },
+    {
+      "name": "Grace Lee",
+      "img": "src/assets/images/istock_000036898774_small.jpg",
+      "email": "grace@example.com",
+      "password": "666",
+      "role": "instructor",
+      "favouriteCoursesId": [],
+      "subscribed": "4",
+      "confirmPassword": "666",
+      "id": 42
+    },
+    {
+      "name": "Henry Clark",
+      "img": "src/assets/images/360_F_665093017_sb9OKpEw2CnNkqV3TDr6VUxpauA93SJZ.jpg",
+      "email": "henry@example.com",
+      "password": "666",
+      "role": "instructor",
+      "subscribed": "4",
+      "confirmPassword": "666",
+      "favouriteCoursesId": [],
+      "id": 42
+    },
+    {
+      "name": "Natalie Thompson",
+      "img": "src/assets/images/istockphoto-1430390602-612x612.jpg",
+      "email": "natalie@example.com",
+      "password": "666",
+      "role": "instructor",
+      "subscribed": "4",
+      "favouriteCoursesId": [],
+      "confirmPassword": "666",
+      "id": 42
+    },
+    {
+      "name": "",
+      "email": "ahmed@gmail.com",
+      "img": "src/assets/images/about-12.webp",
+      "password": "111",
+      "subscribed": "4",
+      "role": "user",
+      "favouriteCoursesId": [],
+      "confirmPassword": "111",
+      "id": 43
+    },
+    {
+      "name": "salma",
+      "email": "salma@gmail.com",
+      "img": "src/assets/images/about-01.webp",
+      "password": "123",
+      "subscribed": 2,
+      "favouriteCoursesId": [
+        2,
+        3,
+        8,
+        6,
+        10,
+        1
+      ],
+      "role": "user",
+      "confirmPassword": "123",
+      "id": 44,
+      "validCoursesId": [
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "name": "youssef ",
+      "email": "youssef@g2mail.com",
+      "img": "src/assets/images/undefined",
+      "password": "youssef@g2mail.com",
+      "subscribed": "4",
+      "favouriteCoursesId": [],
+      "role": "user",
+      "confirmPassword": "youssef@g2mail.com",
+      "id": 45
     }
   ],
   "SubPlans": [
@@ -3569,5 +3929,6 @@
       "price": "199.92",
       "charge": "Charged as annual payment of 2,399 EGP"
     }
-  ]
+  ],
+  "Messages": []
 }

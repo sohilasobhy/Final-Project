@@ -9,6 +9,7 @@ export default function LessonsList() {
     const [array, setArray] = useState();
     const { courseId } = useParams()
     const [lessonData, setLessonData] = useRecoilState($lessonData)
+    console.log(lessonData)
     console.log(courseId)
     useEffect(() => {
         axios
@@ -35,8 +36,10 @@ export default function LessonsList() {
                                     <Accordion.Body>
                                         {
                                             course.lessons.map((lesson, index) => {
+                                                console.log(lesson)
+                                                console.log(lesson.LessonName == lessonData.LessonName)
                                                 return (
-                                                    <div key={index} className='lessonName d-flex gap-2 align-items-center' onClick={() => { setLessonData(lesson) }}> <IoIosPaper /> <p className='lessonName'>{lesson.LessonName}</p></div>
+                                                    <div key={index} className={`lessonName d-flex gap-2 align-items-center ${lesson.LessonName == lessonData.LessonName ? "active" : ""}`} onClick={() => { setLessonData(lesson) }}> <IoIosPaper /> <p className='lessonName'>{lesson.LessonName}</p></div>
                                                 )
                                             })
                                         }

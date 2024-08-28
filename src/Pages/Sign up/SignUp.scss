@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem 2rem;
   position: relative;
   background-image: url("../../assets/images/BG-3.webp");
   background-color: #f0f4f5;
@@ -42,6 +42,17 @@
         transition: 0.5s;
         z-index: 10;
         color: black;
+      }
+      .show {
+        top: 50%;
+        right: 5%;
+        display: none;
+        cursor: pointer;
+        z-index: 111;
+      }
+      input:valid ~ .show,
+      input:focus ~ .show {
+        display: block;
       }
       input:valid ~ span,
       input:focus ~ span {

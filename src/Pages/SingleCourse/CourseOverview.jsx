@@ -10,26 +10,43 @@ import reviewer1 from "../../assets/images/user.png"
 import { IoIosPaper } from "react-icons/io";
 import SingleCourseComponent from '../../Components/SingleCourseComponent';
 import { RateStarsClick } from '../../Components/RateStarsClick/RateStarsClick';
-import { Field, Form, Formik } from 'formik';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { RateStars } from '../RateStars/RateStars';
 import CommercialVid from './CommercialVid';
 import CourseDetails from './CourseDetails';
+import { useRecoilState } from 'recoil';
+import { $UserInfo } from '../../Store/Store';
+import { ReviewScheme } from '../../schemas/ReviweScheme';
 const CourseOverview = () => {
+    let url = "http://localhost:3000/Reviews"
     const [key, setKey] = useState('home');
     let { id } = useParams();
-    const [array, setArray] = useState();
+    const [courses, setCourses] = useState();
     const [instractour, setInstructor] = useState();
     const [Reviews, setReviews] = useState();
     const [Cateories, setCategories] = useState();
     const [reviewers, setreviewers] = useState();
     const [reviewsShow, setReviewsShow] = useState(3)
     const [isloading, setIsloading] = useState(false);
+    const [userInfo] = useRecoilState($UserInfo)
+    console.log(userInfo)
+    const [valid, setValid] = useState(false)
+    let handleSubmit = (values) => {
+        console.log(values)
+        axios.post(url, values)
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
     useEffect(() => {
         setIsloading(true)
         axios
             .get(`http://localhost:3000/Courses/${id}`)
             .then((response) => {
-                setArray(response.data);
+                setCourses(response.data);
             })
             .catch((error) => {
                 console.error("There was an error fetching the data!", error);
@@ -39,12 +56,12 @@ const CourseOverview = () => {
     }, [id]);
 
     useEffect(() => {
-        if (array) {
+        if (courses) {
             axios
-                .get(`http://localhost:3000/Instructors?id=${array?.instructorId}`)
+                .get(`http://localhost:3000/Instructors?id=${courses?.instructorId}`)
                 .then((response) => {
                     setInstructor(response.data[0]);
-                    console.log(array)
+                    console.log(courses)
                 })
                 .catch((error) => {
                     console.error("There was an error fetching the data!", error);
@@ -52,12 +69,12 @@ const CourseOverview = () => {
                     setIsloading(false);
                 });
         }
-    }, [array])
+    }, [courses])
 
     useEffect(() => {
-        if (array) {
+        if (courses) {
             axios
-                .get(`http://localhost:3000/Courses?category=${array.category}`)
+                .get(`http://localhost:3000/Courses?category=${courses.category}`)
                 .then((response) => {
                     setCategories(response.data);
                 })
@@ -67,10 +84,10 @@ const CourseOverview = () => {
                     setIsloading(false);
                 });
         }
-    }, [array])
+    }, [courses])
 
     useEffect(() => {
-        if (array) {
+        if (courses) {
             axios
                 .get(`http://localhost:3000/Users`)
                 .then((response) => {
@@ -82,11 +99,11 @@ const CourseOverview = () => {
                     setIsloading(false);
                 });
         }
-    }, [array])
+    }, [courses])
     useEffect(() => {
-        if (array) {
+        if (courses) {
             axios
-                .get(`http://localhost:3000/Reviews?courseID=${array?.id}`)
+                .get(`http://localhost:3000/Reviews?courseID=${courses?.id}`)
                 .then((response) => {
                     setReviews(response.data);
                 })
@@ -96,7 +113,18 @@ const CourseOverview = () => {
                     setIsloading(false);
                 });
         }
-    }, [array])
+    }, [courses])
+    console.log(courses)
+    useEffect(() => {
+        // if (userInfo != null && userInfo?.favouriteCoursesId.includes(Number(courses?.id))) {
+        // setValid(true)
+        // }
+    }, [userInfo])
+    console.log(valid)
+    let relatedCourses = Cateories?.filter((course) => {
+        return course?.id != courses?.id;
+    });
+    // const [relatedCourses] = Cateories?.filter((course) => { return console.log(course) })
     function getReviewerImage(userId) {
         let x = reviewers.find((ele) => ele.id == userId);
         console.log(x);
@@ -108,7 +136,7 @@ const CourseOverview = () => {
 
     if (isloading) {
         content = <div className="d-flex align-items-center justify-content-center min-vh-100"><Spinner style={{ width: '5rem', height: '5rem' }} size="lg" animation="border" variant="primary" /></div>
-    } else if (!array) {
+    } else if (!courses) {
         content = <h2>No Course Data</h2>
     } else {
         content =
@@ -123,11 +151,11 @@ const CourseOverview = () => {
                         <div className='p-5'>
                             <h3 className=' align-self-start'>Course Overview</h3>
                             <p className='mt-4'>
-                                {array.desc}
+                                {courses.desc}
                             </p>
                             <h3 className='mt-5 align-self-start'>What You’ll Learn? </h3>
                             <div className='mt-3'>
-                                {array.Objectives.map((objective, index) => {
+                                {courses.Objectives.map((objective, index) => {
                                     return (
                                         <div className='d-flex gap-2 mt-3' key={index}>
                                             <img src={right} alt="check-mark" className='object-fit-contain' />
@@ -142,7 +170,7 @@ const CourseOverview = () => {
                         <div>
                             <Accordion defaultActiveKey={['0']} alwaysOpen>
                                 {
-                                    array?.courseContent?.map((course, index) => {
+                                    courses?.courseContent?.map((course, index) => {
                                         return (
                                             <Accordion.Item eventKey={`${index}`} className='mt-3' key={index}>
                                                 <Accordion.Header>{course.category}</Accordion.Header>
@@ -151,7 +179,7 @@ const CourseOverview = () => {
                                                         course.lessons.map((lesson, index) => {
                                                             console.log(lesson)
                                                             return (
-                                                                <Link to={`/lessons/${id}`} key={index} className='lessonName d-flex gap-2 align-items-center'> <IoIosPaper /> <p>{lesson.LessonName}</p></Link>
+                                                                <Link to={`${valid ? `/lessons/${id}` : ""}`} key={index} className='lessonName d-flex gap-2 align-items-center'> <IoIosPaper /> <p>{lesson.LessonName}</p></Link>
                                                             )
                                                         })
                                                     }
@@ -199,8 +227,8 @@ const CourseOverview = () => {
                         <div className='px-2 py-5 p-md-5 contant col-12 col-lg-6'>
                             <div className="top  d-flex flex-column flex-md-row align-items-center gap-5 col-12">
                                 <div className='rating d-flex flex-column align-items-center justify-content-center gap-3'>
-                                    <p>{array.rating}</p>
-                                    <RateStars rate={array.rating} />
+                                    <p>{courses.rating}</p>
+                                    <RateStars rate={courses.rating} />
                                 </div>
                                 {/* <div className='d-flex flex-column col-8 gap-2 align-items-center'>
                                     <div className='d-flex align-items-center col-12 gap-1 ratingBar  m-auto'>
@@ -235,28 +263,35 @@ const CourseOverview = () => {
                                     </div>
                                 </div> */}
                             </div>
-                            <div className="leaveReview mt-5">
-                                <Formik
-                                    initialValues={{
-                                        comment: "",
-                                        rating: null
-                                    }}
-                                    onSubmit={(values) => handleSubmit(values)}
-                                >
-                                    {({ setFieldValue }) => (
-                                        <Form className='col-12'>
-                                            <h4>Leave a review:</h4>
-                                            <div className='d-flex flex-column align-items-center gap-2 p-3 ms-3'>
-                                                <RateStarsClick setFieldValue={setFieldValue} />
-                                                <Field name="comment" type="text" placeholder='Write your review' className='col-8  comment' />
-                                                <button type='submit' className='col-8 btn btn-success'>
-                                                    submit
-                                                </button>
-                                            </div>
-                                        </Form>
-                                    )}
-                                </Formik>
-                            </div>
+                            {userInfo &&
+                                <div className="leaveReview mt-5">
+                                    <Formik
+                                        initialValues={{
+                                            comment: "",
+                                            rating: 0,
+                                            courseID: courses.id,
+                                            userId: userInfo?.id,
+                                        }}
+                                        onSubmit={(values) => handleSubmit(values)}
+                                        validationSchema={ReviewScheme}
+                                    >
+                                        {({ setFieldValue }) => (
+                                            <Form className='col-12'>
+                                                <h4>Leave a review:</h4>
+                                                <div className='d-flex flex-column align-items-center gap-2 p-3 ms-3'>
+                                                    <RateStarsClick setFieldValue={setFieldValue} />
+                                                    <Field name="comment" type="text" placeholder='Write your review' className='col-8  comment' />
+                                                    <span className='text-danger fw-bold'>
+                                                        <ErrorMessage name='comment' />
+                                                    </span>
+                                                    <button type='submit' className='col-8 btn btn-success'>
+                                                        submit
+                                                    </button>
+                                                </div>
+                                            </Form>
+                                        )}
+                                    </Formik>
+                                </div>}
                             <div className="Reviews mt-5">
                                 <h4>Reviews:</h4>
                                 {Reviews?.length > 0 ?
@@ -294,8 +329,8 @@ const CourseOverview = () => {
                         Cateories?.length > 1 ?
                             <div>
                                 <h3>Courses You May Like</h3>
-                                <div className='row align-items-stretch mt-3 g-5 g-lg-3'>
-                                    {Cateories?.slice(0, 3).map((course, index) => {
+                                <div className='row align-items-stretch mt-3 g-5 g-lg-3 justify-content-center'>
+                                    {relatedCourses?.slice(0, 3).map((course) => {
                                         return (
                                             <div
                                                 className="col-12 col-md-6 col-lg-4 position-relative"
@@ -314,9 +349,6 @@ const CourseOverview = () => {
                 </div>
                 <CommercialVid />
             </div >
-    }
-    let handleSubmit = (values) => {
-        console.log(values)
     }
     return (
         <div>

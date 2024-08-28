@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
-export default function Instructors() {
+export default function InstructorsDash() {
     const [Instructors, setInstrucors] = useState()
     useEffect(() => {
         axios.get("http://localhost:3000/Instructors")

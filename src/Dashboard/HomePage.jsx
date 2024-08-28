@@ -1,11 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { $CourseForm } from "../Store/Store";
 
-export default function HomePage() {
+export default function HomePageDash() {
     const [courses, setCourses] = useState([]);
     const [reviews, setReviews] = useState([]);
     const [instructors, setInstructors] = useState([]);
+    const [, setCourseForm] = useRecoilState($CourseForm);
     useEffect(() => {
         axios
             .get("http://localhost:3000/HomeCourses")
@@ -50,6 +53,9 @@ export default function HomePage() {
                                 <td>
                                     Course Name
                                 </td>
+                                <td>
+                                    Edit
+                                </td>
                                 <td className="text-center">
                                     Delete
                                 </td>
@@ -65,13 +71,21 @@ export default function HomePage() {
                                                     {course.name}
                                                 </Link>
                                             </td>
-                                            <td className="text-center">
+                                            <td>
+                                                Edit
+                                            </td>
+                                            <td className="text-center" onClick={() => { }}>
                                                 -
                                             </td>
                                         </tr>
                                     )
                                 })
                             }
+                            <tr>
+                                <td colSpan={3} className=" text-primary fw-medium fs-5 add" onClick={() => setCourseForm(true)}>
+                                    + Add New Course
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -114,6 +128,11 @@ export default function HomePage() {
                                     )
                                 })
                             }
+                            <tr>
+                                <td colSpan={3} className=" text-primary fw-medium fs-5 add">
+                                    + Add New Course
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -161,10 +180,15 @@ export default function HomePage() {
                                     )
                                 })
                             }
+                            <tr>
+                                <td colSpan={3} className=" text-primary fw-medium fs-5 add">
+                                    + Add New Course
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

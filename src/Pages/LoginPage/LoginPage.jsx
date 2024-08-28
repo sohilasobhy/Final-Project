@@ -7,10 +7,13 @@ import axios from "axios"
 import { useState } from "react"
 import { useRecoilState } from "recoil"
 import { $UserInfo } from "../../Store/Store"
+import { IoMdEye } from "react-icons/io";
+import { IoMdEyeOff } from "react-icons/io";
 export default function LoginPage() {
     const [message, setMessage] = useState(false)
     const navigate = useNavigate()
-    const [userInfo, setUserInfo] = useRecoilState($UserInfo)
+    const [, setUserInfo] = useRecoilState($UserInfo)
+    const [show, setShow] = useState(false)
     return (
         <div className="col-12" id="LoginPage">
             <div className="backgroundFilter"></div>
@@ -41,7 +44,7 @@ export default function LoginPage() {
                 <Form action="post">
                     <h2>Sign in</h2>
                     <div className="inputBox">
-                        <Field type="text" required="required" name="email" />
+                        <Field type="text" required="required" name="email" className="mt-1" />
                         <span>Email</span>
                         <i></i>
                     </div>
@@ -49,9 +52,11 @@ export default function LoginPage() {
                         <ErrorMessage name="email" />
                     </span>
                     <div className="inputBox">
-                        <Field type="password" required="required" name="password" />
+                        <Field type={show ? `text` : `password`} required="required" name="password" className="mt-1" />
                         <span>Password</span>
                         <i></i>
+                        <IoMdEyeOff className={`position-absolute show ${show ? "d-none" : ""}`} onClick={() => setShow(true)} />
+                        <IoMdEye className={`position-absolute show ${show == false ? "d-none" : ""}`} onClick={() => setShow(false)} />
                     </div>
                     <span className={`error  ${message ? `d-block` : `d-none`}`}>
                         Wrong email or password

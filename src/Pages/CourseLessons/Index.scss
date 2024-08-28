@@ -6,6 +6,9 @@
     left: 0;
     padding: 1rem;
     background-color: white;
+    .active {
+      color: #1ab69d;
+    }
     .accordion-item:first-of-type > .accordion-header .accordion-button {
       background-color: transparent;
     }

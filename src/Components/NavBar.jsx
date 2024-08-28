@@ -48,7 +48,7 @@ export default function NavBar() {
             </div>
             :
             <div className="d-none d-sm-flex justify-content-center align-items-center py-2 px-3 rounded-2 bg-white menuIcon" onClick={() => setProfile(!profile)} >
-              <img src={user?.img == "" ? defaultImage : user?.img} alt="user Image" width={40} height={40} className="object-fit-cover rounded-5" />
+              <img src={`../${user?.img == "" ? defaultImage : user?.img}`} alt="user Image" width={40} height={40} className="object-fit-cover rounded-5" />
             </div>
         }
         <div

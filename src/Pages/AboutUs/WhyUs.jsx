@@ -10,7 +10,7 @@ export default function WhyUs() {
             <div className="d-flex flex-column gap-2 align-items-center mainTitle">
                 <p className="text-muted text-center fs-6">WHY CHOOSE EDUJOURNEY</p>
                 <div className="d-flex flex-column align-items-center justify-content-center gap-2">
-                    <h2 className="text-center fs-1 col-8 title">The Best <span>Beneficial</span> Side of EduBlink</h2>
+                    <h2 className="text-center fs-1 col-8 title">The Best <span>Beneficial</span> Side of EduJourney</h2>
                     <div className="col-3 d-flex justify-content-center align-items-center">
                         <svg
                             style={{

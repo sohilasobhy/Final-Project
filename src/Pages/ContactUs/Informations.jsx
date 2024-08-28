@@ -1,9 +1,23 @@
-import { Field, Formik } from "formik";
-import { Form } from "react-router-dom";
+import axios from "axios";
+import { Field, Formik, Form, ErrorMessage } from "formik";
 import { Button } from "react-bootstrap";
+import { showSuccessAlert } from "../../Components/ShowSuccessAlert";
+import { ContactScheme } from "../../schemas/ContactScheme";
 
+let url = "http://localhost:3000/Messages";
 
 export default function Informations() {
+    function handleSubmit(values) {
+        axios.post(url, values)
+            .then(response => {
+                console.log(response.data.email);
+                showSuccessAlert();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
     return (
         <div id="Informations" className="py-5 container">
             <div className="d-flex flex-column flex-lg-row justify-content-center gap-5 align-items-center">
@@ -28,18 +42,33 @@ export default function Informations() {
                     <div>
                         <Formik
                             initialValues={{
+                                name: "",
                                 subject: "",
                                 message: "",
+                                email: "",
                             }}
                             onSubmit={(values) => handleSubmit(values)}
+                            validationSchema={ContactScheme}
                         >
                             <Form className='col-12 p-5 d-flex flex-column gap-4'>
                                 <h4>Get in touch!</h4>
                                 <Field name="name" type="text" placeholder='Your Name*' />
+                                <span className="text-danger fw-bold">
+                                    <ErrorMessage name="name" />
+                                </span>
                                 <Field name="email" type="email" placeholder='Enter Your Email*' />
+                                <span className="text-danger fw-bold">
+                                    <ErrorMessage name="email" />
+                                </span>
                                 <Field name="subject" type="text" placeholder='Subject' />
+                                <span className="text-danger fw-bold">
+                                    <ErrorMessage name="subject" />
+                                </span>
                                 <Field name="message" as="textarea" placeholder='Your Message' />
-                                <Button variant="success" className="d-flex align-items-center justify-content-center col-12 col-md-6">
+                                <span className="text-danger fw-bold">
+                                    <ErrorMessage name="message" />
+                                </span>
+                                <Button type="submit" variant="success" className="d-flex align-items-center justify-content-center col-12 col-md-6">
                                     Submit Message
                                 </Button>
                             </Form>
@@ -48,5 +77,5 @@ export default function Informations() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

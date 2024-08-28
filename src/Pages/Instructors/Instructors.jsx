@@ -28,7 +28,7 @@ export default function InstructorsPage() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3000/Instructors?q=${values}`)
+            .get(`http://localhost:3000/Instructors?q=${values ? values : ""}`)
             .then((response) => {
                 setInstructors(response.data);
             })
@@ -36,17 +36,6 @@ export default function InstructorsPage() {
                 console.error("There was an error fetching the data!", error);
             });
     }, [values]);
-
-    useEffect(() => {
-        axios
-            .get("http://localhost:3000/Instructors")
-            .then((res) => {
-                setInstructors(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }, []);
 
     return (
         <div id="InstructorsPage">

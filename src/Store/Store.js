@@ -49,9 +49,17 @@ export const $subPlans = atom({
   key: "$subPlans",
   default: {
     "duration": "Monthly",
-    "price": "399.00",
+    "price": "399.00 EGP",
     "charge": "Charged monthly"
   },
+});
+export const $checkoutPay = atom({
+  key: "$checkoutPay",
+  default: {},
+});
+export const $CourseForm = atom({
+  key: "$CourseForm",
+  default: false,
 });
 
 

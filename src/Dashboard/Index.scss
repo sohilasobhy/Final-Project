@@ -4,6 +4,7 @@
     background-color: #2db87f;
     z-index: 9999;
     top: 0;
+    overflow: auto;
     .LINKS {
       a {
         font-size: 20px;
@@ -12,6 +13,9 @@
         &:hover {
           color: black;
         }
+      }
+      .active {
+        color: #000;
       }
     }
     .logo {
@@ -31,13 +35,15 @@
   #Categories,
   #Reviews,
   #InstrucorsDash,
-  #UsersDash {
+  #UsersDash,
+  #MessagesDash {
     right: 0;
     table {
       tr {
         td {
           background-color: #eff4f5;
           border-color: white;
+          cursor: pointer;
         }
       }
       thead {
@@ -54,6 +60,51 @@
             }
           }
         }
+      }
+    }
+  }
+  #DashHome {
+    .add {
+      cursor: pointer;
+    }
+  }
+}
+#AddCourseForm {
+  .filter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0000008e;
+    z-index: 99999;
+  }
+  .FormContainer {
+    border-radius: 0.5rem;
+    background-color: #c1d8c3;
+    height: 90%;
+    overflow: auto;
+  }
+  .error {
+    color: #d93025;
+    margin-top: 5px;
+    font-weight: 600;
+  }
+  form {
+    div {
+      input,
+      select,
+      textarea {
+        border: none;
+        padding: 0.2rem;
+        border-radius: 0.4rem;
+        &:focus {
+          outline: 0;
+        }
+      }
+      a {
+        color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+        font-weight: 600;
       }
     }
   }

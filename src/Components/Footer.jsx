@@ -29,7 +29,7 @@ export default function Footer() {
             <span>Call: </span> +01 123 5641 231
           </p>
           <p className="contact">
-            <span> Email: </span> info@edublink.co
+            <span> Email: </span> info@EduJourney.co
           </p>
         </div>
         <div className="d-flex flex-column col-12 col-md-6 col-lg-2 gap-3 links">

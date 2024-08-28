@@ -1,7 +1,3 @@
-import shareIcon from "../../assets/images/share.png";
-import linkedIn from "../../assets/images/linkedin(3).png";
-import facebook2 from "../../assets/images/facebook-app-symbol(1).png";
-import twitter from "../../assets/images/twitter.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import SingleInstructor from "../../Components/SingleInstructorComponent/SingleInstructor";

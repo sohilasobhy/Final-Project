@@ -19,7 +19,6 @@ export default function HomePage() {
     <div className="col-12 HomePage position-relative">
       <SideMenu />
       <Video />
-      <CircleProgress />
       <HeroSection />
       <Features />
       <Edges />

@@ -1,21 +1,14 @@
 import "./InstractourProfile.scss"
-import { MdSlowMotionVideo } from "react-icons/md";
 import { CiBookmark, CiLogout } from "react-icons/ci";
-import user from "../../assets/images/user.png"
 import { Link } from "react-router-dom";
 import { TiMessages } from "react-icons/ti";
 import { useRecoilState } from "recoil";
 import { $UserInfo, $profile } from "../../Store/Store";
-import axios from "axios";
-import { useEffect, useState } from "react";
 
 export default function InstractourProfile() {
     console.log("first")
     const [profile] = useRecoilState($profile)
     const [user, setUser] = useRecoilState($UserInfo)
-
-    // const user = JSON.parse(localStorage.getItem(`user`))
-
     if (profile) {
         return (
             <div className="bg-white position-fixed pb-3" id="Insratcour">

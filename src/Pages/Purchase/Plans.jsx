@@ -6,7 +6,8 @@ import { $subPlans } from "../../Store/Store"
 
 export default function Plans() {
     const [plans, setPlans] = useState()
-    const [subPlans, setSubPlans] = useRecoilState($subPlans)
+    const [, setSubPlans] = useRecoilState($subPlans)
+    const [defaultPlan, setDefaultPlan] = useState(0)
     useEffect(() => {
         axios
             .get("http://localhost:3000/SubPlans")
@@ -23,8 +24,11 @@ export default function Plans() {
             {
                 plans?.map((plan, index) => {
                     return (
-                        <div className="col-12 col-md-8 col-lg-4" key={index} onClick={() => setSubPlans(plan)}>
-                            <div className="d-flex flex-column justify-content-between plan">
+                        <div className={`col-12 col-md-8 col-lg-4 `} key={index} onClick={() => {
+                            setSubPlans(plan)
+                            setDefaultPlan(index)
+                        }}>
+                            <div className={`d-flex flex-column justify-content-between plan ${index == defaultPlan ? "activePlan" : ""}`}>
                                 <div>
                                     <h3>{plan.duration} Plan</h3>
                                     <p className="mt-2">{plan.price} EGP/month</p>

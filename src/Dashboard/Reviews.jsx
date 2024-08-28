@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function Reviews() {
+export default function ReviewsDash() {
     const [Reviews, setReviews] = useState()
     useEffect(() => {
         axios

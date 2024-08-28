@@ -1,19 +1,18 @@
-import "./ClientProfile.scss"
+import "./AdminProfile.scss"
 import { MdSlowMotionVideo } from "react-icons/md";
-import { CiBookmark, CiLogout } from "react-icons/ci";
-import { TiMessages } from "react-icons/ti";
+import { CiLogout } from "react-icons/ci";
+import { MdDashboard } from "react-icons/md";
 import userImg from "../../assets/images/user.png"
 import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { $UserInfo, $profile } from "../../Store/Store";
-export default function
-    ClientProfile() {
+export default function AdminProfile() {
     const [user, setUser] = useRecoilState($UserInfo)
     const [profile] = useRecoilState($profile)
-    console.log(user)
+    console.log(user?.img)
     if (profile) {
         return (
-            <div className="bg-white position-fixed pb-3" id="client">
+            <div className="bg-white position-fixed pb-3" id="Admin">
                 <div className="d-flex flex-column align-items-center user px-5 pt-5 pb-4">
                     <div className="d-flex gap-3 userInfo">
                         <img src={`../${user?.img ? user?.img : userImg}`} alt="user image" width={50} height={50} className=" object-fit-cover" />
@@ -26,31 +25,12 @@ export default function
                             </p>
                         </div>
                     </div>
-                    <div className="col-12 d-flex justify-content-center mt-4 rounded-1 subscribe">
-                        <Link to={"/purchase"}>Sucscribe</Link>
-                    </div>
                 </div>
                 <div className="line col-12"></div>
                 <div className="">
-                    <Link to={"/progress"} className="d-flex align-items-center gap-2 item py-2 px-5">
-                        <MdSlowMotionVideo />
-                        <p>My Progress</p>
-                    </Link>
-                    <Link to={"/wishlist"} className="d-flex align-items-center gap-2 item py-2 px-5 mt-3">
-                        <CiBookmark />
-                        <p>Saved Courses</p>
-                    </Link>
-                    {/* <Link className="d-flex align-items-center gap-2 item mt-3 py-2 px-5">
-                                <FaCertificate />
-                                <p>Certificates</p>
-                            </Link>
-                            <Link className="d-flex align-items-center gap-2 item mt-3 py-2 px-5">
-                                <IoMdSettings />
-                                <p>Account Settings </p>
-                            </Link> */}
-                    <Link to={"/messages"} className="d-flex align-items-center gap-2 item mt-3 py-2 px-5">
-                        <TiMessages />
-                        <p>Messages</p>
+                    <Link to={"/dashboard/Home-page"} className="d-flex align-items-center gap-2 item py-2 px-5">
+                        <MdDashboard />
+                        <p>Dashboard</p>
                     </Link>
                 </div>
                 <div className="line col-12"></div>

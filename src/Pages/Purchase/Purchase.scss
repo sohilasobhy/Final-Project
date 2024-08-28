@@ -1,5 +1,8 @@
 #Purchase {
   #Plans {
+    .activePlan {
+      border: 1px solid blue;
+    }
     .plan {
       height: 180px;
       padding: 0.8rem;

@@ -16,6 +16,9 @@
     .mainImage {
       scale: 1.2;
     }
+    .enrolled {
+      display: none;
+    }
   }
   .mainImage {
     transition: 0.6s;
@@ -123,5 +126,18 @@
         color: black;
       }
     }
+  }
+  .enrolled {
+    top: 11%;
+    left: -22%;
+    background-color: #ee4a62;
+    width: 68%;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg);
+    color: white;
   }
 }

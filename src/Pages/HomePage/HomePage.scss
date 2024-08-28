@@ -10,16 +10,14 @@
   }
 }
 @keyframes bounce {
-  0%,
-  75%,
-  100% {
+  0% {
     bottom: 0;
   }
   50% {
-    bottom: 200px;
+    bottom: 20px;
   }
-  90% {
-    bottom: 50px;
+  100% {
+    bottom: 0;
   }
 }
 @keyframes spin {
@@ -32,7 +30,7 @@
 }
 #HeroSection {
   background-color: #eaf0f2;
-  background-image: url(https://demo.edublink.co/wp-content/uploads/2023/05/BG-1.webp);
+  background-image: url(https://demo.EduJourney.co/wp-content/uploads/2023/05/BG-1.webp);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -317,10 +315,8 @@
     box-shadow: 0 40px 70px rgba(27, 20, 78, 0.1);
     border-radius: 0.5rem;
     right: 0;
-
     transform: translateX(-50%);
-    animation: bounce 3s infinite;
-
+    animation: bounce 2s ease-in-out infinite;
     @media (max-width: 992px) {
       bottom: -10%;
       right: 15%;

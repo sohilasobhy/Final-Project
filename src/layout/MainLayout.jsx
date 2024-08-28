@@ -12,13 +12,13 @@ export const MainLayout = () => {
     return (
         <>
             <NavBar />
+            <Outlet />
+            <Footer />
             <ScrollToTop />
             <Profile />
             <Search />
             <SideMenu />
             <CircleProgress />
-            <Outlet />
-            <Footer />
         </>
     )
 }

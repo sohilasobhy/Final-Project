@@ -1,4 +1,33 @@
 #Courses {
+  .pagination {
+    .page-link {
+      &:focus {
+        box-shadow: 0 0 0;
+        a {
+          background-color: white !important;
+        }
+      }
+    }
+    .page-item {
+      a {
+        color: #1ab69d !important;
+      }
+    }
+    .active {
+      a {
+        background-color: #1ab69d;
+        color: white !important;
+        border: 1px solid #1ab69d;
+        outline: 0;
+      }
+    }
+    .disabled {
+      a {
+        color: #1ab69d !important;
+      }
+    }
+  }
+
   .header {
     padding: 6rem;
     display: flex;

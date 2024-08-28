@@ -10,16 +10,24 @@ import SignUp from "../Pages/Sign up/SignUp";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import CourseLessons from "../Pages/CourseLessons/Index";
 import Purchase from "../Pages/Purchase/Purchase";
-import Test from "../Components/test/Test";
 import Progress from "../Components/ClientProfile/Progress/Progress";
 import SavedCourses from "../Components/ClientProfile/SavedCourses/SavedCourses";
 import Messages from "../Components/ClientProfile/Messages/Messages";
-import Dashboard from "../Dashboard/Index";
 import ForgetPassword from "../Components/ForgetPassword/ForgetPassword";
 import InstructorsPage from "../Pages/Instructors/Instructors";
 import IsLoggedOut from "../Components/IsLoggedOut/IsLoggedOut";
 import Checkout from "../Pages/Checkout/Checkout";
 import SingleInstructor from "../Pages/SingleInstructorPage/SingleInstructor";
+import DashboardLayout from "../Dashboard/Index";
+import Users from "../Dashboard/Users";
+import IsLoggedIn from "../Components/IsLoggedIn/IsLoggedIn";
+import HomePageDash from "../Dashboard/HomePage";
+import AllCourses from "../Dashboard/AllCourses";
+import CategoriesDash from "../Dashboard/Categories";
+import ReviewsDash from "../Dashboard/Reviews";
+import InstructorsDash from "../Dashboard/Instructors";
+import MessagesDash from "../Dashboard/Messages";
+import CourseContentForm from "../Pages/SingleCourse/test";
 
 
 const router = createBrowserRouter([
@@ -77,7 +85,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/test",
-                element: <Test />
+                element: <CourseContentForm />
             },
         ],
     }, {
@@ -91,10 +99,40 @@ const router = createBrowserRouter([
         element: <CourseLessons />
     }, {
         path: "/dashboard",
-        element: <Dashboard />
+        element: <DashboardLayout />,
+        children: [
+            {
+                path: "users",
+                element: <Users />
+            },
+            {
+                path: "Home-page",
+                element: <HomePageDash />
+            },
+            {
+                path: "All-courses",
+                element: <AllCourses />
+            },
+            {
+                path: "Categories",
+                element: <CategoriesDash />
+            },
+            {
+                path: "Reviews",
+                element: <ReviewsDash />
+            },
+            {
+                path: "instructors",
+                element: <InstructorsDash />
+            },
+            {
+                path: "messages",
+                element: <MessagesDash />
+            }
+        ],
     }, {
         path: "/checkout",
-        element: <Checkout />
+        element: <IsLoggedIn><Checkout /></IsLoggedIn>
     },
 ])
 export default router;
