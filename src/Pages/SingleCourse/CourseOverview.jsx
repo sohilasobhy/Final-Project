@@ -17,6 +17,7 @@ import CourseDetails from './CourseDetails';
 import { useRecoilState } from 'recoil';
 import { $UserInfo } from '../../Store/Store';
 import { ReviewScheme } from '../../schemas/ReviweScheme';
+import { toast } from 'react-toastify';
 const CourseOverview = () => {
     let url = "http://localhost:3000/Reviews"
     const [key, setKey] = useState('home');
@@ -31,16 +32,20 @@ const CourseOverview = () => {
     const [userInfo] = useRecoilState($UserInfo)
     console.log(userInfo)
     const [valid, setValid] = useState(false)
-    let handleSubmit = (values) => {
-        console.log(values)
+    let handleSubmit = (values, { resetForm }) => {
+        console.log(values);
         axios.post(url, values)
             .then(response => {
-                console.log(response)
+                console.log(response);
+                toast.success("Your review has been added");
+                setReviews([...Reviews, values]);
+                resetForm(); // Ensure resetForm is called after successful submission
             })
             .catch(error => {
                 console.error('Error:', error);
             });
-    }
+    };
+
     useEffect(() => {
         setIsloading(true)
         axios
@@ -126,7 +131,7 @@ const CourseOverview = () => {
     });
     // const [relatedCourses] = Cateories?.filter((course) => { return console.log(course) })
     function getReviewerImage(userId) {
-        let x = reviewers.find((ele) => ele.id == userId);
+        let x = reviewers?.find((ele) => ele.id == userId);
         console.log(x);
         return x;
     }
@@ -147,7 +152,7 @@ const CourseOverview = () => {
                     onSelect={(k) => setKey(k)}
                     className="mb-3 col-12 col-lg-6 ms-0 ms-lg-5"
                 >
-                    <Tab eventKey="home" title="Overview" className='col-12 col-lg-6 p-2 p-lg-5  '>
+                    <Tab eventKey="home" title="Overview" className='col-12 col-lg-6 p-2 p-lg-5 Overview'>
                         <div className='p-5'>
                             <h3 className=' align-self-start'>Course Overview</h3>
                             <p className='mt-4'>
@@ -155,7 +160,7 @@ const CourseOverview = () => {
                             </p>
                             <h3 className='mt-5 align-self-start'>What You’ll Learn? </h3>
                             <div className='mt-3'>
-                                {courses.Objectives.map((objective, index) => {
+                                {courses.obj.map((objective, index) => {
                                     return (
                                         <div className='d-flex gap-2 mt-3' key={index}>
                                             <img src={right} alt="check-mark" className='object-fit-contain' />
@@ -166,7 +171,7 @@ const CourseOverview = () => {
                             </div>
                         </div>
                     </Tab>
-                    <Tab eventKey="profile" title="Curriculum" className='col-12 col-lg-6 p-2 p-lg-5 '>
+                    <Tab eventKey="profile" title="Curriculum" className='col-12 col-lg-6 p-2 p-lg-5 Curriculum'>
                         <div>
                             <Accordion defaultActiveKey={['0']} alwaysOpen>
                                 {
@@ -272,7 +277,7 @@ const CourseOverview = () => {
                                             courseID: courses.id,
                                             userId: userInfo?.id,
                                         }}
-                                        onSubmit={(values) => handleSubmit(values)}
+                                        onSubmit={(values, formikBag) => handleSubmit(values, formikBag)}
                                         validationSchema={ReviewScheme}
                                     >
                                         {({ setFieldValue }) => (
@@ -280,6 +285,7 @@ const CourseOverview = () => {
                                                 <h4>Leave a review:</h4>
                                                 <div className='d-flex flex-column align-items-center gap-2 p-3 ms-3'>
                                                     <RateStarsClick setFieldValue={setFieldValue} />
+                                                    <h4>Add Your Review</h4>
                                                     <Field name="comment" type="text" placeholder='Write your review' className='col-8  comment' />
                                                     <span className='text-danger fw-bold'>
                                                         <ErrorMessage name='comment' />
@@ -292,14 +298,14 @@ const CourseOverview = () => {
                                         )}
                                     </Formik>
                                 </div>}
-                            <div className="Reviews mt-5">
+                            <div className="Reviews mt-5 ">
                                 <h4>Reviews:</h4>
                                 {Reviews?.length > 0 ?
                                     Reviews.slice(0, reviewsShow).map((item, index) => {
                                         return (
-                                            <div key={item.id} className='d-flex flex-column flex-md-row align-items-lg-center justify-content-lg-center  p-3 gap-3'>
+                                            <div key={item.id} className='d-flex flex-column flex-md-row  p-3 gap-3'>
                                                 <img
-                                                    src={`../../${getReviewerImage(item.userId).img ? getReviewerImage(item.userId).img : reviewer1}`}
+                                                    src={`../../${getReviewerImage(item.userId)?.img ? getReviewerImage(item.userId)?.img : reviewer1}`}
                                                     alt="reviewer image"
                                                     className='reviewerImg' />
                                                 <div>

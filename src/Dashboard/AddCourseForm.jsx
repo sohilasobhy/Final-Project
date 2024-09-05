@@ -3,43 +3,93 @@ import { ErrorMessage, Field, FieldArray, Form, Formik } from "formik";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import { $CourseForm } from "../Store/Store";
+import { $AllCourses, $CourseForm } from "../Store/Store";
 import { UploadCourseScheme } from "../schemas/UploadCourseScheme";
+import CustomModal from "../Components/Modal/Modal";
+import Swal from "sweetalert2";
 export default function AddCourseForm() {
     const [CourseForm, setCourseForm] = useRecoilState($CourseForm)
-    const [Categories, setCategories] = useState()
-    console.log(Categories)
-    const [Instructors, setInstructors] = useState()
+    const [Categories, setCategories] = useState([]);
+    const [Instructors, setInstructors] = useState([]);
+    const [Courses, setCourses] = useRecoilState($AllCourses);
+    useEffect(() => {
+        axios
+            .get("http://localhost:3000/Courses")
+            .then((res) => {
+                setCourses(res.data)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }, [])
+    const url = "http://localhost:3000/Courses"
     const handleSubmit = (values) => {
+        console.log(values)
         const objArray = values?.obj.split(',');
         values.obj = objArray
         let image = values.img.split("\\")[2]
         values.img = `src/assets/images/${image}`
-        let video = values.video.split("\\")[2]
-        values.video = `src/assets/images/${video}`
-        values.duration = `${values.duration} weeks`
+        let video = values.comVideo.split("\\")[2]
+        values.comVideo = `src/assets/images/${video}`
+        let lessonLink = values.courseContent[0].lessons[0].Link.split("\\")[2]
+        values.courseContent[0].lessons[0].Link = `src/assets/images/${lessonLink}`
+        values.Duration = `${values.Duration} weeks`
         if (values.price == 0) {
             values.price = "free"
         } else {
             values.price = `$${values.price}`
         }
-        console.log(values)
+        let CatId = Categories.find((element) => element.categoryName = values.category)
+        values.CtegoryId = CatId.id
+        let InstId = Instructors.find((element) => element.name = values.Instructor)
+        values.instructorId = InstId.id
+        Swal.fire({
+            title: "Are you sure you want to add this course?",
+            icon: "success",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, add it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axios.post(url, values)
+                    .then(() => {
+                        Swal.fire({
+                            title: "Added!",
+                            text: "the course has been added.",
+                            icon: "success"
+                        });
+                        setCourses([...Courses, values])
+                        setCourseForm(false)
+                    })
+                    .catch((error) => {
+                        Swal.fire({
+                            title: "Error!",
+                            text: "There was a problem adding this course.",
+                            icon: "error"
+                        });
+                    });
+            }
+        });
     }
     const initialValues = {
         name: "",
-        Levels: "Beginner",
+        level: "Beginner",
         category: "Business Management",
         CtegoryId: "",
         price: "",
-        lesson: "",
-        duration: "",
-        Instructors: "Jane Seymour",
+        lessons: "",
+        Duration: "",
+        Instructor: "Jane Seymour",
         Language: "English",
-        video: "",
+        comVideo: "",
+        instructorId: "",
         img: "",
         obj: "",
-        description: "",
+        desc: "",
         Certification: "Yes",
+        rating: "0",
+        students: "0",
         courseContent: [
             {
                 category: '',
@@ -75,225 +125,254 @@ export default function AddCourseForm() {
     }, [])
     if (CourseForm) {
         return (
-            <div id="AddCourseForm">
-                <div className="filter d-flex justify-content-center align-items-center" onClick={(event) => {
-                    event.stopPropagation();
-                    // setCourseForm(false);
-                }}>
-                    <div className=" col-10 col-md-8 col-lg-6 FormContainer">
-                        <Formik
-                            initialValues={initialValues}
-                            onSubmit={handleSubmit}
-                            validationSchema={UploadCourseScheme}>
-                            {({ values }) => (
-                                <Form className="p-3 d-flex flex-column gap-3" >
-                                    <h2 className="text-center mb-3">Upload New Course</h2>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Enter Course Name</p>
-                                        <Field type="text" name="name" />
-                                        <span className="error">
-                                            <ErrorMessage name="name" />
-                                        </span>
-                                    </div>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Course Level:</p>
-                                        <Field as="select" name="Levels">
-                                            <option value="Beginner">Beginner</option>
-                                            <option value="Intermediat">Intermediat</option>
-                                            <option value="Hard">Hard</option>
-                                        </Field>
-                                        <span className="error">
-                                            <ErrorMessage name="Levels" />
-                                        </span>
-                                    </div>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Course Category:</p>
-                                        <Field as="select" name="category">
-                                            {
-                                                Categories?.map((Category) => {
-                                                    return (
-                                                        <option value={Category.categoryName}>{Category.categoryName}</option>
-                                                    )
-                                                })
-                                            }
-                                        </Field>
-                                        <span className="error">
-                                            <ErrorMessage name="category" />
-                                        </span>
-                                        <Link to={"/dashboard/Categories"} onClick={() => setCourseForm(false)}>+ Add another category</Link>
-                                    </div>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Enter Course Lessons</p>
-                                        <Field type="number" min="20" max="70" name="lesson" />
-                                        <span className="error">
-                                            <ErrorMessage name="lesson" />
-                                        </span>
-                                    </div>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Enter Course Duration</p>
-                                        <Field type="number" min="4" max="12" name="duration" />
-                                        <span className="error">
-                                            <ErrorMessage name="duration" />
-                                        </span>
-                                    </div>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Enter Course Instructor</p>
-                                        <Field as="select" name="Instructors">
-                                            {
-                                                Instructors?.map((Instructor) => {
-                                                    return (
-                                                        <option value={Instructor.name}>{Instructor.name}</option>
-                                                    )
-                                                })
-                                            }
-                                        </Field>
-                                        <span className="error">
-                                            <ErrorMessage name="Instructors" />
-                                        </span>
-                                        <Link to={"/dashboard/Instructors"} onClick={() => setCourseForm(false)}>+ Add another Instructor</Link>
-                                    </div>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Course Language</p>
-                                        <Field as="select" name="Language">
-                                            <option value="English">English</option>
-                                            <option value="Arabic">Arabic</option>
-                                        </Field>
-                                        <span className="error">
-                                            <ErrorMessage name="Language" />
-                                        </span>
-                                    </div>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Commercial Video</p>
-                                        <Field type="file" name="video" />
-                                        <span className="error">
-                                            <ErrorMessage name="video" />
-                                        </span>
-                                    </div>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Commercial Image</p>
-                                        <Field type="file" name="img" />
-                                        <span className="error">
-                                            <ErrorMessage name="img" />
-                                        </span>
-                                    </div>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Course Objectives</p>
-                                        <Field
-                                            as="textarea"
-                                            name="obj"
-                                            placeholder="Enter values separated by commas"
-                                        />
-                                        <span className="error">
-                                            <ErrorMessage name="obj" />
-                                        </span>
-                                    </div>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Description</p>
-                                        <Field as="textarea" name="description" />
-                                        <span className="error">
-                                            <ErrorMessage name="description" />
-                                        </span>
-                                    </div>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Course price</p>
-                                        <Field type="number" name="price" min="0" max="200" />
-                                        <span className="error">
-                                            <ErrorMessage name="price" />
-                                        </span>
-                                    </div>
-                                    <div className="d-flex flex-column gap-1">
-                                        <p>Certification</p>
-                                        <Field as="select" name="Certification">
-                                            <option value="Yes">Yes</option>
-                                            <option value="No">No</option>
-                                        </Field>
-                                        <span className="error">
-                                            <ErrorMessage name="Certification" />
-                                        </span>
-                                    </div>
-                                    <FieldArray name="courseContent">
-                                        {({ remove, push }) => (
-                                            <>
-                                                {values.courseContent.map((category, index) => (
-                                                    <div key={index}>
-                                                        <h3>Category {index + 1}</h3>
-                                                        <Field
-                                                            name={`courseContent[${index}].category`}
-                                                            placeholder="Category Name"
-                                                        />
-                                                        <FieldArray name={`courseContent[${index}].lessons`}>
-                                                            {({ remove: removeLesson, push: pushLesson }) => (
-                                                                <>
-                                                                    {category.lessons.map((lesson, lessonIndex) => (
-                                                                        <div key={lessonIndex}>
-                                                                            <h4>Lesson {lessonIndex + 1}</h4>
-                                                                            <Field
-                                                                                name={`courseContent[${index}].lessons[${lessonIndex}].LessonName`}
-                                                                                placeholder="Lesson Name"
-                                                                            />
-                                                                            <Field
-                                                                                name={`courseContent[${index}].lessons[${lessonIndex}].desc`}
-                                                                                placeholder="Lesson Description"
-                                                                            />
-                                                                            <Field
-                                                                                name={`courseContent[${index}].lessons[${lessonIndex}].Link`}
-                                                                                placeholder="Media Link"
-                                                                            />
-                                                                            <button
-                                                                                type="button"
-                                                                                onClick={() => removeLesson(lessonIndex)}
-                                                                            >
-                                                                                Remove Lesson
-                                                                            </button>
-                                                                        </div>
-                                                                    ))}
-                                                                    <button
-                                                                        type="button"
-                                                                        onClick={() =>
-                                                                            pushLesson({
-                                                                                LessonName: '',
-                                                                                desc: '',
-                                                                                Link: '',
-                                                                            })
-                                                                        }
-                                                                    >
-                                                                        Add Lesson
-                                                                    </button>
-                                                                </>
-                                                            )}
-                                                        </FieldArray>
-                                                        <button type="button" onClick={() => remove(index)}>
-                                                            Remove Category
-                                                        </button>
-                                                    </div>
-                                                ))}
-                                                <button
-                                                    type="button"
-                                                    onClick={() =>
-                                                        push({
-                                                            category: '',
-                                                            lessons: [
-                                                                {
-                                                                    LessonName: '',
-                                                                    desc: '',
-                                                                    Link: '',
-                                                                },
-                                                            ],
-                                                        })
+            <CustomModal onHide={() => setCourseForm(false)} title={"Add Course Form"} show={CourseForm}>
+                <div className=" col-10 col-md-8 col-lg-6 FormContainer">
+                    <Formik
+                        initialValues={initialValues}
+                        onSubmit={handleSubmit}
+                        validationSchema={UploadCourseScheme}>
+                        {({ values, errors }) => (
+                            <Form className="p-3 d-flex flex-column gap-3" >
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Enter Course Name</p>
+                                    <Field type="text" name="name" />
+                                    <span className="error">
+                                        <ErrorMessage name="name" />
+                                    </span>
+                                </div>
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Course Level:</p>
+                                    <Field as="select" name="level">
+                                        <option value="Beginner">Beginner</option>
+                                        <option value="Intermediat">Intermediat</option>
+                                        <option value="Hard">Hard</option>
+                                    </Field>
+                                    <span className="error">
+                                        <ErrorMessage name="level" />
+                                    </span>
+                                </div>
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Course Category:</p>
+                                    <Field as="select" name="category">
+                                        {
+                                            Categories?.map((Category) => {
+                                                return (
+                                                    <option value={Category.categoryName}>{Category.categoryName}</option>
+                                                )
+                                            })
+                                        }
+                                    </Field>
+                                    <span className="error">
+                                        <ErrorMessage name="category" />
+                                    </span>
+                                    <Link to={"/dashboard/Categories"} onClick={() => setCourseForm(false)}>+ Add another category</Link>
+                                </div>
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Enter Course Lessons</p>
+                                    <Field type="number" min="10" max="70" name="lessons" />
+                                    <span className="error">
+                                        <ErrorMessage name="lessons" />
+                                    </span>
+                                </div>
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Enter Course Duration</p>
+                                    <Field type="number" min="4" max="12" name="Duration" />
+                                    <span className="error">
+                                        <ErrorMessage name="Duration" />
+                                    </span>
+                                </div>
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Enter Course Instructor</p>
+                                    <Field as="select" name="Instructor">
+                                        {
+                                            Instructors?.map((Instructor) => {
+                                                return (
+                                                    <option value={Instructor.name}>{Instructor.name}</option>
+                                                )
+                                            })
+                                        }
+                                    </Field>
+                                    <span className="error">
+                                        <ErrorMessage name="Instructor" />
+                                    </span>
+                                    <Link to={"/dashboard/Instructors"} onClick={() => setCourseForm(false)}>+ Add another Instructor</Link>
+                                </div>
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Course Language</p>
+                                    <Field as="select" name="Language">
+                                        <option value="English">English</option>
+                                        <option value="Arabic">Arabic</option>
+                                    </Field>
+                                    <span className="error">
+                                        <ErrorMessage name="Language" />
+                                    </span>
+                                </div>
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Commercial Video</p>
+                                    <Field type="file" name="comVideo" />
+                                    <span className="error">
+                                        <ErrorMessage name="comVideo" />
+                                    </span>
+                                </div>
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Commercial Image</p>
+                                    <Field type="file" name="img" />
+                                    <span className="error">
+                                        <ErrorMessage name="img" />
+                                    </span>
+                                </div>
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Course Objectives</p>
+                                    <Field
+                                        as="textarea"
+                                        name="obj"
+                                        placeholder="Enter values separated by commas"
+                                    />
+                                    <span className="error">
+                                        <ErrorMessage name="obj" />
+                                    </span>
+                                </div>
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Description</p>
+                                    <Field as="textarea" name="desc" />
+                                    <span className="error">
+                                        <ErrorMessage name="desc" />
+                                    </span>
+                                </div>
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Course price</p>
+                                    <Field type="number" name="price" min="0" max="200" />
+                                    <span className="error">
+                                        <ErrorMessage name="price" />
+                                    </span>
+                                </div>
+                                <div className="d-flex flex-column gap-1">
+                                    <p>Certification</p>
+                                    <Field as="select" name="Certification">
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </Field>
+                                    <span className="error">
+                                        <ErrorMessage name="Certification" />
+                                    </span>
+                                </div>
+                                <FieldArray name="courseContent">
+                                    {({ remove, push }) => (
+                                        <>
+                                            {values.courseContent.map((category, index) => (
+                                                <div key={index}>
+                                                    <h3>Category {index + 1}</h3>
+                                                    <Field
+                                                        name={`courseContent[${index}].category`}
+                                                        placeholder="Category Name"
+                                                        className="mt-2"
+                                                    />
+                                                    <ErrorMessage
+                                                        name={`courseContent[${index}].category`}
+                                                        component="div"
+                                                        className="error"
+                                                    />
+
+                                                    <FieldArray name={`courseContent[${index}].lessons`}>
+                                                        {({ remove: removeLesson, push: pushLesson }) => (
+                                                            <>
+                                                                {category.lessons.map((lesson, lessonIndex) => (
+                                                                    <div key={lessonIndex}>
+                                                                        <h4 className="mt-2">Lesson {lessonIndex + 1}</h4>
+                                                                        <Field
+                                                                            name={`courseContent[${index}].lessons[${lessonIndex}].LessonName`}
+                                                                            placeholder="Lesson Name"
+                                                                            as="textarea"
+                                                                        />
+                                                                        <br />
+                                                                        <ErrorMessage
+                                                                            name={`courseContent[${index}].lessons[${lessonIndex}].LessonName`}
+                                                                            component="div"
+                                                                            className="error"
+                                                                        />
+                                                                        <Field
+                                                                            name={`courseContent[${index}].lessons[${lessonIndex}].desc`}
+                                                                            placeholder="Lesson Description"
+                                                                            as="textarea"
+                                                                            className="mt-2"
+                                                                        />
+                                                                        <br />
+                                                                        <ErrorMessage
+                                                                            name={`courseContent[${index}].lessons[${lessonIndex}].desc`}
+                                                                            component="div"
+                                                                            className="error"
+                                                                        />
+                                                                        <h4>Lesson video</h4>
+                                                                        <Field
+                                                                            name={`courseContent[${index}].lessons[${lessonIndex}].Link`}
+                                                                            type="file"
+                                                                        />
+                                                                        <br />
+                                                                        <ErrorMessage
+                                                                            name={`courseContent[${index}].lessons[${lessonIndex}].Link`}
+                                                                            component="div"
+                                                                            className="error"
+                                                                        />
+                                                                        <button
+                                                                            type="button"
+                                                                            onClick={() => removeLesson(lessonIndex)}
+                                                                            className="mt-2 btn btn-danger"
+                                                                        >
+                                                                            Remove Lesson
+                                                                        </button>
+                                                                    </div>
+                                                                ))}
+                                                                <button
+                                                                    className="mt-2 btn btn-primary"
+                                                                    type="button"
+                                                                    onClick={() =>
+                                                                        pushLesson({
+                                                                            LessonName: '',
+                                                                            desc: '',
+                                                                            Link: '',
+                                                                        })
+                                                                    }
+                                                                >
+                                                                    Add Lesson
+                                                                </button>
+                                                            </>
+                                                        )}
+                                                    </FieldArray>
+                                                    {
+                                                        console.log(errors)
                                                     }
-                                                >
-                                                    Add Category
-                                                </button>
-                                            </>
-                                        )}
-                                    </FieldArray>
-                                    <button type="submit" className="btn btn-success">Next</button>
-                                </Form>
-                            )}
-                        </Formik>
-                    </div>
+                                                    <button type="button" className="mt-2 ms-2 btn btn-danger" onClick={() => remove(index)}>
+                                                        Remove Category
+                                                    </button>
+                                                </div>
+                                            ))}
+                                            <button
+                                                type="button"
+                                                className="btn btn-primary"
+                                                onClick={() =>
+                                                    push({
+                                                        category: '',
+                                                        lessons: [
+                                                            {
+                                                                LessonName: '',
+                                                                desc: '',
+                                                                Link: '',
+                                                            },
+                                                        ],
+                                                    })
+                                                }
+                                            >
+                                                Add Category
+                                            </button>
+                                        </>
+                                    )}
+                                </FieldArray>
+                                <button type="submit" className="btn btn-success">Upload the course</button>
+                            </Form>
+                        )}
+                    </Formik>
                 </div>
-            </div >
+            </CustomModal>
         )
     }
 }

@@ -2,35 +2,16 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import { $CourseForm } from "../Store/Store";
-
+import { $AddCourseHome, $AddInstructorHome, $HomeCourses, $HomeInstructors, $HomeReviews, $ReviewForm } from "../Store/Store";
+import Swal from 'sweetalert2';
 export default function HomePageDash() {
-    const [courses, setCourses] = useState([]);
-    const [reviews, setReviews] = useState([]);
-    const [instructors, setInstructors] = useState([]);
-    const [, setCourseForm] = useRecoilState($CourseForm);
-    useEffect(() => {
-        axios
-            .get("http://localhost:3000/HomeCourses")
-            .then((response) => {
-                setCourses(response.data);
-                console.log(courses);
-            })
-            .catch((error) => {
-                console.error("There was an error fetching the data!", error);
-            });
-    }, []);
-    useEffect(() => {
-        axios
-            .get("http://localhost:3000/HomeReviews")
-            .then((response) => {
-                setReviews(response.data);
-                console.log(reviews);
-            })
-            .catch((error) => {
-                console.error("There was an error fetching the data!", error);
-            });
-    }, []);
+    const [courses, setCourses] = useRecoilState($HomeCourses);
+    console.log(courses)
+    const [reviews, setReviews] = useRecoilState($HomeReviews);
+    const [instructors, setInstructors] = useRecoilState($HomeInstructors);
+    const [, setAddCourseHome] = useRecoilState($AddCourseHome)
+    const [, setReviewForm] = useRecoilState($ReviewForm);
+    const [, setInstructorForm] = useRecoilState($AddInstructorHome);
     useEffect(() => {
         axios
             .get("http://localhost:3000/HomeInstructors")
@@ -42,8 +23,49 @@ export default function HomePageDash() {
                 console.error("There was an error fetching the data!", error);
             });
     }, []);
+    const handleDelete = (url, deletedItem, item) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axios.delete(url)
+                    .then(() => {
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your course has been deleted.",
+                            icon: "success"
+                        });
+                    })
+                    .catch((error) => {
+                        Swal.fire({
+                            title: "Error!",
+                            text: "There was a problem deleting the course.",
+                            icon: "error"
+                        });
+                    });
+                if (item == 1) {
+                    const updatedArray = courses.filter(item => item.id !== deletedItem.id);
+                    setCourses(updatedArray)
+                } else if (item == 2) {
+                    const updatedArray = reviews.filter(item => item.id !== deletedItem.id);
+                    setReviews(updatedArray)
+                } else if (item == 3) {
+                    const updatedArray = instructors.filter(item => item.id !== deletedItem.id);
+                    setInstructors(updatedArray)
+                }
+                console.log(courses)
+            }
+        });
+    };
+    console.log(courses)
     return (
-        <div id="DashHome" className="position-absolute top-0 col-12 col-md-7 col-lg-8 col-xl-9 p-3">
+        <div id="DashHome" className="position-absolute top-0 col-11 col-md-7 col-lg-8 col-xl-9 p-3">
             <div>
                 <h2>Home Courses</h2>
                 <div className="mt-4">
@@ -51,10 +73,10 @@ export default function HomePageDash() {
                         <thead>
                             <tr>
                                 <td>
-                                    Course Name
+                                    Course Id
                                 </td>
                                 <td>
-                                    Edit
+                                    Course Name
                                 </td>
                                 <td className="text-center">
                                     Delete
@@ -67,22 +89,22 @@ export default function HomePageDash() {
                                     return (
                                         <tr key={course.id}>
                                             <td>
+                                                {course.id}
+                                            </td>
+                                            <td>
                                                 <Link to={`/single-course/${course.id}`}>
                                                     {course.name}
                                                 </Link>
                                             </td>
-                                            <td>
-                                                Edit
-                                            </td>
-                                            <td className="text-center" onClick={() => { }}>
-                                                -
+                                            <td className="text-center" onClick={() => { handleDelete(`http://localhost:3000/HomeCourses/${course.id}`, course, 1) }}>
+                                                <button className="btn btn-danger">Delete</button>
                                             </td>
                                         </tr>
                                     )
                                 })
                             }
                             <tr>
-                                <td colSpan={3} className=" text-primary fw-medium fs-5 add" onClick={() => setCourseForm(true)}>
+                                <td colSpan={3} className=" text-primary fw-medium fs-5 add" onClick={() => setAddCourseHome(true)}>
                                     + Add New Course
                                 </td>
                             </tr>
@@ -122,15 +144,15 @@ export default function HomePageDash() {
                                                 {review.comment}
                                             </td>
                                             <td className="text-center">
-                                                -
+                                                <button className="btn btn-danger" onClick={() => handleDelete(`http://localhost:3000/HomeReviews/${review.id}`, review, 2)}>Delete</button>
                                             </td>
                                         </tr>
                                     )
                                 })
                             }
                             <tr>
-                                <td colSpan={3} className=" text-primary fw-medium fs-5 add">
-                                    + Add New Course
+                                <td colSpan={3} className=" text-primary fw-medium fs-5 add" onClick={() => setReviewForm(true)}>
+                                    + Add New Review
                                 </td>
                             </tr>
                         </tbody>
@@ -168,21 +190,22 @@ export default function HomePageDash() {
                                                 {instructor.id}
                                             </td>
                                             <td className="text-center" >
-                                                <img src={instructor.img} alt="instructor image" width={100} />
+                                                <img src={`../${instructor.img}`} alt="instructor image" width={100} />
                                             </td>
                                             <td className="text-center" style={{ verticalAlign: "middle" }}>
                                                 {instructor.name}
                                             </td>
                                             <td className="text-center" style={{ verticalAlign: "middle" }}>
-                                                -
+                                                <button className="btn btn-danger" onClick={() => handleDelete(`http://localhost:3000/HomeInstructors/${instructor.id}`, instructor, 3)}>Delete</button>
+
                                             </td>
                                         </tr>
                                     )
                                 })
                             }
                             <tr>
-                                <td colSpan={3} className=" text-primary fw-medium fs-5 add">
-                                    + Add New Course
+                                <td colSpan={4} className=" text-primary fw-medium fs-5 add" onClick={() => setInstructorForm(true)}>
+                                    + Add New Instructor
                                 </td>
                             </tr>
                         </tbody>

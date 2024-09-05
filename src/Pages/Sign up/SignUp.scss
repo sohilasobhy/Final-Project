@@ -7,7 +7,7 @@
   background-image: url("../../assets/images/BG-3.webp");
   background-color: #f0f4f5;
   z-index: 22;
-  height: 100vh;
+  min-height: 89.5vh;
   form {
     inset: 4px;
     background-color: #2eb980;
@@ -134,9 +134,9 @@
     border: 1px solid #2eb980;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    width: 35%;
+    width: 30%;
     background-color: #fff;
-    height: 100%;
+    height: 593px;
     img {
       border-bottom-right-radius: 8px;
       border-top-right-radius: 8px;

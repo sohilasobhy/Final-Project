@@ -8,14 +8,14 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import { $UserInfo } from "../Store/Store";
+import { $UserInfo, $whishlistItems } from "../Store/Store";
 import { RateStars } from "../Pages/RateStars/RateStars";
 import axios from "axios";
 import React from 'react';
 import { toast } from 'react-toastify';
 
 export default function SingleCourseComponent({ course, color }) {
-  const [isReadMore] = useState(true);
+  // const [isReadMore] = useState(true);
   const [found, setFound] = useState(false)
   const [user, setUser] = useRecoilState($UserInfo)
   console.log(user)
@@ -23,13 +23,12 @@ export default function SingleCourseComponent({ course, color }) {
   console.log(user?.favouriteCoursesId)
 
   useEffect(() => {
-    console.log("first")
-    if (user?.favouriteCoursesId.includes(Number(course?.id))) {
-      console.log("first")
-      console.log(course.id)
-      setFound(true)
+    if (user) {
+      if (user?.favouriteCoursesId.includes(Number(course?.id))) {
+        setFound(true)
+      }
     }
-  }, [course])
+  }, [course, user?.favouriteCoursesId])
 
   function AddToWishlist() {
     if (user) {
@@ -39,29 +38,21 @@ export default function SingleCourseComponent({ course, color }) {
           let res = response.data;
           if (!res.favouriteCoursesId.includes(Number(course?.id))) {
             toast.success('course added to wishlist successfuly')
-            setFound(true)
             res.favouriteCoursesId.push(Number(course?.id));
             res = res.favouriteCoursesId;
-            setUser(response.data)
-            if (sessionStorage.getItem("user") != null) {
-              sessionStorage.setItem("user", JSON.stringify(response.data))
-            } else if (localStorage.getItem("user") != null) {
-              localStorage.setItem("user", JSON.stringify(response.data))
-            }
+            setFound(true);
           } else {
-            console.log(res)
-            res = res.favouriteCoursesId.filter((item) => item != course.id)
-            console.log(res)
-            toast.warning('course added to wishlist successfuly')
-            setFound(false)
-            setUser(response.data)
-            if (sessionStorage.getItem("user") != null) {
-              sessionStorage.setItem("user", JSON.stringify(response.data))
-            } else if (localStorage.getItem("user") != null) {
-              localStorage.setItem("user", JSON.stringify(response.data))
-            }
+            res = res.favouriteCoursesId.filter((item) => Number(item) != Number(course.id))
+            toast.warning('course removed from wishlist')
+            setFound(false);
           }
           console.log({ ...user, favouriteCoursesId: res })
+          if (sessionStorage.getItem("user") != null) {
+            sessionStorage.setItem("user", JSON.stringify({ ...user, favouriteCoursesId: res }))
+          } else if (localStorage.getItem("user") != null) {
+            localStorage.setItem("user", JSON.stringify({ ...user, favouriteCoursesId: res }))
+          }
+          setUser({ ...user, favouriteCoursesId: res })
           return axios.put(`http://localhost:3000/Users/${user?.id}`, { ...user, favouriteCoursesId: res });
         })
         .catch(error => {
@@ -71,7 +62,6 @@ export default function SingleCourseComponent({ course, color }) {
       toast.error("Please login first !")
     }
   }
-  console.log(user)
   useEffect(() => {
     if (user?.subscribed == 2 && user?.validCoursesId?.includes(Number(course.id))) {
       setValidCourse(true)
@@ -101,7 +91,7 @@ export default function SingleCourseComponent({ course, color }) {
         >
           <p className="py-1 px-2 level">{course?.level}</p>
           <p className="courseName">
-            {isReadMore
+            {course?.name.length > 44
               ? course?.name.slice(0, 44) + "..."
               : course?.name}
           </p>
@@ -132,7 +122,7 @@ export default function SingleCourseComponent({ course, color }) {
           />
           <p className="py-1 px-2 levelHov">{course?.level}</p>
           <p className="courseNameHov">
-            {isReadMore
+            {course?.name.length > 44
               ? course?.name.slice(0, 44) + "..."
               : course?.name}
           </p>
@@ -142,7 +132,7 @@ export default function SingleCourseComponent({ course, color }) {
           </div>
           <p className="priceHov">{course?.price}</p>
           <p className="courseDesc">
-            {isReadMore
+            {course?.desc.length > 44
               ? course?.desc.slice(0, 140) + "..."
               : course?.desc}
           </p>

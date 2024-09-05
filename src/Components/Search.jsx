@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export default function Search() {
   const [search, setSearch] = useRecoilState($Search);
-  const [input, setInput] = useState(null);
+  const [input, setInput] = useState("");
   const [courses, setCourses] = useState()
   useEffect(() => {
     axios
@@ -40,12 +40,12 @@ export default function Search() {
                 setInput(e.target.value)
               }}
             />
-            {!courses.length >= 1 && input !== "" ? <span className="text-white">No data</span> : ""}
+            {courses.length >= 1 && input !== "" ? <span className="text-white">No data</span> : ""}
             <div className={`col-12 bg-white coursesBox mt-3 p-3 flex-column overflow-auto ${courses?.length >= 1 && input !== "" ? `d-flex` : `d-none`}`} >
               {
                 courses?.map((course) => {
                   return (
-                    <div key={course.id}>
+                    <div key={course.id} className="mt-1 courseName">
                       <Link to={`/single-course/${course.id}`} onClick={() => setSearch(false)}>
                         {course.name}
                       </Link>

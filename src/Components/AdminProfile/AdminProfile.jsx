@@ -8,7 +8,7 @@ import { useRecoilState } from "recoil";
 import { $UserInfo, $profile } from "../../Store/Store";
 export default function AdminProfile() {
     const [user, setUser] = useRecoilState($UserInfo)
-    const [profile] = useRecoilState($profile)
+    const [profile, setProfile] = useRecoilState($profile)
     console.log(user?.img)
     if (profile) {
         return (
@@ -28,7 +28,7 @@ export default function AdminProfile() {
                 </div>
                 <div className="line col-12"></div>
                 <div className="">
-                    <Link to={"/dashboard/Home-page"} className="d-flex align-items-center gap-2 item py-2 px-5">
+                    <Link to={"/dashboard/Home-page"} className="d-flex align-items-center gap-2 item py-2 px-5" onClick={() => setProfile(false)}>
                         <MdDashboard />
                         <p>Dashboard</p>
                     </Link>

@@ -28,7 +28,7 @@ export default function SingleCourse() {
     }, [id]);
     useEffect(() => {
         axios
-            .get(`http://localhost:3000/Categories?categoryId=${array?.CtegoryId}`)
+            .get(`http://localhost:3000/Categories?id=${array?.CtegoryId}`)
             .then((response) => {
                 setCategory(response.data[0]);
             })

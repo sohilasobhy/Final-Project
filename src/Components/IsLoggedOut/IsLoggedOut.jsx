@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function IsLoggedOut({ children }) {
-    const [user, setUser] = useRecoilState($UserInfo);
+    const [user] = useRecoilState($UserInfo);
     let navigate = useNavigate();
     useEffect(() => {
         if (user) {

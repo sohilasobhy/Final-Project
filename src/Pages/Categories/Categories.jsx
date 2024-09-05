@@ -42,6 +42,8 @@ export default function Categories() {
     let content;
     if (isloading) {
         content = <div className="d-flex align-items-center justify-content-center min-vh-100"><Spinner style={{ width: '5rem', height: '5rem' }} size="lg" animation="border" variant="primary" /></div>
+    } else if (categories?.length == 0) {
+        content = <h2 className="p-5">No Courses in this category</h2>
     } else if (!categories) {
         content = <h2 className="p-5">No Category Data</h2>
     }

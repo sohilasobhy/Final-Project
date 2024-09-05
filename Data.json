@@ -104,7 +104,7 @@
           ]
         }
       ],
-      "Objectives": [
+      "obj": [
         "Understand the fundamentals of SEO and how search engines work.",
         "Learn to conduct effective keyword research and analysis.",
         "Master on-page and off-page optimization techniques.",
@@ -216,7 +216,7 @@
           ]
         }
       ],
-      "Objectives": [
+      "obj": [
         "Understand the basics of HTML, CSS, and JavaScript.",
         "Learn to create responsive web designs.",
         "Master the use of popular web development frameworks.",
@@ -303,7 +303,7 @@
         }
       ],
       "img": "src/assets/images/course4.jpg",
-      "Objectives": [
+      "obj": [
         "Develop a comprehensive digital marketing strategy.",
         "Learn to execute campaigns across various digital channels.",
         "Master the use of analytics tools to measure campaign success.",
@@ -375,7 +375,7 @@
         }
       ],
       "img": "src/assets/images/course3.jpg",
-      "Objectives": [
+      "obj": [
         "Understand the fundamentals of graphic design.",
         "Learn to use key design software such as Adobe Photoshop and Illustrator.",
         "Develop skills in creating visual content.",
@@ -477,7 +477,7 @@
       ],
       "Certification": "Yes",
       "img": "src/assets/images/course5.jpg",
-      "Objectives": [
+      "obj": [
         "Understand the basics of personal finance and budgeting.",
         "Learn strategies for saving and investing.",
         "Master debt management and credit improvement techniques.",
@@ -564,7 +564,7 @@
         }
       ],
       "img": "src/assets/images/course-12-590x430.jpg",
-      "Objectives": [
+      "obj": [
         "Understand the fundamentals of data science.",
         "Learn to use data science tools such as Python and R.",
         "Master data cleaning, visualization, and analysis techniques.",
@@ -646,7 +646,7 @@
         }
       ],
       "img": "src/assets/images/course-06-590x430.jpg",
-      "Objectives": [
+      "obj": [
         "Understand the fundamentals of public speaking.",
         "Learn techniques to overcome fear and anxiety.",
         "Develop skills in crafting and delivering speeches.",
@@ -763,7 +763,7 @@
         }
       ],
       "img": "src/assets/images/course-07-590x430.jpg",
-      "Objectives": [
+      "obj": [
         "Deepen your knowledge of Excel functions and formulas.",
         "Learn advanced data analysis techniques.",
         "Master pivot tables, macros, and VBA scripting.",
@@ -845,7 +845,7 @@
         }
       ],
       "img": "src/assets/images/course-83-590x430.jpg",
-      "Objectives": [
+      "obj": [
         "Understand the basics of photography techniques.",
         "Learn to use your camera settings effectively.",
         "Develop skills in composition and lighting.",
@@ -926,7 +926,7 @@
         }
       ],
       "img": "src/assets/images/course-10-590x430.jpg",
-      "Objectives": [
+      "obj": [
         "Develop a comprehensive social media marketing strategy.",
         "Learn to create engaging content for various platforms.",
         "Understand social media analytics and performance metrics.",
@@ -1023,7 +1023,7 @@
         }
       ],
       "img": "src/assets/images/course-09-590x430.jpg",
-      "Objectives": [
+      "obj": [
         "Understand the fundamentals of blockchain technology.",
         "Explore blockchain applications beyond cryptocurrencies.",
         "Learn about smart contracts and decentralized applications (DApps).",
@@ -1120,7 +1120,7 @@
         }
       ],
       "img": "src/assets/images/course-35-590x430.jpg",
-      "Objectives": [
+      "obj": [
         "Learn essential cooking techniques and skills.",
         "Understand kitchen safety and hygiene practices.",
         "Explore basic recipes and meal planning.",
@@ -1207,7 +1207,7 @@
         }
       ],
       "img": "src/assets/images/course-11-590x430.jpg",
-      "Objectives": [
+      "obj": [
         "Develop your creative writing skills and style.",
         "Learn to craft compelling characters and plots.",
         "Explore various writing genres and techniques.",
@@ -1319,7 +1319,7 @@
           ]
         }
       ],
-      "Objectives": [
+      "obj": [
         "Learn the basics of yoga postures and breathing techniques.",
         "Develop flexibility, strength, and mindfulness.",
         "Understand the benefits of yoga for mental and physical health.",
@@ -1431,7 +1431,7 @@
           ]
         }
       ],
-      "Objectives": [
+      "obj": [
         "Master advanced photo editing techniques in Photoshop.",
         "Learn to use layers, masks, and advanced filters.",
         "Develop skills in retouching, compositing, and digital painting.",
@@ -1518,7 +1518,7 @@
           ]
         }
       ],
-      "Objectives": [
+      "obj": [
         "Understand the fundamentals of cloud computing.",
         "Learn about various cloud service models (IaaS, PaaS, SaaS).",
         "Master the use of popular cloud platforms like AWS and Azure.",
@@ -1590,7 +1590,7 @@
           ]
         }
       ],
-      "Objectives": [
+      "obj": [
         "Deepen your understanding of Python programming.",
         "Learn to work with advanced data structures and algorithms.",
         "Master object-oriented programming (OOP) concepts.",
@@ -1677,7 +1677,7 @@
           ]
         }
       ],
-      "Objectives": [
+      "obj": [
         "Understand advanced machine learning algorithms and techniques.",
         "Learn to implement deep learning models using TensorFlow and Keras.",
         "Master techniques for model optimization and evaluation.",
@@ -1759,7 +1759,7 @@
         }
       ],
       "img": "src/assets/images/course-07-590x430.jpg",
-      "Objectives": [
+      "obj": [
         "Understand the basics of HTML and CSS.",
         "Learn to create and style web pages.",
         "Develop skills in responsive web design.",
@@ -1875,7 +1875,7 @@
         }
       ],
       "img": "src/assets/images/course-35-590x430.jpg",
-      "Objectives": [
+      "obj": [
         "Enhance your JavaScript programming skills.",
         "Learn to work with DOM manipulation and event handling.",
         "Master asynchronous programming with promises and async/await.",
@@ -1957,7 +1957,7 @@
         }
       ],
       "img": "src/assets/images/course-06-590x430.jpg",
-      "Objectives": [
+      "obj": [
         "Understand the fundamentals of project management.",
         "Learn about project planning, execution, and monitoring.",
         "Master the use of project management tools and techniques.",
@@ -2059,7 +2059,7 @@
           ]
         }
       ],
-      "Objectives": [
+      "obj": [
         "Enhance your SQL skills for advanced database management.",
         "Learn to work with complex queries and joins.",
         "Master database normalization and indexing techniques.",
@@ -2146,7 +2146,7 @@
         }
       ],
       "img": "src/assets/images/course2.jpg",
-      "Objectives": [
+      "obj": [
         "Understand the fundamentals of cybersecurity.",
         "Learn about common cyber threats and vulnerabilities.",
         "Master techniques for protecting digital assets.",
@@ -2257,7 +2257,7 @@
         }
       ],
       "img": "src/assets/images/course-12-590x430.jpg",
-      "Objectives": [
+      "obj": [
         "Learn the basics of digital photography.",
         "Understand camera settings and techniques.",
         "Develop skills in composition and lighting.",
@@ -2266,230 +2266,179 @@
       "desc": "This course introduces beginners to digital photography, covering camera settings, composition, lighting, and post-processing. Participants will learn to capture beautiful images and enhance them through editing."
     },
     {
-      "id": "25",
-      "level": "Intermediate",
-      "name": "Mastering Photoshop: Advanced Techniques and Tools",
-      "rating": "4.8",
-      "category": "Computer Science",
-      "CtegoryId": "8",
-      "price": "$60",
-      "lessons": "6",
-      "students": "150",
-      "Duration": "10 Weeks",
-      "Instructor": "Natalie Thompson",
-      "Language": "English",
-      "instructorId": "12",
+      "name": "عنوان الدورة ",
+      "level": "Intermediat",
+      "category": "Business Management",
+      "CtegoryId": "1",
+      "price": "$40",
+      "lessons": 15,
+      "Duration": "6 weeks",
+      "Instructor": "Jane Seymour",
+      "Language": "Arabic",
+      "comVideo": "src/assets/images/certificate.png",
+      "instructorId": "1",
+      "img": "src/assets/images/course-07-590x430.jpg",
+      "obj": [
+        "الهدف الاول",
+        "الهدف الثاني",
+        "الهدف الثالث"
+      ],
+      "desc": "تتحدث هذه الدورة عن...",
       "Certification": "Yes",
+      "rating": "0",
+      "students": "0",
       "courseContent": [
         {
-          "category": "On-Page SEO",
+          "category": "العنوان الاول",
           "lessons": [
             {
-              "LessonName": "Lesson 1: On-Page SEO Basics",
-              "desc": "In this lesson, you'll learn the fundamental elements of on-page SEO, including keyword research, optimizing title tags and meta descriptions, using header tags effectively, and creating SEO-friendly content. Mastering these basics will help improve your website's visibility in search engine results, driving more organic traffic to your site.",
+              "LessonName": "الدرس الاول",
+              "desc": "تفاصيل الدرس",
               "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
-            },
-            {
-              "LessonName": "Lesson 2: Understanding Keywords",
-              "desc": "This lesson dives into the importance of keywords in SEO, covering how to identify and select the right keywords for your content. You'll learn about keyword research tools, the difference between short-tail and long-tail keywords, and how to incorporate keywords naturally into your website to improve search engine rankings and attract your target audience.",
-              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
-            }
-          ]
-        },
-        {
-          "category": "SEO Fundamentals",
-          "lessons": [
-            {
-              "LessonName": "Lesson 3: Introduction to SEO",
-              "desc": "In this lesson, you'll gain a comprehensive overview of SEO (Search Engine Optimization), including its history, key concepts, and importance in digital marketing. You'll explore how search engines work, the difference between on-page and off-page SEO, and the role of SEO in driving organic traffic to websites. This foundational knowledge will set the stage for more advanced SEO strategies in future lessons.",
-              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4"
-            },
-            {
-              "LessonName": "Lesson 4: Understanding Keywords",
-              "desc": "This lesson delves deeper into the significance of keywords in SEO. You will learn advanced techniques for keyword research, the importance of keyword intent, and how to analyze keyword competition. Additionally, you'll explore how to effectively integrate keywords into your content strategy to enhance your website's search engine rankings and attract the right audience.",
-              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4"
-            }
-          ]
-        },
-        {
-          "category": "Content Optimization",
-          "lessons": [
-            {
-              "LessonName": "Lesson 5: Content Creation and Optimization",
-              "desc": "In this lesson, you'll discover the essentials of creating high-quality, SEO-friendly content. Learn how to write compelling and relevant content that engages your audience while incorporating SEO best practices. You'll cover techniques for optimizing content with keywords, using multimedia effectively, and ensuring readability and structure to boost your website's search engine performance.",
-              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4"
-            },
-            {
-              "LessonName": "Lesson 6: Content Promotion",
-              "desc": "This lesson focuses on strategies for promoting your content to reach a wider audience and drive more traffic to your website. You'll explore various content promotion techniques, including social media marketing, email marketing, influencer outreach, and leveraging online communities. By the end of this lesson, you'll know how to create a content promotion plan that maximizes your content's visibility and engagement.",
-              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4"
-            }
-          ]
-        },
-        {
-          "category": " Technical SEO",
-          "lessons": [
-            {
-              "LessonName": "Lesson 7: Technical SEO",
-              "desc": "In this lesson, you'll explore the technical aspects of SEO that ensure your website is easily crawlable and indexable by search engines. Topics include website speed optimization, mobile-friendliness, XML sitemaps, robots.txt files, and structured data. Understanding and implementing these technical SEO elements will help improve your site's performance and search engine rankings.",
-              "Link": "src/assets/images/Start your dreams with us!.mp4"
-            },
-            {
-              "LessonName": "Lesson 8: Off-Page SEO",
-              "desc": "This lesson covers the strategies and techniques involved in off-page SEO, focusing on activities outside of your website that can improve its search engine rankings. You'll learn about the importance of backlinks, how to build a strong backlink profile, and other off-page factors like social signals and online reputation management. Mastering off-page SEO will help enhance your website's authority and visibility.",
-              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4"
-            }
-          ]
-        },
-        {
-          "category": "Local SEO",
-          "lessons": [
-            {
-              "LessonName": "Lesson 9: Local SEO",
-              "desc": "In this lesson, you'll learn how to optimize your website for local search results, making it easier for customers in your area to find you online. Topics include setting up and optimizing your Google My Business profile, using local keywords, managing online reviews, and building local citations. Implementing these local SEO strategies will help increase your visibility and attract more local customers to your business.",
-              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
-            },
-            {
-              "LessonName": "Lesson 10: SEO Tools and Analytics",
-              "desc": "This lesson introduces essential SEO tools and analytics that help you measure and improve your website’s performance. You'll explore tools for keyword research, site audits, backlink analysis, and tracking rankings. Additionally, you'll learn how to interpret data from Google Analytics and other platforms to make informed decisions and refine your SEO strategy.",
-              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4"
-            }
-          ]
-        },
-        {
-          "category": " Business Building",
-          "lessons": [
-            {
-              "LessonName": "Lesson 11: Building Your SEO Business",
-              "desc": "In this lesson, you'll discover how to start and grow a successful SEO business. Topics include identifying your niche, developing a business plan, acquiring clients, setting pricing strategies, and delivering effective SEO services. You'll also learn about building a strong brand, creating a portfolio, and leveraging client testimonials to establish credibility and attract more business.",
-              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
             }
           ]
         }
       ],
-      "img": "src/assets/images/course-35-590x430.jpg",
-      "Objectives": [
-        "Master advanced Photoshop tools and techniques.",
-        "Enhance images with professional editing skills.",
-        "Create complex graphic designs.",
-        "Develop a professional workflow for digital art."
+      "id": "1XRLFO7"
+    },
+    {
+      "name": "my full name",
+      "level": "Beginner",
+      "category": "Business Management",
+      "CtegoryId": 1,
+      "price": "$9",
+      "lessons": 10,
+      "Duration": "9 weeks",
+      "Instructor": "RAHMA",
+      "Language": "English",
+      "comVideo": "src/assets/images/check-mark.png",
+      "instructorId": "1",
+      "img": "src/assets/images/check-mark(1).png",
+      "obj": [
+        "9"
       ],
-      "desc": "This intermediate course takes you through advanced Photoshop techniques, equipping you with the skills needed for professional image editing and graphic design."
+      "desc": "9",
+      "Certification": "Yes",
+      "rating": "0",
+      "students": "0",
+      "courseContent": [
+        {
+          "category": "9",
+          "lessons": [
+            {
+              "LessonName": "9",
+              "desc": "9",
+              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4"
+            }
+          ]
+        }
+      ],
+      "id": "2Lkv-lf"
+    },
+    {
+      "name": "dddd",
+      "level": "Beginner",
+      "category": "Business Management",
+      "CtegoryId": 1,
+      "price": "$9",
+      "lessons": 10,
+      "Duration": "9 weeks",
+      "Instructor": "James Wilson",
+      "Language": "English",
+      "comVideo": "src/assets/images/check-mark(1).png",
+      "instructorId": "1",
+      "img": "src/assets/images/check-mark.png",
+      "obj": [
+        "9"
+      ],
+      "desc": "9",
+      "Certification": "Yes",
+      "rating": "0",
+      "students": "0",
+      "courseContent": [
+        {
+          "category": "9",
+          "lessons": [
+            {
+              "LessonName": "9",
+              "desc": "9",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
+            }
+          ]
+        }
+      ],
+      "id": "-VxSjRr"
+    },
+    {
+      "name": "sohila sobhy",
+      "level": "Beginner",
+      "category": "Business Management",
+      "CtegoryId": 1,
+      "price": "$55",
+      "lessons": 15,
+      "Duration": "4 weeks",
+      "Instructor": "RAHMA",
+      "Language": "Arabic",
+      "comVideo": "src/assets/images/bohemian-man-with-his-arms-crossed.jpg",
+      "instructorId": "1",
+      "img": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
+      "obj": [
+        "555"
+      ],
+      "desc": "555",
+      "Certification": "Yes",
+      "rating": "0",
+      "students": "0",
+      "courseContent": [
+        {
+          "category": "55",
+          "lessons": [
+            {
+              "LessonName": "5",
+              "desc": "5",
+              "Link": "src/assets/images/certificate.png"
+            }
+          ]
+        }
+      ],
+      "id": "n8XBHdi"
+    },
+    {
+      "name": "sohila sobhy",
+      "level": "Beginner",
+      "category": "Business Management",
+      "CtegoryId": 1,
+      "price": "$7",
+      "lessons": 18,
+      "Duration": "8 weeks",
+      "Instructor": "Jane Seymour",
+      "Language": "English",
+      "comVideo": "src/assets/images/certificate.png",
+      "instructorId": "1",
+      "img": "src/assets/images/check-mark.png",
+      "obj": [
+        "8"
+      ],
+      "desc": "8",
+      "Certification": "Yes",
+      "rating": "0",
+      "students": "0",
+      "courseContent": [
+        {
+          "category": "8",
+          "lessons": [
+            {
+              "LessonName": "8",
+              "desc": "8",
+              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4"
+            }
+          ]
+        }
+      ],
+      "id": "TBUx_RU"
     }
   ],
   "HomeCourses": [
-    {
-      "id": "1",
-      "level": "Beginner",
-      "name": "Starting SEO as your Home Based Business",
-      "rating": "5.0",
-      "category": "Business Management",
-      "CtegoryId": "1",
-      "price": "$30",
-      "lessons": "11",
-      "students": "227",
-      "Duration": "15 Weeks",
-      "Instructor": "Jane Seymour",
-      "Language": "English",
-      "Certification": "Yes",
-      "img": "src/assets/images/course1.jpg",
-      "comVideo": "../../src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
-      "instructorId": "1",
-      "courseContent": [
-        {
-          "category": "On-Page SEO",
-          "lessons": [
-            {
-              "LessonName": "Lesson 1: On-Page SEO Basics",
-              "desc": "In this lesson, you'll learn the fundamental elements of on-page SEO, including keyword research, optimizing title tags and meta descriptions, using header tags effectively, and creating SEO-friendly content. Mastering these basics will help improve your website's visibility in search engine results, driving more organic traffic to your site.",
-              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
-            },
-            {
-              "LessonName": "Lesson 2: Understanding Keywords",
-              "desc": "This lesson dives into the importance of keywords in SEO, covering how to identify and select the right keywords for your content. You'll learn about keyword research tools, the difference between short-tail and long-tail keywords, and how to incorporate keywords naturally into your website to improve search engine rankings and attract your target audience.",
-              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
-            }
-          ]
-        },
-        {
-          "category": "SEO Fundamentals",
-          "lessons": [
-            {
-              "LessonName": "Lesson 3: Introduction to SEO",
-              "desc": "In this lesson, you'll gain a comprehensive overview of SEO (Search Engine Optimization), including its history, key concepts, and importance in digital marketing. You'll explore how search engines work, the difference between on-page and off-page SEO, and the role of SEO in driving organic traffic to websites. This foundational knowledge will set the stage for more advanced SEO strategies in future lessons.",
-              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4"
-            },
-            {
-              "LessonName": "Lesson 4: Understanding Keywords",
-              "desc": "This lesson delves deeper into the significance of keywords in SEO. You will learn advanced techniques for keyword research, the importance of keyword intent, and how to analyze keyword competition. Additionally, you'll explore how to effectively integrate keywords into your content strategy to enhance your website's search engine rankings and attract the right audience.",
-              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4"
-            }
-          ]
-        },
-        {
-          "category": "Content Optimization",
-          "lessons": [
-            {
-              "LessonName": "Lesson 5: Content Creation and Optimization",
-              "desc": "In this lesson, you'll discover the essentials of creating high-quality, SEO-friendly content. Learn how to write compelling and relevant content that engages your audience while incorporating SEO best practices. You'll cover techniques for optimizing content with keywords, using multimedia effectively, and ensuring readability and structure to boost your website's search engine performance.",
-              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4"
-            },
-            {
-              "LessonName": "Lesson 6: Content Promotion",
-              "desc": "This lesson focuses on strategies for promoting your content to reach a wider audience and drive more traffic to your website. You'll explore various content promotion techniques, including social media marketing, email marketing, influencer outreach, and leveraging online communities. By the end of this lesson, you'll know how to create a content promotion plan that maximizes your content's visibility and engagement.",
-              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4"
-            }
-          ]
-        },
-        {
-          "category": " Technical SEO",
-          "lessons": [
-            {
-              "LessonName": "Lesson 7: Technical SEO",
-              "desc": "In this lesson, you'll explore the technical aspects of SEO that ensure your website is easily crawlable and indexable by search engines. Topics include website speed optimization, mobile-friendliness, XML sitemaps, robots.txt files, and structured data. Understanding and implementing these technical SEO elements will help improve your site's performance and search engine rankings.",
-              "Link": "src/assets/images/Start your dreams with us!.mp4"
-            },
-            {
-              "LessonName": "Lesson 8: Off-Page SEO",
-              "desc": "This lesson covers the strategies and techniques involved in off-page SEO, focusing on activities outside of your website that can improve its search engine rankings. You'll learn about the importance of backlinks, how to build a strong backlink profile, and other off-page factors like social signals and online reputation management. Mastering off-page SEO will help enhance your website's authority and visibility.",
-              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4"
-            }
-          ]
-        },
-        {
-          "category": "Local SEO",
-          "lessons": [
-            {
-              "LessonName": "Lesson 9: Local SEO",
-              "desc": "In this lesson, you'll learn how to optimize your website for local search results, making it easier for customers in your area to find you online. Topics include setting up and optimizing your Google My Business profile, using local keywords, managing online reviews, and building local citations. Implementing these local SEO strategies will help increase your visibility and attract more local customers to your business.",
-              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
-            },
-            {
-              "LessonName": "Lesson 10: SEO Tools and Analytics",
-              "desc": "This lesson introduces essential SEO tools and analytics that help you measure and improve your website’s performance. You'll explore tools for keyword research, site audits, backlink analysis, and tracking rankings. Additionally, you'll learn how to interpret data from Google Analytics and other platforms to make informed decisions and refine your SEO strategy.",
-              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4"
-            }
-          ]
-        },
-        {
-          "category": " Business Building",
-          "lessons": [
-            {
-              "LessonName": "Lesson 11: Building Your SEO Business",
-              "desc": "In this lesson, you'll discover how to start and grow a successful SEO business. Topics include identifying your niche, developing a business plan, acquiring clients, setting pricing strategies, and delivering effective SEO services. You'll also learn about building a strong brand, creating a portfolio, and leveraging client testimonials to establish credibility and attract more business.",
-              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
-            }
-          ]
-        }
-      ],
-      "Objectives": [
-        "Understand the fundamentals of SEO and how search engines work.",
-        "Learn to conduct effective keyword research and analysis.",
-        "Master on-page and off-page optimization techniques.",
-        "Develop strategies for local SEO, mobile SEO, and technical SEO."
-      ],
-      "desc": "This course provides a comprehensive guide to launching and managing a successful SEO (Search Engine Optimization) business from home. It is designed for individuals who are interested in understanding the principles of SEO and want to leverage this knowledge to build a profitable home-based business."
-    },
     {
       "id": "2",
       "level": "Beginner",
@@ -2594,7 +2543,7 @@
           ]
         }
       ],
-      "Objectives": [
+      "obj": [
         "Understand the basics of HTML, CSS, and JavaScript.",
         "Learn to create responsive web designs.",
         "Master the use of popular web development frameworks.",
@@ -2681,7 +2630,7 @@
         }
       ],
       "img": "src/assets/images/course4.jpg",
-      "Objectives": [
+      "obj": [
         "Develop a comprehensive digital marketing strategy.",
         "Learn to execute campaigns across various digital channels.",
         "Master the use of analytics tools to measure campaign success.",
@@ -2753,13 +2702,125 @@
         }
       ],
       "img": "src/assets/images/course3.jpg",
-      "Objectives": [
+      "obj": [
         "Understand the fundamentals of graphic design.",
         "Learn to use key design software such as Adobe Photoshop and Illustrator.",
         "Develop skills in creating visual content.",
         "Apply design principles to create compelling graphics."
       ],
       "desc": "This course is designed to introduce beginners to the world of graphic design. Covering the basics of design principles and software like Adobe Photoshop and Illustrator, it aims to equip learners with the skills needed to create visually appealing graphics for various purposes."
+    },
+    {
+      "id": 1,
+      "level": "Beginner",
+      "name": "Starting SEO as your Home Based Business",
+      "rating": "4",
+      "category": "Business Management",
+      "CtegoryId": "1",
+      "price": "$30",
+      "lessons": "11",
+      "students": "227",
+      "Duration": "15 Weeks",
+      "Instructor": "Jane Seymour",
+      "Language": "English",
+      "Certification": "Yes",
+      "img": "src/assets/images/course1.jpg",
+      "comVideo": "../../src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
+      "instructorId": "1",
+      "courseContent": [
+        {
+          "category": "On-Page SEO",
+          "lessons": [
+            {
+              "LessonName": "Lesson 1: On-Page SEO Basics",
+              "desc": "In this lesson, you'll learn the fundamental elements of on-page SEO, including keyword research, optimizing title tags and meta descriptions, using header tags effectively, and creating SEO-friendly content. Mastering these basics will help improve your website's visibility in search engine results, driving more organic traffic to your site.",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
+            },
+            {
+              "LessonName": "Lesson 2: Understanding Keywords",
+              "desc": "This lesson dives into the importance of keywords in SEO, covering how to identify and select the right keywords for your content. You'll learn about keyword research tools, the difference between short-tail and long-tail keywords, and how to incorporate keywords naturally into your website to improve search engine rankings and attract your target audience.",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
+            }
+          ]
+        },
+        {
+          "category": "SEO Fundamentals",
+          "lessons": [
+            {
+              "LessonName": "Lesson 3: Introduction to SEO",
+              "desc": "In this lesson, you'll gain a comprehensive overview of SEO (Search Engine Optimization), including its history, key concepts, and importance in digital marketing. You'll explore how search engines work, the difference between on-page and off-page SEO, and the role of SEO in driving organic traffic to websites. This foundational knowledge will set the stage for more advanced SEO strategies in future lessons.",
+              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4"
+            },
+            {
+              "LessonName": "Lesson 4: Understanding Keywords",
+              "desc": "This lesson delves deeper into the significance of keywords in SEO. You will learn advanced techniques for keyword research, the importance of keyword intent, and how to analyze keyword competition. Additionally, you'll explore how to effectively integrate keywords into your content strategy to enhance your website's search engine rankings and attract the right audience.",
+              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4"
+            }
+          ]
+        },
+        {
+          "category": "Content Optimization",
+          "lessons": [
+            {
+              "LessonName": "Lesson 5: Content Creation and Optimization",
+              "desc": "In this lesson, you'll discover the essentials of creating high-quality, SEO-friendly content. Learn how to write compelling and relevant content that engages your audience while incorporating SEO best practices. You'll cover techniques for optimizing content with keywords, using multimedia effectively, and ensuring readability and structure to boost your website's search engine performance.",
+              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4"
+            },
+            {
+              "LessonName": "Lesson 6: Content Promotion",
+              "desc": "This lesson focuses on strategies for promoting your content to reach a wider audience and drive more traffic to your website. You'll explore various content promotion techniques, including social media marketing, email marketing, influencer outreach, and leveraging online communities. By the end of this lesson, you'll know how to create a content promotion plan that maximizes your content's visibility and engagement.",
+              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4"
+            }
+          ]
+        },
+        {
+          "category": " Technical SEO",
+          "lessons": [
+            {
+              "LessonName": "Lesson 7: Technical SEO",
+              "desc": "In this lesson, you'll explore the technical aspects of SEO that ensure your website is easily crawlable and indexable by search engines. Topics include website speed optimization, mobile-friendliness, XML sitemaps, robots.txt files, and structured data. Understanding and implementing these technical SEO elements will help improve your site's performance and search engine rankings.",
+              "Link": "src/assets/images/Start your dreams with us!.mp4"
+            },
+            {
+              "LessonName": "Lesson 8: Off-Page SEO",
+              "desc": "This lesson covers the strategies and techniques involved in off-page SEO, focusing on activities outside of your website that can improve its search engine rankings. You'll learn about the importance of backlinks, how to build a strong backlink profile, and other off-page factors like social signals and online reputation management. Mastering off-page SEO will help enhance your website's authority and visibility.",
+              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4"
+            }
+          ]
+        },
+        {
+          "category": "Local SEO",
+          "lessons": [
+            {
+              "LessonName": "Lesson 9: Local SEO",
+              "desc": "In this lesson, you'll learn how to optimize your website for local search results, making it easier for customers in your area to find you online. Topics include setting up and optimizing your Google My Business profile, using local keywords, managing online reviews, and building local citations. Implementing these local SEO strategies will help increase your visibility and attract more local customers to your business.",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
+            },
+            {
+              "LessonName": "Lesson 10: SEO Tools and Analytics",
+              "desc": "This lesson introduces essential SEO tools and analytics that help you measure and improve your website’s performance. You'll explore tools for keyword research, site audits, backlink analysis, and tracking rankings. Additionally, you'll learn how to interpret data from Google Analytics and other platforms to make informed decisions and refine your SEO strategy.",
+              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4"
+            }
+          ]
+        },
+        {
+          "category": " Business Building",
+          "lessons": [
+            {
+              "LessonName": "Lesson 11: Building Your SEO Business",
+              "desc": "In this lesson, you'll discover how to start and grow a successful SEO business. Topics include identifying your niche, developing a business plan, acquiring clients, setting pricing strategies, and delivering effective SEO services. You'll also learn about building a strong brand, creating a portfolio, and leveraging client testimonials to establish credibility and attract more business.",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
+            }
+          ]
+        }
+      ],
+      "obj": [
+        "Understand the fundamentals of SEO and how search engines work.",
+        "Learn to conduct effective keyword research and analysis.",
+        "Master on-page and off-page optimization techniques.",
+        "Develop strategies for local SEO, mobile SEO, and technical SEO."
+      ],
+      "desc": "This course provides a comprehensive guide to launching and managing a successful SEO (Search Engine Optimization) business from home. It is designed for individuals who are interested in understanding the principles of SEO and want to leverage this knowledge to build a profitable home-based business."
     }
   ],
   "Instructors": [
@@ -3015,6 +3076,24 @@
         "twitter": "https://x.com/",
         "linkedIn": "https://www.linkedin.com/"
       }
+    },
+    {
+      "name": "RAHMA",
+      "job": "dddddddddd",
+      "img": "src/assets/images/course1.jpg",
+      "students": "",
+      "rating": "",
+      "About": "ssssssssssssssssssss",
+      "coursesID": [],
+      "Contact": {
+        "address": "ssssssssssssssssssss",
+        "Email": "sohila@gmail.com",
+        "phone": "1111111111111111",
+        "facebook": "https://github.com/sohilasobhy/Final-Project/blob/main/Data.json#L2",
+        "twitter": "https://github.com/sohilasobhy/Final-Project/blob/main/Data.json#L2",
+        "linkedIn": "https://github.com/sohilasobhy/Final-Project/blob/main/Data.json#L2"
+      },
+      "id": "GTtNAe4"
     }
   ],
   "HomeInstructors": [
@@ -3103,6 +3182,48 @@
         "twitter": "https://x.com/",
         "linkedIn": "https://www.linkedin.com/"
       }
+    },
+    {
+      "id": "7",
+      "name": "James Wilson",
+      "job": "Cloud Architect",
+      "img": "src/assets/images/tfs-quickstart-for-instructors.png",
+      "students": "40",
+      "rating": "5",
+      "About": "Hello, I'm James Wilson, a Cloud Architect with over 7 years of experience. I specialize in designing scalable cloud solutions and enjoy sharing my knowledge with others.",
+      "coursesID": [
+        16,
+        17
+      ],
+      "Contact": {
+        "address": "303 Cloud Ave, Denver, CO",
+        "Email": "james@example.com",
+        "phone": "4321098765",
+        "facebook": "https://www.facebook.com/profile.php?id=61559129840944",
+        "twitter": "https://www.linkedin.com/in/james-wilson-a3951917/",
+        "linkedIn": "https://x.com/per_incuriam2"
+      }
+    },
+    {
+      "id": "9",
+      "name": "Daniel Harris",
+      "job": "DevOps Engineer",
+      "img": "src/assets/images/how-much-does-udemy-pay-instructors-1200x750.png",
+      "students": "32",
+      "rating": "5",
+      "About": "Hello, I'm Daniel Harris, a DevOps Engineer with 5 years of experience. I specialize in automating workflows and enjoy helping others streamline their development processes.",
+      "coursesID": [
+        19,
+        20
+      ],
+      "Contact": {
+        "address": "505 DevOps Lane, Chicago, IL",
+        "Email": "daniel@example.com",
+        "phone": "2109876543",
+        "facebook": "https://www.facebook.com/",
+        "twitter": "https://x.com/",
+        "linkedIn": "https://www.linkedin.com/"
+      }
     }
   ],
   "HomeReviews": [
@@ -3137,6 +3258,30 @@
       "Job": "Graphic Designer",
       "rating": "5",
       "courseID": "4"
+    },
+    {
+      "id": 5,
+      "userId": "30",
+      "comment": "Great course material and excellent support from the instructors!",
+      "Job": "Project Manager",
+      "rating": "4",
+      "courseID": "5"
+    },
+    {
+      "id": 10,
+      "userId": "16",
+      "comment": "The interactive elements and real-world examples were very helpful.",
+      "Job": "Content Writer",
+      "rating": "5",
+      "courseID": "10"
+    },
+    {
+      "id": 15,
+      "userId": "20",
+      "comment": "The platform offers a great variety of courses that are very informative.",
+      "Job": "Entrepreneur",
+      "rating": "4",
+      "courseID": "15"
     }
   ],
   "Reviews": [
@@ -3261,57 +3406,57 @@
       "courseID": "15"
     }
   ],
-"Categories": [
+  "Categories": [
     {
-      "categoryId": "1",
+      "id": 1,
       "categoryName": "Business Management",
       "categoryImg": "src/assets/images/project-manager.png",
       "categoryImg2": "src/assets/images/project-manager(2).png"
     },
     {
-      "categoryId": "2",
+      "id": 2,
       "categoryName": "Art & Design",
       "categoryImg": "src/assets/images/vector.png",
       "categoryImg2": "src/assets/images/vector(1).png"
     },
     {
-      "categoryId": "3",
+      "id": 3,
       "categoryName": "Personal Development",
       "categoryImg": "src/assets/images/web-programming.png",
       "categoryImg2": "src/assets/images/web-programmingًWhite.png"
     },
     {
-      "categoryId": "4",
+      "id": 4,
       "categoryName": "Health and Fitness",
       "categoryImg": "src/assets/images/pill.png",
       "categoryImg2": "src/assets/images/pill (1).png"
     },
     {
-      "categoryId": "5",
+      "id": 5,
       "categoryName": "Data Science",
       "categoryImg": "src/assets/images/database.png",
       "categoryImg2": "src/assets/images/database (1).png"
     },
     {
-      "categoryId": "6",
+      "id": 6,
       "categoryName": "Marketing",
       "categoryImg": "src/assets/images/promotion.png",
       "categoryImg2": "src/assets/images/promotion (1).png"
     },
     {
-      "categoryId": "7",
+      "id": 7,
       "categoryName": "Business & Finance",
       "categoryImg": "src/assets/images/handshake.png",
       "categoryImg2": "src/assets/images/handshake (1).png"
     },
     {
-      "categoryId": "8",
+      "id": 8,
       "categoryName": "Computer Science",
       "categoryImg": "src/assets/images/monitor.png",
       "categoryImg2": "src/assets/images/monitor (1).png"
     },
     {
-      "categoryId": "9",
+      "id": 9,
       "categoryName": "Video & Photography",
       "categoryImg": "src/assets/images/gallery.png",
       "categoryImg2": "src/assets/images/gallery (1).png"
@@ -3724,16 +3869,9 @@
       "role": "admin",
       "subscribed": 2,
       "confirmPassword": "123",
-      "id": 33,
-      "favouriteCoursesId": [
-        1,
-        4
-      ],
-      "validCoursesId": [
-        2,
-        1,
-        5
-      ]
+      "favouriteCoursesId": [],
+      "validCoursesId": [],
+      "id": 33
     },
     {
       "name": "Jane Seymour",
@@ -3868,7 +4006,7 @@
       "id": 42
     },
     {
-      "name": "",
+      "name": "ahmed",
       "email": "ahmed@gmail.com",
       "img": "src/assets/images/about-12.webp",
       "password": "111",
@@ -3885,12 +4023,10 @@
       "password": "123",
       "subscribed": 2,
       "favouriteCoursesId": [
-        2,
-        3,
         8,
+        1,
         6,
-        10,
-        1
+        2
       ],
       "role": "user",
       "confirmPassword": "123",
@@ -3898,19 +4034,25 @@
       "validCoursesId": [
         1,
         2,
-        6
+        6,
+        3,
+        4,
+        7
       ]
     },
     {
-      "name": "youssef ",
-      "email": "youssef@g2mail.com",
-      "img": "src/assets/images/undefined",
-      "password": "youssef@g2mail.com",
-      "subscribed": "4",
+      "name": "ahmed ali",
+      "email": "ahmed-dev@gmail.com",
+      "img": "",
+      "password": "1234567890",
+      "subscribed": 2,
       "favouriteCoursesId": [],
       "role": "user",
-      "confirmPassword": "youssef@g2mail.com",
-      "id": 45
+      "confirmPassword": "1234567890",
+      "id": 45,
+      "validCoursesId": [
+        1
+      ]
     }
   ],
   "SubPlans": [

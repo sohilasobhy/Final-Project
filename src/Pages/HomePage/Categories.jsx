@@ -61,8 +61,8 @@ export default function Categories() {
           {
             categories?.map((category, index) => {
               return (
-                <div className="col-12 col-md-6 col-lg-4" key={category.categoryId} >
-                  <div className={`d-flex justify-content-start gap-2 align-items-center cat  col-12 h-100 py-3 ps-2 ${classes[index % classes.length]}`} onClick={() => { navigate(`/one-category/${category.categoryId}`) }}>
+                <div className="col-12 col-md-6 col-lg-4" key={category.id} >
+                  <div className={`d-flex justify-content-start gap-2 align-items-center cat  col-12 h-100 py-3 ps-2 ${classes[index % classes.length]}`} onClick={() => { navigate(`/one-category/${category.id}`) }}>
                     <img src={category.categoryImg} alt="category image" className="img1" />
                     <img src={category.categoryImg2} alt="category image" className="img2" />
                     <p>{category.categoryName}</p>

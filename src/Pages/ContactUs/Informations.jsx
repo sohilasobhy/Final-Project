@@ -1,21 +1,41 @@
 import axios from "axios";
 import { Field, Formik, Form, ErrorMessage } from "formik";
 import { Button } from "react-bootstrap";
-import { showSuccessAlert } from "../../Components/ShowSuccessAlert";
 import { ContactScheme } from "../../schemas/ContactScheme";
+import emailjs from 'emailjs-com';
+import { toast } from "react-toastify";
 
 let url = "http://localhost:3000/Messages";
 
 export default function Informations() {
-    function handleSubmit(values) {
-        axios.post(url, values)
+
+    function handleSubmit(values, { resetForm }) {
+        const serviceId = "service_i3dbwvn";
+        const templateId = "template_qj9oamv";
+        const userId = "2DVmTWBZV2epUYPYI";
+        const templateParams = {
+            name: values.name,
+            email: values.email,
+            subject: values.subject,
+            message: values.message,
+        };
+        emailjs.send(serviceId, templateId, templateParams, userId)
             .then(response => {
-                console.log(response.data.email);
-                showSuccessAlert();
+                console.log('SUCCESS!', response.status, response.text);
+                resetForm();
             })
             .catch(error => {
-                console.error('Error:', error);
+                console.error('FAILED...', error);
             });
+        axios
+            .post(url, values)
+            .then((res) => {
+                console.log(res.data)
+                toast.success("Your message was sent successfully")
+            })
+            .catch((err) => {
+                console.log(err)
+            })
     }
 
     return (
@@ -47,7 +67,7 @@ export default function Informations() {
                                 message: "",
                                 email: "",
                             }}
-                            onSubmit={(values) => handleSubmit(values)}
+                            onSubmit={handleSubmit}
                             validationSchema={ContactScheme}
                         >
                             <Form className='col-12 p-5 d-flex flex-column gap-4'>

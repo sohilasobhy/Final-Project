@@ -15,13 +15,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useRecoilState } from "recoil";
 import { $UserInfo, $checkoutPay, $commercialVid } from "../../Store/Store";
+import { toast } from "react-toastify";
 export default function CourseDetails() {
     let navigate = useNavigate()
-    const [courseDetails, setCourseDetails] = useRecoilState($checkoutPay)
+    const [, setCourseDetails] = useRecoilState($checkoutPay)
     const [userInfo] = useRecoilState($UserInfo)
     const [validCourse, setValidCourse] = useState(false)
     let { id } = useParams();
     const [course, setArray] = useState();
+    console.log(course)
     const [isloading, setIsloading] = useState(false)
     const [, setCommercialVid] = useRecoilState($commercialVid)
     useEffect(() => {
@@ -51,7 +53,7 @@ export default function CourseDetails() {
     } else {
         content = <div id="CourseDetails">
             <div className="position-relative">
-                <img src={`../../../${course.img}`} className="col-12 courseImg" />
+                <img src={`../../../${course.img}`} className="col-12 courseImg object-fit-cover" height={240} />
                 <div className="d-flex justify-content-center align-items-center pause position-absolute" onClick={() => {
                     setCommercialVid(course)
                 }}>
@@ -91,13 +93,24 @@ export default function CourseDetails() {
                 </div>
             </div>
             <div className="position-relative Browse mt-3 mx-auto col-8" onClick={() => {
-                navigate("/checkout")
-                setCourseDetails(course)
+                if (userInfo) {
+                    if (userInfo?.subscribed == 1 || validCourse || userInfo?.role == "admin") {
+                        navigate(`/lessons/${course.id}`)
+                    } else {
+                        navigate("/checkout")
+                        setCourseDetails(course)
+                    }
+                } else {
+                    toast.warning("Please Login First")
+                    setTimeout(() => {
+                        navigate("/login")
+                    }, 1500)
+                }
             }}>
                 <button className="d-flex align-items-center gap-3 btn col-12 ">
                     <p className="col-12 text-center">
                         {
-                            userInfo?.subscribed == 1 || validCourse || course?.price == "Free" ? `Watch Now` : `Enroll Now`
+                            userInfo?.subscribed == 1 || validCourse || userInfo?.role == "admin" ? `Watch Now` : `Enroll Now`
                         }
                         <FontAwesomeIcon icon={faArrowRight} className="ms-3" />
                     </p>

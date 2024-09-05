@@ -27,7 +27,7 @@ import CategoriesDash from "../Dashboard/Categories";
 import ReviewsDash from "../Dashboard/Reviews";
 import InstructorsDash from "../Dashboard/Instructors";
 import MessagesDash from "../Dashboard/Messages";
-import CourseContentForm from "../Pages/SingleCourse/test";
+import EditCourseForm from "../Pages/SingleCourse/test";
 
 
 const router = createBrowserRouter([
@@ -85,7 +85,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/test",
-                element: <CourseContentForm />
+                element: <EditCourseForm />
             },
         ],
     }, {
@@ -99,7 +99,7 @@ const router = createBrowserRouter([
         element: <CourseLessons />
     }, {
         path: "/dashboard",
-        element: <DashboardLayout />,
+        element: <IsLoggedIn><DashboardLayout /></IsLoggedIn>,
         children: [
             {
                 path: "users",
@@ -132,7 +132,7 @@ const router = createBrowserRouter([
         ],
     }, {
         path: "/checkout",
-        element: <IsLoggedIn><Checkout /></IsLoggedIn>
+        element: <Checkout />
     },
 ])
 export default router;
