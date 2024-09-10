@@ -34,20 +34,40 @@ export default function SideMenu() {
             </div>
           </div>
           <div className="p-3 d-flex flex-column gap-4 LINKS">
-            <Link to={"/"} className="p-1">
+            <Link to={"/"} className="p-1"
+              onClick={() => setMenuIndex(false)}
+            >
               Home
             </Link>
-            <Link to={"/about"} className="p-1">
+            <Link to={"/about"} className="p-1"
+              onClick={() => setMenuIndex(false)}
+            >
               About
             </Link>
-            <Link to={"/courses"} className="p-1">
+            <Link to={"/courses"} className="p-1"
+              onClick={() => setMenuIndex(false)}
+            >
               Courses
             </Link>
-            <Link to={"/contact"} className="p-1">
+            <Link to={"/contact"} className="p-1"
+              onClick={() => setMenuIndex(false)}
+            >
               Contact Us
             </Link>
-            <Link to={"/join"} className="p-1">
-              Login / Register
+            <Link to={"/Instructors"} className="p-1"
+              onClick={() => setMenuIndex(false)}
+            >
+              Instructors
+            </Link>
+            <Link to={"/purchase"} className="p-1"
+              onClick={() => setMenuIndex(false)}
+            >
+              Subscribe
+            </Link>
+            <Link to={"/login"} className="p-1"
+              onClick={() => setMenuIndex(false)}
+            >
+              Login
             </Link>
           </div>
         </div>

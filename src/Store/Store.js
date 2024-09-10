@@ -111,6 +111,14 @@ export const $AllCategories = atom({
   key: "$AllCategories",
   default: [],
 });
+export const $EditForm = atom({
+  key: "$EditForm",
+  default: false,
+});
+export const $EditFormCourse = atom({
+  key: "$EditFormCourse",
+  default: false,
+});
 
 
 

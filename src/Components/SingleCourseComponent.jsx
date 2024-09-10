@@ -24,7 +24,7 @@ export default function SingleCourseComponent({ course, color }) {
 
   useEffect(() => {
     if (user) {
-      if (user?.favouriteCoursesId.includes(Number(course?.id))) {
+      if (user?.favouriteCoursesId?.includes(Number(course?.id))) {
         setFound(true)
       }
     }
@@ -36,7 +36,7 @@ export default function SingleCourseComponent({ course, color }) {
         .get(`http://localhost:3000/Users/${user?.id}`)
         .then(response => {
           let res = response.data;
-          if (!res.favouriteCoursesId.includes(Number(course?.id))) {
+          if (!res.favouriteCoursesId?.includes(Number(course?.id))) {
             toast.success('course added to wishlist successfuly')
             res.favouriteCoursesId.push(Number(course?.id));
             res = res.favouriteCoursesId;

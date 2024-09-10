@@ -10,6 +10,7 @@ import { useRecoilState } from "recoil";
 import { $UserInfo } from "../Store/Store";
 import { useEffect } from "react";
 import AddInstructorForm from "./AddInstructorForm";
+import EditForm from "./EditForm";
 export default function DashboardLayout() {
     const [userInfo] = useRecoilState($UserInfo)
     let navigate = useNavigate()
@@ -21,6 +22,7 @@ export default function DashboardLayout() {
                 <AddCourseToHome />
                 <AddCourseForm />
                 <AddInstructorForm />
+                <EditForm />
                 <AddNewCategory />
                 <AddInstructorToHome />
                 <AddReview />

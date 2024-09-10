@@ -3,12 +3,14 @@ import { MdSlowMotionVideo } from "react-icons/md";
 import { CiLogout } from "react-icons/ci";
 import { MdDashboard } from "react-icons/md";
 import userImg from "../../assets/images/user.png"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { $UserInfo, $profile } from "../../Store/Store";
+import { toast } from "react-toastify";
 export default function AdminProfile() {
     const [user, setUser] = useRecoilState($UserInfo)
     const [profile, setProfile] = useRecoilState($profile)
+    const navigate = useNavigate()
     console.log(user?.img)
     if (profile) {
         return (
@@ -35,8 +37,11 @@ export default function AdminProfile() {
                 </div>
                 <div className="line col-12"></div>
                 <div className="py-3 px-5 item d-flex gap-2 align-items-center logout" onClick={() => {
+                    navigate("/")
+                    setProfile(false)
                     localStorage.setItem('user', null)
                     sessionStorage.setItem('user', null)
+                    toast.error("You are logged out")
                     setUser(null)
                 }}>
                     <CiLogout />

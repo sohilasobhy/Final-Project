@@ -3,10 +3,11 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { useRecoilState } from "recoil"
 import Swal from "sweetalert2"
-import { $AddInstructor, $AllInstructors } from "../Store/Store"
+import { $AddInstructor, $AllInstructors, $HomeInstructors } from "../Store/Store"
 
 export default function InstructorsDash() {
     const [Instructors, setInstrucors] = useRecoilState($AllInstructors)
+    const [homeInstructors, setHomeInstructors] = useRecoilState($HomeInstructors)
     const [, setAddForm] = useRecoilState($AddInstructor)
     useEffect(() => {
         axios.get("http://localhost:3000/Instructors")
@@ -28,6 +29,21 @@ export default function InstructorsDash() {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
+                axios.delete(`http://localhost:3000/HomeInstructors/${id}`)
+                    .then(() => {
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "the instructor has been deleted.",
+                            icon: "success"
+                        });
+                    })
+                    .catch((error) => {
+                        Swal.fire({
+                            title: "Error!",
+                            text: "There was a problem deleting the instructor.",
+                            icon: "error"
+                        });
+                    });
                 axios.delete(`http://localhost:3000/Instructors/${id}`)
                     .then(() => {
                         Swal.fire({
@@ -59,6 +75,8 @@ export default function InstructorsDash() {
                         });
                     });
                 const updatedArray = Instructors.filter(item => item.id !== id);
+                const updatedInstructors = homeInstructors.filter(item => item.id !== id);
+                setHomeInstructors(updatedInstructors)
                 setInstrucors(updatedArray)
             }
         });

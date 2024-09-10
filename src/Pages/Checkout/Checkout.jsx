@@ -67,18 +67,36 @@ export default function Checkout() {
                             initialValues={{ cardNumber: "", HolderName: "", date: "", cvv: "" }}
                             onSubmit={handlePaymentSuccess}
                             validationSchema={paymenScheme}>
-                            <Form className="d-flex flex-column align-items-center col-12 gap-1">
+                            <Form className="d-flex flex-column align-items-start col-12 gap-3">
                                 <div className={`${checkoutPay?.price == "Free" ? "d-none" : "d-flex"} flex-column align-items-center col-12 gap-1`}>
                                     <h4>Payment Information</h4>
-                                    <Field type="number" required="required" name="cardNumber" placeholder="Card Number" className="col-11" />
-                                    <ErrorValidation name={"cardNumber"} />
-                                    <Field type="text" required="required" name="HolderName" placeholder="Card Holder Name" className="col-11" />
-                                    <span className="error">
-                                        <ErrorMessage name="HolderName" />
-                                    </span>
-                                    <div className="d-flex gap-2 col-12 justify-content-center">
-                                        <Field type="number" required="required" name="date" placeholder="MM/YY" className="col-5 align-self-start" />
-                                        <Field type="number" required="required" name="cvv" placeholder="CVV" className="col-5" />
+                                    <div className="d-flex flex-column gap-2 col-12">
+                                        <p className=" align-self-start">Enter card number:</p>
+                                        <Field type="number" required="required" name="cardNumber" placeholder="Card Number" className="col-12" />
+                                        <span className="error">
+                                            <ErrorMessage name={"cardNumber"} />
+                                        </span>
+                                    </div>
+                                    <div className="d-flex flex-column gap-2 col-12">
+                                        <p className=" align-self-start">Enter card holder name:</p>
+                                        <Field type="text" required="required" name="HolderName" placeholder="Card Holder Name" className="col-12" />
+                                        <span className="error">
+                                            <ErrorMessage name="HolderName" />
+                                        </span>
+                                    </div>
+                                    <div className="row g-2 col-12 justify-content-start col-11">
+                                        <div className="col-6">
+                                            <div>
+                                                <p>Expiration date</p>
+                                                <Field type="number" required="required" name="date" placeholder="MM/YY" className="col-12 " />
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div>
+                                                <p>Enter cvv</p>
+                                                <Field type="number" required="required" name="cvv" placeholder="CVV" className="col-12" />
+                                            </div>
+                                        </div>
                                     </div>
                                     <span className="error">
                                         <ErrorMessage name="date" />

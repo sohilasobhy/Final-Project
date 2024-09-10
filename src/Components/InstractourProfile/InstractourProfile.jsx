@@ -1,14 +1,14 @@
 import "./InstractourProfile.scss"
 import { CiBookmark, CiLogout } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { TiMessages } from "react-icons/ti";
 import { useRecoilState } from "recoil";
 import { $UserInfo, $profile } from "../../Store/Store";
 
 export default function InstractourProfile() {
-    console.log("first")
-    const [profile] = useRecoilState($profile)
+    const [profile, setProfile] = useRecoilState($profile)
     const [user, setUser] = useRecoilState($UserInfo)
+    const navigate = useNavigate()
     if (profile) {
         return (
             <div className="bg-white position-fixed pb-3" id="Insratcour">
@@ -26,12 +26,12 @@ export default function InstractourProfile() {
                     </div>
                 </div>
                 <div className="line col-12"></div>
-                <div className="">
+                <div>
                     {/* <Link to={"/progress"} className="d-flex align-items-center gap-2 item py-2 px-5">
                     <MdSlowMotionVideo />
                     <p>My Progress</p>
                 </Link> */}
-                    <Link to={"/wishlist"} className="d-flex align-items-center gap-2 item py-2 px-5 mt-3">
+                    <Link to={"/myCourses"} className="d-flex align-items-center gap-2 item py-2 px-5 mt-3" onClick={() => setProfile(false)}>
                         <CiBookmark />
                         <p>My Courses</p>
                     </Link>
@@ -43,21 +43,25 @@ export default function InstractourProfile() {
                         <IoMdSettings />
                         <p>Account Settings </p>
                     </Link> */}
-                    <Link to={"/messages"} className="d-flex align-items-center gap-2 item mt-3 py-2 px-5">
+                    {/* <Link to={"/messages"} className="d-flex align-items-center gap-2 item mt-3 py-2 px-5" onClick={() => setProfile(false)}>
                         <TiMessages />
                         <p>Messages</p>
-                    </Link>
+                    </Link> */}
                 </div>
                 <div className="line col-12"></div>
                 <div className="py-3 px-5 item d-flex gap-2 align-items-center logout" onClick={() => {
+                    setProfile(false)
+                    navigate("/")
                     localStorage.setItem('user', null)
                     sessionStorage.setItem('user', null)
                     setUser(null)
+                    toast.error("You are logged out")
+
                 }}>
                     <CiLogout />
                     <p>Logout</p>
                 </div>
-            </div>
+            </div >
         )
     }
 }       

@@ -28,6 +28,7 @@ import ReviewsDash from "../Dashboard/Reviews";
 import InstructorsDash from "../Dashboard/Instructors";
 import MessagesDash from "../Dashboard/Messages";
 import EditCourseForm from "../Pages/SingleCourse/test";
+import InstructorCourses from "../Components/InstractourProfile/InstructorCourses";
 
 
 const router = createBrowserRouter([
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
             {
                 path: "/wishlist",
                 element: <SavedCourses />
+            },
+            {
+                path: "/myCourses",
+                element: <InstructorCourses />
             },
             {
                 path: "/messages",

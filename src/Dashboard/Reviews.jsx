@@ -1,9 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useRecoilState } from "recoil";
 import Swal from "sweetalert2";
+import { $HomeReviews } from "../Store/Store";
 
 export default function ReviewsDash() {
     const [Reviews, setReviews] = useState()
+    const [HomeReviews, setHomeReviews] = useRecoilState($HomeReviews)
     useEffect(() => {
         axios
             .get("http://localhost:3000/Reviews")
@@ -41,8 +44,25 @@ export default function ReviewsDash() {
                             icon: "error"
                         });
                     });
+                axios.delete(`http://localhost:3000/HomeReviews/${id}`)
+                    .then(() => {
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "the review has been deleted.",
+                            icon: "success"
+                        });
+                    })
+                    .catch((error) => {
+                        Swal.fire({
+                            title: "Error!",
+                            text: "There was a problem deleting the review.",
+                            icon: "error"
+                        });
+                    });
                 const updatedArray = Reviews.filter(item => item.id !== id);
+                const updatedHome = HomeReviews.filter(item => item.id !== id);
                 setReviews(updatedArray)
+                setHomeReviews(updatedHome)
             }
         });
     };

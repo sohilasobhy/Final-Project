@@ -6,7 +6,7 @@
     color: #01338d;
   }
   .formCon {
-    height: 550px;
+    height: 620px;
   }
   .courseInfo {
     p {
@@ -24,7 +24,6 @@
     height: 100%;
   }
   form {
-    // background-color: white;
     border-radius: 0.5rem;
     padding: 1rem;
     input[type="number"]::-webkit-outer-spin-button,
@@ -46,6 +45,10 @@
       &:focus {
         outline: 1px solid #01338d;
       }
+    }
+    .error {
+      color: #d93025;
+      font-weight: 600;
     }
   }
 }

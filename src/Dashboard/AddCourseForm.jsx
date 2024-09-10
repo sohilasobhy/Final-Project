@@ -39,9 +39,11 @@ export default function AddCourseForm() {
         } else {
             values.price = `$${values.price}`
         }
-        let CatId = Categories.find((element) => element.categoryName = values.category)
+        let CatId = Categories.find((element) => element.categoryName == values.category)
         values.CtegoryId = CatId.id
-        let InstId = Instructors.find((element) => element.name = values.Instructor)
+        console.log(Instructors)
+        let InstId = Instructors.find((element) => element.name == values.Instructor)
+        console.log(Instructors)
         values.instructorId = InstId.id
         Swal.fire({
             title: "Are you sure you want to add this course?",
@@ -53,13 +55,20 @@ export default function AddCourseForm() {
         }).then((result) => {
             if (result.isConfirmed) {
                 axios.post(url, values)
-                    .then(() => {
+                    .then((res) => {
+                        console.log(Instructors)
+                        let instractor = Instructors.find((item) => String(item.name) === String(res.data.Instructor))
+                        console.log(instractor)
+                        let NewCourses = [...instractor.coursesID, res.data.id]
+                        console.log(res.data)
+                        console.log(NewCourses)
+                        axios.put(`http://localhost:3000/Instructors/${instractor?.id}`, { ...instractor, coursesID: NewCourses })
                         Swal.fire({
                             title: "Added!",
                             text: "the course has been added.",
                             icon: "success"
                         });
-                        setCourses([...Courses, values])
+                        setCourses([...Courses, res.data])
                         setCourseForm(false)
                     })
                     .catch((error) => {
@@ -117,6 +126,7 @@ export default function AddCourseForm() {
             .get("http://localhost:3000/Instructors")
             .then((res) => {
                 setInstructors(res.data)
+                console.log(res.data)
                 console.log(Instructors)
             })
             .catch((err) => {

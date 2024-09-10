@@ -72,7 +72,7 @@ export default function LoginPage() {
                                 <span>Remember me</span>
                             </div>
                             <div className="links">
-                                <Link to={"/forget-password"}>Forget password</Link>
+                                {/* <Link to={"/forget-password"}>Forget password</Link> */}
                                 <Link to={"/signup"} className="signup">Signup</Link>
                             </div>
                             <input type="submit" className="submitBTN" />

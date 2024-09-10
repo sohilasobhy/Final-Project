@@ -19,7 +19,9 @@ export default function SignUp() {
         password: "",
         subscribed: "no",
         favouriteCoursesId: [],
+        validCoursesId: [],
         role: "user",
+        completedCourses: [],
     }
     let url = "http://localhost:3000/Users"
     const handleSignUp = (values) => {

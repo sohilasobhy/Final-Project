@@ -1,13 +1,16 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { useRecoilState } from "recoil";
-import { $AllCourses, $CourseForm } from "../Store/Store";
+import { $AllCourses, $AllInstructors, $CourseForm, $EditForm, $EditFormCourse, $HomeCourses } from "../Store/Store";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 export default function AllCourses() {
     const [courses, setCourses] = useRecoilState($AllCourses)
-    console.log(courses)
+    const [Instructor, setInstructor] = useRecoilState($AllInstructors)
+    const [homeCourses, sethomeCourses] = useRecoilState($HomeCourses)
+    const [, setCourseId] = useRecoilState($EditFormCourse)
+    const [, setEdit] = useRecoilState($EditForm)
     const [, setCourseForm] = useRecoilState($CourseForm)
     useEffect(() => {
         axios
@@ -15,6 +18,15 @@ export default function AllCourses() {
             .then((response) => {
                 setCourses(response.data);
                 console.log(courses);
+            })
+            .catch((error) => {
+                console.error("There was an error fetching the data!", error);
+            });
+        axios
+            .get("http://localhost:3000/Instructors")
+            .then((response) => {
+                setInstructor(response.data);
+                console.log(Instructor);
             })
             .catch((error) => {
                 console.error("There was an error fetching the data!", error);
@@ -32,27 +44,40 @@ export default function AllCourses() {
         }).then((result) => {
             if (result.isConfirmed) {
                 axios.delete(`http://localhost:3000/HomeCourses/${id}`)
-                    .then(() => {
-                        Swal.fire({
-                            title: "Deleted!",
-                            text: "Your course has been deleted.",
-                            icon: "success"
-                        });
+                    .then((res) => {
+                        console.log(res)
                     })
                     .catch((error) => {
-                        Swal.fire({
-                            title: "Error!",
-                            text: "There was a problem deleting the course.",
-                            icon: "error"
-                        });
+                        console.log(error)
                     });
                 axios.delete(`http://localhost:3000/Courses/${id}`)
-                    .then(() => {
+                    .then((res) => {
+                        console.log(res)
                         Swal.fire({
                             title: "Deleted!",
                             text: "Your course has been deleted.",
                             icon: "success"
                         });
+                        let course = courses.find((item) => item.id == id)
+                        console.log(course)
+                        let instractor = Instructor.find((item) => item.name === course.Instructor)
+                        console.log(instractor)
+                        console.log(instractor.coursesID)
+                        console.log(course.id)
+                        let NewCourses = instractor.coursesID.filter((item) => {
+                            return (
+                                item != course.id
+                            )
+                        })
+                        console.log(NewCourses)
+                        axios.put(`http://localhost:3000/Instructors/${instractor?.id}`, { ...instractor, coursesID: NewCourses })
+                            .then((res) => {
+                                console.log("Instructor updated", res.data);
+                            })
+                            .catch((error) => {
+                                console.log("Error updating instructor", error);
+                            });
+                        // setCourses([...courses, res.data])
                     })
                     .catch((error) => {
                         Swal.fire({
@@ -62,6 +87,8 @@ export default function AllCourses() {
                         });
                     });
                 const updatedArray = courses.filter(item => item.id !== id);
+                const updateHome = homeCourses.filter(item => item.id !== id);
+                sethomeCourses(updateHome)
                 setCourses(updatedArray)
                 console.log(updatedArray)
             }
@@ -101,7 +128,10 @@ export default function AllCourses() {
                                         </Link>
                                     </td>
                                     <td className="text-center">
-                                        <button className="btn btn-primary">Edit</button>
+                                        <button className="btn btn-primary" onClick={() => {
+                                            setEdit(true)
+                                            setCourseId(course.id)
+                                        }}>Edit</button>
                                     </td>
                                     <td className="text-center">
                                         <button className="btn btn-danger" onClick={() => handleDelete(course.id)}>Delete</button>

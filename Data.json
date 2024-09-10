@@ -113,7 +113,7 @@
       "desc": "This course provides a comprehensive guide to launching and managing a successful SEO (Search Engine Optimization) business from home. It is designed for individuals who are interested in understanding the principles of SEO and want to leverage this knowledge to build a profitable home-based business."
     },
     {
-      "id": "2",
+      "id": 2,
       "level": "Beginner",
       "name": "Build Your First Website: A Beginner's Guide to Web Development",
       "rating": "3",
@@ -225,7 +225,7 @@
       "desc": "This course provides a step-by-step guide to building your first website from scratch. It covers essential web development technologies such as HTML, CSS, and JavaScript, and introduces popular frameworks. Designed for beginners, it aims to equip learners with the skills needed to create, design, and deploy a fully functional website."
     },
     {
-      "id": "3",
+      "id": 3,
       "level": "Intermediate",
       "name": "Mastering Digital Marketing: From Strategy to Execution",
       "rating": "4",
@@ -312,7 +312,7 @@
       "desc": "This course offers an in-depth exploration of digital marketing strategies and execution. Participants will learn how to create effective digital marketing campaigns, utilize analytics tools, and integrate various digital channels such as SEO, SEM, social media, and email marketing to achieve their marketing goals."
     },
     {
-      "id": "4",
+      "id": 4,
       "level": "Beginner",
       "name": "Introduction to Graphic Design: From Concept to Creation",
       "rating": "3.7",
@@ -384,7 +384,7 @@
       "desc": "This course is designed to introduce beginners to the world of graphic design. Covering the basics of design principles and software like Adobe Photoshop and Illustrator, it aims to equip learners with the skills needed to create visually appealing graphics for various purposes."
     },
     {
-      "id": "5",
+      "id": 5,
       "level": "Beginner",
       "name": "Personal Finance Management: Building Your Financial Future",
       "rating": "2",
@@ -486,7 +486,7 @@
       "desc": "This course provides a foundation in personal finance management, covering essential topics such as budgeting, saving, investing, and debt management. It is designed to help individuals build a secure financial future through practical strategies and effective planning."
     },
     {
-      "id": "6",
+      "id": 6,
       "level": "Beginner",
       "name": "Data Science for Everyone: A Beginner's Guide",
       "rating": "3",
@@ -655,7 +655,7 @@
       "desc": "This course is designed to help beginners overcome their fear of public speaking. It covers essential techniques for crafting and delivering compelling speeches, providing strategies to boost confidence and engage audiences effectively."
     },
     {
-      "id": "8",
+      "id": 8,
       "level": "Intermediate",
       "name": "Advanced Excel: Mastering Functions and Formulas",
       "rating": "4.7",
@@ -854,7 +854,7 @@
       "desc": "This course is designed for beginners to explore the world of photography. It covers the basics of camera settings, composition, lighting, and various photography styles, helping you to capture stunning images with confidence."
     },
     {
-      "id": "10",
+      "id": 10,
       "level": "Intermediate",
       "name": "Social Media Marketing: Building Your Online Presence",
       "rating": "2.5",
@@ -935,7 +935,7 @@
       "desc": "This course covers everything you need to know to build a strong online presence through social media. Learn to create engaging content, analyze performance metrics, and run effective advertising campaigns on popular platforms."
     },
     {
-      "id": "11",
+      "id": 11,
       "level": "Advanced",
       "name": "Blockchain Technology: Beyond Cryptocurrency",
       "rating": "4.8",
@@ -1032,7 +1032,7 @@
       "desc": "This course provides a deep dive into blockchain technology, exploring its fundamentals, applications beyond cryptocurrencies, smart contracts, and the latest developments in blockchain security and scalability."
     },
     {
-      "id": "12",
+      "id": 12,
       "level": "Beginner",
       "name": "Introduction to Cooking: Basics of Culinary Arts",
       "rating": "4.7",
@@ -1129,7 +1129,7 @@
       "desc": "This course is perfect for beginners looking to learn the basics of cooking. It covers essential techniques, kitchen safety, basic recipes, and tips for meal planning, helping you to develop your culinary skills confidently."
     },
     {
-      "id": "13",
+      "id": 13,
       "level": "Intermediate",
       "name": "Creative Writing: Unlock Your Storytelling Potential",
       "rating": "4.9",
@@ -1216,7 +1216,7 @@
       "desc": "This course helps you unlock your storytelling potential, focusing on developing your writing skills, creating compelling characters, and exploring different genres. You'll receive feedback to enhance your writing style and storytelling abilities."
     },
     {
-      "id": "14",
+      "id": 14,
       "level": "Beginner",
       "name": "Yoga for Beginners: Find Your Balance and Peace",
       "rating": "4.8",
@@ -1328,7 +1328,7 @@
       "desc": "This course introduces beginners to yoga, covering essential postures, breathing techniques, and the benefits of yoga for mental and physical well-being. Participants will learn to create a personal yoga practice routine for balance and peace."
     },
     {
-      "id": "15",
+      "id": 15,
       "level": "Advanced",
       "name": "Advanced Photoshop: Mastering Photo Editing Techniques",
       "rating": "4.9",
@@ -1440,7 +1440,7 @@
       "desc": "This course takes your Photoshop skills to the next level, focusing on advanced editing techniques, layers, masks, filters, retouching, compositing, and digital painting. Learn to create professional-quality images with creative effects."
     },
     {
-      "id": "16",
+      "id": 16,
       "level": "Beginner",
       "name": "Introduction to Cloud Computing: Basics and Applications",
       "rating": "4.8",
@@ -1527,7 +1527,7 @@
       "desc": "This course introduces beginners to the basics of cloud computing, covering key concepts, service models, and popular platforms like AWS and Azure. Participants will learn to deploy and manage applications in the cloud."
     },
     {
-      "id": "17",
+      "id": 17,
       "level": "Intermediate",
       "name": "Intermediate Python: Enhancing Your Programming Skills",
       "rating": "4.7",
@@ -1599,7 +1599,7 @@
       "desc": "This course builds on basic Python knowledge, covering advanced topics such as data structures, algorithms, and object-oriented programming. Participants will enhance their programming skills and learn to debug and test Python code effectively."
     },
     {
-      "id": "18",
+      "id": 18,
       "level": "Advanced",
       "name": "Machine Learning: Advanced Techniques and Applications",
       "rating": "4.9",
@@ -1686,7 +1686,7 @@
       "desc": "This course covers advanced machine learning techniques, including deep learning with TensorFlow and Keras, model optimization, and evaluation. Participants will gain practical experience through real-world applications of machine learning."
     },
     {
-      "id": "19",
+      "id": 19,
       "level": "Beginner",
       "name": "Basic HTML and CSS: Build Your First Web Page",
       "rating": "4.8",
@@ -1768,7 +1768,7 @@
       "desc": "This course is designed for beginners to learn the basics of HTML and CSS, enabling them to create and style web pages. Participants will also explore responsive web design and best practices in web development."
     },
     {
-      "id": "20",
+      "id": 20,
       "level": "Intermediate",
       "name": "Intermediate JavaScript: Building Interactive Web Applications",
       "rating": "4.7",
@@ -1884,7 +1884,7 @@
       "desc": "This course builds on basic JavaScript knowledge, focusing on advanced topics such as DOM manipulation, event handling, and asynchronous programming. Participants will learn to build interactive web applications using JavaScript."
     },
     {
-      "id": "21",
+      "id": 21,
       "level": "Beginner",
       "name": "Introduction to Project Management: Basics and Best Practices",
       "rating": "4.8",
@@ -1966,7 +1966,7 @@
       "desc": "This course introduces beginners to the basics of project management, covering key concepts, planning, execution, and monitoring. Participants will learn to use project management tools and techniques, and develop skills in managing risks and stakeholders."
     },
     {
-      "id": "22",
+      "id": 22,
       "level": "Intermediate",
       "name": "Intermediate SQL: Advanced Database Management",
       "rating": "4.8",
@@ -2068,7 +2068,7 @@
       "desc": "This course builds on basic SQL knowledge, covering advanced topics such as complex queries, joins, normalization, and indexing. Participants will learn to optimize and tune database performance for efficient management."
     },
     {
-      "id": "23",
+      "id": 23,
       "level": "Advanced",
       "name": "Cybersecurity: Protecting Your Digital Assets",
       "rating": "4.9",
@@ -2155,7 +2155,7 @@
       "desc": "This course provides an in-depth understanding of cybersecurity, covering common threats, vulnerabilities, and protection techniques. Participants will learn to respond to incidents and manage risks to safeguard digital assets."
     },
     {
-      "id": "24",
+      "id": 24,
       "level": "Beginner",
       "name": "Introduction to Digital Photography: Capturing Beautiful Images",
       "rating": "4.7",
@@ -2266,6 +2266,7 @@
       "desc": "This course introduces beginners to digital photography, covering camera settings, composition, lighting, and post-processing. Participants will learn to capture beautiful images and enhance them through editing."
     },
     {
+      "id": 25,
       "name": "عنوان الدورة ",
       "level": "Intermediat",
       "category": "Business Management",
@@ -2298,149 +2299,12 @@
             }
           ]
         }
-      ],
-      "id": "1XRLFO7"
-    },
-    {
-      "name": "my full name",
-      "level": "Beginner",
-      "category": "Business Management",
-      "CtegoryId": 1,
-      "price": "$9",
-      "lessons": 10,
-      "Duration": "9 weeks",
-      "Instructor": "RAHMA",
-      "Language": "English",
-      "comVideo": "src/assets/images/check-mark.png",
-      "instructorId": "1",
-      "img": "src/assets/images/check-mark(1).png",
-      "obj": [
-        "9"
-      ],
-      "desc": "9",
-      "Certification": "Yes",
-      "rating": "0",
-      "students": "0",
-      "courseContent": [
-        {
-          "category": "9",
-          "lessons": [
-            {
-              "LessonName": "9",
-              "desc": "9",
-              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4"
-            }
-          ]
-        }
-      ],
-      "id": "2Lkv-lf"
-    },
-    {
-      "name": "dddd",
-      "level": "Beginner",
-      "category": "Business Management",
-      "CtegoryId": 1,
-      "price": "$9",
-      "lessons": 10,
-      "Duration": "9 weeks",
-      "Instructor": "James Wilson",
-      "Language": "English",
-      "comVideo": "src/assets/images/check-mark(1).png",
-      "instructorId": "1",
-      "img": "src/assets/images/check-mark.png",
-      "obj": [
-        "9"
-      ],
-      "desc": "9",
-      "Certification": "Yes",
-      "rating": "0",
-      "students": "0",
-      "courseContent": [
-        {
-          "category": "9",
-          "lessons": [
-            {
-              "LessonName": "9",
-              "desc": "9",
-              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
-            }
-          ]
-        }
-      ],
-      "id": "-VxSjRr"
-    },
-    {
-      "name": "sohila sobhy",
-      "level": "Beginner",
-      "category": "Business Management",
-      "CtegoryId": 1,
-      "price": "$55",
-      "lessons": 15,
-      "Duration": "4 weeks",
-      "Instructor": "RAHMA",
-      "Language": "Arabic",
-      "comVideo": "src/assets/images/bohemian-man-with-his-arms-crossed.jpg",
-      "instructorId": "1",
-      "img": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
-      "obj": [
-        "555"
-      ],
-      "desc": "555",
-      "Certification": "Yes",
-      "rating": "0",
-      "students": "0",
-      "courseContent": [
-        {
-          "category": "55",
-          "lessons": [
-            {
-              "LessonName": "5",
-              "desc": "5",
-              "Link": "src/assets/images/certificate.png"
-            }
-          ]
-        }
-      ],
-      "id": "n8XBHdi"
-    },
-    {
-      "name": "sohila sobhy",
-      "level": "Beginner",
-      "category": "Business Management",
-      "CtegoryId": 1,
-      "price": "$7",
-      "lessons": 18,
-      "Duration": "8 weeks",
-      "Instructor": "Jane Seymour",
-      "Language": "English",
-      "comVideo": "src/assets/images/certificate.png",
-      "instructorId": "1",
-      "img": "src/assets/images/check-mark.png",
-      "obj": [
-        "8"
-      ],
-      "desc": "8",
-      "Certification": "Yes",
-      "rating": "0",
-      "students": "0",
-      "courseContent": [
-        {
-          "category": "8",
-          "lessons": [
-            {
-              "LessonName": "8",
-              "desc": "8",
-              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4"
-            }
-          ]
-        }
-      ],
-      "id": "TBUx_RU"
+      ]
     }
   ],
   "HomeCourses": [
     {
-      "id": "2",
+      "id": 2,
       "level": "Beginner",
       "name": "Build Your First Website: A Beginner's Guide to Web Development",
       "rating": "4.8",
@@ -2552,7 +2416,7 @@
       "desc": "This course provides a step-by-step guide to building your first website from scratch. It covers essential web development technologies such as HTML, CSS, and JavaScript, and introduces popular frameworks. Designed for beginners, it aims to equip learners with the skills needed to create, design, and deploy a fully functional website."
     },
     {
-      "id": "3",
+      "id": 3,
       "level": "Intermediate",
       "name": "Mastering Digital Marketing: From Strategy to Execution",
       "rating": "4.9",
@@ -2639,7 +2503,7 @@
       "desc": "This course offers an in-depth exploration of digital marketing strategies and execution. Participants will learn how to create effective digital marketing campaigns, utilize analytics tools, and integrate various digital channels such as SEO, SEM, social media, and email marketing to achieve their marketing goals."
     },
     {
-      "id": "4",
+      "id": 4,
       "level": "Beginner",
       "name": "Introduction to Graphic Design: From Concept to Creation",
       "rating": "4.7",
@@ -2821,11 +2685,113 @@
         "Develop strategies for local SEO, mobile SEO, and technical SEO."
       ],
       "desc": "This course provides a comprehensive guide to launching and managing a successful SEO (Search Engine Optimization) business from home. It is designed for individuals who are interested in understanding the principles of SEO and want to leverage this knowledge to build a profitable home-based business."
+    },
+    {
+      "id": 5,
+      "level": "Beginner",
+      "name": "Personal Finance Management: Building Your Financial Future",
+      "rating": "2",
+      "category": "Business & Finance",
+      "CtegoryId": "7",
+      "price": "$35",
+      "lessons": "10",
+      "students": "420",
+      "Duration": "6 Weeks",
+      "Instructor": "Alice Johnson",
+      "Language": "English",
+      "instructorId": "2",
+      "comVideo": "../../src/assets/images/Mississippi State University 2019 National Commercial.mp4",
+      "courseContent": [
+        {
+          "category": "Introduction to Personal Finance",
+          "lessons": [
+            {
+              "LessonName": "Lesson 1: Understanding Personal Finance",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
+              "desc": "This lesson provides an overview of personal finance, including its key concepts, importance, and how it affects your financial well-being. You'll learn about basic financial principles, budgeting, saving, and the role of financial planning in achieving your financial goals."
+            },
+            {
+              "LessonName": "Lesson 2: Setting Financial Goals",
+              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
+              "desc": "In this lesson, you'll learn how to set realistic and achievable financial goals. Topics include identifying short-term and long-term goals, creating a plan to achieve them, and tracking your progress. Effective goal-setting is crucial for financial success and maintaining motivation."
+            }
+          ]
+        },
+        {
+          "category": "Budgeting and Saving",
+          "lessons": [
+            {
+              "LessonName": "Lesson 3: Creating a Budget",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
+              "desc": "This lesson focuses on the process of creating a budget to manage your finances effectively. You'll learn how to track income and expenses, categorize spending, and develop a budget that aligns with your financial goals. A well-structured budget is essential for maintaining financial control and avoiding debt."
+            },
+            {
+              "LessonName": "Lesson 4: Strategies for Saving Money",
+              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
+              "desc": "In this lesson, you'll explore various strategies for saving money and building an emergency fund. Topics include identifying areas where you can cut costs, automating savings, and setting up savings goals. Effective saving techniques will help you build financial security and prepare for future expenses."
+            }
+          ]
+        },
+        {
+          "category": "Debt Management",
+          "lessons": [
+            {
+              "LessonName": "Lesson 5: Understanding and Managing Debt",
+              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
+              "desc": "This lesson covers the fundamentals of debt management, including types of debt, interest rates, and repayment strategies. You'll learn how to assess your debt situation, prioritize payments, and develop a plan to manage and reduce debt effectively."
+            },
+            {
+              "LessonName": "Lesson 6: Strategies for Reducing Debt",
+              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
+              "desc": "In this lesson, you'll explore practical strategies for reducing and eliminating debt. Topics include debt consolidation, negotiation with creditors, and methods for paying off debt more quickly. Effective debt reduction techniques will help you improve your financial health and reduce financial stress."
+            }
+          ]
+        },
+        {
+          "category": "Investing Basics",
+          "lessons": [
+            {
+              "LessonName": "Lesson 7: Introduction to Investing",
+              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
+              "desc": "This lesson introduces the basics of investing, including different types of investments, risk and return, and investment principles. You'll learn about stocks, bonds, mutual funds, and other investment options, as well as how to start building an investment portfolio."
+            },
+            {
+              "LessonName": "Lesson 8: Building an Investment Portfolio",
+              "Link": "src/assets/images/Start your dreams with us!.mp4",
+              "desc": "In this lesson, you'll learn how to build and manage an investment portfolio that aligns with your financial goals and risk tolerance. Topics include asset allocation, diversification, and portfolio rebalancing. Effective portfolio management is key to achieving long-term investment success."
+            }
+          ]
+        },
+        {
+          "category": "Advanced Financial Planning",
+          "lessons": [
+            {
+              "LessonName": "Lesson 9: Retirement Planning",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
+              "desc": "This lesson focuses on planning for retirement, including retirement savings options, calculating retirement needs, and creating a retirement strategy. You'll learn about retirement accounts, investment strategies for retirement, and how to ensure financial stability in your later years."
+            },
+            {
+              "LessonName": "Lesson 10: Estate Planning and Wealth Management",
+              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
+              "desc": "In this lesson, you'll explore estate planning and wealth management strategies to protect and transfer your assets effectively. Topics include wills, trusts, estate taxes, and strategies for managing and growing wealth across generations. Proper estate planning ensures your financial legacy is preserved according to your wishes."
+            }
+          ]
+        }
+      ],
+      "Certification": "Yes",
+      "img": "src/assets/images/course5.jpg",
+      "obj": [
+        "Understand the basics of personal finance and budgeting.",
+        "Learn strategies for saving and investing.",
+        "Master debt management and credit improvement techniques.",
+        "Develop a long-term financial plan."
+      ],
+      "desc": "This course provides a foundation in personal finance management, covering essential topics such as budgeting, saving, investing, and debt management. It is designed to help individuals build a secure financial future through practical strategies and effective planning."
     }
   ],
   "Instructors": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Jane Seymour",
       "job": "UI Designer",
       "img": "src/assets/images/team-01.webp",
@@ -2847,7 +2813,7 @@
       }
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Alice Johnson",
       "job": "Data Scientist",
       "img": "src/assets/images/team-02.webp",
@@ -2869,7 +2835,7 @@
       }
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Michael Smith",
       "job": "Cybersecurity Expert",
       "img": "src/assets/images/team-03.webp",
@@ -2890,7 +2856,7 @@
       }
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Emily Davis",
       "job": "Project Manager",
       "img": "src/assets/images/team-04.webp",
@@ -2911,7 +2877,7 @@
       }
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "David Brown",
       "job": "Full Stack Developer",
       "img": "src/assets/images/instructors-300.png",
@@ -2932,7 +2898,7 @@
       }
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Sophia Williams",
       "job": "Machine Learning Engineer",
       "img": "src/assets/images/2-5-how-do-i-apply-block.jpg",
@@ -2954,7 +2920,7 @@
       }
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "James Wilson",
       "job": "Cloud Architect",
       "img": "src/assets/images/tfs-quickstart-for-instructors.png",
@@ -2975,7 +2941,7 @@
       }
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "Olivia Martinez",
       "job": "Business Analyst",
       "img": "src/assets/images/kumonfranchise-press-2022-1001.jpeg",
@@ -2995,7 +2961,7 @@
       }
     },
     {
-      "id": "9",
+      "id": 9,
       "name": "Daniel Harris",
       "job": "DevOps Engineer",
       "img": "src/assets/images/how-much-does-udemy-pay-instructors-1200x750.png",
@@ -3016,7 +2982,7 @@
       }
     },
     {
-      "id": "10",
+      "id": 10,
       "name": "Grace Lee",
       "job": "Blockchain Developer",
       "img": "src/assets/images/istock_000036898774_small.jpg",
@@ -3037,7 +3003,7 @@
       }
     },
     {
-      "id": "11",
+      "id": 11,
       "name": "Henry Clark",
       "job": "AI Researcher",
       "img": "src/assets/images/360_F_665093017_sb9OKpEw2CnNkqV3TDr6VUxpauA93SJZ.jpg",
@@ -3057,7 +3023,7 @@
       }
     },
     {
-      "id": "12",
+      "id": 12,
       "name": "Natalie Thompson",
       "job": "Digital Marketing Expert",
       "img": "src/assets/images/istockphoto-1430390602-612x612.jpg",
@@ -3076,29 +3042,11 @@
         "twitter": "https://x.com/",
         "linkedIn": "https://www.linkedin.com/"
       }
-    },
-    {
-      "name": "RAHMA",
-      "job": "dddddddddd",
-      "img": "src/assets/images/course1.jpg",
-      "students": "",
-      "rating": "",
-      "About": "ssssssssssssssssssss",
-      "coursesID": [],
-      "Contact": {
-        "address": "ssssssssssssssssssss",
-        "Email": "sohila@gmail.com",
-        "phone": "1111111111111111",
-        "facebook": "https://github.com/sohilasobhy/Final-Project/blob/main/Data.json#L2",
-        "twitter": "https://github.com/sohilasobhy/Final-Project/blob/main/Data.json#L2",
-        "linkedIn": "https://github.com/sohilasobhy/Final-Project/blob/main/Data.json#L2"
-      },
-      "id": "GTtNAe4"
     }
   ],
   "HomeInstructors": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Jane Seymour",
       "job": "UI Designer",
       "img": "src/assets/images/team-01.webp",
@@ -3120,7 +3068,7 @@
       }
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Alice Johnson",
       "job": "Data Scientist",
       "img": "src/assets/images/team-02.webp",
@@ -3142,7 +3090,7 @@
       }
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Michael Smith",
       "job": "Cybersecurity Expert",
       "img": "src/assets/images/team-03.webp",
@@ -3163,7 +3111,7 @@
       }
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Emily Davis",
       "job": "Project Manager",
       "img": "src/assets/images/team-04.webp",
@@ -3184,7 +3132,7 @@
       }
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "James Wilson",
       "job": "Cloud Architect",
       "img": "src/assets/images/tfs-quickstart-for-instructors.png",
@@ -3205,7 +3153,7 @@
       }
     },
     {
-      "id": "9",
+      "id": 9,
       "name": "Daniel Harris",
       "job": "DevOps Engineer",
       "img": "src/assets/images/how-much-does-udemy-pay-instructors-1200x750.png",
@@ -3228,7 +3176,7 @@
   ],
   "HomeReviews": [
     {
-      "id": "1",
+      "id": 1,
       "userId": "5",
       "comment": "The hands-on projects and interactive elements really helped me understand the concepts better. Highly recommend!",
       "Job": "Content Creator",
@@ -3236,7 +3184,7 @@
       "courseID": "1"
     },
     {
-      "id": "2",
+      "id": 2,
       "userId": "7",
       "comment": "This course provided me with invaluable skills that I could immediately apply to my job.",
       "Job": "Marketing Specialist",
@@ -3244,7 +3192,7 @@
       "courseID": "2"
     },
     {
-      "id": "3",
+      "id": 3,
       "userId": "20",
       "comment": "The instructors were very knowledgeable and the content was well-organized.",
       "Job": "Software Engineer",
@@ -3252,7 +3200,7 @@
       "courseID": "3"
     },
     {
-      "id": "4",
+      "id": 4,
       "userId": "8",
       "comment": "I loved the flexibility of the courses. I could learn at my own pace and revisit topics as needed.",
       "Job": "Graphic Designer",
@@ -3274,14 +3222,6 @@
       "Job": "Content Writer",
       "rating": "5",
       "courseID": "10"
-    },
-    {
-      "id": 15,
-      "userId": "20",
-      "comment": "The platform offers a great variety of courses that are very informative.",
-      "Job": "Entrepreneur",
-      "rating": "4",
-      "courseID": "15"
     }
   ],
   "Reviews": [
@@ -3396,14 +3336,6 @@
       "Job": "Teacher",
       "rating": "5",
       "courseID": "14"
-    },
-    {
-      "id": 15,
-      "userId": "20",
-      "comment": "The platform offers a great variety of courses that are very informative.",
-      "Job": "Entrepreneur",
-      "rating": "4",
-      "courseID": "15"
     }
   ],
   "Categories": [
@@ -3471,6 +3403,8 @@
       "password": "123455678",
       "subscribed": "1",
       "role": "user",
+      "validCoursesId": [],
+      "completedCourses": [],
       "favouriteCoursesId": [
         1,
         5,
@@ -3485,6 +3419,8 @@
       "password": "password123",
       "subscribed": "1",
       "role": "user",
+      "completedCourses": [],
+      "validCoursesId": [],
       "favouriteCoursesId": [
         7,
         10
@@ -3497,6 +3433,8 @@
       "img": "",
       "password": "mypassword",
       "subscribed": "1",
+      "completedCourses": [],
+      "validCoursesId": [],
       "favouriteCoursesId": [],
       "role": "user"
     },
@@ -3508,6 +3446,7 @@
       "password": "alice.johnson@example.com",
       "subscribed": "2",
       "role": "user",
+      "completedCourses": [],
       "favouriteCoursesId": [
         3,
         15
@@ -3526,6 +3465,7 @@
       "password": "bobspassword",
       "subscribed": "2",
       "favouriteCoursesId": [],
+      "completedCourses": [],
       "role": "user",
       "validCoursesId": [
         2,
@@ -3543,7 +3483,9 @@
         17,
         22
       ],
+      "completedCourses": [],
       "subscribed": "2",
+      "role": "user",
       "validCoursesId": [
         5,
         13,
@@ -3559,6 +3501,7 @@
       "password": "dianapass",
       "subscribed": "2",
       "role": "user",
+      "completedCourses": [],
       "validCoursesId": [
         10,
         15,
@@ -3574,6 +3517,7 @@
       "password": "frankpass",
       "subscribed": "2",
       "role": "user",
+      "completedCourses": [],
       "validCoursesId": [
         17,
         15,
@@ -3589,6 +3533,7 @@
       "favouriteCoursesId": [],
       "role": "user",
       "subscribed": "2",
+      "completedCourses": [],
       "validCoursesId": [
         3,
         18,
@@ -3602,6 +3547,7 @@
       "img": "",
       "password": "henrypass",
       "favouriteCoursesId": [],
+      "completedCourses": [],
       "role": "user",
       "subscribed": "2",
       "validCoursesId": [
@@ -3616,7 +3562,9 @@
       "name": "Ivy King",
       "email": "ivy.king@example.com",
       "img": "",
+      "completedCourses": [],
       "password": "ivypass",
+      "validCoursesId": [],
       "role": "user",
       "subscribed": "3"
     },
@@ -3626,31 +3574,20 @@
       "email": "jack.lee@example.com",
       "img": "",
       "password": "jackpass",
+      "completedCourses": [],
       "favouriteCoursesId": [],
+      "validCoursesId": [],
       "subscribed": "3",
       "role": "user"
-    },
-    {
-      "id": 13,
-      "name": "Karen Miller",
-      "email": "karen.miller@example.com",
-      "img": "",
-      "password": "karenpass",
-      "favouriteCoursesId": [],
-      "subscribed": "2",
-      "role": "user",
-      "validCoursesId": [
-        8,
-        14,
-        20
-      ]
     },
     {
       "id": 14,
       "name": "Liam Nelson",
       "email": "liam.nelson@example.com",
       "img": "",
+      "completedCourses": [],
       "favouriteCoursesId": [],
+      "validCoursesId": [],
       "password": "liampass",
       "subscribed": "3",
       "role": "user"
@@ -3661,6 +3598,8 @@
       "email": "mia.owens@example.com",
       "img": "",
       "favouriteCoursesId": [],
+      "completedCourses": [],
+      "validCoursesId": [],
       "password": "miapass",
       "subscribed": "3",
       "role": "user"
@@ -3671,6 +3610,7 @@
       "email": "nathan.perez@example.com",
       "img": "",
       "favouriteCoursesId": [],
+      "completedCourses": [],
       "password": "nathanpass",
       "subscribed": "2",
       "role": "user",
@@ -3688,6 +3628,7 @@
       "favouriteCoursesId": [],
       "password": "oliviapass",
       "subscribed": "2",
+      "completedCourses": [],
       "role": "user",
       "validCoursesId": [
         6,
@@ -3702,6 +3643,7 @@
       "img": "",
       "favouriteCoursesId": [],
       "password": "peterpass",
+      "completedCourses": [],
       "role": "user",
       "subscribed": "2",
       "validCoursesId": [
@@ -3715,9 +3657,11 @@
       "name": "Quinn Smith",
       "email": "quinn.smith@example.com",
       "img": "",
+      "validCoursesId": [],
       "password": "quinnpass",
       "favouriteCoursesId": [],
       "subscribed": "1",
+      "completedCourses": [],
       "role": "user"
     },
     {
@@ -3725,9 +3669,11 @@
       "name": "Rachel Taylor",
       "email": "rachel.taylor@example.com",
       "img": "",
+      "validCoursesId": [],
       "password": "rachelpass",
       "favouriteCoursesId": [],
       "subscribed": "1",
+      "completedCourses": [],
       "role": "user"
     },
     {
@@ -3738,6 +3684,7 @@
       "password": "steve.underwood@example.com",
       "subscribed": "2",
       "favouriteCoursesId": [],
+      "completedCourses": [],
       "role": "user",
       "validCoursesId": [
         10,
@@ -3752,6 +3699,7 @@
       "img": "",
       "password": "tinapass",
       "favouriteCoursesId": [],
+      "completedCourses": [],
       "subscribed": "2",
       "role": "user",
       "validCoursesId": [
@@ -3765,9 +3713,11 @@
       "name": "Umar Watson",
       "email": "umar.watson@example.com",
       "img": "",
+      "validCoursesId": [],
       "password": "umarpass",
       "favouriteCoursesId": [],
       "role": "user",
+      "completedCourses": [],
       "subscribed": "3"
     },
     {
@@ -3778,6 +3728,8 @@
       "password": "verapass",
       "favouriteCoursesId": [],
       "role": "user",
+      "validCoursesId": [],
+      "completedCourses": [],
       "subscribed": "3"
     },
     {
@@ -3786,7 +3738,9 @@
       "email": "william.young@example.com",
       "img": "",
       "password": "williampass",
+      "completedCourses": [],
       "role": "user",
+      "validCoursesId": [],
       "favouriteCoursesId": [],
       "subscribed": "3"
     },
@@ -3796,7 +3750,9 @@
       "email": "xena.zane@example.com",
       "img": "",
       "password": "xenapass",
+      "completedCourses": [],
       "role": "user",
+      "validCoursesId": [],
       "favouriteCoursesId": [],
       "subscribed": "3"
     },
@@ -3805,7 +3761,9 @@
       "name": "Yvonne Adams",
       "email": "yvonne.adams@example.com",
       "img": "",
+      "validCoursesId": [],
       "password": "yvonnepass",
+      "completedCourses": [],
       "role": "user",
       "favouriteCoursesId": [],
       "subscribed": "3"
@@ -3815,7 +3773,9 @@
       "name": "Zach Brown",
       "email": "zach.brown@example.com",
       "img": "",
+      "validCoursesId": [],
       "password": "zachpass",
+      "completedCourses": [],
       "role": "user",
       "favouriteCoursesId": [],
       "subscribed": "3"
@@ -3825,7 +3785,9 @@
       "name": "Anna Clark",
       "email": "anna.clark@example.com",
       "img": "",
+      "validCoursesId": [],
       "password": "annapass",
+      "completedCourses": [],
       "role": "user",
       "favouriteCoursesId": [],
       "subscribed": "3"
@@ -3836,7 +3798,9 @@
       "email": "brian.davis@example.com",
       "img": "",
       "password": "brianpass",
+      "completedCourses": [],
       "role": "user",
+      "validCoursesId": [],
       "favouriteCoursesId": [],
       "subscribed": "3"
     },
@@ -3844,7 +3808,9 @@
       "id": 31,
       "name": "Cara Evans",
       "email": "cara.evans@example.com",
+      "completedCourses": [],
       "img": "",
+      "validCoursesId": [],
       "password": "carapass",
       "favouriteCoursesId": [],
       "role": "user",
@@ -3853,7 +3819,9 @@
     {
       "name": "RAHMA",
       "email": "rahma@gmail.com",
+      "completedCourses": [],
       "img": "",
+      "validCoursesId": [],
       "password": "666",
       "favouriteCoursesId": [],
       "role": "user",
@@ -3871,6 +3839,7 @@
       "confirmPassword": "123",
       "favouriteCoursesId": [],
       "validCoursesId": [],
+      "completedCourses": [],
       "id": 33
     },
     {
@@ -3878,7 +3847,9 @@
       "email": "Edward@gmail",
       "img": "src/assets/images/team-01.webp",
       "password": "666",
+      "validCoursesId": [],
       "favouriteCoursesId": [],
+      "completedCourses": [],
       "role": "instructor",
       "subscribed": "4",
       "confirmPassword": "666",
@@ -3888,7 +3859,6 @@
       "name": "Alice Johnson",
       "img": "src/assets/images/team-02.webp",
       "email": "alice@example.com",
-      "favouriteCoursesId": [],
       "password": "666",
       "role": "instructor",
       "subscribed": "4",
@@ -3899,7 +3869,6 @@
       "name": "Michael Smith",
       "img": "src/assets/images/team-03.webp",
       "email": "michael@example.com",
-      "favouriteCoursesId": [],
       "password": "666",
       "role": "instructor",
       "subscribed": "4",
@@ -3973,13 +3942,13 @@
       "id": 41
     },
     {
-      "name": "Grace Lee",
-      "img": "src/assets/images/istock_000036898774_small.jpg",
-      "email": "grace@example.com",
+      "name": "Natalie Thompson",
+      "img": "src/assets/images/istockphoto-1430390602-612x612.jpg",
+      "email": "natalie@example.com",
       "password": "666",
       "role": "instructor",
-      "favouriteCoursesId": [],
       "subscribed": "4",
+      "favouriteCoursesId": [],
       "confirmPassword": "666",
       "id": 42
     },
@@ -4011,6 +3980,8 @@
       "img": "src/assets/images/about-12.webp",
       "password": "111",
       "subscribed": "4",
+      "completedCourses": [],
+      "validCoursesId": [],
       "role": "user",
       "favouriteCoursesId": [],
       "confirmPassword": "111",
@@ -4021,12 +3992,18 @@
       "email": "salma@gmail.com",
       "img": "src/assets/images/about-01.webp",
       "password": "123",
+      "completedCourses": [
+        2,
+        4
+      ],
       "subscribed": 2,
       "favouriteCoursesId": [
         8,
         1,
         6,
-        2
+        2,
+        11,
+        10
       ],
       "role": "user",
       "confirmPassword": "123",
@@ -4047,26 +4024,28 @@
       "password": "1234567890",
       "subscribed": 2,
       "favouriteCoursesId": [],
+      "completedCourses": [],
       "role": "user",
       "confirmPassword": "1234567890",
       "id": 45,
-      "validCoursesId": [
-        1
-      ]
+      "validCoursesId": []
     }
   ],
   "SubPlans": [
     {
+      "id": 1,
       "duration": "Monthly",
       "price": "399.00",
       "charge": "Charged monthly"
     },
     {
+      "id": 2,
       "duration": "Quarterly",
       "price": "266.33",
       "charge": "Charged every 3 months as a payment of 799 EGP"
     },
     {
+      "id": 3,
       "duration": "Yearly ",
       "price": "199.92",
       "charge": "Charged as annual payment of 2,399 EGP"
