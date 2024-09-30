@@ -8,6 +8,7 @@ import { useRecoilState } from "recoil";
 import { $Search, $UserInfo, $menu, $profile } from "../Store/Store";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import defaultImage from "../assets/images/user.png"
+import { MdDarkMode } from "react-icons/md";
 export default function NavBar() {
   const [profile, setProfile] = useRecoilState($profile)
   const navigate = useNavigate()

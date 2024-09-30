@@ -12,7 +12,7 @@ import CourseLessons from "../Pages/CourseLessons/Index";
 import Purchase from "../Pages/Purchase/Purchase";
 import Progress from "../Components/ClientProfile/Progress/Progress";
 import SavedCourses from "../Components/ClientProfile/SavedCourses/SavedCourses";
-import Messages from "../Components/ClientProfile/Messages/Messages";
+// import Messages from "../Components/ClientProfile/Messages/Messages";
 import ForgetPassword from "../Components/ForgetPassword/ForgetPassword";
 import InstructorsPage from "../Pages/Instructors/Instructors";
 import IsLoggedOut from "../Components/IsLoggedOut/IsLoggedOut";
@@ -29,6 +29,7 @@ import InstructorsDash from "../Dashboard/Instructors";
 import MessagesDash from "../Dashboard/Messages";
 import EditCourseForm from "../Pages/SingleCourse/test";
 import InstructorCourses from "../Components/InstractourProfile/InstructorCourses";
+import SubPlans from "../Dashboard/SubPlans";
 
 
 const router = createBrowserRouter([
@@ -71,10 +72,6 @@ const router = createBrowserRouter([
             {
                 path: "/myCourses",
                 element: <InstructorCourses />
-            },
-            {
-                path: "/messages",
-                element: <Messages />
             },
             {
                 path: "/forget-password",
@@ -133,6 +130,10 @@ const router = createBrowserRouter([
             {
                 path: "messages",
                 element: <MessagesDash />
+            },
+            {
+                path: "subPlans",
+                element: <SubPlans />
             }
         ],
     }, {

@@ -48,6 +48,10 @@ export default function Menu() {
                         onClick={() => setOpen(false)}                    >
                         Users
                     </NavLink>
+                    <NavLink to={"/dashboard/subPlans"} className="p-1"
+                        onClick={() => setOpen(false)}                    >
+                        subscription plans
+                    </NavLink>
                 </div>
             </div>
             <div className={`sideMenu d-md-none  justify-content-center ${openMenue == false ? `d-none` : ` d-flex`}`} onClick={() => { setOpen(!openMenue) }}>

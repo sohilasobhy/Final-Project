@@ -11,6 +11,10 @@ import { $UserInfo } from "../Store/Store";
 import { useEffect } from "react";
 import AddInstructorForm from "./AddInstructorForm";
 import EditForm from "./EditForm";
+import EditCategoryForm from "./EditCategoryForm";
+import AddAdmin from "./AddAdmin";
+import AddSubPlans from "./AddSubPlans";
+import EditPlans from "./EditPlans";
 export default function DashboardLayout() {
     const [userInfo] = useRecoilState($UserInfo)
     let navigate = useNavigate()
@@ -19,9 +23,13 @@ export default function DashboardLayout() {
         return (
             <div id="Dashboard" className="d-flex">
                 <Menu />
+                <EditPlans />
+                <AddSubPlans />
+                <AddAdmin />
                 <AddCourseToHome />
                 <AddCourseForm />
                 <AddInstructorForm />
+                <EditCategoryForm />
                 <EditForm />
                 <AddNewCategory />
                 <AddInstructorToHome />

@@ -1,268 +1,308 @@
 import { useRecoilState } from "recoil";
 import CustomModal from "../Components/Modal/Modal";
-import { $EditForm, $EditFormCourse } from "../Store/Store";
-import { Formik, Form, Field, FieldArray } from "formik";
-import * as Yup from "yup";
-import { useEffect, useState } from "react";
+import { $AllCourses, $EditForm, $EditFormCourse } from "../Store/Store";
+import { Formik, Form, Field, FieldArray, ErrorMessage } from "formik";
+import { useEffect } from "react";
 import axios from "axios";
+import { EditCourseScheme } from "../schemas/EditCourseScheme";
+import Swal from "sweetalert2";
 export default function EditForm() {
-    const [openModal, setOpen] = useRecoilState($EditForm)
-    const [courseId] = useRecoilState($EditFormCourse)
-    const [course, setCourse] = useState()
-    console.log(courseId)
+    const [openModal, setOpen] = useRecoilState($EditForm);
+    const [allCourses, setAllCourses] = useRecoilState($AllCourses)
+    const [courseId] = useRecoilState($EditFormCourse);
+    const course = allCourses.find((e) => {
+        return (
+            e.id === courseId
+        )
+    })
     useEffect(() => {
         axios
-            .get(`http://localhost:3000/Courses/${Number(courseId)}`)
+            .get(`http://localhost:3000/Courses`)
             .then((res) => {
-                setCourse(res.data)
-                console.log(res.data)
+                setAllCourses(res.data);
             })
             .catch((err) => {
-                console.log(err)
-            })
-    }, [courseId])
-    const courseValidationSchema = Yup.object().shape({
-        name: Yup.string().required("Course name is required"),
-        level: Yup.string().required("Level is required"),
-        rating: Yup.number().min(0).max(5).required("Rating is required"),
-        price: Yup.string().required("Price is required"),
-        lessons: Yup.number().required("Lessons are required"),
-        duration: Yup.string().required("Duration is required"),
-        instructor: Yup.string().required("Instructor is required"),
-        language: Yup.string().required("Language is required"),
-        certification: Yup.string().required("Certification info is required"),
-        courseContent: Yup.array().of(
-            Yup.object().shape({
-                category: Yup.string().required("Category is required"),
-                lessons: Yup.array().of(
-                    Yup.object().shape({
-                        LessonName: Yup.string().required("Lesson name is required"),
-                        desc: Yup.string().required("Lesson description is required"),
-                        Link: Yup.string().url().required("Video link is required"),
-                    })
-                ),
-            })
-        ),
-    });
-    console.log(course)
+                console.log(err);
+            });
+    }, [courseId]);
     const initialValues = {
-        name: `${course?.name}`,
-        level: `${course?.name}`,
-        rating: `${course?.rating}`,
-        price: `${course?.price}`,
-        lessons: `${course?.lessons}`,
-        duration: `${course?.duration}`,
-        instructor: "Jane Seymour",
-        language: "English",
-        certification: "Yes",
-        courseContent: [
-            {
-                category: "Introduction to Web Development",
-                lessons: [
-                    {
-                        LessonName: "Lesson 1: What is Web Development?",
-                        desc: "In this lesson, you'll get an introduction to web development...",
-                        Link: "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
-                    },
-                    {
-                        LessonName: "Lesson 2: Overview of Web Technologies",
-                        desc: "This lesson provides a broad overview of the key technologies...",
-                        Link: "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
-                    },
-                ],
-            },
-            {
-                category: "HTML Basics",
-                lessons: [
-                    {
-                        LessonName: "Lesson 3: Getting Started with HTML",
-                        desc: "In this lesson, you'll learn the fundamentals of HTML...",
-                        Link: "src/assets/images/Coaching Institute Advertisement Video.mp4",
-                    },
-                    {
-                        LessonName: "Lesson 4: Structuring a Web Page",
-                        desc: "This lesson focuses on organizing and structuring a web page using HTML...",
-                        Link: "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
-                    },
-                ],
-            },
-        ],
+        id: course?.id,
+        name: course?.name,
+        level: course?.level,
+        rating: course?.rating,
+        price: course?.price,
+        category: course?.category,
+        CtegoryId: course?.CtegoryId,
+        lessons: course?.lessons,
+        Duration: course?.Duration,
+        Instructor: course?.Instructor,
+        Language: course?.Language,
+        Certification: course?.Certification,
+        courseContent: course?.courseContent,
+        students: course?.students,
+        img: course?.img,
+        comVideo: course?.comVideo,
+        instructorId: course?.instructorId,
+        totalRating: course?.totalRating,
+        rates: course?.rates,
+        obj: course?.obj,
+        desc: course?.desc
     };
 
     const handleSubmit = (values) => {
         console.log(values);
+
+        Swal.fire({
+            title: "Are you sure you want to apply this edits?",
+            icon: "success",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, apply it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axios
+                    .put(`http://localhost:3000/Courses/${Number(courseId)}`, values)
+                    .then((res) => {
+                        Swal.fire({
+                            title: "Added!",
+                            text: "Edits have been saved",
+                            icon: "success"
+                        });
+                        setOpen(false)
+                        const editedCourses = [...allCourses]
+                        editedCourses.splice(
+                            editedCourses.findIndex((e) => e.id == res.data.id),
+                            1,
+                            {
+                                id: res.data?.id,
+                                name: res.data?.name,
+                                level: res.data?.level,
+                                rating: res.data?.rating,
+                                price: res.data?.price,
+                                category: res.data?.category,
+                                CtegoryId: res.data?.CtegoryId,
+                                lessons: res.data?.lessons,
+                                Duration: res.data?.Duration,
+                                Instructor: res.data?.Instructor,
+                                Language: res.data?.Language,
+                                Certification: res.data?.Certification,
+                                courseContent: res.data?.courseContent,
+                                students: res.data?.students,
+                                img: res.data?.img,
+                                comVideo: res.data?.comVideo,
+                                instructorId: res.data?.instructorId,
+                                totalRating: res.data?.totalRating,
+                                rates: res.data?.rates,
+                                obj: res.data?.obj,
+                                desc: res.data?.desc
+                            }
+                        )
+                        setAllCourses(editedCourses)
+                    })
+                    .catch((error) => {
+                        Swal.fire({
+                            title: "Error!",
+                            text: "There was a problem saving these edits.",
+                            icon: "error"
+                        });
+                    });
+                axios
+                    .put(`http://localhost:3000/HomeCourses/${Number(courseId)}`, values)
+            }
+        });
     };
+
     return (
         <CustomModal show={openModal} onHide={() => setOpen(false)} title="Edit course form">
-            <Formik
-                initialValues={initialValues}
-                validationSchema={courseValidationSchema}
-                onSubmit={(values) => handleSubmit(values)}
-            >
-                {({ values, errors, touched }) => (
-                    <Form>
-                        <div>
-                            <label htmlFor="name">Course Name</label>
-                            <Field id="name" name="name" placeholder="Course Name" />
-                            {errors.name && touched.name ? <div>{errors.name}</div> : null}
-                        </div>
-                        <div>
-                            <label htmlFor="level">Level</label>
-                            <Field id="level" name="level" placeholder="Beginner" />
-                            {errors.level && touched.level ? <div>{errors.level}</div> : null}
-                        </div>
-                        <div>
-                            <label htmlFor="rating">Rating</label>
-                            <Field id="rating" name="rating" type="number" placeholder="4.8" />
-                            {errors.rating && touched.rating ? <div>{errors.rating}</div> : null}
-                        </div>
-                        <div>
-                            <label htmlFor="price">Price</label>
-                            <Field id="price" name="price" placeholder="$50" />
-                            {errors.price && touched.price ? <div>{errors.price}</div> : null}
-                        </div>
-
-                        <div>
-                            <label htmlFor="lessons">Lessons</label>
-                            <Field id="lessons" name="lessons" type="number" placeholder="11" />
-                            {errors.lessons && touched.lessons ? <div>{errors.lessons}</div> : null}
-                        </div>
-
-                        <div>
-                            <label htmlFor="duration">Duration</label>
-                            <Field id="duration" name="duration" placeholder="12 Weeks" />
-                            {errors.duration && touched.duration ? <div>{errors.duration}</div> : null}
-                        </div>
-
-                        <div>
-                            <label htmlFor="instructor">Instructor</label>
-                            <Field id="instructor" name="instructor" placeholder="Jane Seymour" />
-                            {errors.instructor && touched.instructor ? <div>{errors.instructor}</div> : null}
-                        </div>
-
-                        <div>
-                            <label htmlFor="language">Language</label>
-                            <Field id="language" name="language" placeholder="English" />
-                            {errors.language && touched.language ? <div>{errors.language}</div> : null}
-                        </div>
-
-                        <div>
-                            <label htmlFor="certification">Certification</label>
-                            <Field id="certification" name="certification" placeholder="Yes" />
-                            {errors.certification && touched.certification ? <div>{errors.certification}</div> : null}
-                        </div>
-
-                        {/* Course Content - FieldArray */}
-                        <FieldArray name="courseContent">
-                            {({ insert, remove, push }) => (
-                                <div>
-                                    {values.courseContent.length > 0 &&
-                                        values.courseContent.map((content, index) => (
-                                            <div key={index}>
-                                                <h4>Category {index + 1}</h4>
-
-                                                <div>
-                                                    <label htmlFor={`courseContent.${index}.category`}>Category</label>
-                                                    <Field
-                                                        name={`courseContent.${index}.category`}
-                                                        placeholder="Category Name"
-                                                    />
-                                                    {errors.courseContent?.[index]?.category &&
-                                                        touched.courseContent?.[index]?.category ? (
-                                                        <div>{errors.courseContent[index].category}</div>
-                                                    ) : null}
-                                                </div>
-
-                                                <FieldArray name={`courseContent.${index}.lessons`}>
-                                                    {({ insert, remove, push }) => (
-                                                        <div>
-                                                            {content.lessons.length > 0 &&
-                                                                content.lessons.map((lesson, lessonIndex) => (
-                                                                    <div key={lessonIndex}>
-                                                                        <h5>Lesson {lessonIndex + 1}</h5>
-
-                                                                        <div>
-                                                                            <label htmlFor={`courseContent.${index}.lessons.${lessonIndex}.LessonName`}>
-                                                                                Lesson Name
-                                                                            </label>
-                                                                            <Field
-                                                                                name={`courseContent.${index}.lessons.${lessonIndex}.LessonName`}
-                                                                                placeholder="Lesson Name"
-                                                                            />
-                                                                            {errors.courseContent?.[index]?.lessons?.[lessonIndex]
-                                                                                ?.LessonName &&
-                                                                                touched.courseContent?.[index]?.lessons?.[lessonIndex]
-                                                                                    ?.LessonName ? (
-                                                                                <div>
-                                                                                    {errors.courseContent[index].lessons[lessonIndex]
-                                                                                        .LessonName}
-                                                                                </div>
-                                                                            ) : null}
-                                                                        </div>
-
-                                                                        <div>
-                                                                            <label htmlFor={`courseContent.${index}.lessons.${lessonIndex}.desc`}>
-                                                                                Description
-                                                                            </label>
-                                                                            <Field
-                                                                                name={`courseContent.${index}.lessons.${lessonIndex}.desc`}
-                                                                                placeholder="Lesson Description"
-                                                                            />
-                                                                            {errors.courseContent?.[index]?.lessons?.[lessonIndex]?.desc &&
-                                                                                touched.courseContent?.[index]?.lessons?.[lessonIndex]?.desc ? (
-                                                                                <div>
-                                                                                    {errors.courseContent[index].lessons[lessonIndex].desc}
-                                                                                </div>
-                                                                            ) : null}
-                                                                        </div>
-
-                                                                        <div>
-                                                                            <label htmlFor={`courseContent.${index}.lessons.${lessonIndex}.Link`}>
-                                                                                Video Link
-                                                                            </label>
-                                                                            <Field
-                                                                                name={`courseContent.${index}.lessons.${lessonIndex}.Link`}
-                                                                                placeholder="Lesson Video Link"
-                                                                            />
-                                                                            {errors.courseContent?.[index]?.lessons?.[lessonIndex]?.Link &&
-                                                                                touched.courseContent?.[index]?.lessons?.[lessonIndex]?.Link ? (
-                                                                                <div>
-                                                                                    {errors.courseContent[index].lessons[lessonIndex].Link}
-                                                                                </div>
-                                                                            ) : null}
-                                                                        </div>
-                                                                    </div>
-                                                                ))}
-                                                            <button
-                                                                type="button"
-                                                                onClick={() => push({ LessonName: "", desc: "", Link: "" })}
-                                                            >
-                                                                Add Lesson
-                                                            </button>
-                                                        </div>
-                                                    )}
-                                                </FieldArray>
-                                            </div>
-                                        ))}
-                                    <button
-                                        type="button"
-                                        onClick={() =>
-                                            push({
-                                                category: "",
-                                                lessons: [{ LessonName: "", desc: "", Link: "" }],
-                                            })
-                                        }
-                                    >
-                                        Add Category
-                                    </button>
+            {course ? (
+                <Formik
+                    initialValues={initialValues}
+                    validationSchema={EditCourseScheme}
+                    onSubmit={(values) => handleSubmit(values)}
+                    enableReinitialize
+                >
+                    {({ values, errors, touched }) => (
+                        <div className="FormContainer">
+                            <Form className="d-flex flex-column gap-3 editForm">
+                                <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
+                                    <h5 htmlFor="name">Course Name</h5>
+                                    <Field id="name" name="name" placeholder="Course Name" />
+                                    <span className="error">
+                                        <ErrorMessage name="name" />
+                                    </span>
                                 </div>
-                            )}
-                        </FieldArray>
+                                <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
+                                    <h5 htmlFor="level">Level</h5>
+                                    <Field as="select" name="level">
+                                        <option value="Beginner">Beginner</option>
+                                        <option value="Intermediat">Intermediat</option>
+                                        <option value="Hard">Hard</option>
+                                    </Field>
+                                    <span className="error">
+                                        <ErrorMessage name="level" />
+                                    </span>
+                                </div>
+                                <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
+                                    <h5 htmlFor="price">Price</h5>
+                                    <Field id="price" name="price" placeholder="course price" />
+                                    <span className="error">
+                                        <ErrorMessage name="level" />
+                                    </span>
+                                </div>
+                                <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
+                                    <h5 htmlFor="lessons">Lessons</h5>
+                                    <Field id="lessons" name="lessons" type="number" placeholder="course lessons" />
+                                    {errors.lessons && touched.lessons ? <div>{errors.lessons}</div> : null}
+                                </div>
+                                <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
+                                    <h5 htmlFor="Duration">Duration</h5>
+                                    <Field id="duration" name="Duration" placeholder="course duration" />
+                                    {errors.Duration && touched.Duration ? <div>{errors.Duration}</div> : null}
+                                </div>
+                                <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
+                                    <h5 htmlFor="instructor">Instructor</h5>
+                                    <Field id="instructor" name="Instructor" placeholder="course instructor" />
+                                    {errors.Instructor && touched.Instructor ? <div>{errors.Instructor}</div> : null}
+                                </div>
+                                <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
+                                    <h5 htmlFor="language">Language</h5>
+                                    <Field id="language" name="Language" placeholder="course language" />
+                                    {errors.Language && touched.Language ? <div>{errors.Language}</div> : null}
+                                </div>
+                                <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
+                                    <h5 htmlFor="certification">Certification</h5>
+                                    <Field id="certification" name="Certification" placeholder="certification" />
+                                    {errors.Certification && touched.Certification ? <div>{errors.Certification}</div> : null}
+                                </div>
+                                <FieldArray name="courseContent">
+                                    {({ insert, remove, push }) => (
+                                        <div>
+                                            {values.courseContent.length > 0 &&
+                                                values.courseContent.map((content, index) => (
+                                                    <div key={index}>
+                                                        <h3 className="mt-2">Category {index + 1}:</h3>
+                                                        <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1 mt-4">
+                                                            <h5 htmlFor={`courseContent.${index}.category`}>Category</h5>
+                                                            <Field
+                                                                name={`courseContent.${index}.category`}
+                                                                placeholder="Category Name"
+                                                            />
+                                                            {errors.courseContent?.[index]?.category &&
+                                                                touched.courseContent?.[index]?.category ? (
+                                                                <div>{errors.courseContent[index].category}</div>
+                                                            ) : null}
+                                                        </div>
+                                                        <button
+                                                            className="mt-3 btn btn-danger"
+                                                            type="button"
+                                                            onClick={() => remove(index)}
+                                                        >
+                                                            Remove Category
+                                                        </button>
+                                                        <FieldArray name={`courseContent.${index}.lessons`}>
+                                                            {({ insert, remove: removeLesson, push: pushLesson }) => (
+                                                                <div className="d-flex flex-column gap-3">
+                                                                    {content.lessons.length > 0 &&
+                                                                        content.lessons.map((lesson, lessonIndex) => (
+                                                                            <div key={lessonIndex} className="d-flex flex-column gap-3">
+                                                                                <h3 className="mt-4">Lesson {lessonIndex + 1}:</h3>
+                                                                                <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1 mt-2">
+                                                                                    <h5 htmlFor={`courseContent.${index}.lessons.${lessonIndex}.LessonName`}>
+                                                                                        Lesson Name
+                                                                                    </h5>
+                                                                                    <Field
+                                                                                        name={`courseContent.${index}.lessons.${lessonIndex}.LessonName`}
+                                                                                        placeholder="Lesson Name"
+                                                                                    />
+                                                                                    {errors.courseContent?.[index]?.lessons?.[lessonIndex]
+                                                                                        ?.LessonName &&
+                                                                                        touched.courseContent?.[index]?.lessons?.[lessonIndex]
+                                                                                            ?.LessonName ? (
+                                                                                        <div>
+                                                                                            {errors.courseContent[index].lessons[lessonIndex]
+                                                                                                .LessonName}
+                                                                                        </div>
+                                                                                    ) : null}
+                                                                                </div>
+                                                                                <div>
+                                                                                    <h5 htmlFor={`courseContent.${index}.lessons.${lessonIndex}.desc`}>
+                                                                                        Description
+                                                                                    </h5>
+                                                                                    <Field
+                                                                                        name={`courseContent.${index}.lessons.${lessonIndex}.desc`}
+                                                                                        placeholder="Lesson Description"
+                                                                                    />
+                                                                                    {errors.courseContent?.[index]?.lessons?.[lessonIndex]?.desc &&
+                                                                                        touched.courseContent?.[index]?.lessons?.[lessonIndex]?.desc ? (
+                                                                                        <div>
+                                                                                            {errors.courseContent[index].lessons[lessonIndex].desc}
+                                                                                        </div>
+                                                                                    ) : null}
+                                                                                </div>
+                                                                                <div>
+                                                                                    <h5 htmlFor={`courseContent.${index}.lessons.${lessonIndex}.Link`}>
+                                                                                        Video Link
+                                                                                    </h5>
+                                                                                    <Field
+                                                                                        name={`courseContent.${index}.lessons.${lessonIndex}.Link`}
+                                                                                        placeholder="Lesson Video Link"
+                                                                                    />
+                                                                                    {errors.courseContent?.[index]?.lessons?.[lessonIndex]?.Link &&
+                                                                                        touched.courseContent?.[index]?.lessons?.[lessonIndex]?.Link ? (
+                                                                                        <div>
+                                                                                            {errors.courseContent[index].lessons[lessonIndex].Link}
+                                                                                        </div>
+                                                                                    ) : null}
+                                                                                </div>
+                                                                                <button
+                                                                                    type="button"
+                                                                                    onClick={() => removeLesson(lessonIndex)
 
-                        <button type="submit">Submit</button>
-                    </Form>
-                )}
-            </Formik>
+                                                                                    }
+                                                                                    className=" btn btn-danger"
+                                                                                >
+                                                                                    Remove Lesson
+                                                                                </button>
+                                                                            </div>
+                                                                        ))}
+                                                                    <button
+                                                                        className="btn btn-success"
+                                                                        type="button"
+                                                                        onClick={() => pushLesson({ LessonName: "", desc: "", Link: "" })}
+                                                                    >
+                                                                        Add Lesson
+                                                                    </button>
+                                                                </div>
+                                                            )}
+                                                        </FieldArray>
+                                                    </div>
+                                                ))}
+                                            <button
+                                                className="btn btn-primary mt-3"
+                                                type="button"
+                                                onClick={() =>
+                                                    push({
+                                                        category: "",
+                                                        lessons: [{ LessonName: "", desc: "", Link: "" }],
+                                                    })
+                                                }
+                                            >
+                                                Add Category
+                                            </button>
+                                        </div>
+                                    )}
+                                </FieldArray>
+
+                                <button type="submit" className="btn btn-success">Submit</button>
+                            </Form>
+                        </div>
+                    )}
+                </Formik>
+            ) : (
+                ""
+            )}
         </CustomModal>
-    )
+    );
 }
+

@@ -7,7 +7,7 @@
   background-image: url("../../assets/images/BG-3.webp");
   background-color: #f0f4f5;
   z-index: 22;
-  min-height: 89.5vh;
+  height: 90vh;
   form {
     inset: 4px;
     background-color: #2eb980;
@@ -136,7 +136,7 @@
     border-bottom-left-radius: 8px;
     width: 30%;
     background-color: #fff;
-    height: 593px;
+    height: 100%;
     img {
       border-bottom-right-radius: 8px;
       border-top-right-radius: 8px;
@@ -145,9 +145,14 @@
       object-fit: cover;
     }
   }
+  .dark {
+    .error {
+      color: white;
+    }
+  }
   .error {
     color: #d93025;
-    margin-top: 5px;
+    margin-top: 2px;
     font-weight: 600;
   }
   @media (max-width: 992px) {

@@ -51,7 +51,8 @@
   #Reviews,
   #InstrucorsDash,
   #UsersDash,
-  #MessagesDash {
+  #MessagesDash,
+  #SubPlans {
     right: 0;
     table {
       tr {
@@ -69,10 +70,18 @@
       }
       tbody {
         td {
+          width: fit-content;
+          vertical-align: middle;
           a {
             &:hover {
               color: #2db87f;
             }
+          }
+          img {
+            border-radius: 50%;
+          }
+          p {
+            vertical-align: middle;
           }
         }
       }
@@ -117,6 +126,9 @@
     }
   }
 }
+.instructorImage {
+  border-radius: 50%;
+}
 .FormContainer {
   border-radius: 0.5rem;
   background-color: #c1d8c3;
@@ -128,6 +140,9 @@
     font-weight: 600;
   }
   form {
+    .submit {
+      background-color: #f3c0a6;
+    }
     div {
       input,
       select,
@@ -139,9 +154,14 @@
           outline: 0;
         }
       }
+
       a {
         color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
         font-weight: 600;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 500;
       }
     }
   }

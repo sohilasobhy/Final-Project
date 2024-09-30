@@ -6,7 +6,6 @@ import { $UserInfo, $checkoutPay } from "../../Store/Store";
 import { showSuccessAlert } from "../../Components/ShowSuccessAlert";
 import { paymenScheme } from "../../schemas/PaymentScheme";
 import { useNavigate } from "react-router-dom";
-import ErrorValidation from "../../Components/ErrorValidation/ErrorValidation";
 import axios from "axios";
 import payment from "../../assets/images/63Z_2112.w012.n001.19C.p6.19.jpg"
 import { toast } from "react-toastify";
@@ -21,22 +20,14 @@ export default function Checkout() {
 
     const handlePaymentSuccess = (values) => {
         showSuccessAlert();
-
-        // Deep clone the userInfo object to ensure all nested properties are mutable
         const updatedUser = { ...userInfo };
-
-        // Ensure validCoursesId is an array
         if (!updatedUser.validCoursesId) {
-            console.log("first")
             updatedUser.validCoursesId = [];
         }
-
         updatedUser.validCoursesId = [...updatedUser.validCoursesId, Number(checkoutPay.id)];
         console.log(updatedUser.validCoursesId)
-
         updatedUser.subscribed = 2;
         console.log(updatedUser)
-        // Update the user information on the server
         axios.put(`http://localhost:3000/Users/${userInfo.id}`, updatedUser)
             .then(response => {
                 console.log(response)
@@ -49,6 +40,8 @@ export default function Checkout() {
                 setTimeout(() => {
                     navigate(checkoutPay?.id ? `/single-course/${checkoutPay?.id}` : `/courses`);
                 }, 1500);
+                let newStudents = Number(checkoutPay?.students) + 1
+                axios.put(`http://localhost:3000/Courses/${checkoutPay?.id}`, { ...checkoutPay, students: newStudents })
             })
             .catch(error => {
                 console.error("Error updating user info:", error);
@@ -62,7 +55,6 @@ export default function Checkout() {
                         <h4 className="text-center">Course Information</h4>
                         <p className=" text-center">Course Name: <br /> <span>{checkoutPay.name}</span> </p>
                         <p className="   text-center ">Course Price: <br /> <span>{checkoutPay.price}</span> </p>
-                        {/* <div className="d-flex flex-column align-items-center justify-content-center gap-1 col-12 p-3"> */}
                         <Formik
                             initialValues={{ cardNumber: "", HolderName: "", date: "", cvv: "" }}
                             onSubmit={handlePaymentSuccess}

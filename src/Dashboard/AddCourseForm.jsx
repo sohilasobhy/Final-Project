@@ -97,7 +97,9 @@ export default function AddCourseForm() {
         obj: "",
         desc: "",
         Certification: "Yes",
-        rating: "0",
+        rating: "",
+        totalRating: "",
+        rates: "",
         students: "0",
         courseContent: [
             {

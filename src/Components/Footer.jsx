@@ -45,19 +45,15 @@ export default function Footer() {
         <div className="d-flex flex-column col-12 col-md-6 col-lg-4 gap-3 contact px-5">
           <p className="top">Contacts</p>
           <p>
-            Enter your email address to register to our newsletter subscription
+            You can send us messages via your email
           </p>
           <div className="d-flex gap-2 align-items-center flex-column flex-lg-row col-12">
-            <input
-              type="email"
-              className="col-12 col-lg-7 px-2 py-3"
-              placeholder="Enter your Email"
-            />
+
             <div className="position-relative Browse d-flex justify-content-center col-12 col-lg-5 mt-3">
               <button className="d-flex align-items-center gap-2 btn">
-                <p>
-                  Subscribe <FontAwesomeIcon icon={faArrowRight} />
-                </p>
+                <Link to={"/contact"}>
+                  Contact Us <FontAwesomeIcon icon={faArrowRight} />
+                </Link>
               </button>
               <div className="position-absolute BTNFilter"></div>
             </div>

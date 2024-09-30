@@ -4,7 +4,6 @@ import { $AddInstructorHome, $HomeInstructors } from "../Store/Store";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { toast } from "react-toastify";
 
 export default function AddInstructorToHome() {
     const [AddInstructorHome, setAddInstructorHome] = useRecoilState($AddInstructorHome)
@@ -69,16 +68,16 @@ export default function AddInstructorToHome() {
     console.log(filteredInstructors)
     if (AddInstructorHome == true) {
         return (
-            <div id="AddCourseToHome">
+            <div id="AddInstructorHome">
                 <CustomModal onHide={() => setAddInstructorHome(false)} title={"Add New Instructor"} show={AddInstructorHome}>
                     <div className="allCoursesCon">
                         <table className="table table-active w-100">
                             <thead>
                                 <tr>
-                                    <td>Instructor Id</td>
+                                    <td className="text-center">Instructor Id</td>
                                     <td>Instructor Image</td>
                                     <td>Instructor Name</td>
-                                    <td>Add</td>
+                                    <td className="text-center">Add</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -86,10 +85,10 @@ export default function AddInstructorToHome() {
                                     filteredInstructors.map((Instructor) => {
                                         return (
                                             <tr>
-                                                <td>{Instructor.id}</td>
-                                                <td><img src={`../${Instructor.img}`} alt="" width={100} height={120} className="object-fit-cover" /></td>
+                                                <td className="text-center">{Instructor.id}</td>
+                                                <td><img src={`../${Instructor.img}`} alt="" width={80} height={80} className="object-fit-cover instructorImage" /></td>
                                                 <td>{Instructor.name}</td>
-                                                <td onClick={() => addToHome(Instructor.id)} className="add">
+                                                <td onClick={() => addToHome(Instructor.id)} className="add text-center">
                                                     <button className="btn btn-primary">Add</button>
                                                 </td>
                                             </tr>

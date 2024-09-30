@@ -1,5 +1,4 @@
-import axios from "axios";
-import { useEffect } from "react";
+
 import { atom } from "recoil";
 
 export const $Show = atom({
@@ -119,6 +118,39 @@ export const $EditFormCourse = atom({
   key: "$EditFormCourse",
   default: false,
 });
+export const $EditCategoryCourse = atom({
+  key: "$EditCategoryCourse",
+  default: false,
+});
+export const $catId = atom({
+  key: "$catId",
+  default: false,
+});
+export const $AddAdmin = atom({
+  key: "$AddAdmin",
+  default: false,
+});
+export const $allUsers = atom({
+  key: "$allUsers",
+  default: [],
+})
+export const $addSubPlan = atom({
+  key: "$addSubPlan",
+  default: false,
+})
+export const $EditSubPlans = atom({
+  key: "$EditSubPlans",
+  default: false,
+})
+export const $allPlans = atom({
+  key: "$allPlans",
+  default: [],
+})
+export const $EditedPlan = atom({
+  key: "$EditedPlan",
+  default: false,
+})
+
 
 
 

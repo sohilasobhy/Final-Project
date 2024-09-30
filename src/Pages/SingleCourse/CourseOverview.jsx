@@ -34,12 +34,19 @@ const CourseOverview = () => {
     const [valid, setValid] = useState(false)
     let handleSubmit = (values, { resetForm }) => {
         console.log(values);
+        let newRates = courses?.rates + 1
+        console.log(newRates)
+        let newTotal = courses?.totalRating + values.rating
+        console.log(newTotal)
+        values.rating = (Number(newTotal) / Number(newRates)).toFixed(1)
+        console.log(values.rating)
         axios.post(url, values)
             .then(response => {
                 console.log(response);
+                axios.put(`http://localhost:3000/Courses/${id}`, { ...courses, rating: values.rating })
                 toast.success("Your review has been added");
                 setReviews([...Reviews, values]);
-                resetForm(); // Ensure resetForm is called after successful submission
+                resetForm();
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -52,6 +59,7 @@ const CourseOverview = () => {
             .get(`http://localhost:3000/Courses/${id}`)
             .then((response) => {
                 setCourses(response.data);
+                console.log(response.data)
             })
             .catch((error) => {
                 console.error("There was an error fetching the data!", error);

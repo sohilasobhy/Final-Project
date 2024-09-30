@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, RouterProvider, Routes, useParams } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import "animate.css";
 import "animate.css";
 import "aos/dist/aos.css";

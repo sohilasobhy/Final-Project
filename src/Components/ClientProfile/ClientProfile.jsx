@@ -26,7 +26,7 @@ export default function ClientProfile() {
                             </p>
                         </div>
                     </div>
-                    <div className="col-12 d-flex justify-content-center mt-4 rounded-1 subscribe">
+                    <div className={`col-12  justify-content-center mt-4 rounded-1 subscribe ${user?.subscribed != "no" || user?.subscribed != "4" ? "d-none" : "d-flex"}`}>
                         <Link to={"/purchase"}
                             onClick={() => setProfile(false)}>Sucscribe</Link>
                     </div>

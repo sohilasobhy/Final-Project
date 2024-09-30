@@ -1,9 +1,13 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Default from "../assets/images/user.png"
 import Swal from "sweetalert2";
+import { $AddAdmin, $allUsers } from "../Store/Store";
+import { useRecoilState } from "recoil";
 export default function Users() {
-    const [users, setusers] = useState()
+    const [users, setusers] = useRecoilState($allUsers)
+    const [, setOpen] = useRecoilState($AddAdmin)
+    console.log(users)
     useEffect(() => {
         axios
             .get("http://localhost:3000/Users")
@@ -15,6 +19,7 @@ export default function Users() {
                 console.error("There was an error fetching the data!", error);
             });
     }, []);
+    console.log(users)
     const handleDelete = (id) => {
         Swal.fire({
             title: "Are you sure?",
@@ -47,22 +52,26 @@ export default function Users() {
             }
         });
     };
+    console.log(users)
     return (
         <div id="UsersDash" className="position-absolute top-0 col-11 col-md-7 col-lg-8 col-xl-9 p-3">
-            <h2>All Users</h2>
+            <div className="d-flex justify-content-between">
+                <h2>All Users</h2>
+                <button className="btn btn-outline-primary" onClick={() => setOpen(true)}>Add admin</button>
+            </div>
             <table className="col-12 table mt-3">
                 <thead>
                     <tr>
                         <td className="text-center">
                             User Id
                         </td>
-                        <td>
+                        <td >
                             User Image
                         </td>
-                        <td>
+                        <td >
                             User Name
                         </td>
-                        <td>
+                        <td >
                             User Role
                         </td>
                         <td className="text-center">
@@ -71,29 +80,63 @@ export default function Users() {
                     </tr>
                 </thead>
                 <tbody>
+                    {console.log(users)}
                     {
                         users?.map((user) => {
-                            return (
-                                <tr>
-                                    <td className="text-center">
-                                        {user.id}
-                                    </td>
-                                    <td>
-                                        <img src={user.img != "" ? `../${user.img}` : Default} width={100} height={120} className="object-fit-cover" />
-                                    </td>
-                                    <td>
-                                        {user.name}
-                                    </td>
-                                    <td>
-                                        {user.role}
-                                    </td>
-                                    <td className="text-center">
-                                        <button className="btn btn-danger" onClick={() => handleDelete(user.id)}>
-                                            Delete
-                                        </button>
-                                    </td>
-                                </tr>
-                            )
+                            if (user.role == "admin") {
+                                return (
+                                    <tr>
+                                        <td className="text-center">
+                                            <p>
+                                                {user.id}
+                                            </p>
+                                        </td>
+                                        <td >
+                                            <img src={user.img != "" ? `../${user.img}` : Default} width={80} height={80} className="object-fit-cover" />
+                                        </td>
+                                        <td >
+                                            {user.name}
+                                        </td>
+                                        <td >
+                                            {user.role}
+                                        </td>
+                                        <td className="text-center">
+                                            <button className="btn btn-danger" onClick={() => handleDelete(user.id)}>
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                )
+                            }
+                        })
+                    }
+                    {
+                        users?.map((user) => {
+                            if (user.role == "user") {
+                                return (
+                                    <tr>
+                                        <td className="text-center">
+                                            <p>
+                                                {user.id}
+                                            </p>
+                                        </td>
+                                        <td >
+                                            <img src={user.img != "" ? `../${user.img}` : Default} width={80} height={80} className="object-fit-cover" />
+                                        </td>
+                                        <td >
+                                            {user.name}
+                                        </td>
+                                        <td >
+                                            {user.role}
+                                        </td>
+                                        <td className="text-center">
+                                            <button className="btn btn-danger" onClick={() => handleDelete(user.id)}>
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                )
+                            }
                         })
                     }
                 </tbody>

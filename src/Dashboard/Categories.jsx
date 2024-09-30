@@ -2,11 +2,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import { $AddNewCat, $AllCategories } from "../Store/Store";
+import { $AddNewCat, $AllCategories, $EditCategoryCourse, $catId } from "../Store/Store";
 import Swal from "sweetalert2";
 
 export default function Categories() {
     const [categories, setCategories] = useRecoilState($AllCategories)
+    const [modal, setModal] = useRecoilState($EditCategoryCourse)
+    const [, setCatId] = useRecoilState($catId)
     const [, setAddCategory] = useRecoilState($AddNewCat)
     useEffect(() => {
         axios
@@ -52,7 +54,10 @@ export default function Categories() {
     };
     return (
         <div id="Categories" className="position-absolute top-0 col-11 col-md-7 col-lg-8 col-xl-9 p-3">
-            <h2>All Categories</h2>
+            <div className="d-flex justify-content-between">
+                <h2>All Categories</h2>
+                <button className="btn btn-outline-primary" onClick={() => setAddCategory(true)}>Add new category</button>
+            </div>
             <table className="col-12 table mt-3">
                 <thead>
                     <tr>
@@ -72,9 +77,11 @@ export default function Categories() {
                 </thead>
                 <tbody>
                     {
+                        console.log(categories)}
+                    {
                         categories?.map((category) => {
                             return (
-                                <tr>
+                                <tr key={category.id}>
                                     <td className="text-center">
                                         {category.id}
                                     </td>
@@ -84,7 +91,10 @@ export default function Categories() {
                                         </Link>
                                     </td>
                                     <td className="text-center">
-                                        <button className="btn btn-primary ">
+                                        <button className="btn btn-primary" onClick={() => {
+                                            setModal(true)
+                                            setCatId(category.id)
+                                        }}>
                                             Edit
                                         </button>
                                     </td>
@@ -97,11 +107,7 @@ export default function Categories() {
                             )
                         })
                     }
-                    <tr>
-                        <td colSpan={4} className=" text-primary fw-medium fs-5 add" onClick={() => setAddCategory(true)}>
-                            + Add New Category
-                        </td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>

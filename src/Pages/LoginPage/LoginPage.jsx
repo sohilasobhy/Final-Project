@@ -10,6 +10,7 @@ import { $UserInfo } from "../../Store/Store"
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import NavBarLogin from "../../Components/NavBarLogin"
+import { toast } from "react-toastify"
 export default function LoginPage() {
     const [message, setMessage] = useState(false)
     const navigate = useNavigate()
@@ -19,7 +20,7 @@ export default function LoginPage() {
         <>
             <NavBarLogin />
             <div className="col-12 d-flex flex-column" id="LoginPage">
-                <div className="d-flex justify-content-center align-items-center h-100">
+                <div className="d-flex justify-content-center align-items-center formContainer">
                     <Formik
                         initialValues={{ email: "", password: "", remember: "" }}
                         onSubmit={(values) => {
@@ -39,6 +40,7 @@ export default function LoginPage() {
                                             setUserInfo(response.data[0])
                                         }
                                         navigate("/")
+                                        toast.success("You are logged in")
                                     }
                                 })
                                 .catch((err) => { console.log(err) })

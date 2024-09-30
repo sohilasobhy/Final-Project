@@ -8,6 +8,7 @@ import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import { useState } from "react"
 import NavBarLogin from "../../Components/NavBarLogin"
+import { toast } from "react-toastify"
 export default function SignUp() {
     const navigate = useNavigate()
     const [show, setShow] = useState(false)
@@ -39,12 +40,13 @@ export default function SignUp() {
                         .then(response => {
                             console.log(response.data.email)
                             navigate("/login")
+                            toast.success("You are now registered")
                         })
                         .catch(error => {
                             console.error('Error:', error);
                         });
                 } else {
-                    console.log("This email already exists")
+                    toast.error("This email already exists")
                 }
             })
             .catch((error) => {

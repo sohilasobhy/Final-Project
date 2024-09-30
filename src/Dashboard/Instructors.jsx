@@ -83,7 +83,10 @@ export default function InstructorsDash() {
     };
     return (
         <div id="InstrucorsDash" className="position-absolute top-0 col-11 col-md-7 col-lg-8 col-xl-9 p-3">
-            <h2>All Instructors</h2>
+            <div className="d-flex justify-content-between">
+                <h2>All Instructors</h2>
+                <button className="btn btn-outline-primary" onClick={() => setAddForm(true)}>Add new instructor</button>
+            </div>
             <table className="col-12 table mt-3">
                 <thead>
                     <tr>
@@ -130,11 +133,7 @@ export default function InstructorsDash() {
                             )
                         })
                     }
-                    <tr>
-                        <td colSpan={4} className=" text-primary fw-medium fs-5 add" onClick={() => setAddForm(true)}>
-                            + Add New Instructor
-                        </td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>

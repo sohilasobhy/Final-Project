@@ -9,7 +9,7 @@
       "CtegoryId": "1",
       "price": "$30",
       "lessons": "11",
-      "students": "227",
+      "students": 228,
       "Duration": "15 Weeks",
       "Instructor": "Jane Seymour",
       "Language": "English",
@@ -233,7 +233,7 @@
       "CtegoryId": "6",
       "price": "Free",
       "lessons": "8",
-      "students": "512",
+      "students": 514,
       "Duration": "10 Weeks",
       "Instructor": "Jane Seymour",
       "Language": "English",
@@ -320,7 +320,7 @@
       "CtegoryId": "2",
       "price": "$40",
       "lessons": "6",
-      "students": "289",
+      "students": 290,
       "Duration": "8 Weeks",
       "Instructor": "Alice Johnson",
       "Language": "English",
@@ -392,7 +392,7 @@
       "CtegoryId": "7",
       "price": "$35",
       "lessons": "10",
-      "students": "420",
+      "students": 421,
       "Duration": "6 Weeks",
       "Instructor": "Alice Johnson",
       "Language": "English",
@@ -581,7 +581,7 @@
       "CtegoryId": "8",
       "price": "Free",
       "lessons": "10",
-      "students": "320",
+      "students": 321,
       "Duration": "8 Weeks",
       "Instructor": "Michael Smith",
       "Language": "English",
@@ -943,7 +943,7 @@
       "CtegoryId": "8",
       "price": "Free",
       "lessons": "9",
-      "students": "340",
+      "students": 341,
       "Duration": "16 Weeks",
       "Instructor": "David Brown",
       "Language": "English",
@@ -1528,21 +1528,17 @@
     },
     {
       "id": 17,
-      "level": "Intermediate",
       "name": "Intermediate Python: Enhancing Your Programming Skills",
+      "level": "Intermediat",
       "rating": "4.7",
+      "price": "$50",
       "category": "Computer Science",
       "CtegoryId": "8",
-      "price": "$50",
       "lessons": "12",
-      "students": "280",
       "Duration": "10 Weeks",
       "Instructor": "James Wilson",
-      "instructorId": "7",
       "Language": "English",
       "Certification": "Yes",
-      "comVideo": "../../src/assets/images/BMS College of Engineering _ Ad Film.mp4",
-      "img": "src/assets/images/course4.jpg",
       "courseContent": [
         {
           "category": "Graphic Design Fundamentals",
@@ -1590,6 +1586,10 @@
           ]
         }
       ],
+      "students": "280",
+      "img": "src/assets/images/course4.jpg",
+      "comVideo": "../../src/assets/images/BMS College of Engineering _ Ad Film.mp4",
+      "instructorId": "7",
       "obj": [
         "Deepen your understanding of Python programming.",
         "Learn to work with advanced data structures and algorithms.",
@@ -2287,7 +2287,7 @@
       "desc": "تتحدث هذه الدورة عن...",
       "Certification": "Yes",
       "rating": "0",
-      "students": "0",
+      "students": 1,
       "courseContent": [
         {
           "category": "العنوان الاول",
@@ -3336,14 +3336,49 @@
       "Job": "Teacher",
       "rating": "5",
       "courseID": "14"
+    },
+    {
+      "comment": "good course",
+      "rating": 4,
+      "courseID": 11,
+      "userId": 44,
+      "id": 15
+    },
+    {
+      "comment": "sss",
+      "rating": 5,
+      "courseID": 11,
+      "userId": 44,
+      "id": 16
+    },
+    {
+      "comment": "good",
+      "rating": 3,
+      "courseID": 10,
+      "userId": 44,
+      "id": 17
+    },
+    {
+      "comment": "111",
+      "rating": "2.7",
+      "courseID": 10,
+      "userId": 44,
+      "id": 18
+    },
+    {
+      "comment": "good course",
+      "rating": "4.0",
+      "courseID": 25,
+      "userId": 42,
+      "id": 19
     }
   ],
   "Categories": [
     {
-      "id": 1,
       "categoryName": "Business Management",
       "categoryImg": "src/assets/images/project-manager.png",
-      "categoryImg2": "src/assets/images/project-manager(2).png"
+      "categoryImg2": "src/assets/images/project-manager(2).png",
+      "id": 1
     },
     {
       "id": 2,
@@ -3370,10 +3405,10 @@
       "categoryImg2": "src/assets/images/database (1).png"
     },
     {
-      "id": 6,
       "categoryName": "Marketing",
       "categoryImg": "src/assets/images/promotion.png",
-      "categoryImg2": "src/assets/images/promotion (1).png"
+      "categoryImg2": "src/assets/images/promotion (1).png",
+      "id": 6
     },
     {
       "id": 7,
@@ -3388,10 +3423,10 @@
       "categoryImg2": "src/assets/images/monitor (1).png"
     },
     {
-      "id": 9,
-      "categoryName": "Video & Photography",
+      "categoryName": "Video & Photography ",
       "categoryImg": "src/assets/images/gallery.png",
-      "categoryImg2": "src/assets/images/gallery (1).png"
+      "categoryImg2": "src/assets/images/gallery (1).png",
+      "id": 9
     }
   ],
   "Users": [
@@ -3861,9 +3896,13 @@
       "email": "alice@example.com",
       "password": "666",
       "role": "instructor",
-      "subscribed": "4",
+      "subscribed": 2,
       "confirmPassword": "666",
-      "id": 35
+      "id": 35,
+      "validCoursesId": [
+        4
+      ],
+      "completedCourses": 1
     },
     {
       "name": "Michael Smith",
@@ -3988,36 +4027,6 @@
       "id": 43
     },
     {
-      "name": "salma",
-      "email": "salma@gmail.com",
-      "img": "src/assets/images/about-01.webp",
-      "password": "123",
-      "completedCourses": [
-        2,
-        4
-      ],
-      "subscribed": 2,
-      "favouriteCoursesId": [
-        8,
-        1,
-        6,
-        2,
-        11,
-        10
-      ],
-      "role": "user",
-      "confirmPassword": "123",
-      "id": 44,
-      "validCoursesId": [
-        1,
-        2,
-        6,
-        3,
-        4,
-        7
-      ]
-    },
-    {
       "name": "ahmed ali",
       "email": "ahmed-dev@gmail.com",
       "img": "",
@@ -4029,6 +4038,29 @@
       "confirmPassword": "1234567890",
       "id": 45,
       "validCoursesId": []
+    },
+    {
+      "name": "salma",
+      "email": "salma@gmail.com",
+      "img": "",
+      "password": "123",
+      "subscribed": 2,
+      "favouriteCoursesId": [],
+      "validCoursesId": [
+        3,
+        7,
+        11,
+        25
+      ],
+      "role": "user",
+      "completedCourses": [
+        3,
+        7,
+        11,
+        25
+      ],
+      "confirmPassword": "123",
+      "id": 46
     }
   ],
   "SubPlans": [
@@ -4051,5 +4083,13 @@
       "charge": "Charged as annual payment of 2,399 EGP"
     }
   ],
-  "Messages": []
+  "Messages": [
+    {
+      "name": "sohila sobhy",
+      "subject": "xdd;l",
+      "message": "dddddddddddd",
+      "email": "sohilasobhysadek@gmail.com",
+      "id": 1
+    }
+  ]
 }

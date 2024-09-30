@@ -15,18 +15,34 @@ import React from 'react';
 import { toast } from 'react-toastify';
 
 export default function SingleCourseComponent({ course, color }) {
-  // const [isReadMore] = useState(true);
   const [found, setFound] = useState(false)
   const [user, setUser] = useRecoilState($UserInfo)
+
+  const [validInstCourse, setValidInstCourse] = useState(false)
   console.log(user)
   const [validCourse, setValidCourse] = useState(false)
-  console.log(user?.favouriteCoursesId)
+  useEffect(() => {
+    if (user.role == "instructor") {
+      axios
+        .get(`http://localhost:3000/Courses?Instructor=${user.name}`)
+        .then((res) => {
+          // setInstructorCourses(res.data)
+          if (res.data?.some(instCourse => Number(instCourse.id) == Number(course.id))) {
+            setValidInstCourse(true);
+          }
+        })
+        .catch((err) => {
+          console.log(err)
+        })
 
+    }
+  }, [user])
   useEffect(() => {
     if (user) {
       if (user?.favouriteCoursesId?.includes(Number(course?.id))) {
         setFound(true)
       }
+
     }
   }, [course, user?.favouriteCoursesId])
 
@@ -132,7 +148,7 @@ export default function SingleCourseComponent({ course, color }) {
           </div>
           <p className="priceHov">{course?.price}</p>
           <p className="courseDesc">
-            {course?.desc.length > 44
+            {course?.desc?.length > 44
               ? course?.desc.slice(0, 140) + "..."
               : course?.desc}
           </p>
@@ -149,7 +165,7 @@ export default function SingleCourseComponent({ course, color }) {
           </div>
           <Link to={`/single-course/${course.id}`} className="btn px-3 py-2 mt-3 enrollBtn d-flex gap-3 align-items-center">
             {
-              user?.subscribed == 1 || validCourse ? `Watch Now` : `Enroll Now`} <FontAwesomeIcon icon={faArrowRight} />
+              user?.subscribed == 1 || validCourse || validInstCourse ? `Watch Now` : `Enroll Now`} <FontAwesomeIcon icon={faArrowRight} />
           </Link>
         </div>
       </div>

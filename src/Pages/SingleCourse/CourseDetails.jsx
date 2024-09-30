@@ -18,6 +18,7 @@ import { $UserInfo, $checkoutPay, $commercialVid } from "../../Store/Store";
 import { toast } from "react-toastify";
 export default function CourseDetails() {
     let navigate = useNavigate()
+    const [validInstCourse, setValidInstCourse] = useState(false)
     const [, setCourseDetails] = useRecoilState($checkoutPay)
     const [userInfo] = useRecoilState($UserInfo)
     const [validCourse, setValidCourse] = useState(false)
@@ -26,6 +27,24 @@ export default function CourseDetails() {
     console.log(course)
     const [isloading, setIsloading] = useState(false)
     const [, setCommercialVid] = useRecoilState($commercialVid)
+
+    if (course && userInfo && userInfo?.role == "instructor") {
+        axios
+            .get(`http://localhost:3000/Courses?Instructor=${userInfo?.name}`)
+            .then((res) => {
+                console.log(res.data)
+                console.log(res.data?.some(instCourse => instCourse.id == course.id))
+                if (res.data?.some(instCourse => instCourse.id == course.id)) {
+                    setValidInstCourse(true);
+                }
+                console.log(res.data?.some(instCourse => Number(instCourse.id) == Number(course.id)))
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+
+    }
+
     useEffect(() => {
         setIsloading(true)
         axios
@@ -94,7 +113,7 @@ export default function CourseDetails() {
             </div>
             <div className="position-relative Browse mt-3 mx-auto col-8" onClick={() => {
                 if (userInfo) {
-                    if (userInfo?.subscribed == 1 || validCourse || userInfo?.role == "admin") {
+                    if (userInfo?.subscribed == 1 || validCourse || userInfo?.role == "admin" || validInstCourse) {
                         navigate(`/lessons/${course.id}`)
                     } else {
                         navigate("/checkout")
@@ -110,7 +129,7 @@ export default function CourseDetails() {
                 <button className="d-flex align-items-center gap-3 btn col-12 ">
                     <p className="col-12 text-center">
                         {
-                            userInfo?.subscribed == 1 || validCourse || userInfo?.role == "admin" ? `Watch Now` : `Enroll Now`
+                            userInfo?.subscribed == 1 || validCourse || validInstCourse || userInfo?.role == "admin" ? `Watch Now` : `Enroll Now`
                         }
                         <FontAwesomeIcon icon={faArrowRight} className="ms-3" />
                     </p>

@@ -67,7 +67,10 @@ export default function HomePageDash() {
     return (
         <div id="DashHome" className="position-absolute top-0 col-11 col-md-7 col-lg-8 col-xl-9 p-3">
             <div>
-                <h2>Home Courses</h2>
+                <div className="d-flex justify-content-between">
+                    <h2>Home Courses</h2>
+                    <button className="btn btn-outline-primary" onClick={() => setAddCourseHome(true)}> Add New Course</button>
+                </div>
                 <div className="mt-4">
                     <table className="table  col-12">
                         <thead>
@@ -103,19 +106,17 @@ export default function HomePageDash() {
                                     )
                                 })
                             }
-                            <tr>
-                                <td colSpan={3} className=" text-primary fw-medium fs-5 add" onClick={() => setAddCourseHome(true)}>
-                                    + Add New Course
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div className="mt-5">
-                <h2>
-                    Home Reviews
-                </h2>
+                <div className="d-flex justify-content-between">
+                    <h2>
+                        Home Reviews
+                    </h2>
+                    <button className="btn btn-outline-primary" onClick={() => setReviewForm(true)}>Add New Review</button>
+                </div>
                 <div className="mt-4">
                     <table className="table table-danger col-12">
                         <thead>
@@ -150,19 +151,18 @@ export default function HomePageDash() {
                                     )
                                 })
                             }
-                            <tr>
-                                <td colSpan={3} className=" text-primary fw-medium fs-5 add" onClick={() => setReviewForm(true)}>
-                                    + Add New Review
-                                </td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
             </div>
             <div className="mt-5">
-                <h2>
-                    Home Instructors
-                </h2>
+                <div className="d-flex justify-content-between">
+                    <h2>
+                        Home Instructors
+                    </h2>
+                    <button className="btn btn-outline-primary" onClick={() => setInstructorForm(true)}>Add New Instructor</button>
+                </div>
                 <div className="mt-4">
                     <table className="table table-danger col-12">
                         <thead>
@@ -190,24 +190,18 @@ export default function HomePageDash() {
                                                 {instructor.id}
                                             </td>
                                             <td className="text-center" >
-                                                <img src={`../${instructor.img}`} alt="instructor image" width={100} />
+                                                <img src={`../${instructor.img}`} alt="instructor image" width={80} height={80} className=" object-fit-cover" />
                                             </td>
                                             <td className="text-center" style={{ verticalAlign: "middle" }}>
                                                 {instructor.name}
                                             </td>
                                             <td className="text-center" style={{ verticalAlign: "middle" }}>
                                                 <button className="btn btn-danger" onClick={() => handleDelete(`http://localhost:3000/HomeInstructors/${instructor.id}`, instructor, 3)}>Delete</button>
-
                                             </td>
                                         </tr>
                                     )
                                 })
                             }
-                            <tr>
-                                <td colSpan={4} className=" text-primary fw-medium fs-5 add" onClick={() => setInstructorForm(true)}>
-                                    + Add New Instructor
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>

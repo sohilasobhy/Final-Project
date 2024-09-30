@@ -1,6 +1,8 @@
 import "./NavBar.scss";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/graduation.png";
+
+
 export default function NavBarLogin() {
 
   return (
@@ -11,9 +13,6 @@ export default function NavBarLogin() {
           <img src={logo} alt="" />
           <p className="siteName">EduJourney</p>
         </Link>
-      </div>
-      <div>
-        {/* <button onClick={()=>{}}>Dark</button> */}
       </div>
     </div>
   );

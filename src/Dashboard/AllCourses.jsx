@@ -96,7 +96,10 @@ export default function AllCourses() {
     };
     return (
         <div id="AllCourses" className="position-absolute top-0 col-11 col-md-7 col-lg-8 col-xl-9 p-3">
-            <h2>All Courses</h2>
+            <div className="d-flex justify-content-between">
+                <h2>All Courses</h2>
+                <button className="btn btn-outline-primary" onClick={() => setCourseForm(true)}>Add new course</button>
+            </div>
             <table className="col-12 table mt-3">
                 <thead>
                     <tr>
@@ -118,7 +121,7 @@ export default function AllCourses() {
                     {
                         courses?.map((course) => {
                             return (
-                                <tr>
+                                <tr key={course.id}>
                                     <td className="text-center">
                                         {course.id}
                                     </td>
@@ -140,11 +143,7 @@ export default function AllCourses() {
                             )
                         })
                     }
-                    <tr>
-                        <td colSpan={4} className=" text-primary fw-medium fs-5 add" onClick={() => setCourseForm(true)}>
-                            + Add New Course
-                        </td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>

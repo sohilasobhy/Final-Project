@@ -7,7 +7,9 @@
   background-image: url("../../assets/images/BG-3.webp");
   background-color: #f0f4f5;
   min-height: 89.5vh;
-  // overflow: auto;
+  .formContainer {
+    height: 70vh;
+  }
   form {
     inset: 4px;
     background-color: #2eb980;
@@ -123,7 +125,7 @@
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     width: 40%;
-    height: 468px;
+    height: 100%;
     background-color: #fff;
     img {
       border-bottom-right-radius: 8px;

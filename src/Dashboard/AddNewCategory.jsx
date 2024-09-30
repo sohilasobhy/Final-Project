@@ -67,18 +67,24 @@ export default function AddNewCategory() {
                                 <div className="d-flex flex-column gap-1">
                                     <h5>Category Name</h5>
                                     <Field type="text" name="categoryName" placeholder="Enter Category Name" />
-                                    <ErrorMessage name="categoryName" />
+                                    <span className="error">
+                                        <ErrorMessage name="categoryName" />
+                                    </span>
                                 </div>
                                 {console.log(errors)}
                                 <div className="d-flex flex-column gap-1">
                                     <h5>Category Image 1</h5>
                                     <Field name="categoryImg" type="file" className="mt-2" accept="image/*" />
-                                    <ErrorMessage name="categoryImg" />
+                                    <span className="error">
+                                        <ErrorMessage name="categoryImg" />
+                                    </span>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
                                     <h5>Category Image 2</h5>
                                     <Field name="categoryImg2" type="file" className="mt-2" accept="image/*" />
-                                    <ErrorMessage name="categoryImg2" />
+                                    <span className="error">
+                                        <ErrorMessage name="categoryImg2" />
+                                    </span>
                                 </div>
                                 <button className="btn btn-success" type="submit">Add</button>
                             </Form>

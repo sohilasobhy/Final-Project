@@ -29,8 +29,8 @@ export default function Categories() {
     content = <h2 className="p-5">No Category Data</h2>
   }
   else {
-    content = <div id="Categories" className="overflow-hidden mb-5">
-      <div className="col-12 d-flex flex-column p-5 justify-content-center align-items-center gap-4 topPart">
+    content = <div id="Categories" className="overflow-hidden">
+      <div className="col-12 d-flex flex-column pt-md-5 justify-content-center align-items-center gap-4 topPart">
         <h2>Top Categories</h2>
         <div className="col-1">
           <svg

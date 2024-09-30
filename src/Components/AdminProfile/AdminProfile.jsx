@@ -1,5 +1,4 @@
 import "./AdminProfile.scss"
-import { MdSlowMotionVideo } from "react-icons/md";
 import { CiLogout } from "react-icons/ci";
 import { MdDashboard } from "react-icons/md";
 import userImg from "../../assets/images/user.png"
