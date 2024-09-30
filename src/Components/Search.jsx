@@ -40,7 +40,7 @@ export default function Search() {
                 setInput(e.target.value)
               }}
             />
-            {courses.length >= 1 && input !== "" ? <span className="text-white">No data</span> : ""}
+            {courses.length >= 1 && input != "" ? <span className="text-white">No data</span> : ""}
             <div className={`col-12 bg-white coursesBox mt-3 p-3 flex-column overflow-auto ${courses?.length >= 1 && input !== "" ? `d-flex` : `d-none`}`} >
               {
                 courses?.map((course) => {

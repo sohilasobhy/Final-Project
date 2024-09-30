@@ -121,7 +121,7 @@
       "CtegoryId": "3",
       "price": "$50",
       "lessons": "11",
-      "students": "341",
+      "students": 342,
       "Duration": "12 Weeks",
       "Instructor": "Jane Seymour",
       "Language": "English",
@@ -320,7 +320,7 @@
       "CtegoryId": "2",
       "price": "$40",
       "lessons": "6",
-      "students": 291,
+      "students": 292,
       "Duration": "8 Weeks",
       "Instructor": "Alice Johnson",
       "Language": "English",
@@ -1224,7 +1224,7 @@
       "CtegoryId": "4",
       "price": "$40",
       "lessons": "10",
-      "students": "420",
+      "students": 421,
       "Duration": "8 Weeks",
       "Instructor": "Sophia Williams",
       "Language": "English",
@@ -2155,117 +2155,6 @@
       "desc": "This course provides an in-depth understanding of cybersecurity, covering common threats, vulnerabilities, and protection techniques. Participants will learn to respond to incidents and manage risks to safeguard digital assets."
     },
     {
-      "id": 24,
-      "level": "Beginner",
-      "name": "Introduction to Digital Photography: Capturing Beautiful Images",
-      "rating": "4.7",
-      "category": "Video and Photography",
-      "CtegoryId": "9",
-      "price": "$45",
-      "lessons": "10",
-      "students": "290",
-      "Duration": "8 Weeks",
-      "Instructor": "Natalie Thompson",
-      "Language": "English",
-      "instructorId": "12",
-      "Certification": "Yes",
-      "courseContent": [
-        {
-          "category": "Introduction to Web Development",
-          "lessons": [
-            {
-              "LessonName": "Lesson 1: What is Web Development?",
-              "desc": "In this lesson, you'll get an introduction to web development, covering the basics of building and maintaining websites. You'll learn about the different components involved, including front-end and back-end development, and the technologies and languages used, such as HTML, CSS, and JavaScript. This foundational knowledge will set the stage for more detailed exploration of web development concepts and practices in future lessons.",
-              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
-            },
-            {
-              "LessonName": "Lesson 2: Overview of Web Technologies",
-              "desc": "This lesson provides a broad overview of the key technologies used in web development. You'll explore the roles and functions of essential technologies such as HTML for structuring web pages, CSS for styling, and JavaScript for adding interactivity. Additionally, you'll learn about server-side technologies and frameworks, databases, and content management systems (CMS). Understanding these technologies will help you grasp how they work together to build dynamic and functional websites.",
-              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
-            }
-          ]
-        },
-        {
-          "category": "HTML Basics",
-          "lessons": [
-            {
-              "LessonName": "Lesson 3: Getting Started with HTML",
-              "desc": "In this lesson, you'll learn the fundamentals of HTML (Hypertext Markup Language), the backbone of web development. You'll cover basic HTML tags and elements, such as headings, paragraphs, links, images, and lists. By the end of the lesson, you'll be able to create a simple web page using HTML and understand how it forms the structure of web content.",
-              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4"
-            },
-            {
-              "LessonName": "Lesson 4: Structuring a Web Page",
-              "desc": "This lesson focuses on organizing and structuring a web page using HTML. You'll learn about key HTML elements such as <header>, <nav>, <main>, <section>, <article>, and <footer>, and how to use them to create a well-organized layout. You'll also explore the importance of semantic HTML for improving accessibility and SEO, ensuring your web pages are both user-friendly and search-engine friendly.",
-              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
-            }
-          ]
-        },
-        {
-          "category": "CSS Styling",
-          "lessons": [
-            {
-              "LessonName": "Lesson 5: Introduction to CSS",
-              "desc": "In this lesson, you'll be introduced to CSS (Cascading Style Sheets), which is used to style and layout web pages. You'll learn the basics of CSS syntax, including how to apply styles to HTML elements, use selectors, and understand properties and values. By the end of the lesson, you'll be able to enhance the appearance of your web pages by controlling colors, fonts, spacing, and layout.",
-              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
-            },
-            {
-              "LessonName": "Lesson 6: Styling Your Web Page",
-              "desc": "This lesson covers techniques for applying and refining styles on your web page using CSS. You'll explore how to use CSS to style text, create layouts with margins and padding, and design responsive elements. You'll also learn about CSS best practices, including the use of classes and IDs, as well as how to leverage external stylesheets for cleaner code and easier maintenance.",
-              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4"
-            }
-          ]
-        },
-        {
-          "category": "JavaScript Fundamentals",
-          "lessons": [
-            {
-              "LessonName": "Lesson 7: Basics of JavaScript",
-              "desc": "In this lesson, you'll be introduced to JavaScript, the programming language that adds interactivity and dynamic behavior to web pages. You'll learn the fundamentals of JavaScript, including variables, data types, operators, functions, and control structures like loops and conditionals. By the end of the lesson, you'll be able to write basic scripts to enhance your web pages and interact with HTML elements.",
-              "Link": "src/assets/images/Start your dreams with us!.mp4"
-            },
-            {
-              "LessonName": "Lesson 8: Adding Interactivity",
-              "desc": "This lesson focuses on using JavaScript to add interactivity to your web pages. You'll learn how to handle user events such as clicks, form submissions, and keyboard inputs. Topics include manipulating the DOM (Document Object Model), creating dynamic content updates, and implementing interactive features like dropdown menus and image sliders. By the end of the lesson, you'll be able to make your web pages more engaging and responsive to user actions.",
-              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4"
-            }
-          ]
-        },
-        {
-          "category": "Building Your First Website",
-          "lessons": [
-            {
-              "LessonName": "Lesson 9: Planning Your Website",
-              "desc": "In this lesson, you'll learn how to effectively plan and organize a website before diving into development. You'll cover the key steps of the planning process, including defining your website's goals, identifying your target audience, creating a site map, and developing wireframes or mockups. Proper planning will ensure a clear structure and cohesive design, setting the stage for a successful website build.",
-              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4"
-            },
-            {
-              "LessonName": "Lesson 10: Developing Your Website",
-              "desc": "This lesson covers the practical aspects of building your website based on the plans and designs created in previous lessons. You'll learn how to integrate HTML, CSS, and JavaScript to bring your website to life. Topics include coding best practices, debugging techniques, and testing your site across different browsers and devices. By the end of this lesson, you'll have a functional website that aligns with your initial planning and design.",
-              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4"
-            }
-          ]
-        },
-        {
-          "category": "Deployment and Maintenance",
-          "lessons": [
-            {
-              "LessonName": "Lesson 11: Launching and Maintaining Your Website",
-              "desc": "This lesson focuses on the final steps of getting your website live and ensuring its ongoing performance. You'll learn how to prepare for launch, including domain registration, web hosting, and deploying your site. Additionally, you'll explore best practices for website maintenance, such as regular updates, backups, monitoring performance, and addressing security issues. By the end of the lesson, you'll be equipped to manage and sustain a successful website.",
-              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4"
-            }
-          ]
-        }
-      ],
-      "img": "src/assets/images/course-12-590x430.jpg",
-      "obj": [
-        "Learn the basics of digital photography.",
-        "Understand camera settings and techniques.",
-        "Develop skills in composition and lighting.",
-        "Explore post-processing and editing techniques."
-      ],
-      "desc": "This course introduces beginners to digital photography, covering camera settings, composition, lighting, and post-processing. Participants will learn to capture beautiful images and enhance them through editing."
-    },
-    {
       "id": 25,
       "name": "عنوان الدورة ",
       "level": "Intermediat",
@@ -2787,6 +2676,359 @@
         "Develop a long-term financial plan."
       ],
       "desc": "This course provides a foundation in personal finance management, covering essential topics such as budgeting, saving, investing, and debt management. It is designed to help individuals build a secure financial future through practical strategies and effective planning."
+    },
+    {
+      "id": 11,
+      "level": "Advanced",
+      "name": "Blockchain Technology: Beyond Cryptocurrency",
+      "rating": "4.8",
+      "category": "Computer Science",
+      "CtegoryId": "8",
+      "price": "Free",
+      "lessons": "9",
+      "students": 341,
+      "Duration": "16 Weeks",
+      "Instructor": "David Brown",
+      "Language": "English",
+      "comVideo": "../../src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
+      "instructorId": "5",
+      "Certification": "Yes",
+      "courseContent": [
+        {
+          "category": "Introduction to Blockchain Technology",
+          "lessons": [
+            {
+              "LessonName": "Lesson 1: What is Blockchain?",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
+              "desc": "This lesson introduces the concept of blockchain technology, explaining what it is, its core principles, and how it differs from traditional data management systems. You'll gain an understanding of the fundamental components and the decentralized nature of blockchain."
+            },
+            {
+              "LessonName": "Lesson 2: History and Evolution of Blockchain",
+              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
+              "desc": "In this lesson, you'll explore the history and development of blockchain technology. You'll learn about its origins, key milestones, and how it has evolved over time to become a crucial technology in various industries."
+            }
+          ]
+        },
+        {
+          "category": "Blockchain Fundamentals",
+          "lessons": [
+            {
+              "LessonName": "Lesson 3: How Blockchain Works",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
+              "desc": "This lesson covers the technical workings of blockchain technology. You'll learn about key concepts such as blocks, chains, consensus mechanisms, and cryptographic hashing, and how these elements work together to ensure security and integrity."
+            },
+            {
+              "LessonName": "Lesson 4: Types of Blockchains",
+              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
+              "desc": "In this lesson, you'll explore different types of blockchains, including public, private, and consortium blockchains. You'll understand their unique characteristics, use cases, and how they differ from one another in terms of access and functionality."
+            }
+          ]
+        },
+        {
+          "category": "Beyond Cryptocurrency",
+          "lessons": [
+            {
+              "LessonName": "Lesson 5: Applications of Blockchain Technology",
+              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
+              "desc": "This lesson delves into the diverse applications of blockchain technology beyond cryptocurrency. You'll explore how blockchain is used in supply chain management, healthcare, finance, and other sectors to enhance transparency and efficiency."
+            },
+            {
+              "LessonName": "Lesson 6: Smart Contracts and Decentralized Applications (DApps)",
+              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
+              "desc": "In this lesson, you'll learn about smart contracts and decentralized applications (DApps). You'll understand how smart contracts automate processes and transactions, and how DApps leverage blockchain technology to offer decentralized services."
+            }
+          ]
+        },
+        {
+          "category": "Blockchain Security and Privacy",
+          "lessons": [
+            {
+              "LessonName": "Lesson 7: Security Challenges in Blockchain",
+              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
+              "desc": "This lesson addresses the security challenges associated with blockchain technology. You'll learn about potential vulnerabilities, attack vectors, and best practices for securing blockchain networks and protecting data integrity."
+            },
+            {
+              "LessonName": "Lesson 8: Privacy and Regulatory Considerations",
+              "Link": "src/assets/images/Start your dreams with us!.mp4",
+              "desc": "In this lesson, you'll explore privacy issues and regulatory considerations related to blockchain technology. You'll understand how blockchain impacts data privacy, and the regulatory landscape surrounding its use in different jurisdictions."
+            }
+          ]
+        },
+        {
+          "category": "Future Trends and Innovations",
+          "lessons": [
+            {
+              "LessonName": "Lesson 9: Future of Blockchain Technology",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
+              "desc": "This lesson provides insights into the future trends and innovations in blockchain technology. You'll explore emerging developments, potential future applications, and how blockchain might evolve to address current challenges and opportunities."
+            }
+          ]
+        }
+      ],
+      "img": "src/assets/images/course-09-590x430.jpg",
+      "obj": [
+        "Understand the fundamentals of blockchain technology.",
+        "Explore blockchain applications beyond cryptocurrencies.",
+        "Learn about smart contracts and decentralized applications (DApps).",
+        "Gain insights into blockchain security and scalability."
+      ],
+      "desc": "This course provides a deep dive into blockchain technology, exploring its fundamentals, applications beyond cryptocurrencies, smart contracts, and the latest developments in blockchain security and scalability."
+    },
+    {
+      "id": 19,
+      "level": "Beginner",
+      "name": "Basic HTML and CSS: Build Your First Web Page",
+      "rating": "4.8",
+      "category": "Personal Development",
+      "CtegoryId": "3",
+      "price": "$30",
+      "lessons": "8",
+      "students": "300",
+      "Duration": "6 Weeks",
+      "Instructor": "Daniel Harris",
+      "Language": "English",
+      "comVideo": "../../src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
+      "instructorId": "9",
+      "Certification": "Yes",
+      "courseContent": [
+        {
+          "category": "Introduction to Social Media Marketing",
+          "lessons": [
+            {
+              "LessonName": "Lesson 1: What is Social Media Marketing?",
+              "Link": "src/assets/images/Start your dreams with us!.mp4",
+              "desc": "This lesson introduces the concept of social media marketing, including its role in modern business strategies. You'll learn about the different social media platforms, their unique features, and how they can be leveraged for marketing purposes."
+            },
+            {
+              "LessonName": "Lesson 2: Benefits of Social Media for Business",
+              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
+              "desc": "In this lesson, you'll explore the various benefits that social media can offer to businesses. Topics include brand visibility, customer engagement, and how social media can drive sales and build a loyal customer base."
+            }
+          ]
+        },
+        {
+          "category": "Creating a Social Media Strategy",
+          "lessons": [
+            {
+              "LessonName": "Lesson 3: Setting Social Media Goals",
+              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
+              "desc": "This lesson focuses on setting clear and achievable goals for your social media marketing efforts. You'll learn how to define objectives, measure success, and align your social media strategy with your overall business goals."
+            },
+            {
+              "LessonName": "Lesson 4: Identifying Your Target Audience",
+              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
+              "desc": "In this lesson, you'll learn how to identify and understand your target audience. You'll explore methods for researching your audience's demographics, interests, and behaviors to tailor your social media content effectively."
+            }
+          ]
+        },
+        {
+          "category": "Content Creation and Curation",
+          "lessons": [
+            {
+              "LessonName": "Lesson 5: Creating Engaging Content",
+              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
+              "desc": "This lesson covers the principles of creating engaging and shareable content for social media. You'll learn about different types of content, including text, images, and videos, and how to craft posts that resonate with your audience."
+            },
+            {
+              "LessonName": "Lesson 6: Curating Content for Your Audience",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
+              "desc": "In this lesson, you'll explore strategies for curating relevant content for your audience. You'll learn how to find, select, and share content that adds value to your followers and complements your original posts."
+            }
+          ]
+        },
+        {
+          "category": "Building Your Online Presence",
+          "lessons": [
+            {
+              "LessonName": "Lesson 7: Building a Social Media Presence",
+              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
+              "desc": "This lesson focuses on building and maintaining a strong social media presence for your business. You'll learn best practices for profile optimization, engagement strategies, and how to grow your follower base organically."
+            }
+          ]
+        }
+      ],
+      "img": "src/assets/images/course-07-590x430.jpg",
+      "obj": [
+        "Understand the basics of HTML and CSS.",
+        "Learn to create and style web pages.",
+        "Develop skills in responsive web design.",
+        "Apply best practices for web development."
+      ],
+      "desc": "This course is designed for beginners to learn the basics of HTML and CSS, enabling them to create and style web pages. Participants will also explore responsive web design and best practices in web development."
+    },
+    {
+      "id": 16,
+      "level": "Beginner",
+      "name": "Introduction to Cloud Computing: Basics and Applications",
+      "rating": "4.8",
+      "category": "Computer Science",
+      "CtegoryId": "8",
+      "price": "$45",
+      "lessons": "10",
+      "students": "350",
+      "Duration": "8 Weeks",
+      "Instructor": "James Wilson",
+      "Language": "English",
+      "instructorId": "7",
+      "comVideo": "../../src/assets/images/VIT University - 1Min Ad Film.mp4",
+      "Certification": "Yes",
+      "img": "src/assets/images/course1.jpg",
+      "courseContent": [
+        {
+          "category": "Digital Marketing Fundamentals",
+          "lessons": [
+            {
+              "LessonName": "Lesson 1: Introduction to Digital Marketing",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
+              "desc": "This lesson introduces the fundamental concepts of digital marketing, including its significance in the modern business landscape, key strategies, and how it differs from traditional marketing. You'll gain an understanding of various digital marketing channels and their roles in a comprehensive marketing strategy."
+            },
+            {
+              "LessonName": "Lesson 2: Understanding Digital Marketing Channels",
+              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
+              "desc": "In this lesson, you'll explore different digital marketing channels such as SEO, PPC, social media, email marketing, and content marketing. You'll learn how each channel works, their unique benefits, and how to integrate them into a cohesive digital marketing strategy."
+            }
+          ]
+        },
+        {
+          "category": "Content Marketing",
+          "lessons": [
+            {
+              "LessonName": "Lesson 3: Creating Engaging Content",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
+              "desc": "This lesson focuses on the principles of creating compelling and valuable content that resonates with your audience. You'll learn techniques for brainstorming content ideas, writing engaging copy, and using visuals effectively to capture and maintain audience interest."
+            },
+            {
+              "LessonName": "Lesson 4: Content Distribution Strategies",
+              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
+              "desc": "In this lesson, you'll explore strategies for distributing your content to maximize reach and engagement. Topics include leveraging social media platforms, email marketing, and content syndication. You'll also learn how to identify and target your audience to ensure your content reaches the right people."
+            }
+          ]
+        },
+        {
+          "category": "Social Media Marketing",
+          "lessons": [
+            {
+              "LessonName": "Lesson 5: Social Media Strategies",
+              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
+              "desc": "This lesson covers the development and implementation of effective social media strategies. You'll learn about setting goals, choosing the right platforms, creating content calendars, and engaging with your audience. The focus will be on building a strong social media presence that aligns with your marketing objectives."
+            },
+            {
+              "LessonName": "Lesson 6: Measuring Social Media Success",
+              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
+              "desc": "In this lesson, you'll explore methods for evaluating the success of your social media efforts. You'll learn about key performance indicators (KPIs), analytics tools, and techniques for tracking engagement, reach, and conversion rates. Understanding these metrics will help you refine your strategies and improve your social media campaigns."
+            }
+          ]
+        },
+        {
+          "category": "Search Engine Marketing",
+          "lessons": [
+            {
+              "LessonName": "Lesson 7: SEO and SEM Basics",
+              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
+              "desc": "This lesson introduces the fundamental concepts of Search Engine Optimization (SEO) and Search Engine Marketing (SEM). You'll learn about the differences and similarities between SEO and SEM, basic strategies for improving search engine rankings, and how to use paid search advertising effectively to drive traffic to your website."
+            },
+            {
+              "LessonName": "Lesson 8: Implementing and Analyzing Campaigns",
+              "Link": "src/assets/images/Start your dreams with us!.mp4",
+              "desc": "In this lesson, you'll explore the practical aspects of implementing and analyzing search engine marketing campaigns. Topics include setting up SEM campaigns, optimizing ad performance, and using analytics tools to track and measure campaign effectiveness. You'll learn how to adjust your strategies based on data to achieve better results."
+            }
+          ]
+        }
+      ],
+      "obj": [
+        "Understand the fundamentals of cloud computing.",
+        "Learn about various cloud service models (IaaS, PaaS, SaaS).",
+        "Master the use of popular cloud platforms like AWS and Azure.",
+        "Develop skills in deploying and managing cloud applications."
+      ],
+      "desc": "This course introduces beginners to the basics of cloud computing, covering key concepts, service models, and popular platforms like AWS and Azure. Participants will learn to deploy and manage applications in the cloud."
+    },
+    {
+      "id": 18,
+      "level": "Advanced",
+      "name": "Machine Learning: Advanced Techniques and Applications",
+      "rating": "4.9",
+      "category": "Data Science",
+      "CtegoryId": "5",
+      "price": "$75",
+      "lessons": "10",
+      "instructorId": "8",
+      "students": "310",
+      "Duration": "14 Weeks",
+      "Instructor": "Olivia Martinez",
+      "Language": "English",
+      "comVideo": "../../src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
+      "Certification": "Yes",
+      "img": "src/assets/images/course2.jpg",
+      "courseContent": [
+        {
+          "category": "Introduction to Data Science",
+          "lessons": [
+            {
+              "LessonName": "Lesson 1: What is Data Science?",
+              "Link": "src/assets/images/Start your dreams with us!.mp4",
+              "desc": "This lesson introduces the field of data science, covering its definition, importance, and key components. You'll learn about the role of data science in various industries, the skills required for data scientists, and the overall process of transforming data into actionable insights."
+            },
+            {
+              "LessonName": "Lesson 2: Applications of Data Science",
+              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
+              "desc": "In this lesson, you'll explore the various applications of data science across different sectors such as healthcare, finance, and marketing. You'll understand how data science techniques are used to solve real-world problems, make predictions, and drive business decisions."
+            }
+          ]
+        },
+        {
+          "category": "Data Basics",
+          "lessons": [
+            {
+              "LessonName": "Lesson 3: Data Collection and Cleaning",
+              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
+              "desc": "This lesson focuses on the fundamentals of data collection and cleaning. You'll learn techniques for gathering data from various sources, handling missing values, and ensuring data quality. Proper data cleaning is essential for accurate analysis and reliable results."
+            },
+            {
+              "LessonName": "Lesson 4: Exploratory Data Analysis (EDA)",
+              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
+              "desc": "In this lesson, you'll dive into exploratory data analysis (EDA) to understand and summarize the main characteristics of a dataset. Topics include data visualization, identifying patterns, and detecting anomalies. EDA is crucial for gaining insights and informing further analysis."
+            }
+          ]
+        },
+        {
+          "category": "Statistical Analysis",
+          "lessons": [
+            {
+              "LessonName": "Lesson 5: Introduction to Statistics for Data Science",
+              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
+              "desc": "This lesson introduces basic statistical concepts essential for data science. You'll cover topics such as descriptive statistics, probability distributions, and statistical inference. Understanding these concepts is fundamental for analyzing and interpreting data effectively."
+            },
+            {
+              "LessonName": "Lesson 6: Hypothesis Testing and Significance",
+              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
+              "desc": "In this lesson, you'll learn about hypothesis testing and significance testing in data analysis. You'll explore how to formulate and test hypotheses, interpret p-values, and understand confidence intervals. These techniques are key for making data-driven decisions and validating results."
+            }
+          ]
+        },
+        {
+          "category": "Machine Learning Basics",
+          "lessons": [
+            {
+              "LessonName": "Lesson 7: Introduction to Machine Learning",
+              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
+              "desc": "This lesson provides an overview of machine learning, including its types, algorithms, and applications. You'll learn about supervised and unsupervised learning, model training, and evaluation. This foundational knowledge is essential for building and understanding machine learning models."
+            },
+            {
+              "LessonName": "Lesson 8: Building Your First Machine Learning Model",
+              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
+              "desc": "In this lesson, you'll take your first steps in building a machine learning model. You'll follow a hands-on approach to select a dataset, choose an algorithm, train the model, and evaluate its performance. Practical experience with model building will help solidify your understanding of machine learning concepts."
+            }
+          ]
+        }
+      ],
+      "obj": [
+        "Understand advanced machine learning algorithms and techniques.",
+        "Learn to implement deep learning models using TensorFlow and Keras.",
+        "Master techniques for model optimization and evaluation.",
+        "Explore real-world applications of machine learning."
+      ],
+      "desc": "This course covers advanced machine learning techniques, including deep learning with TensorFlow and Keras, model optimization, and evaluation. Participants will gain practical experience through real-world applications of machine learning."
     }
   ],
   "Instructors": [
@@ -3031,7 +3273,6 @@
       "rating": "5",
       "About": "Hi, I'm Natalie Thompson, a Digital Marketing Expert with 5 years of experience. I enjoy crafting marketing strategies and teaching others how to grow their online presence.",
       "coursesID": [
-        24,
         25
       ],
       "Contact": {
@@ -3222,6 +3463,36 @@
       "Job": "Content Writer",
       "rating": "5",
       "courseID": "10"
+    },
+    {
+      "id": 12,
+      "userId": "26",
+      "comment": "The community aspect of the platform is great. It's nice to connect with other learners.",
+      "Job": "Web Developer",
+      "rating": "5",
+      "courseID": "12"
+    },
+    {
+      "comment": "good course",
+      "rating": 4,
+      "courseID": 11,
+      "userId": 44,
+      "id": 15
+    },
+    {
+      "id": 14,
+      "userId": "18",
+      "comment": "Clear and concise course material that made learning easy and enjoyable.",
+      "Job": "Teacher",
+      "rating": "5",
+      "courseID": "14"
+    },
+    {
+      "comment": "111",
+      "rating": "2.7",
+      "courseID": 10,
+      "userId": 44,
+      "id": 18
     }
   ],
   "Reviews": [
@@ -3371,20 +3642,6 @@
       "courseID": 25,
       "userId": 42,
       "id": 19
-    },
-    {
-      "comment": "sss",
-      "rating": "NaN",
-      "courseID": 4,
-      "userId": 48,
-      "id": 20
-    },
-    {
-      "comment": "ddd",
-      "rating": "NaN",
-      "courseID": 4,
-      "userId": 48,
-      "id": 21
     }
   ],
   "Categories": [
@@ -3642,18 +3899,6 @@
       "role": "user"
     },
     {
-      "id": 15,
-      "name": "Mia Owens",
-      "email": "mia.owens@example.com",
-      "img": "",
-      "favouriteCoursesId": [],
-      "completedCourses": [],
-      "validCoursesId": [],
-      "password": "miapass",
-      "subscribed": "3",
-      "role": "user"
-    },
-    {
       "id": 16,
       "name": "Nathan Perez",
       "email": "nathan.perez@example.com",
@@ -3667,22 +3912,6 @@
         3,
         11,
         18
-      ]
-    },
-    {
-      "id": 17,
-      "name": "Olivia Quinn",
-      "email": "olivia.quinn@example.com",
-      "img": "",
-      "favouriteCoursesId": [],
-      "password": "oliviapass",
-      "subscribed": "2",
-      "completedCourses": [],
-      "role": "user",
-      "validCoursesId": [
-        6,
-        15,
-        23
       ]
     },
     {
@@ -4059,19 +4288,24 @@
       "img": "",
       "password": "123",
       "subscribed": 2,
-      "favouriteCoursesId": [],
+      "favouriteCoursesId": [
+        3,
+        2
+      ],
       "validCoursesId": [
         3,
         7,
         11,
-        25
+        25,
+        4
       ],
       "role": "user",
       "completedCourses": [
         3,
         7,
         11,
-        25
+        25,
+        14
       ],
       "confirmPassword": "123",
       "id": 46
@@ -4105,6 +4339,23 @@
       ],
       "confirmPassword": "111",
       "id": 48
+    },
+    {
+      "name": "test2",
+      "email": "test2@gmail.com",
+      "img": "",
+      "password": "333",
+      "subscribed": 2,
+      "favouriteCoursesId": [
+        3
+      ],
+      "validCoursesId": [
+        2
+      ],
+      "role": "user",
+      "completedCourses": [],
+      "confirmPassword": "333",
+      "id": 49
     }
   ],
   "SubPlans": [
@@ -4125,16 +4376,21 @@
       "duration": "Yearly ",
       "price": "199.92",
       "charge": "Charged as annual payment of 2,399 EGP"
+    },
+    {
+      "duration": "Esse dolor numquam c",
+      "charge": "Eum rerum in error m",
+      "price": "975",
+      "id": 4
+    },
+    {
+      "duration": "Veniam est est qu",
+      "charge": "Omnis qui sit dolor",
+      "price": "713",
+      "id": 5
     }
   ],
   "Messages": [
-    {
-      "name": "sohila sobhy",
-      "subject": "xdd;l",
-      "message": "dddddddddddd",
-      "email": "sohilasobhysadek@gmail.com",
-      "id": 1
-    },
     {
       "name": "sohila sobhy",
       "subject": "ssss",
