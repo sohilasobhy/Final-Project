@@ -233,7 +233,7 @@
       "CtegoryId": "6",
       "price": "Free",
       "lessons": "8",
-      "students": 514,
+      "students": 515,
       "Duration": "10 Weeks",
       "Instructor": "Jane Seymour",
       "Language": "English",
@@ -320,7 +320,7 @@
       "CtegoryId": "2",
       "price": "$40",
       "lessons": "6",
-      "students": 290,
+      "students": 291,
       "Duration": "8 Weeks",
       "Instructor": "Alice Johnson",
       "Language": "English",
@@ -3371,6 +3371,20 @@
       "courseID": 25,
       "userId": 42,
       "id": 19
+    },
+    {
+      "comment": "sss",
+      "rating": "NaN",
+      "courseID": 4,
+      "userId": 48,
+      "id": 20
+    },
+    {
+      "comment": "ddd",
+      "rating": "NaN",
+      "courseID": 4,
+      "userId": 48,
+      "id": 21
     }
   ],
   "Categories": [
@@ -4061,6 +4075,36 @@
       ],
       "confirmPassword": "123",
       "id": 46
+    },
+    {
+      "name": "sohila sobhy",
+      "email": "dd@ff.com",
+      "img": "",
+      "password": "222",
+      "subscribed": "no",
+      "favouriteCoursesId": [],
+      "validCoursesId": [],
+      "role": "user",
+      "completedCourses": [],
+      "confirmPassword": "222",
+      "id": 47
+    },
+    {
+      "name": "test",
+      "email": "test@gmail.com",
+      "img": "",
+      "password": "111",
+      "subscribed": 2,
+      "favouriteCoursesId": [],
+      "validCoursesId": [
+        3
+      ],
+      "role": "user",
+      "completedCourses": [
+        4
+      ],
+      "confirmPassword": "111",
+      "id": 48
     }
   ],
   "SubPlans": [
@@ -4090,6 +4134,27 @@
       "message": "dddddddddddd",
       "email": "sohilasobhysadek@gmail.com",
       "id": 1
+    },
+    {
+      "name": "sohila sobhy",
+      "subject": "ssss",
+      "message": "ssss",
+      "email": "sohilasobhysadek@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "sohila sobhy",
+      "subject": "aaaaaa",
+      "message": "jjjj",
+      "email": "sohilasobhysadek@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "sohila sobhy",
+      "subject": "sss",
+      "message": "sss",
+      "email": "sohilasobhysadek@gmail.com",
+      "id": 4
     }
   ]
 }

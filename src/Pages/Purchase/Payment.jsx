@@ -2,13 +2,24 @@ import { Accordion, Button } from "react-bootstrap";
 import visa from "../../assets/images/pngwing.com.png"
 import Mastercard from "../../assets/images/Mastercard-logo.svg.png"
 import { useRecoilState } from "recoil";
-import { $checkoutPay, $subPlans } from "../../Store/Store";
+import { $UserInfo, $checkoutPay, $subPlans } from "../../Store/Store";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function Payment() {
     const [subPlan] = useRecoilState($subPlans);
     const [checkoutPay, setcheckoutPay] = useRecoilState($checkoutPay);
+    const [userInfo, setUserInfo] = useRecoilState($UserInfo)
     console.log(subPlan)
+    function handlecheck() {
+        if (userInfo != null) {
+            navigate("/checkout")
+            setcheckoutPay(subPlan)
+        } else {
+            toast.error("Please login first")
+            setTimeout(() => { navigate("/login") }, 500)
+        }
+    }
     let navigate = useNavigate()
     return (
         <div className="mt-5 col-12 col-md-8 col-lg-6" id="payment">
@@ -37,8 +48,7 @@ export default function Payment() {
                                 </div>
                             </div>
                             <Button className="mt-3 mx-auto col-10" variant="danger" onClick={() => {
-                                navigate("/checkout")
-                                setcheckoutPay(subPlan)
+                                handlecheck()
                             }}>Pay {subPlan.price} EGP</Button>
                         </div>
                     </Accordion.Body>

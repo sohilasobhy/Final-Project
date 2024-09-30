@@ -29,7 +29,7 @@ export default function Features() {
                             </svg>
                         </div>
                     </div>
-                    <p className="desc col-11 text-center text-lg-start">Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod ex tempor incididunt labore dolore magna aliquaenim ad minim.</p>
+                    <p className="desc col-11 text-center text-lg-start">At EduJourney, we're committed to helping you learn and grow your skills from anywhere, at any time. Whether you're looking to advance your career or explore new passions, we provide the tools and resources you need to succeed.</p>
                     <div className="d-flex justify-content-start gap-2 align-content-center about">
                         <img src={img2} alt="check-mark" />
                         <p>Flexible Classes</p>

@@ -68,9 +68,7 @@ export default function Edges() {
                 </div>
               </div>
               <p className="p2 mb-3 mb-md-0">
-                Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod
-                ex tempor incididunt labore dolore magna aliquaenim minim veniam
-                quis nostrud exercitation ullamco laboris.
+                At EduJourney, we're committed to helping you learn and grow your skills from anywhere, at any time. Whether you're looking to advance your career or explore new passions, we provide the tools and resources you need to succeed.
               </p>
               <div className="d-flex flex-column gap-3">
                 <div className="d-flex justify-content-start gap-2 align-content-center about">

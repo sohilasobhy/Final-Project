@@ -22,7 +22,7 @@ export default function SingleCourseComponent({ course, color }) {
   console.log(user)
   const [validCourse, setValidCourse] = useState(false)
   useEffect(() => {
-    if (user.role == "instructor") {
+    if (user?.role == "instructor") {
       axios
         .get(`http://localhost:3000/Courses?Instructor=${user.name}`)
         .then((res) => {
