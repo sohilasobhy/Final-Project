@@ -76,9 +76,6 @@ export default function HomePageDash() {
                         <thead>
                             <tr>
                                 <td>
-                                    Course Id
-                                </td>
-                                <td>
                                     Course Name
                                 </td>
                                 <td className="text-center">
@@ -91,9 +88,7 @@ export default function HomePageDash() {
                                 courses?.map((course) => {
                                     return (
                                         <tr key={course.id}>
-                                            <td>
-                                                {course.id}
-                                            </td>
+
                                             <td>
                                                 <Link to={`/single-course/${course.id}`}>
                                                     {course.name}
@@ -121,10 +116,8 @@ export default function HomePageDash() {
                     <table className="table table-danger col-12">
                         <thead>
                             <tr>
-                                <td className="text-center">
-                                    Review ID
-                                </td>
-                                <td className="text-center pe-2">
+
+                                <td className="pe-2">
                                     Review
                                 </td>
                                 <td className="text-center pe-2">
@@ -137,10 +130,6 @@ export default function HomePageDash() {
                                 reviews?.map((review) => {
                                     return (
                                         <tr key={review.id}>
-                                            <td className="text-center">
-
-                                                {review.id}
-                                            </td>
                                             <td className="pe-5">
                                                 {review.comment}
                                             </td>
@@ -167,13 +156,11 @@ export default function HomePageDash() {
                     <table className="table table-danger col-12">
                         <thead>
                             <tr>
-                                <td className="text-center">
-                                    Instructor ID
-                                </td>
-                                <td className="text-center pe-2">
+
+                                <td className=" ps-5">
                                     Instructor Image
                                 </td>
-                                <td className="text-center pe-2">
+                                <td className=" pe-2">
                                     Instructor Name
                                 </td>
                                 <td className="text-center pe-2">
@@ -186,13 +173,11 @@ export default function HomePageDash() {
                                 instructors?.map((instructor) => {
                                     return (
                                         <tr key={instructor.id}>
-                                            <td className="text-center" style={{ verticalAlign: "middle" }}>
-                                                {instructor.id}
-                                            </td>
-                                            <td className="text-center" >
+
+                                            <td className=" ps-5" >
                                                 <img src={`../${instructor.img}`} alt="instructor image" width={80} height={80} className=" object-fit-cover" />
                                             </td>
-                                            <td className="text-center" style={{ verticalAlign: "middle" }}>
+                                            <td className="" style={{ verticalAlign: "middle" }}>
                                                 {instructor.name}
                                             </td>
                                             <td className="text-center" style={{ verticalAlign: "middle" }}>

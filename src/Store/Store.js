@@ -150,6 +150,10 @@ export const $EditedPlan = atom({
   key: "$EditedPlan",
   default: false,
 })
+export const $loginCourseID = atom({
+  key: "$loginCourseID",
+  default: false,
+})
 
 
 

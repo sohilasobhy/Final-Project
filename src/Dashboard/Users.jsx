@@ -62,10 +62,7 @@ export default function Users() {
             <table className="col-12 table mt-3">
                 <thead>
                     <tr>
-                        <td className="text-center">
-                            User Id
-                        </td>
-                        <td >
+                        <td className="ps-4">
                             User Image
                         </td>
                         <td >
@@ -86,12 +83,8 @@ export default function Users() {
                             if (user.role == "admin") {
                                 return (
                                     <tr>
-                                        <td className="text-center">
-                                            <p>
-                                                {user.id}
-                                            </p>
-                                        </td>
-                                        <td >
+
+                                        <td className="ps-4">
                                             <img src={user.img != "" ? `../${user.img}` : Default} width={80} height={80} className="object-fit-cover" />
                                         </td>
                                         <td >
@@ -115,12 +108,8 @@ export default function Users() {
                             if (user.role == "user") {
                                 return (
                                     <tr>
-                                        <td className="text-center">
-                                            <p>
-                                                {user.id}
-                                            </p>
-                                        </td>
-                                        <td >
+
+                                        <td className="ps-4">
                                             <img src={user.img != "" ? `../${user.img}` : Default} width={80} height={80} className="object-fit-cover" />
                                         </td>
                                         <td >

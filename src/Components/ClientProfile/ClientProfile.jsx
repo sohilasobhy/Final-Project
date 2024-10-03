@@ -6,6 +6,7 @@ import userImg from "../../assets/images/user.png"
 import { Link, useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { $UserInfo, $profile } from "../../Store/Store";
+import { toast } from "react-toastify";
 export default function ClientProfile() {
     const [user, setUser] = useRecoilState($UserInfo)
     const [profile, setProfile] = useRecoilState($profile)
@@ -45,28 +46,15 @@ export default function ClientProfile() {
                         <CiBookmark />
                         <p>Saved Courses</p>
                     </Link>
-                    {/* <Link className="d-flex align-items-center gap-2 item mt-3 py-2 px-5">
-                                <FaCertificate />
-                                <p>Certificates</p>
-                            </Link>
-                            <Link className="d-flex align-items-center gap-2 item mt-3 py-2 px-5">
-                                <IoMdSettings />
-                                <p>Account Settings </p>
-                            </Link> */}
-                    {/* <Link to={"/messages"} className="d-flex align-items-center gap-2 item mt-3 py-2 px-5">
-                        <TiMessages />
-                        <p>Messages</p>
-                    </Link> */}
                 </div>
                 <div className="line col-12"></div>
                 <div className="py-3 px-5 item d-flex gap-2 align-items-center logout" onClick={() => {
                     navigate("/")
+                    toast.error("You are logged out")
                     setProfile(false)
                     setUser(null)
                     localStorage.setItem('user', null)
                     sessionStorage.setItem('user', null)
-                    toast.error("You are logged out")
-
                 }}>
                     <CiLogout />
                     <p>Logout</p>

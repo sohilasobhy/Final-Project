@@ -30,19 +30,11 @@ export default function InstructorsDash() {
         }).then((result) => {
             if (result.isConfirmed) {
                 axios.delete(`http://localhost:3000/HomeInstructors/${id}`)
-                    .then(() => {
-                        Swal.fire({
-                            title: "Deleted!",
-                            text: "the instructor has been deleted.",
-                            icon: "success"
-                        });
+                    .then((res) => {
+                        console.log(res.data)
                     })
                     .catch((error) => {
-                        Swal.fire({
-                            title: "Error!",
-                            text: "There was a problem deleting the instructor.",
-                            icon: "error"
-                        });
+                        console.log(error)
                     });
                 axios.delete(`http://localhost:3000/Instructors/${id}`)
                     .then(() => {
@@ -60,19 +52,11 @@ export default function InstructorsDash() {
                         });
                     });
                 axios.delete(`http://localhost:3000/users/${id}`)
-                    .then(() => {
-                        Swal.fire({
-                            title: "Deleted!",
-                            text: "the instructor has been deleted.",
-                            icon: "success"
-                        });
+                    .then((res) => {
+                        console.log(res.data)
                     })
                     .catch((error) => {
-                        Swal.fire({
-                            title: "Error!",
-                            text: "There was a problem deleting the instructor.",
-                            icon: "error"
-                        });
+                        console.log(error)
                     });
                 const updatedArray = Instructors.filter(item => item.id !== id);
                 const updatedInstructors = homeInstructors.filter(item => item.id !== id);
@@ -90,15 +74,11 @@ export default function InstructorsDash() {
             <table className="col-12 table mt-3">
                 <thead>
                     <tr>
-                        <td className="text-center">
-                            Instructor Id
-                        </td>
-                        <td>
+
+                        <td className="ps-4">
                             Name
                         </td>
-                        <td>
-                            Course Id
-                        </td>
+
                         <td className="text-center">
                             Delete
                         </td>
@@ -109,20 +89,10 @@ export default function InstructorsDash() {
                         Instructors?.map((Instructor) => {
                             return (
                                 <tr>
-                                    <td className="text-center">
-                                        {Instructor.id}
-                                    </td>
-                                    <td>
+                                    <td className="ps-4">
                                         <Link to={`/Instructor/${Instructor.id}`}>
                                             {Instructor.name}
                                         </Link>
-                                    </td>
-                                    <td>
-                                        {Instructor.coursesID.map((course, index) => (
-                                            <span key={course}>
-                                                {course}{index !== Instructor.coursesID.length - 1 ? ', ' : ''}
-                                            </span>
-                                        ))}
                                     </td>
                                     <td className="text-center">
                                         <button className="btn btn-danger" onClick={() => handleDelete(Instructor.id)}>

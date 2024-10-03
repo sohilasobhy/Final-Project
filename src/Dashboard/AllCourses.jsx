@@ -103,9 +103,7 @@ export default function AllCourses() {
             <table className="col-12 table mt-3">
                 <thead>
                     <tr>
-                        <td className="text-center">
-                            Course Id
-                        </td>
+
                         <td>
                             Course Name
                         </td>
@@ -122,9 +120,7 @@ export default function AllCourses() {
                         courses?.map((course) => {
                             return (
                                 <tr key={course.id}>
-                                    <td className="text-center">
-                                        {course.id}
-                                    </td>
+
                                     <td>
                                         <Link to={`/single-course/${course.id}`}>
                                             {course.name}

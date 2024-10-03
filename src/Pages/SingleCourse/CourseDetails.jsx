@@ -14,7 +14,7 @@ import certificate from "../../assets/images/award2.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useRecoilState } from "recoil";
-import { $UserInfo, $checkoutPay, $commercialVid } from "../../Store/Store";
+import { $UserInfo, $checkoutPay, $commercialVid, $loginCourseID } from "../../Store/Store";
 import { toast } from "react-toastify";
 export default function CourseDetails() {
     let navigate = useNavigate()
@@ -24,9 +24,9 @@ export default function CourseDetails() {
     const [validCourse, setValidCourse] = useState(false)
     let { id } = useParams();
     const [course, setArray] = useState();
-    console.log(course)
     const [isloading, setIsloading] = useState(false)
     const [, setCommercialVid] = useRecoilState($commercialVid)
+    const [, setCourseId] = useRecoilState($loginCourseID)
 
     if (course && userInfo && userInfo?.role == "instructor") {
         axios
@@ -121,6 +121,7 @@ export default function CourseDetails() {
                     }
                 } else {
                     toast.warning("Please Login First")
+                    setCourseId(course.id)
                     setTimeout(() => {
                         navigate("/login")
                     }, 1500)

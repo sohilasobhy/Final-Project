@@ -74,7 +74,6 @@ export default function AddInstructorToHome() {
                         <table className="table table-active w-100">
                             <thead>
                                 <tr>
-                                    <td className="text-center">Instructor Id</td>
                                     <td>Instructor Image</td>
                                     <td>Instructor Name</td>
                                     <td className="text-center">Add</td>
@@ -84,8 +83,7 @@ export default function AddInstructorToHome() {
                                 {
                                     filteredInstructors.map((Instructor) => {
                                         return (
-                                            <tr>
-                                                <td className="text-center">{Instructor.id}</td>
+                                            <tr key={Instructor.id}>
                                                 <td><img src={`../${Instructor.img}`} alt="" width={80} height={80} className="object-fit-cover instructorImage" /></td>
                                                 <td>{Instructor.name}</td>
                                                 <td onClick={() => addToHome(Instructor.id)} className="add text-center">

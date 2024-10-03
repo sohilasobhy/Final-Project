@@ -45,19 +45,12 @@ export default function ReviewsDash() {
                         });
                     });
                 axios.delete(`http://localhost:3000/HomeReviews/${id}`)
-                    .then(() => {
-                        Swal.fire({
-                            title: "Deleted!",
-                            text: "the review has been deleted.",
-                            icon: "success"
-                        });
+                    .then((res) => {
+                        console.log(res.data)
                     })
                     .catch((error) => {
-                        Swal.fire({
-                            title: "Error!",
-                            text: "There was a problem deleting the review.",
-                            icon: "error"
-                        });
+                        console.log(error)
+
                     });
                 const updatedArray = Reviews.filter(item => item.id !== id);
                 const updatedHome = HomeReviews.filter(item => item.id !== id);
@@ -66,24 +59,18 @@ export default function ReviewsDash() {
             }
         });
     };
+
     return (
         <div id="Reviews" className="position-absolute top-0 col-11 col-md-7 col-lg-8 col-xl-9 p-3">
             <h2>All Reviews</h2>
             <table className="col-12 table mt-3">
                 <thead>
                     <tr>
-                        <td className="text-center">
-                            Review Id
-                        </td>
-                        <td>
+
+                        <td className="ps-4">
                             Comment
                         </td>
-                        <td className="text-center">
-                            User Id
-                        </td>
-                        <td className="text-center">
-                            Course Id
-                        </td>
+
                         <td className="text-center">
                             Delete
                         </td>
@@ -94,18 +81,11 @@ export default function ReviewsDash() {
                         Reviews?.map((review) => {
                             return (
                                 <tr>
-                                    <td className="text-center">
-                                        {review.id}
-                                    </td>
-                                    <td className="col-6">
+
+                                    <td className="col-6 ps-4">
                                         {review.comment}
                                     </td>
-                                    <td className="text-center">
-                                        {review.userId}
-                                    </td>
-                                    <td className="text-center">
-                                        {review.courseID}
-                                    </td>
+
                                     <td className="text-center">
                                         <button className="btn btn-danger" onClick={() => handleDelete(review.id)}>
                                             Delete

@@ -33,26 +33,24 @@ const CourseOverview = () => {
     console.log(userInfo)
     const [valid, setValid] = useState(false)
     let handleSubmit = (values, { resetForm }) => {
-        console.log(values);
         let newRates = courses?.rates + 1
-        console.log(newRates)
         let newTotal = courses?.totalRating + values.rating
-        console.log(newTotal)
-        values.rating = (Number(newTotal) / Number(newRates)).toFixed(1)
-        console.log(values.rating)
         axios.post(url, values)
             .then(response => {
-                console.log(response);
+                console.log(values)
+                setReviews([...Reviews, values]);
+                console.log([...Reviews, values])
+                values.rating = (Number(newTotal) / Number(newRates)).toFixed(1)
+                console.log(values.rating)
                 axios.put(`http://localhost:3000/Courses/${id}`, { ...courses, rating: values.rating })
                 toast.success("Your review has been added");
-                setReviews([...Reviews, values]);
                 resetForm();
             })
             .catch(error => {
                 console.error('Error:', error);
             });
     };
-
+    console.log(Reviews)
     useEffect(() => {
         setIsloading(true)
         axios
@@ -127,6 +125,7 @@ const CourseOverview = () => {
                 });
         }
     }, [courses])
+    console.log(Reviews)
     console.log(courses)
     useEffect(() => {
         // if (userInfo != null && userInfo?.favouriteCoursesId.includes(Number(courses?.id))) {
@@ -231,7 +230,6 @@ const CourseOverview = () => {
                                     >
                                         <FontAwesomeIcon icon={faLinkedinIn} />
                                     </a>
-
                                 </div>
                             </div>
                         </div>
@@ -289,6 +287,7 @@ const CourseOverview = () => {
                                         validationSchema={ReviewScheme}
                                     >
                                         {({ setFieldValue }) => (
+
                                             <Form className='col-12'>
                                                 <h4>Leave a review:</h4>
                                                 <div className='d-flex flex-column align-items-center gap-2 p-3 ms-3'>
@@ -308,6 +307,7 @@ const CourseOverview = () => {
                                 </div>}
                             <div className="Reviews mt-5 ">
                                 <h4>Reviews:</h4>
+                                {console.log(Reviews)}
                                 {Reviews?.length > 0 ?
                                     Reviews.slice(0, reviewsShow).map((item, index) => {
                                         return (

@@ -79,7 +79,6 @@ export default function AddCourseToHome() {
                         <table className="table table-active">
                             <thead>
                                 <tr>
-                                    <td>Course Id</td>
                                     <td>Course Name</td>
                                     <td>Add</td>
                                 </tr>
@@ -89,7 +88,6 @@ export default function AddCourseToHome() {
                                     filteredCourses.map((course) => {
                                         return (
                                             <tr>
-                                                <td>{course.id}</td>
                                                 <td>{course.name}</td>
                                                 <td onClick={() => addToHome(course.id)} className="add">
                                                     <button className="btn btn-primary">Add</button>

@@ -61,10 +61,8 @@ export default function Categories() {
             <table className="col-12 table mt-3">
                 <thead>
                     <tr>
-                        <td className="text-center">
-                            Category Id
-                        </td>
-                        <td>
+
+                        <td className="ps-4">
                             Category Name
                         </td>
                         <td className="text-center">
@@ -82,10 +80,8 @@ export default function Categories() {
                         categories?.map((category) => {
                             return (
                                 <tr key={category.id}>
-                                    <td className="text-center">
-                                        {category.id}
-                                    </td>
-                                    <td>
+
+                                    <td className="ps-4">
                                         <Link to={`/one-category/${category.id}`}>
                                             {category.categoryName}
                                         </Link>

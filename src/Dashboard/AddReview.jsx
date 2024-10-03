@@ -76,16 +76,12 @@ export default function AddReview() {
                 <table className='table table-bordered'>
                     <thead>
                         <tr>
-                            <td>
-                                ID
-                            </td>
+
                             <td>
                                 Review
                             </td>
-                            <td>
-                                UserId
-                            </td>
-                            <td>
+
+                            <td className='text-center'>
                                 Add
                             </td>
                         </tr>
@@ -94,18 +90,12 @@ export default function AddReview() {
                         {
                             filteredReviews.map((review) => {
                                 return (
-                                    <tr>
-                                        <td>
-                                            {review.id}
-                                        </td>
+                                    <tr key={review.id}>
                                         <td>
                                             {review.comment}
                                         </td>
-                                        <td>
-                                            {review.userId}
-                                        </td>
-                                        <td>
-                                            <button className='btn btn-primary' onClick={() => AddToHomeRewiews(review.id)}>
+                                        <td className='text-center'>
+                                            <button className='btn btn-primary ' onClick={() => AddToHomeRewiews(review.id)}>
                                                 Add
                                             </button>
                                         </td>

@@ -6,7 +6,7 @@ import { LoginSchema } from "../../schemas/LoginScheme"
 import axios from "axios"
 import { useState } from "react"
 import { useRecoilState } from "recoil"
-import { $UserInfo } from "../../Store/Store"
+import { $UserInfo, $loginCourseID } from "../../Store/Store"
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import NavBarLogin from "../../Components/NavBarLogin"
@@ -16,6 +16,8 @@ export default function LoginPage() {
     const navigate = useNavigate()
     const [, setUserInfo] = useRecoilState($UserInfo)
     const [show, setShow] = useState(false)
+    const [courseId] = useRecoilState($loginCourseID)
+    console.log(courseId)
     return (
         <>
             <NavBarLogin />
@@ -39,7 +41,7 @@ export default function LoginPage() {
                                             sessionStorage.setItem(`user`, JSON.stringify(response.data[0]))
                                             setUserInfo(response.data[0])
                                         }
-                                        navigate("/")
+
                                         toast.success("You are logged in")
                                     }
                                 })
