@@ -72,6 +72,10 @@
     .wishHeart {
       top: 2%;
       right: 2%;
+      [dir="rtl"] & {
+        right: auto;
+        left: 2%;
+      }
       font-size: 25px;
       padding: 0.5rem;
       border-radius: 50%;

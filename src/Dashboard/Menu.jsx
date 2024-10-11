@@ -3,7 +3,19 @@ import logo from "../assets/images/graduationWhite.png"
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
 import { useState } from "react";
+import { MdLanguage } from "react-icons/md";
+import { useRecoilState } from "recoil";
+import { $Language } from "../Store/Store";
+import { FormattedMessage } from "react-intl";
 export default function Menu() {
+    const [language] = useRecoilState($Language)
+    console.log(language)
+    const lang = localStorage.getItem("lang") || "ltr";
+    const handleLang = () => {
+        const newLang = lang === "ltr" ? "rtl" : "ltr";
+        localStorage.setItem("lang", newLang);
+        window.location.reload();
+    };
     const [openMenue, setOpen] = useState(false)
     console.log(openMenue)
     return (
@@ -14,43 +26,48 @@ export default function Menu() {
                         className="d-flex align-items-center gap-2 logo p-3"
                     >
                         <img src={logo} alt="" />
-                        <p className=" mt-3 siteName">EduJourney</p>
+                        <p className="siteName">EduJourney</p>
                     </Link>
+                    <div onClick={handleLang} className={`language mx-2`}>
+                        <MdLanguage size={30} />
+                    </div>
                 </div>
                 <div className="p-3 d-flex flex-column gap-4 LINKS">
                     <NavLink to={"/dashboard/Home-page"} className="p-1"
                         onClick={() => setOpen(false)}
                     >
-                        Home Page
+                        <FormattedMessage id="home" />
                     </NavLink>
                     <NavLink to={"/dashboard/All-courses"} className="p-1"
                         onClick={() => setOpen(false)}
                     >
-                        All Courses
+                        <FormattedMessage id="course" />
                     </NavLink>
                     <NavLink to={"/dashboard/Categories"} className="p-1"
                         onClick={() => setOpen(false)}                    >
-                        Categories
+                        <FormattedMessage id="categories" />
+
                     </NavLink>
                     <NavLink to={"/dashboard/Reviews"} className="p-1"
                         onClick={() => setOpen(false)}                    >
-                        Reviews
+                        <FormattedMessage id="review" />
+
                     </NavLink>
                     <NavLink to={"/dashboard/instructors"} className="p-1"
                         onClick={() => setOpen(false)}                    >
-                        Instructors
+                        <FormattedMessage id="instructors" />
                     </NavLink>
                     <NavLink to={"/dashboard/messages"} className="p-1"
                         onClick={() => setOpen(false)}                    >
-                        Messages
+                        <FormattedMessage id="messages" />
                     </NavLink>
                     <NavLink to={"/dashboard/users"} className="p-1"
                         onClick={() => setOpen(false)}                    >
-                        Users
+                        <FormattedMessage id="users" />
                     </NavLink>
                     <NavLink to={"/dashboard/subPlans"} className="p-1"
                         onClick={() => setOpen(false)}                    >
-                        subscription plans
+                        <FormattedMessage id="subPlans" />
                     </NavLink>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import SingleInstructor from "../../Components/SingleInstructorComponent/SingleInstructor";
+import { FormattedMessage } from "react-intl";
 export default function HomeInstractor() {
   const [array, setArray] = useState([]);
   useEffect(() => {
@@ -20,8 +21,8 @@ export default function HomeInstractor() {
       className="col-12 d-flex flex-column align-items-center gap-5"
       id="HomeInstractor">
       <div className="d-flex flex-column align-items-center header gap-2">
-        <p>INSTRUCTORS</p>
-        <h2>Course Instructors</h2>
+        <p><FormattedMessage id="instructors" /></p>
+        <h2><FormattedMessage id="courseInstructor" /></h2>
         <div className="col-6">
           <svg
             style={{

@@ -9,6 +9,11 @@
     .instractuorName {
       border-right: 1px solid #dbdbdb;
       padding-right: 2rem;
+      [dir="rtl"] & {
+        border-right: 0;
+        padding-right: 0;
+        padding-left: 2rem;
+      }
       @media (max-width: 768px) {
         border: 0;
         padding: 0;
@@ -16,8 +21,18 @@
     }
     .category {
       padding-left: 2rem;
+      [dir="rtl"] & {
+        border-right: 1px solid #dbdbdb;
+        padding-left: 0;
+        padding-right: 2rem;
+      }
       @media (max-width: 768px) {
         padding: 0;
+        [dir="rtl"] & {
+          border-right: 0;
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
     }
   }
@@ -25,6 +40,10 @@
 #CourseDetails {
   top: 20%;
   right: 5%;
+  [dir="rtl"] & {
+    right: auto;
+    left: 5%;
+  }
   position: absolute;
   border-radius: 0.5rem;
   background-color: white;
@@ -229,6 +248,14 @@
   .accordion-item:first-of-type > .accordion-header .accordion-button {
     background-color: transparent;
   }
+  [dir="rtl"] & {
+    .accordion-button:not(.collapsed)::after,
+    .accordion-button::after {
+      position: absolute;
+      left: 3%;
+    }
+  }
+
   .accordion-button {
     font-size: 20px;
     font-weight: 600;

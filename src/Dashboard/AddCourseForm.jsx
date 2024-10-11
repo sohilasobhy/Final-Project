@@ -3,15 +3,18 @@ import { ErrorMessage, Field, FieldArray, Form, Formik } from "formik";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import { $AllCourses, $CourseForm } from "../Store/Store";
+import { $AllCourses, $CourseForm, $Language } from "../Store/Store";
 import { UploadCourseScheme } from "../schemas/UploadCourseScheme";
 import CustomModal from "../Components/Modal/Modal";
 import Swal from "sweetalert2";
+import { FormattedMessage, useIntl } from "react-intl";
 export default function AddCourseForm() {
     const [CourseForm, setCourseForm] = useRecoilState($CourseForm)
     const [Categories, setCategories] = useState([]);
     const [Instructors, setInstructors] = useState([]);
     const [Courses, setCourses] = useRecoilState($AllCourses);
+    const [lang] = useRecoilState($Language)
+    let intl = useIntl();
     useEffect(() => {
         axios
             .get("http://localhost:3000/Courses")
@@ -46,12 +49,13 @@ export default function AddCourseForm() {
         console.log(Instructors)
         values.instructorId = InstId.id
         Swal.fire({
-            title: "Are you sure you want to add this course?",
+            title: intl.formatMessage({ id: 'courseAdding' }),
             icon: "success",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, add it!"
+            confirmButtonText: intl.formatMessage({ id: 'confirm' }),
+            cancelButtonText: intl.formatMessage({ id: 'cancle' }),
         }).then((result) => {
             if (result.isConfirmed) {
                 axios.post(url, values)
@@ -64,8 +68,9 @@ export default function AddCourseForm() {
                         console.log(NewCourses)
                         axios.put(`http://localhost:3000/Instructors/${instractor?.id}`, { ...instractor, coursesID: NewCourses })
                         Swal.fire({
-                            title: "Added!",
-                            text: "the course has been added.",
+                            title: intl.formatMessage({ id: 'added' }),
+                            text: intl.formatMessage({ id: 'courseDone' }),
+                            confirmButtonText: intl.formatMessage({ id: "confirm" }),
                             icon: "success"
                         });
                         setCourses([...Courses, res.data])
@@ -73,8 +78,8 @@ export default function AddCourseForm() {
                     })
                     .catch((error) => {
                         Swal.fire({
-                            title: "Error!",
-                            text: "There was a problem adding this course.",
+                            title: intl.formatMessage({ id: 'error' }),
+                            text: intl.formatMessage({ id: 'proplem' }),
                             icon: "error"
                         });
                     });
@@ -137,7 +142,7 @@ export default function AddCourseForm() {
     }, [])
     if (CourseForm) {
         return (
-            <CustomModal onHide={() => setCourseForm(false)} title={"Add Course Form"} show={CourseForm}>
+            <CustomModal onHide={() => setCourseForm(false)} title={<FormattedMessage id="addCourse" />} show={CourseForm}>
                 <div className=" col-10 col-md-8 col-lg-6 FormContainer">
                     <Formik
                         initialValues={initialValues}
@@ -146,14 +151,14 @@ export default function AddCourseForm() {
                         {({ values, errors }) => (
                             <Form className="p-3 d-flex flex-column gap-3" >
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Enter Course Name</p>
+                                    <p><FormattedMessage id="enterCourseName" /></p>
                                     <Field type="text" name="name" />
                                     <span className="error">
                                         <ErrorMessage name="name" />
                                     </span>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Course Level:</p>
+                                    <p><FormattedMessage id="courseLevel" />:</p>
                                     <Field as="select" name="level">
                                         <option value="Beginner">Beginner</option>
                                         <option value="Intermediat">Intermediat</option>
@@ -164,7 +169,7 @@ export default function AddCourseForm() {
                                     </span>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Course Category:</p>
+                                    <p><FormattedMessage id="catName" /></p>
                                     <Field as="select" name="category">
                                         {
                                             Categories?.map((Category) => {
@@ -177,24 +182,24 @@ export default function AddCourseForm() {
                                     <span className="error">
                                         <ErrorMessage name="category" />
                                     </span>
-                                    <Link to={"/dashboard/Categories"} onClick={() => setCourseForm(false)}>+ Add another category</Link>
+                                    <Link to={"/dashboard/Categories"} onClick={() => setCourseForm(false)}>+ <FormattedMessage id="addCategory" /></Link>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Enter Course Lessons</p>
+                                    <p><FormattedMessage id="courselessons" /></p>
                                     <Field type="number" min="10" max="70" name="lessons" />
                                     <span className="error">
                                         <ErrorMessage name="lessons" />
                                     </span>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Enter Course Duration</p>
+                                    <p><FormattedMessage id="courseDuration" /></p>
                                     <Field type="number" min="4" max="12" name="Duration" />
                                     <span className="error">
                                         <ErrorMessage name="Duration" />
                                     </span>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Enter Course Instructor</p>
+                                    <p><FormattedMessage id="courseInst" /></p>
                                     <Field as="select" name="Instructor">
                                         {
                                             Instructors?.map((Instructor) => {
@@ -207,10 +212,10 @@ export default function AddCourseForm() {
                                     <span className="error">
                                         <ErrorMessage name="Instructor" />
                                     </span>
-                                    <Link to={"/dashboard/Instructors"} onClick={() => setCourseForm(false)}>+ Add another Instructor</Link>
+                                    <Link to={"/dashboard/Instructors"} onClick={() => setCourseForm(false)}>+ <FormattedMessage id="addInstructor" /></Link>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Course Language</p>
+                                    <p><FormattedMessage id="courseLang" /></p>
                                     <Field as="select" name="Language">
                                         <option value="English">English</option>
                                         <option value="Arabic">Arabic</option>
@@ -220,46 +225,46 @@ export default function AddCourseForm() {
                                     </span>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Commercial Video</p>
+                                    <p><FormattedMessage id="comVideo" /></p>
                                     <Field type="file" name="comVideo" />
                                     <span className="error">
                                         <ErrorMessage name="comVideo" />
                                     </span>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Commercial Image</p>
+                                    <p><FormattedMessage id="comImg" /></p>
                                     <Field type="file" name="img" />
                                     <span className="error">
                                         <ErrorMessage name="img" />
                                     </span>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Course Objectives</p>
+                                    <p><FormattedMessage id="courseObj" /></p>
                                     <Field
                                         as="textarea"
                                         name="obj"
-                                        placeholder="Enter values separated by commas"
+                                        placeholder={lang == "EN" ? "Enter Values Seprated By Commas" : "ادخل الاهداف بينها فاصلة"}
                                     />
                                     <span className="error">
                                         <ErrorMessage name="obj" />
                                     </span>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Description</p>
+                                    <p><FormattedMessage id="desc" /></p>
                                     <Field as="textarea" name="desc" />
                                     <span className="error">
                                         <ErrorMessage name="desc" />
                                     </span>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Course price</p>
+                                    <p><FormattedMessage id="coursePrice" /></p>
                                     <Field type="number" name="price" min="0" max="200" />
                                     <span className="error">
                                         <ErrorMessage name="price" />
                                     </span>
                                 </div>
                                 <div className="d-flex flex-column gap-1">
-                                    <p>Certification</p>
+                                    <p><FormattedMessage id="certification" /></p>
                                     <Field as="select" name="Certification">
                                         <option value="Yes">Yes</option>
                                         <option value="No">No</option>
@@ -273,10 +278,9 @@ export default function AddCourseForm() {
                                         <>
                                             {values.courseContent.map((category, index) => (
                                                 <div key={index}>
-                                                    <h3>Category {index + 1}</h3>
+                                                    <h3><FormattedMessage id="Category" /> {index + 1}</h3>
                                                     <Field
                                                         name={`courseContent[${index}].category`}
-                                                        placeholder="Category Name"
                                                         className="mt-2"
                                                     />
                                                     <ErrorMessage
@@ -290,10 +294,9 @@ export default function AddCourseForm() {
                                                             <>
                                                                 {category.lessons.map((lesson, lessonIndex) => (
                                                                     <div key={lessonIndex}>
-                                                                        <h4 className="mt-2">Lesson {lessonIndex + 1}</h4>
+                                                                        <h4 className="mt-2"><FormattedMessage id="lesson" /> {lessonIndex + 1}</h4>
                                                                         <Field
                                                                             name={`courseContent[${index}].lessons[${lessonIndex}].LessonName`}
-                                                                            placeholder="Lesson Name"
                                                                             as="textarea"
                                                                         />
                                                                         <br />
@@ -302,9 +305,9 @@ export default function AddCourseForm() {
                                                                             component="div"
                                                                             className="error"
                                                                         />
+                                                                        <h4><FormattedMessage id="lessonDesc" /></h4>
                                                                         <Field
                                                                             name={`courseContent[${index}].lessons[${lessonIndex}].desc`}
-                                                                            placeholder="Lesson Description"
                                                                             as="textarea"
                                                                             className="mt-2"
                                                                         />
@@ -314,7 +317,7 @@ export default function AddCourseForm() {
                                                                             component="div"
                                                                             className="error"
                                                                         />
-                                                                        <h4>Lesson video</h4>
+                                                                        <h4><FormattedMessage id="lessonLink" /></h4>
                                                                         <Field
                                                                             name={`courseContent[${index}].lessons[${lessonIndex}].Link`}
                                                                             type="file"
@@ -330,7 +333,7 @@ export default function AddCourseForm() {
                                                                             onClick={() => removeLesson(lessonIndex)}
                                                                             className="mt-2 btn btn-danger"
                                                                         >
-                                                                            Remove Lesson
+                                                                            <FormattedMessage id="removLesson" />
                                                                         </button>
                                                                     </div>
                                                                 ))}
@@ -345,16 +348,15 @@ export default function AddCourseForm() {
                                                                         })
                                                                     }
                                                                 >
-                                                                    Add Lesson
-                                                                </button>
+                                                                    <FormattedMessage id="addLesson" />                                                                </button>
                                                             </>
                                                         )}
                                                     </FieldArray>
                                                     {
                                                         console.log(errors)
                                                     }
-                                                    <button type="button" className="mt-2 ms-2 btn btn-danger" onClick={() => remove(index)}>
-                                                        Remove Category
+                                                    <button type="button" className="mt-2 mx-2 btn btn-danger" onClick={() => remove(index)}>
+                                                        <FormattedMessage id="removeCat" />
                                                     </button>
                                                 </div>
                                             ))}
@@ -374,12 +376,11 @@ export default function AddCourseForm() {
                                                     })
                                                 }
                                             >
-                                                Add Category
-                                            </button>
+                                                <FormattedMessage id="addCat" />                                            </button>
                                         </>
                                     )}
                                 </FieldArray>
-                                <button type="submit" className="btn btn-success">Upload the course</button>
+                                <button type="submit" className="btn btn-success"><FormattedMessage id="submit" /></button>
                             </Form>
                         )}
                     </Formik>

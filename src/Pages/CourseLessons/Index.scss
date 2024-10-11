@@ -19,6 +19,13 @@
         box-shadow: none !important;
       }
     }
+    [dir="rtl"] & {
+      .accordion-button:not(.collapsed)::after,
+      .accordion-button::after {
+        position: absolute;
+        left: 3%;
+      }
+    }
     .accordion-button:not(.collapsed) {
       background-color: transparent !important;
       border-bottom: 0 !important;

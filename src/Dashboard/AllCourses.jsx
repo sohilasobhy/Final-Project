@@ -4,6 +4,7 @@ import { useRecoilState } from "recoil";
 import { $AllCourses, $AllInstructors, $CourseForm, $EditForm, $EditFormCourse, $HomeCourses } from "../Store/Store";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export default function AllCourses() {
     const [courses, setCourses] = useRecoilState($AllCourses)
@@ -12,12 +13,12 @@ export default function AllCourses() {
     const [, setCourseId] = useRecoilState($EditFormCourse)
     const [, setEdit] = useRecoilState($EditForm)
     const [, setCourseForm] = useRecoilState($CourseForm)
+    let intl = useIntl()
     useEffect(() => {
         axios
             .get("http://localhost:3000/Courses")
             .then((response) => {
                 setCourses(response.data);
-                console.log(courses);
             })
             .catch((error) => {
                 console.error("There was an error fetching the data!", error);
@@ -26,7 +27,6 @@ export default function AllCourses() {
             .get("http://localhost:3000/Instructors")
             .then((response) => {
                 setInstructor(response.data);
-                console.log(Instructor);
             })
             .catch((error) => {
                 console.error("There was an error fetching the data!", error);
@@ -34,13 +34,14 @@ export default function AllCourses() {
     }, []);
     const handleDelete = (id) => {
         Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
+            title: intl.formatMessage({ id: "areYouSure" }),
+            text: intl.formatMessage({ id: "revert" }),
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: intl.formatMessage({ id: "confirm" }),
+            cancelButtonText: intl.formatMessage({ id: "cancle" }),
         }).then((result) => {
             if (result.isConfirmed) {
                 axios.delete(`http://localhost:3000/HomeCourses/${id}`)
@@ -54,8 +55,8 @@ export default function AllCourses() {
                     .then((res) => {
                         console.log(res)
                         Swal.fire({
-                            title: "Deleted!",
-                            text: "Your course has been deleted.",
+                            title: intl.formatMessage({ id: "deleted" }),
+                            confirmButtonText: intl.formatMessage({ id: "confirm" }),
                             icon: "success"
                         });
                         let course = courses.find((item) => item.id == id)
@@ -77,12 +78,11 @@ export default function AllCourses() {
                             .catch((error) => {
                                 console.log("Error updating instructor", error);
                             });
-                        // setCourses([...courses, res.data])
                     })
                     .catch((error) => {
                         Swal.fire({
-                            title: "Error!",
-                            text: "There was a problem deleting the course.",
+                            title: intl.formatMessage({ id: "error" }),
+                            text: intl.formatMessage({ id: "problem" }),
                             icon: "error"
                         });
                     });
@@ -97,21 +97,21 @@ export default function AllCourses() {
     return (
         <div id="AllCourses" className="position-absolute top-0 col-11 col-md-7 col-lg-8 col-xl-9 p-3">
             <div className="d-flex justify-content-between">
-                <h2>All Courses</h2>
-                <button className="btn btn-outline-primary" onClick={() => setCourseForm(true)}>Add new course</button>
+                <h2><FormattedMessage id="courses" /></h2>
+                <button className="btn btn-outline-primary" onClick={() => setCourseForm(true)}><FormattedMessage id="addCourse" /></button>
             </div>
             <table className="col-12 table mt-3">
                 <thead>
                     <tr>
-
                         <td>
-                            Course Name
+                            <FormattedMessage id="courseName" />
                         </td>
                         <td className="text-center">
-                            Edit
+                            <FormattedMessage id="edit" />
+
                         </td>
                         <td className="text-center">
-                            Delete
+                            <FormattedMessage id="delete" />
                         </td>
                     </tr>
                 </thead>
@@ -130,10 +130,12 @@ export default function AllCourses() {
                                         <button className="btn btn-primary" onClick={() => {
                                             setEdit(true)
                                             setCourseId(course.id)
-                                        }}>Edit</button>
+                                        }}>                            <FormattedMessage id="edit" />
+                                        </button>
                                     </td>
                                     <td className="text-center">
-                                        <button className="btn btn-danger" onClick={() => handleDelete(course.id)}>Delete</button>
+                                        <button className="btn btn-danger" onClick={() => handleDelete(course.id)}>                            <FormattedMessage id="delete" />
+                                        </button>
                                     </td>
                                 </tr>
                             )

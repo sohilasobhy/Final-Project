@@ -13,6 +13,7 @@ import { RateStars } from "../Pages/RateStars/RateStars";
 import axios from "axios";
 import React from 'react';
 import { toast } from 'react-toastify';
+import { FormattedMessage } from "react-intl";
 
 export default function SingleCourseComponent({ course, color }) {
   const [found, setFound] = useState(false)
@@ -53,13 +54,13 @@ export default function SingleCourseComponent({ course, color }) {
         .then(response => {
           let res = response.data;
           if (!res.favouriteCoursesId?.includes(Number(course?.id))) {
-            toast.success('course added to wishlist successfuly')
+            toast.success(<FormattedMessage id="wishlistCourse" />)
             res.favouriteCoursesId.push(Number(course?.id));
             res = res.favouriteCoursesId;
             setFound(true);
           } else {
             res = res.favouriteCoursesId.filter((item) => Number(item) != Number(course.id))
-            toast.warning('course removed from wishlist')
+            toast.warning(<FormattedMessage id="wishlistRemove" />)
             setFound(false);
           }
           console.log({ ...user, favouriteCoursesId: res })
@@ -75,7 +76,7 @@ export default function SingleCourseComponent({ course, color }) {
           console.error('Error:', error);
         });
     } else {
-      toast.error("Please login first !")
+      toast.error(<FormattedMessage id="loginToast" />)
     }
   }
   useEffect(() => {
@@ -95,7 +96,7 @@ export default function SingleCourseComponent({ course, color }) {
             className="col-12 h-100 mainImage object-fit-cover"
           />
           <div className={`position-absolute enrolled overflow-hidden ${user?.subscribed == 1 || validCourse ? `` : `d-none`}`}>
-            <p>Enrolled</p>
+            <p><FormattedMessage id="enrolled" /></p>
           </div>
           <div className=" position-absolute hours d-flex gap-2 align-items-center py-1 px-2">
             <IoTime />
@@ -165,7 +166,7 @@ export default function SingleCourseComponent({ course, color }) {
           </div>
           <Link to={`/single-course/${course.id}`} className="btn px-3 py-2 mt-3 enrollBtn d-flex gap-3 align-items-center">
             {
-              user?.subscribed == 1 || validCourse || validInstCourse ? `Watch Now` : `Enroll Now`} <FontAwesomeIcon icon={faArrowRight} />
+              user?.subscribed == 1 || validCourse || validInstCourse ? <FormattedMessage id="WatchNow" /> : <FormattedMessage id="EnrollNow" />} <FontAwesomeIcon icon={faArrowRight} />
           </Link>
         </div>
       </div>

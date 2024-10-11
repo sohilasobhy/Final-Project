@@ -28,6 +28,9 @@
     }
     .links {
       margin-top: 2rem;
+      a:hover {
+        color: #2db87f;
+      }
       .top {
         font-size: 20px;
         font-weight: 700;

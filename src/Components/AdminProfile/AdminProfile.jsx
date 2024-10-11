@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { $UserInfo, $profile } from "../../Store/Store";
 import { toast } from "react-toastify";
+import { FormattedMessage } from "react-intl";
 export default function AdminProfile() {
     const [user, setUser] = useRecoilState($UserInfo)
     const [profile, setProfile] = useRecoilState($profile)
@@ -31,7 +32,7 @@ export default function AdminProfile() {
                 <div className="">
                     <Link to={"/dashboard/Home-page"} className="d-flex align-items-center gap-2 item py-2 px-5" onClick={() => setProfile(false)}>
                         <MdDashboard />
-                        <p>Dashboard</p>
+                        <p><FormattedMessage id="dashboard" /></p>
                     </Link>
                 </div>
                 <div className="line col-12"></div>
@@ -40,11 +41,11 @@ export default function AdminProfile() {
                     setProfile(false)
                     localStorage.setItem('user', null)
                     sessionStorage.setItem('user', null)
-                    toast.error("You are logged out")
+                    toast.error(<FormattedMessage id="loggedOut" />)
                     setUser(null)
                 }}>
                     <CiLogout />
-                    <p>Logout</p>
+                    <p><FormattedMessage id="logout" /></p>
                 </div>
             </div>
         )

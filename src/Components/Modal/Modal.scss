@@ -1,5 +1,12 @@
 .modal {
   z-index: 9999 !important;
+  .modal-header .btn-close {
+    [dir="rtl"] & {
+      position: absolute;
+      left: 2%;
+      right: auto;
+    }
+  }
   .modal-content {
     background-color: #c1d8c3;
   }

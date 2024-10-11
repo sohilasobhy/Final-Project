@@ -6,12 +6,14 @@ import { LoginSchema } from "../../schemas/LoginScheme"
 import axios from "axios"
 import { useState } from "react"
 import { useRecoilState } from "recoil"
-import { $UserInfo, $loginCourseID } from "../../Store/Store"
+import { $Language, $UserInfo, $loginCourseID } from "../../Store/Store"
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import NavBarLogin from "../../Components/NavBarLogin"
 import { toast } from "react-toastify"
+import { FormattedMessage } from "react-intl"
 export default function LoginPage() {
+    const [lang] = useRecoilState($Language)
     const [message, setMessage] = useState(false)
     const navigate = useNavigate()
     const [, setUserInfo] = useRecoilState($UserInfo)
@@ -41,18 +43,17 @@ export default function LoginPage() {
                                             sessionStorage.setItem(`user`, JSON.stringify(response.data[0]))
                                             setUserInfo(response.data[0])
                                         }
-
-                                        toast.success("You are logged in")
+                                        toast.success(<FormattedMessage id="loggedIn" />)
                                     }
                                 })
                                 .catch((err) => { console.log(err) })
                         }}
                         validationSchema={LoginSchema}>
                         <Form action="post">
-                            <h2>Sign in</h2>
+                            <h2><FormattedMessage id="signIN" /></h2>
                             <div className="inputBox">
                                 <Field type="text" required="required" name="email" className="mt-1" />
-                                <span>Email</span>
+                                <span><FormattedMessage id="Email" /></span>
                                 <i></i>
                             </div>
                             <span className="error">
@@ -60,26 +61,26 @@ export default function LoginPage() {
                             </span>
                             <div className="inputBox">
                                 <Field type={show ? `text` : `password`} required="required" name="password" className="mt-1" />
-                                <span>Password</span>
+                                <span><FormattedMessage id="password" /></span>
                                 <i></i>
                                 <IoMdEyeOff className={`position-absolute show ${show ? "d-none" : ""}`} onClick={() => setShow(true)} />
                                 <IoMdEye className={`position-absolute show ${show == false ? "d-none" : ""}`} onClick={() => setShow(false)} />
                             </div>
                             <span className={`error  ${message ? `d-block` : `d-none`}`}>
-                                Wrong email or password
+                                {lang == "EN" ? "Wrong email or password" : "خطأ في البريد الاكتروني او كلمة السر"}
                             </span>
                             <span className="error">
                                 <ErrorMessage name="password" />
                             </span>
                             <div className="mt-4 wrongPass d-flex gap-1">
                                 <Field type="checkbox" name="remember" />
-                                <span>Remember me</span>
+                                <span><FormattedMessage id="rememberMe" /></span>
                             </div>
                             <div className="links">
                                 {/* <Link to={"/forget-password"}>Forget password</Link> */}
-                                <Link to={"/signup"} className="signup">Signup</Link>
+                                <Link to={"/signup"} className="signup"><FormattedMessage id="Signup" /></Link>
                             </div>
-                            <input type="submit" className="submitBTN" />
+                            <button type="submit" className="submitBTN"><FormattedMessage id="submit" /> </button>
                         </Form>
                     </Formik>
                     <div className="imgCon">

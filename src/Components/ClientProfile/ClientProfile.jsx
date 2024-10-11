@@ -7,6 +7,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { $UserInfo, $profile } from "../../Store/Store";
 import { toast } from "react-toastify";
+import { FormattedMessage } from "react-intl";
+
 export default function ClientProfile() {
     const [user, setUser] = useRecoilState($UserInfo)
     const [profile, setProfile] = useRecoilState($profile)
@@ -38,26 +40,26 @@ export default function ClientProfile() {
                         onClick={() => setProfile(false)}
                     >
                         <MdSlowMotionVideo />
-                        <p>My Progress</p>
+                        <p><FormattedMessage id="myProg" /></p>
                     </Link>
                     <Link to={"/wishlist"} className="d-flex align-items-center gap-2 item py-2 px-5 mt-3"
                         onClick={() => setProfile(false)}
                     >
                         <CiBookmark />
-                        <p>Saved Courses</p>
+                        <p><FormattedMessage id="saveCourse" /></p>
                     </Link>
                 </div>
                 <div className="line col-12"></div>
                 <div className="py-3 px-5 item d-flex gap-2 align-items-center logout" onClick={() => {
                     navigate("/")
-                    toast.error("You are logged out")
+                    toast.error(<FormattedMessage id="loggedOut" />)
                     setProfile(false)
                     setUser(null)
                     localStorage.setItem('user', null)
                     sessionStorage.setItem('user', null)
                 }}>
                     <CiLogout />
-                    <p>Logout</p>
+                    <p><FormattedMessage id="logout" /></p>
                 </div>
             </div>
         )

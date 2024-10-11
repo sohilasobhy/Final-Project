@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { RateStars } from "../RateStars/RateStars";
 import quotation from "../../assets/images/quotation-right-mark.png";
 import man from "../../assets/images/user.png";
+import { FormattedMessage } from "react-intl";
 
 export default function HomeReviews(props) {
   let navigate = useNavigate();
@@ -34,7 +35,6 @@ export default function HomeReviews(props) {
         console.error("There was an error fetching the data!", error);
       });
   }, []);
-  // users
 
   useEffect(() => {
     axios
@@ -46,7 +46,6 @@ export default function HomeReviews(props) {
         console.error("There was an error fetching the data!", error);
       });
   }, []);
-  // Reviews
 
   function getImage(userId) {
     let x = reviewer.find((ele) => ele.id == userId);
@@ -57,9 +56,9 @@ export default function HomeReviews(props) {
     <div className="col-12 container py-5" id="HomeReviews" style={{ marginTop: props.number }}>
       <div className="col-12 d-flex justify-content-center flex-wrap gap-5">
         <div className="col-12 col-lg-4 d-flex flex-column gap-3 align-items-center align-items-lg-start">
-          <h5>TESTIMONIALS</h5>
+          <h5><FormattedMessage id="testimonials" /></h5>
           <div className="d-flex flex-column align-items-center align-items-lg-start">
-            <h2 className="col-12 text-center text-lg-start">What Our Students Have To Say</h2>
+            <h2 className="col-12 text-center text-lg-start"><FormattedMessage id="reviews" /></h2>
             <div className="col-3 mt-1">
               <svg
                 style={{
@@ -81,25 +80,15 @@ export default function HomeReviews(props) {
             </div>
           </div>
           <p className="studentsReviews text-center text-lg-start">
-            Our students love the comprehensive and engaging courses we offer.
-            Here's what they have to say about their learning experiences.
+            <FormattedMessage id="Comment" />
           </p>
-          <div
-            className="position-relative Browse d-flex justify-content-center col-6 mt-5"
-            onClick={() => { navigate("/courses") }}>
-            <button className="d-flex align-items-center gap-3 btn">
-              <p>
-                View All <FontAwesomeIcon icon={faArrowRight} />
-              </p>
-            </button>
-            <div className="position-absolute BTNFilter"></div>
-          </div>
         </div>
         <div className="col-12 col-lg-7 slider p-2 h-100">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={50}
             slidesPerView={1}
+            className='EN'
             autoplay={{ delay: 5000 }}
             loop={true}
             breakpoints={{

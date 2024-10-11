@@ -5,11 +5,13 @@ import { useRecoilState } from 'recoil'
 import { $HomeReviews, $ReviewForm } from '../Store/Store'
 import CustomModal from '../Components/Modal/Modal'
 import Swal from 'sweetalert2'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 export default function AddReview() {
     const [reviews, setReviews] = useState([])
     const [HomeReviews, setHomeReviews] = useRecoilState($HomeReviews)
     const [AddForm, setAddForm] = useRecoilState($ReviewForm)
+    let intl = useIntl();
     let url = "http://localhost:3000/HomeReviews"
     useEffect(() => {
         axios
@@ -40,19 +42,21 @@ export default function AddReview() {
         let review = reviews.find((element) => element.id == reviewId)
         console.log(review)
         Swal.fire({
-            title: "Are you sure you want to add this review?",
+            title: intl.formatMessage({ id: 'courseAdding' }),
             icon: "success",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, add it!"
+            confirmButtonText: intl.formatMessage({ id: 'confirm' }),
+            cancelButtonText: intl.formatMessage({ id: 'cancle' }),
         }).then((result) => {
             if (result.isConfirmed) {
                 axios.post(url, review)
                     .then(() => {
                         Swal.fire({
-                            title: "Added!",
-                            text: "Your review has been added.",
+                            title: intl.formatMessage({ id: 'added' }),
+                            text: intl.formatMessage({ id: 'courseDone' }),
+                            confirmButtonText: intl.formatMessage({ id: "confirm" }),
                             icon: "success"
                         });
                         setHomeReviews([...HomeReviews, review])
@@ -60,8 +64,8 @@ export default function AddReview() {
                     })
                     .catch((error) => {
                         Swal.fire({
-                            title: "Error!",
-                            text: "There was a problem adding the review.",
+                            title: intl.formatMessage({ id: 'error' }),
+                            text: intl.formatMessage({ id: 'proplem' }),
                             icon: "error"
                         });
                     });
@@ -71,18 +75,18 @@ export default function AddReview() {
     }
     if (AddForm) {
         return (
-            <CustomModal title={"Add Review To Home"} onHide={() => setAddForm(false)} show={AddForm}>
+            <CustomModal title={<FormattedMessage id="addReview" />} onHide={() => setAddForm(false)} show={AddForm}>
 
                 <table className='table table-bordered'>
                     <thead>
                         <tr>
 
                             <td>
-                                Review
+                                <FormattedMessage id="review" />
                             </td>
 
                             <td className='text-center'>
-                                Add
+                                <FormattedMessage id="add" />
                             </td>
                         </tr>
                     </thead>
@@ -96,7 +100,7 @@ export default function AddReview() {
                                         </td>
                                         <td className='text-center'>
                                             <button className='btn btn-primary ' onClick={() => AddToHomeRewiews(review.id)}>
-                                                Add
+                                                <FormattedMessage id="add" />
                                             </button>
                                         </td>
                                     </tr>

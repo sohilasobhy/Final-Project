@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
 export default function HeroSection() {
   let navigate = useNavigate();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -25,16 +26,18 @@ export default function HeroSection() {
     <div id="HeroSection" className="col-12 overflow-hidden">
       <div className="col-12 px-5 pt-5 d-flex justify-content-between align-items-center gap-5 container flex-wrap ">
         <div className="left col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start gap-5 gap-lg-4 z-1 position-relative ">
-          <h1 className="col-12 col-lg-9 ">
-            Get <span>1000+</span> Best Online Courses From EduJourney
+          <h1 className="col-12 col-lg-9">
+            <FormattedMessage id="get" />
+            &nbsp;
+            <span><FormattedMessage id="number" /></span>
+            <FormattedMessage id="title" />
           </h1>
           <p>
-            Unlock Your Potential with EduJourney's Online Courses. Join a
-            Community of Learners and Start Achieving Your Goals Today.
+            <FormattedMessage id="subTitle" />
           </p>
           <button className="btn btn-primary col-6 col-lg-4 py-3 d-flex align-items-center gap-2 justify-content-center position-relative" onClick={() => { navigate("/courses") }}>
             <div className="position-absolute btnBG w-100 h-100"></div>
-            <p className=" z-2">Find courses</p>
+            <p className=" z-2"><FormattedMessage id="findCourses" /></p>
             <FontAwesomeIcon icon={faArrowRight} className=" z-2" />
           </button>
         </div>

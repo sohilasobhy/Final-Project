@@ -9,6 +9,17 @@
     right: 30%;
   }
 }
+@keyframes movingLeft {
+  0% {
+    left: 30%;
+  }
+  50% {
+    left: 40%;
+  }
+  100% {
+    left: 30%;
+  }
+}
 @keyframes bounce {
   0% {
     bottom: 0;
@@ -39,6 +50,11 @@
     h1 {
       font-size: 55px;
       font-weight: bold;
+      [dir="rtl"] & {
+        text-align: right;
+        width: 100% !important;
+        line-height: 1.5;
+      }
       span {
         color: #ee4a62;
         font-weight: 700;
@@ -46,13 +62,32 @@
       }
       @media (max-width: 992px) {
         font-size: 40px;
+        [dir="rtl"] & {
+          text-align: center;
+        }
       }
       @media (max-width: 768px) {
         font-size: 35px;
+        [dir="rtl"] & {
+          text-align: center;
+        }
       }
     }
     p {
       font-size: 18px;
+      [dir="rtl"] & {
+        text-align: right;
+      }
+      @media (max-width: 992px) {
+        [dir="rtl"] & {
+          text-align: center;
+        }
+      }
+      @media (max-width: 768px) {
+        [dir="rtl"] & {
+          text-align: center;
+        }
+      }
     }
     button {
       background-color: #1ab69d;
@@ -79,6 +114,9 @@
     border-radius: 50px 50px 50px 50px;
     bottom: 42%;
     right: 42%;
+    [dir="rtl"] & {
+      display: none !important;
+    }
   }
   .blueCircle {
     height: 70px;
@@ -93,27 +131,53 @@
   .shape2 {
     top: 20%;
     right: 0;
+    [dir="rtl"] & {
+      left: 0;
+      right: auto;
+    }
   }
   .shape3 {
     top: 25%;
     right: 12%;
+    [dir="rtl"] & {
+      top: 25%;
+      left: 8%;
+      right: auto;
+    }
   }
   .shape4 {
     top: 15%;
     right: 30%;
     animation: moving 7s linear infinite;
+    [dir="rtl"] & {
+      left: 30%;
+      right: auto;
+      animation: movingLeft 7s linear infinite;
+    }
   }
   .shape5 {
     top: 30%;
     right: 30%;
+    [dir="rtl"] & {
+      left: 30%;
+      right: auto;
+    }
   }
   .shape6 {
     bottom: 20%;
     right: 7%;
+    [dir="rtl"] & {
+      left: 7%;
+      right: auto;
+    }
   }
   .shape1 {
     top: 15%;
     left: 10%;
+    [dir="rtl"] & {
+      right: 10%;
+      left: auto;
+    }
   }
 }
 #Features {
@@ -124,6 +188,7 @@
     height: 80px;
     background-color: #4bc395;
   }
+
   .putBorder {
     border-right: 1px solid #4bc395;
   }
@@ -250,6 +315,14 @@
     top: 5%;
     right: -2%;
   }
+  [dir="rtl"] & {
+    .awards {
+      .text {
+        font-size: 25px;
+        font-weight: 500;
+      }
+    }
+  }
   .img1 {
     object-fit: contain;
     height: 60vh;
@@ -291,6 +364,9 @@
       font-size: 1.3rem;
       font-weight: 600;
       color: #808080;
+      [dir="rtl"] & {
+        font-size: 2rem;
+      }
     }
     h1 {
       line-height: 1.2;
@@ -426,8 +502,12 @@
   }
 }
 .topLeft {
-  border-right: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  [dir="rtl"] & {
+    border-right: 0;
+    border-left: 1px solid #e5e5e5;
+  }
   @media (max-width: 768px) {
     border: 0;
   }
@@ -446,6 +526,10 @@
 }
 .bottomLeft {
   border-right: 1px solid #e5e5e5;
+  [dir="rtl"] & {
+    border-right: 0;
+    border-left: 1px solid #e5e5e5;
+  }
   @media (max-width: 768px) {
     border: 0;
   }
@@ -481,6 +565,9 @@
   .studentsReviews {
     font-size: 20px;
     color: #8d8d8d;
+    [dir="rtl"] & {
+      text-align: right !important;
+    }
   }
   .Browse {
     padding: 0.8rem;
@@ -595,7 +682,11 @@
       }
     }
     .middle {
-      padding: 0.4rem 0.7rem;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: white;
       border-radius: 50%;
       border: solid 4px #1ab69d33;

@@ -7,7 +7,6 @@ import AdminProfile from "./AdminProfile/AdminProfile";
 
 export default function Profile() {
     const [userInfo] = useRecoilState($UserInfo)
-    console.log(userInfo?.role)
     return (
         <IsLoggedIn>
             {

@@ -34,6 +34,13 @@
       outline: none !important;
       --bs-accordion-btn-focus-box-shadow: 0;
     }
+    [dir="rtl"] & {
+      .accordion-button:not(.collapsed)::after,
+      .accordion-button::after {
+        position: absolute;
+        left: 3%;
+      }
+    }
     .header {
       font-size: 14px;
       font-weight: 600;

@@ -6,10 +6,12 @@ import { useEffect } from "react";
 import axios from "axios";
 import { EditCourseScheme } from "../schemas/EditCourseScheme";
 import Swal from "sweetalert2";
+import { FormattedMessage, useIntl } from "react-intl";
 export default function EditForm() {
     const [openModal, setOpen] = useRecoilState($EditForm);
     const [allCourses, setAllCourses] = useRecoilState($AllCourses)
     const [courseId] = useRecoilState($EditFormCourse);
+    let intl = useIntl()
     const course = allCourses.find((e) => {
         return (
             e.id === courseId
@@ -53,20 +55,21 @@ export default function EditForm() {
         console.log(values);
 
         Swal.fire({
-            title: "Are you sure you want to apply this edits?",
+            title: intl.formatMessage({ id: "areYouSure" }),
             icon: "success",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, apply it!"
+            confirmButtonText: intl.formatMessage({ id: "confirm" }),
+            cancelButtonText: intl.formatMessage({ id: "cancle" })
         }).then((result) => {
             if (result.isConfirmed) {
                 axios
                     .put(`http://localhost:3000/Courses/${Number(courseId)}`, values)
                     .then((res) => {
                         Swal.fire({
-                            title: "Added!",
-                            text: "Edits have been saved",
+                            title: intl.formatMessage({ id: "courseDone" }),
+                            confirmButtonText: intl.formatMessage({ id: "confirm" }),
                             icon: "success"
                         });
                         setOpen(false)
@@ -102,8 +105,8 @@ export default function EditForm() {
                     })
                     .catch((error) => {
                         Swal.fire({
-                            title: "Error!",
-                            text: "There was a problem saving these edits.",
+                            title: intl.formatMessage({ id: "error" }),
+                            text: intl.formatMessage({ id: "problem" }),
                             icon: "error"
                         });
                     });
@@ -114,7 +117,7 @@ export default function EditForm() {
     };
 
     return (
-        <CustomModal show={openModal} onHide={() => setOpen(false)} title="Edit course form">
+        <CustomModal show={openModal} onHide={() => setOpen(false)} title={<FormattedMessage id="editCourse" />}>
             {course ? (
                 <Formik
                     initialValues={initialValues}
@@ -126,14 +129,14 @@ export default function EditForm() {
                         <div className="FormContainer">
                             <Form className="d-flex flex-column gap-3 editForm">
                                 <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
-                                    <h5 htmlFor="name">Course Name</h5>
+                                    <h5 htmlFor="name"><FormattedMessage id="courseName" />:</h5>
                                     <Field id="name" name="name" placeholder="Course Name" />
                                     <span className="error">
                                         <ErrorMessage name="name" />
                                     </span>
                                 </div>
                                 <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
-                                    <h5 htmlFor="level">Level</h5>
+                                    <h5 htmlFor="level"><FormattedMessage id="courseLevel" />:</h5>
                                     <Field as="select" name="level">
                                         <option value="Beginner">Beginner</option>
                                         <option value="Intermediat">Intermediat</option>
@@ -144,34 +147,34 @@ export default function EditForm() {
                                     </span>
                                 </div>
                                 <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
-                                    <h5 htmlFor="price">Price</h5>
+                                    <h5 htmlFor="price"><FormattedMessage id="coursePrice" />:</h5>
                                     <Field id="price" name="price" placeholder="course price" />
                                     <span className="error">
-                                        <ErrorMessage name="level" />
+                                        <ErrorMessage name="price" />
                                     </span>
                                 </div>
                                 <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
-                                    <h5 htmlFor="lessons">Lessons</h5>
+                                    <h5 htmlFor="lessons"><FormattedMessage id="lessons" /></h5>
                                     <Field id="lessons" name="lessons" type="number" placeholder="course lessons" />
                                     {errors.lessons && touched.lessons ? <div>{errors.lessons}</div> : null}
                                 </div>
                                 <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
-                                    <h5 htmlFor="Duration">Duration</h5>
+                                    <h5 htmlFor="Duration"><FormattedMessage id="duration" /></h5>
                                     <Field id="duration" name="Duration" placeholder="course duration" />
                                     {errors.Duration && touched.Duration ? <div>{errors.Duration}</div> : null}
                                 </div>
                                 <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
-                                    <h5 htmlFor="instructor">Instructor</h5>
+                                    <h5 htmlFor="instructor"><FormattedMessage id="instructor" /></h5>
                                     <Field id="instructor" name="Instructor" placeholder="course instructor" />
                                     {errors.Instructor && touched.Instructor ? <div>{errors.Instructor}</div> : null}
                                 </div>
                                 <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
-                                    <h5 htmlFor="language">Language</h5>
+                                    <h5 htmlFor="language"><FormattedMessage id="language" /></h5>
                                     <Field id="language" name="Language" placeholder="course language" />
                                     {errors.Language && touched.Language ? <div>{errors.Language}</div> : null}
                                 </div>
                                 <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1">
-                                    <h5 htmlFor="certification">Certification</h5>
+                                    <h5 htmlFor="certification"><FormattedMessage id="Certification" /></h5>
                                     <Field id="certification" name="Certification" placeholder="certification" />
                                     {errors.Certification && touched.Certification ? <div>{errors.Certification}</div> : null}
                                 </div>
@@ -181,9 +184,9 @@ export default function EditForm() {
                                             {values.courseContent.length > 0 &&
                                                 values.courseContent.map((content, index) => (
                                                     <div key={index}>
-                                                        <h3 className="mt-2">Category {index + 1}:</h3>
+                                                        <h3 className="mt-2"><FormattedMessage id="Category" /> {index + 1}:</h3>
                                                         <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1 mt-4">
-                                                            <h5 htmlFor={`courseContent.${index}.category`}>Category</h5>
+                                                            <h5 htmlFor={`courseContent.${index}.category`}><FormattedMessage id="Category" /></h5>
                                                             <Field
                                                                 name={`courseContent.${index}.category`}
                                                                 placeholder="Category Name"
@@ -198,19 +201,17 @@ export default function EditForm() {
                                                             type="button"
                                                             onClick={() => remove(index)}
                                                         >
-                                                            Remove Category
-                                                        </button>
+                                                            <FormattedMessage id="removeCat" />                                                        </button>
                                                         <FieldArray name={`courseContent.${index}.lessons`}>
                                                             {({ insert, remove: removeLesson, push: pushLesson }) => (
                                                                 <div className="d-flex flex-column gap-3">
                                                                     {content.lessons.length > 0 &&
                                                                         content.lessons.map((lesson, lessonIndex) => (
                                                                             <div key={lessonIndex} className="d-flex flex-column gap-3">
-                                                                                <h3 className="mt-4">Lesson {lessonIndex + 1}:</h3>
+                                                                                <h3 className="mt-4"><FormattedMessage id="lesson" /> {lessonIndex + 1}:</h3>
                                                                                 <div className="col-12 col-md-10 col-lg-8 d-flex flex-column gap-1 mt-2">
                                                                                     <h5 htmlFor={`courseContent.${index}.lessons.${lessonIndex}.LessonName`}>
-                                                                                        Lesson Name
-                                                                                    </h5>
+                                                                                        <FormattedMessage id="lessonName" />                                                                                    </h5>
                                                                                     <Field
                                                                                         name={`courseContent.${index}.lessons.${lessonIndex}.LessonName`}
                                                                                         placeholder="Lesson Name"
@@ -227,7 +228,7 @@ export default function EditForm() {
                                                                                 </div>
                                                                                 <div>
                                                                                     <h5 htmlFor={`courseContent.${index}.lessons.${lessonIndex}.desc`}>
-                                                                                        Description
+                                                                                        <FormattedMessage id="descLesson" />
                                                                                     </h5>
                                                                                     <Field
                                                                                         name={`courseContent.${index}.lessons.${lessonIndex}.desc`}
@@ -242,8 +243,7 @@ export default function EditForm() {
                                                                                 </div>
                                                                                 <div>
                                                                                     <h5 htmlFor={`courseContent.${index}.lessons.${lessonIndex}.Link`}>
-                                                                                        Video Link
-                                                                                    </h5>
+                                                                                        <FormattedMessage id="lessonLink" />:                                                                                    </h5>
                                                                                     <Field
                                                                                         name={`courseContent.${index}.lessons.${lessonIndex}.Link`}
                                                                                         placeholder="Lesson Video Link"
@@ -262,8 +262,7 @@ export default function EditForm() {
                                                                                     }
                                                                                     className=" btn btn-danger"
                                                                                 >
-                                                                                    Remove Lesson
-                                                                                </button>
+                                                                                    <FormattedMessage id="removLesson" />                                                                                </button>
                                                                             </div>
                                                                         ))}
                                                                     <button
@@ -271,7 +270,7 @@ export default function EditForm() {
                                                                         type="button"
                                                                         onClick={() => pushLesson({ LessonName: "", desc: "", Link: "" })}
                                                                     >
-                                                                        Add Lesson
+                                                                        <FormattedMessage id="addLesson" />
                                                                     </button>
                                                                 </div>
                                                             )}
@@ -288,13 +287,13 @@ export default function EditForm() {
                                                     })
                                                 }
                                             >
-                                                Add Category
+                                                <FormattedMessage id="addCat" />
                                             </button>
                                         </div>
                                     )}
                                 </FieldArray>
 
-                                <button type="submit" className="btn btn-success">Submit</button>
+                                <button type="submit" className="btn btn-success"><FormattedMessage id="submit" /></button>
                             </Form>
                         </div>
                     )}

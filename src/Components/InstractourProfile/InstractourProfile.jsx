@@ -3,6 +3,8 @@ import { CiBookmark, CiLogout } from "react-icons/ci";
 import { Link, useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { $UserInfo, $profile } from "../../Store/Store";
+import { FormattedMessage } from "react-intl";
+import { toast } from "react-toastify";
 
 export default function InstractourProfile() {
     const [profile, setProfile] = useRecoilState($profile)
@@ -28,7 +30,7 @@ export default function InstractourProfile() {
                 <div>
                     <Link to={"/myCourses"} className="d-flex align-items-center gap-2 item py-2 px-5 mt-3" onClick={() => setProfile(false)}>
                         <CiBookmark />
-                        <p>My Courses</p>
+                        <p><FormattedMessage id="myCourses" /></p>
                     </Link>
                 </div>
                 <div className="line col-12"></div>
@@ -38,11 +40,11 @@ export default function InstractourProfile() {
                     localStorage.setItem('user', null)
                     sessionStorage.setItem('user', null)
                     setUser(null)
-                    toast.error("You are logged out")
+                    toast.error(<FormattedMessage id="loggedOut" />)
 
                 }}>
                     <CiLogout />
-                    <p>Logout</p>
+                    <p><FormattedMessage id="logout" /></p>
                 </div>
             </div >
         )

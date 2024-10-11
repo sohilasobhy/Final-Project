@@ -15,9 +15,10 @@ import { RateStars } from '../RateStars/RateStars';
 import CommercialVid from './CommercialVid';
 import CourseDetails from './CourseDetails';
 import { useRecoilState } from 'recoil';
-import { $UserInfo } from '../../Store/Store';
+import { $Language, $UserInfo } from '../../Store/Store';
 import { ReviewScheme } from '../../schemas/ReviweScheme';
 import { toast } from 'react-toastify';
+import { FormattedMessage } from 'react-intl';
 const CourseOverview = () => {
     let url = "http://localhost:3000/Reviews"
     const [key, setKey] = useState('home');
@@ -30,8 +31,9 @@ const CourseOverview = () => {
     const [reviewsShow, setReviewsShow] = useState(3)
     const [isloading, setIsloading] = useState(false);
     const [userInfo] = useRecoilState($UserInfo)
+    const [lang] = useRecoilState($Language)
     console.log(userInfo)
-    const [valid, setValid] = useState(false)
+    const [valid] = useState(false)
     let handleSubmit = (values, { resetForm }) => {
         let newRates = courses?.rates + 1
         let newTotal = courses?.totalRating + values.rating
@@ -40,17 +42,16 @@ const CourseOverview = () => {
                 console.log(values)
                 setReviews([...Reviews, values]);
                 console.log([...Reviews, values])
-                values.rating = (Number(newTotal) / Number(newRates)).toFixed(1)
-                console.log(values.rating)
-                axios.put(`http://localhost:3000/Courses/${id}`, { ...courses, rating: values.rating })
-                toast.success("Your review has been added");
+                let newRating = (Number(newTotal) / Number(newRates)).toFixed(1)
+                axios.put(`http://localhost:3000/Courses/${id}`, { ...courses, rating: newRating })
+                toast.success(<FormattedMessage id="reviewAdded" />);
                 resetForm();
             })
             .catch(error => {
                 console.error('Error:', error);
             });
+        console.log(values)
     };
-    console.log(Reviews)
     useEffect(() => {
         setIsloading(true)
         axios
@@ -125,31 +126,19 @@ const CourseOverview = () => {
                 });
         }
     }, [courses])
-    console.log(Reviews)
-    console.log(courses)
-    useEffect(() => {
-        // if (userInfo != null && userInfo?.favouriteCoursesId.includes(Number(courses?.id))) {
-        // setValid(true)
-        // }
-    }, [userInfo])
-    console.log(valid)
     let relatedCourses = Cateories?.filter((course) => {
         return course?.id != courses?.id;
     });
-    // const [relatedCourses] = Cateories?.filter((course) => { return console.log(course) })
     function getReviewerImage(userId) {
         let x = reviewers?.find((ele) => ele.id == userId);
-        console.log(x);
         return x;
     }
-
-
     let content;
 
     if (isloading) {
         content = <div className="d-flex align-items-center justify-content-center min-vh-100"><Spinner style={{ width: '5rem', height: '5rem' }} size="lg" animation="border" variant="primary" /></div>
     } else if (!courses) {
-        content = <h2>No Course Data</h2>
+        content = <h2><FormattedMessage id='NoCourseData' /></h2>
     } else {
         content =
             <div id='main'>
@@ -159,13 +148,13 @@ const CourseOverview = () => {
                     onSelect={(k) => setKey(k)}
                     className="mb-3 col-12 col-lg-6 ms-0 ms-lg-5"
                 >
-                    <Tab eventKey="home" title="Overview" className='col-12 col-lg-6 p-2 p-lg-5 Overview'>
+                    <Tab eventKey="home" title={<FormattedMessage id='Overview' />} className='col-12 col-lg-6 p-2 p-lg-5 Overview'>
                         <div className='p-5'>
-                            <h3 className=' align-self-start'>Course Overview</h3>
+                            <h3 className=' align-self-start'><FormattedMessage id='CourseOverview' /></h3>
                             <p className='mt-4'>
                                 {courses.desc}
                             </p>
-                            <h3 className='mt-5 align-self-start'>What You’ll Learn? </h3>
+                            <h3 className='mt-5 align-self-start'><FormattedMessage id='WhatYoullLearn' /></h3>
                             <div className='mt-3'>
                                 {courses.obj.map((objective, index) => {
                                     return (
@@ -178,7 +167,7 @@ const CourseOverview = () => {
                             </div>
                         </div>
                     </Tab>
-                    <Tab eventKey="profile" title="Curriculum" className='col-12 col-lg-6 p-2 p-lg-5 Curriculum'>
+                    <Tab eventKey="profile" title={<FormattedMessage id='curriculum' />} className='col-12 col-lg-6 p-2 p-lg-5 Curriculum'>
                         <div>
                             <Accordion defaultActiveKey={['0']} alwaysOpen>
                                 {
@@ -204,7 +193,7 @@ const CourseOverview = () => {
                             </Accordion>
                         </div>
                     </Tab>
-                    <Tab eventKey="contact" title="Instructor" className='col-12 col-lg-8 p-1 '>
+                    <Tab eventKey="contact" title={<FormattedMessage id='instructors' />} className='col-12 col-lg-8 p-1 '>
                         <div className='p-5 contant d-flex flex-column flex-md-row gap-4 instructorInfo align-items-center align-items-lg-start'>
                             <img src={`/${instractour?.img}`} alt="instructor-img" />
                             <div className='col-12 col-md-7 col-lg-6 d-flex flex-column gap-4'>
@@ -234,7 +223,7 @@ const CourseOverview = () => {
                             </div>
                         </div>
                     </Tab>
-                    <Tab eventKey="new-tab" title="Reviews">
+                    <Tab eventKey="new-tab" title={<FormattedMessage id='reviews' />}>
                         <div className='px-2 py-5 p-md-5 contant col-12 col-lg-6'>
                             <div className="top  d-flex flex-column flex-md-row align-items-center gap-5 col-12">
                                 <div className='rating d-flex flex-column align-items-center justify-content-center gap-3'>
@@ -289,16 +278,16 @@ const CourseOverview = () => {
                                         {({ setFieldValue }) => (
 
                                             <Form className='col-12'>
-                                                <h4>Leave a review:</h4>
+                                                <h4><FormattedMessage id='leaveReview' />:</h4>
                                                 <div className='d-flex flex-column align-items-center gap-2 p-3 ms-3'>
                                                     <RateStarsClick setFieldValue={setFieldValue} />
-                                                    <h4>Add Your Review</h4>
-                                                    <Field name="comment" type="text" placeholder='Write your review' className='col-8  comment' />
+                                                    <h4 ><FormattedMessage id='addYourReview' /></h4>
+                                                    <Field name="comment" type="text" placeholder={lang == "EN" ? "Write Your Review" : "ادخل رأيك"} className='col-8  comment' />
                                                     <span className='text-danger fw-bold'>
                                                         <ErrorMessage name='comment' />
                                                     </span>
                                                     <button type='submit' className='col-8 btn btn-success'>
-                                                        submit
+                                                        <FormattedMessage id='submit' />
                                                     </button>
                                                 </div>
                                             </Form>
@@ -306,7 +295,7 @@ const CourseOverview = () => {
                                     </Formik>
                                 </div>}
                             <div className="Reviews mt-5 ">
-                                <h4>Reviews:</h4>
+                                <h4><FormattedMessage id='reviews' />:</h4>
                                 {console.log(Reviews)}
                                 {Reviews?.length > 0 ?
                                     Reviews.slice(0, reviewsShow).map((item, index) => {
@@ -327,10 +316,10 @@ const CourseOverview = () => {
                                     : <h5 className='text-muted py-3'>No Reviews To Show</h5>}
                                 <div className="d-flex align-items-center gap-3 buttons">
                                     {reviewsShow < Reviews?.length &&
-                                        <Button onClick={() => setReviewsShow(reviewsShow + 3)} className='btn1'>Show More</Button>
+                                        <Button onClick={() => setReviewsShow(reviewsShow + 3)} className='btn1'><FormattedMessage id='showMore' /></Button>
                                     }
                                     {reviewsShow >= 6 &&
-                                        <Button variant='danger' onClick={() => setReviewsShow(reviewsShow - 3)}>Show Less</Button>
+                                        <Button variant='danger' onClick={() => setReviewsShow(reviewsShow - 3)}><FormattedMessage id='showLess' /></Button>
                                     }
                                 </div>
                             </div>
@@ -342,7 +331,7 @@ const CourseOverview = () => {
                     {
                         Cateories?.length > 1 ?
                             <div>
-                                <h3>Courses You May Like</h3>
+                                <h3><FormattedMessage id='CoursesYouMayLike' /></h3>
                                 <div className='row align-items-stretch mt-3 g-5 g-lg-3 justify-content-center'>
                                     {relatedCourses?.slice(0, 3).map((course) => {
                                         return (

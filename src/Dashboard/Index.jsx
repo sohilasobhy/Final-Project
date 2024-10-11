@@ -15,6 +15,7 @@ import EditCategoryForm from "./EditCategoryForm";
 import AddAdmin from "./AddAdmin";
 import AddSubPlans from "./AddSubPlans";
 import EditPlans from "./EditPlans";
+import { FormattedMessage } from "react-intl";
 export default function DashboardLayout() {
     const [userInfo] = useRecoilState($UserInfo)
     let navigate = useNavigate()
@@ -38,9 +39,10 @@ export default function DashboardLayout() {
             </div>
         )
     } else {
+        toast.error(<FormattedMessage id="loginToast" />)
         useEffect(() => {
             navigate("/")
-        }, [])
+        })
     }
 
 }

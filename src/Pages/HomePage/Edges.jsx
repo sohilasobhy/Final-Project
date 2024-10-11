@@ -6,6 +6,7 @@ import videoCon from "../../assets/images/videoCon.png";
 import award from "../../assets/images/award.png";
 import { useRecoilState } from "recoil";
 import { $Video } from "../../Store/Store";
+import { FormattedMessage } from "react-intl";
 
 export default function Edges() {
   const [Video, setVideo] = useRecoilState($Video);
@@ -35,17 +36,17 @@ export default function Edges() {
               </div>
               <div>
                 <p className="numbers">29+</p>
-                <p className="text">Wonderful Awards</p>
+                <p className="text"><FormattedMessage id="WonderfulAwards" /></p>
               </div>
             </div>
             <img src={img1} alt="" className=" img1 " />
           </div>
           <div className="col-12 col-lg-6">
             <div className=" d-flex flex-column justify-content-center gap-3 right py-5 px-5 px-lg-0">
-              <p className="p1">About Us</p>
+              <p className="p1"><FormattedMessage id="about" /></p>
               <div className="col-10 d-flex flex-column gap-2">
                 <h1>
-                  Learn & Grow Your Skills From <span>Anywhere</span>
+                  <FormattedMessage id="learn" /> <span><FormattedMessage id="Anywhere" /></span>
                 </h1>
                 <div className="col-3">
                   <svg
@@ -68,20 +69,20 @@ export default function Edges() {
                 </div>
               </div>
               <p className="p2 mb-3 mb-md-0">
-                At EduJourney, we're committed to helping you learn and grow your skills from anywhere, at any time. Whether you're looking to advance your career or explore new passions, we provide the tools and resources you need to succeed.
+                <FormattedMessage id="commited" />
               </p>
               <div className="d-flex flex-column gap-3">
                 <div className="d-flex justify-content-start gap-2 align-content-center about">
                   <img src={img2} alt="" />
-                  <p>Expert Trainers</p>
+                  <p><FormattedMessage id="ExpertTrainers" /></p>
                 </div>
                 <div className="d-flex justify-content-start gap-2 align-content-center  about">
                   <img src={img2} alt="" />
-                  <p>Online Remote Learning</p>
+                  <p><FormattedMessage id="OnlineRemoteLearning" /></p>
                 </div>
                 <div className="d-flex justify-content-start gap-2 align-content-center about">
                   <img src={img2} alt="" />
-                  <p>Lifetime Access</p>
+                  <p><FormattedMessage id="LifetimeAccess" /></p>
                 </div>
               </div>
             </div>

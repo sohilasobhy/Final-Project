@@ -3,12 +3,14 @@ import { useRecoilState } from 'recoil'
 import { $EditSubPlans, $EditedPlan, $addSubPlan, $allPlans } from '../Store/Store'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 export default function SubPlans() {
     const [, setOpen] = useRecoilState($addSubPlan)
     const [, setEdit] = useRecoilState($EditSubPlans)
     const [, setEditedPlan] = useRecoilState($EditedPlan)
     const [plans, setPlans] = useRecoilState($allPlans)
+    let intl = useIntl()
     useEffect(() => {
         axios
             .get("http://localhost:3000/SubPlans")
@@ -21,27 +23,28 @@ export default function SubPlans() {
     }, [])
     function handleDelete(id) {
         Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
+            title: intl.formatMessage({ id: "areYouSure" }),
+            text: intl.formatMessage({ id: "revert" }),
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
+            confirmButtonText: intl.formatMessage({ id: "confirm" }),
+            cancelButtonText: intl.formatMessage({ id: "cancle" }),
         }).then((result) => {
             if (result.isConfirmed) {
                 axios.delete(`http://localhost:3000/SubPlans/${id}`)
                     .then(() => {
                         Swal.fire({
-                            title: "Deleted!",
-                            text: "Your plan has been deleted.",
+                            title: intl.formatMessage({ id: "deleted" }),
+                            confirmButtonText: intl.formatMessage({ id: "confirm" }),
                             icon: "success"
                         });
                     })
                     .catch((error) => {
                         Swal.fire({
-                            title: "Error!",
-                            text: "There was a problem deleting the category.",
+                            title: intl.formatMessage({ id: "error" }),
+                            text: intl.formatMessage({ id: "problem" }),
                             icon: "error"
                         });
                     });
@@ -53,26 +56,26 @@ export default function SubPlans() {
     return (
         <div id="SubPlans" className="position-absolute top-0 col-11 col-md-7 col-lg-8 col-xl-9 p-3">
             <div className="d-flex justify-content-between">
-                <h2>All Users</h2>
-                <button className="btn btn-outline-primary" onClick={() => setOpen(true)}>Add subscription plan</button>
+                <h2><FormattedMessage id='subPlans' /></h2>
+                <button className="btn btn-outline-primary" onClick={() => setOpen(true)}><FormattedMessage id='adPlan' /></button>
             </div>
             <table className="col-12 table mt-3">
                 <thead>
                     <tr className='text-center' >
                         <td >
-                            Plan Duration
+                            <FormattedMessage id='planDuration' />
                         </td>
                         <td >
-                            Plan Price
+                            <FormattedMessage id='planPrice' />
                         </td>
                         <td >
-                            Plan Charge
+                            <FormattedMessage id='planCharge' />
                         </td>
                         <td className='text-center'>
-                            Edit
+                            <FormattedMessage id='edit' />
                         </td>
                         <td className='text-center'>
-                            Delete
+                            <FormattedMessage id='delete' />
                         </td>
                     </tr>
                 </thead>
@@ -94,12 +97,12 @@ export default function SubPlans() {
                                         <button className='btn btn-primary' onClick={() => {
                                             setEdit(true)
                                             setEditedPlan(plan.id)
-                                        }}>Edit</button>
+                                        }}><FormattedMessage id='edit' /></button>
                                     </td>
                                     <td className='text-center'>
                                         <button className='btn btn-danger' onClick={() => {
                                             handleDelete(plan.id)
-                                        }}>Delete</button>
+                                        }}><FormattedMessage id='delete' /></button>
                                     </td>
                                 </tr>
                             )

@@ -3,6 +3,7 @@ import shape3 from "../../assets/images/shape3.png";
 import shape1 from "../../assets/images/shape1.png";
 import shape2 from "../../assets/images/shape-04.png";
 import Counter from "./Counter";
+import { FormattedMessage } from "react-intl";
 
 export default function Stat() {
   const [play, setPlay] = useState(false);
@@ -35,25 +36,25 @@ export default function Stat() {
             <Counter initialCount={0} targetValue={45} incrementValue={1} updateInterval={30} duration={2000} />
             <p className="point">.</p>
             <Counter initialCount={0} targetValue={2} incrementValue={1} updateInterval={100} duration={2000} />
-            <p className="point">K</p>
+            <p className="point"><FormattedMessage id="K" /></p>
           </div>
-          <p>Student Enrolled</p>
+          <p><FormattedMessage id="StudentEnrolled" /></p>
         </div>
         <div className="col-12 col-md-6 px-2 py-5 topRight box d-flex flex-column align-items-center">
           <div className="num d-flex align-items-center justify-content-center">
             <Counter initialCount={0} targetValue={32} incrementValue={1} updateInterval={30} duration={2000} />
             <p className="point">.</p>
             <Counter initialCount={0} targetValue={4} incrementValue={1} updateInterval={100} duration={2000} />
-            <p className="point">K</p>
+            <p className="point"><FormattedMessage id="K" /></p>
           </div>
-          <p>CLASS COMPLETED</p>
+          <p><FormattedMessage id="CLASSCOMPLETED" /></p>
         </div>
         <div className="col-12 col-md-6 px-2 py-5 bottomLeft box d-flex flex-column align-items-center">
           <div className="num d-flex align-items-center justify-content-center">
             <Counter initialCount={0} targetValue={354} incrementValue={10} updateInterval={30} duration={2000} />
             <p className="point">+</p>
           </div>
-          <p>TOP INSTRUCTORS</p>
+          <p><FormattedMessage id="TOPINSTRUCTORS" /></p>
         </div>
         <div className="col-12 col-md-6 px-2 py-5 bottomRight box d-flex flex-column align-items-center">
           <div className="num d-flex align-items-center justify-content-center">
@@ -62,7 +63,7 @@ export default function Stat() {
             <Counter initialCount={0} targetValue={9} incrementValue={1} updateInterval={30} duration={2000} />
             <p className="point">%</p>
           </div>
-          <p>SATISFACTION RATE</p>
+          <p><FormattedMessage id="SATISFACTIONRATE" /></p>
         </div>
       </div>
       <img

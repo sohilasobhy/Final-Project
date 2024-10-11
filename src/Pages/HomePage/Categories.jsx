@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
+import { FormattedMessage } from "react-intl";
 import { useNavigate } from "react-router-dom";
 export default function Categories() {
   const colors = ["#effaf8", "#fef2f4", "#eefbf5", "#fffaef", "#f7f3ff", "#fff0f8", "#f3f4fe", "#fff7ef", "#f1fbff"];
@@ -31,7 +32,7 @@ export default function Categories() {
   else {
     content = <div id="Categories" className="overflow-hidden">
       <div className="col-12 d-flex flex-column pt-md-5 justify-content-center align-items-center gap-4 topPart">
-        <h2>Top Categories</h2>
+        <h2><FormattedMessage id="TopCategories" /> </h2>
         <div className="col-1">
           <svg
             style={{
@@ -52,8 +53,7 @@ export default function Categories() {
           </svg>
         </div>
         <p className="p-4 text-center">
-          Explore a world of knowledge with courses across all disciplines and
-          interests
+          <FormattedMessage id="Explore" />
         </p>
       </div>
       <div className="container">

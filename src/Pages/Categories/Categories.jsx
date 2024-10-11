@@ -1,12 +1,15 @@
 import { Link, useParams } from "react-router-dom"
 import "./Categories.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons"
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { Spinner } from "react-bootstrap"
 import SingleCourseComponent from "../../Components/SingleCourseComponent"
 import ReactPaginate from 'react-paginate';
+import { FormattedMessage } from "react-intl"
+import { useRecoilState } from "recoil"
+import { $Language } from "../../Store/Store"
 
 export default function Categories() {
     let categorId = useParams()
@@ -16,6 +19,7 @@ export default function Categories() {
     const [pageCount, setPageCount] = useState(0);
     const [itemOffset, setItemOffset] = useState(0);
     const [currentItems, setCurrentItems] = useState([]);
+    const [lang] = useRecoilState($Language)
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
         setCurrentItems(categories?.slice(itemOffset, endOffset));
@@ -43,16 +47,19 @@ export default function Categories() {
     if (isloading) {
         content = <div className="d-flex align-items-center justify-content-center min-vh-100"><Spinner style={{ width: '5rem', height: '5rem' }} size="lg" animation="border" variant="primary" /></div>
     } else if (categories?.length == 0) {
-        content = <h2 className="p-5">No Courses in this category</h2>
+        content = <h2 className="p-5"><FormattedMessage id="NoCourses" /></h2>
     } else if (!categories) {
-        content = <h2 className="p-5">No Category Data</h2>
+        content = <h2 className="p-5"><FormattedMessage id="NoCategory" /></h2>
     }
     else {
         content = <div id="mainCategories">
             <div className="header">
                 <p className="d-flex align-items-center gap-2">
-                    <Link to={"/"}>Home</Link>
-                    <FontAwesomeIcon icon={faAngleRight} /> <p>{categories[0]?.category}</p>
+                    <Link to={"/"}><FormattedMessage id="home" /></Link>
+                    {
+                        lang == "EN" ? <FontAwesomeIcon icon={faAngleRight} /> : <FontAwesomeIcon icon={faAngleLeft} />
+                    }
+                    <p>{categories[0]?.category}</p>
                 </p>
             </div>
             <div>

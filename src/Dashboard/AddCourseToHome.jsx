@@ -4,31 +4,35 @@ import { $AddCourseHome, $HomeCourses } from "../Store/Store";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export default function AddCourseToHome() {
     const [AddCourseHome, setAddCourseHome] = useRecoilState($AddCourseHome)
     const [allCourses, setAllCourses] = useState([])
     const [homeCoursesIds, sethomeCoursesIds] = useState([])
-    const [HomeCourses, setHomeCourses] = useRecoilState($HomeCourses)
+    const [HomeCourses, setHomeCourses] = useRecoilState($HomeCourses);
+    let intl = useIntl();
     let url = "http://localhost:3000/HomeCourses"
     function addToHome(Courseid) {
         console.log(allCourses)
         console.log(Courseid)
         let course = allCourses.find((element) => Number(element.id) == Courseid)
         Swal.fire({
-            title: "Are you sure you want to add this course?",
+            title: intl.formatMessage({ id: 'courseAdding' }),
             icon: "success",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, add it!"
+            confirmButtonText: intl.formatMessage({ id: 'yesAdd' }),
+            cancelButtonText: intl.formatMessage({ id: 'cancle' }),
         }).then((result) => {
             if (result.isConfirmed) {
                 axios.post(url, course)
                     .then(() => {
                         Swal.fire({
-                            title: "Added!",
-                            text: "Your course has been added.",
+                            title: intl.formatMessage({ id: 'confirm' }),
+                            text: intl.formatMessage({ id: 'courseDone' }),
+                            confirmButtonText: intl.formatMessage({ id: "confirm" }),
                             icon: "success"
                         });
                         setHomeCourses([...HomeCourses, course])
@@ -36,8 +40,8 @@ export default function AddCourseToHome() {
                     })
                     .catch((error) => {
                         Swal.fire({
-                            title: "Error!",
-                            text: "There was a problem adding the course.",
+                            title: intl.formatMessage({ id: 'error' }),
+                            text: intl.formatMessage({ id: 'proplem' }),
                             icon: "error"
                         });
                     });
@@ -74,13 +78,13 @@ export default function AddCourseToHome() {
     if (AddCourseHome) {
         return (
             <div id="AddCourseToHome">
-                <CustomModal onHide={() => setAddCourseHome(false)} title={"Add Course Form"} show={AddCourseHome}>
+                <CustomModal onHide={() => setAddCourseHome(false)} title={<FormattedMessage id="addCourse" />} show={AddCourseHome}>
                     <div className="allCoursesCon">
                         <table className="table table-active">
                             <thead>
                                 <tr>
-                                    <td>Course Name</td>
-                                    <td>Add</td>
+                                    <td><FormattedMessage id="courseName" /></td>
+                                    <td><FormattedMessage id="add" /></td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -90,7 +94,7 @@ export default function AddCourseToHome() {
                                             <tr>
                                                 <td>{course.name}</td>
                                                 <td onClick={() => addToHome(course.id)} className="add">
-                                                    <button className="btn btn-primary">Add</button>
+                                                    <button className="btn btn-primary"><FormattedMessage id="add" /></button>
                                                 </td>
                                             </tr>
                                         )

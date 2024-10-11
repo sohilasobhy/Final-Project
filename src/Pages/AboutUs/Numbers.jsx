@@ -3,6 +3,7 @@ import instructor from "../../assets/images/speech.png"
 import like from "../../assets/images/like.png"
 import classIcon from "../../assets/images/presentation.png"
 import Counter from "../HomePage/Counter"
+import { FormattedMessage } from "react-intl"
 export default function Numbers() {
     return (
         <div className="container py-5" id="Numbers">
@@ -16,9 +17,9 @@ export default function Numbers() {
                             <Counter initialCount={0} targetValue={29} incrementValue={1} updateInterval={30} duration={2000} />
                             <p className="point">.</p>
                             <Counter initialCount={0} targetValue={3} incrementValue={1} updateInterval={100} duration={2000} />
-                            <p className="point">K</p>
+                            <p className="point"><FormattedMessage id="K" /></p>
                         </h2>
-                        <p>STUDENT ENROLLED</p>
+                        <p><FormattedMessage id="StudentEnrolled" /></p>
                     </div>
                 </div>
                 <div className="col-12 col-md-6 col-lg-3">
@@ -30,9 +31,9 @@ export default function Numbers() {
                             <Counter initialCount={0} targetValue={32} incrementValue={1} updateInterval={30} duration={2000} />
                             <p className="point">.</p>
                             <Counter initialCount={0} targetValue={4} incrementValue={1} updateInterval={100} duration={2000} />
-                            <p className="point">K</p>
+                            <p className="point"><FormattedMessage id="K" /></p>
                         </h2>
-                        <p>CLASS COMPLETED</p>
+                        <p><FormattedMessage id="CLASSCOMPLETED" /></p>
                     </div>
                 </div>
                 <div className="col-12 col-md-6 col-lg-3">
@@ -44,7 +45,7 @@ export default function Numbers() {
                             <Counter initialCount={0} targetValue={100} incrementValue={10} updateInterval={30} duration={2000} />
                             <p className="point">%</p>
                         </h2>
-                        <p>SATISFACTION RATE</p>
+                        <p><FormattedMessage id="SATISFACTIONRATE" /></p>
                     </div>
                 </div>
                 <div className="col-12 col-md-6 col-lg-3">
@@ -56,7 +57,7 @@ export default function Numbers() {
                             <Counter initialCount={0} targetValue={354} incrementValue={30} updateInterval={30} duration={2000} />
                             <p className="point">+</p>
                         </h2>
-                        <p>TOP INSTRUCTORS</p>
+                        <p><FormattedMessage id="TOPINSTRUCTORS" /></p>
                     </div>
                 </div>
             </div>

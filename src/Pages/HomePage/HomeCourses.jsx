@@ -5,6 +5,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 export default function HomeCourses() {
   let navigate = useNavigate()
@@ -25,8 +26,8 @@ export default function HomeCourses() {
       className="col-12 pt-3 pe-3 ps-3 d-flex flex-column justify-content-center align-items-center"
       id="HomeCourses">
       <div className="p-5 d-flex flex-column align-items-center header gap-2">
-        <p className="text-center">POPULAR COURSES</p>
-        <h2 className="text-center">Pick A Course To Get Started</h2>
+        <p className="text-center"><FormattedMessage id="POPULARCOURSES" /></p>
+        <h2 className="text-center"><FormattedMessage id="startCourse" /></h2>
         <div className="col-4">
           <svg
             style={{
@@ -65,9 +66,10 @@ export default function HomeCourses() {
       <div className="position-relative Browse  mt-5" onClick={() => {
         navigate("/courses")
       }}>
-        <button className="d-flex align-items-center  gap-3   btn">
-          <p>
-            Browse More Courses <FontAwesomeIcon icon={faArrowRight} />
+        <button className="d-flex align-items-center gap-3 btn">
+          <p className="d-flex align-items-center gap-3">
+            <FormattedMessage id="BrowseMore" />
+            <FontAwesomeIcon icon={faArrowRight} />
           </p>
         </button>
         <div className="position-absolute BTNFilter"></div>

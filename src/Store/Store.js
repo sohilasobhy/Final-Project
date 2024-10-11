@@ -50,7 +50,7 @@ export const $subPlans = atom({
   key: "$subPlans",
   default: {
     "duration": "Monthly",
-    "price": "399.00 EGP",
+    "price": "399.00",
     "charge": "Charged monthly"
   },
 });
@@ -153,6 +153,10 @@ export const $EditedPlan = atom({
 export const $loginCourseID = atom({
   key: "$loginCourseID",
   default: false,
+})
+export const $Language = atom({
+  key: "$Language",
+  default: "EN",
 })
 
 

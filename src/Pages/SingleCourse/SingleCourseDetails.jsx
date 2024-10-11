@@ -2,13 +2,17 @@ import { Link, useParams } from "react-router-dom"
 import instractuor from "../../assets/images/programmer.png"
 import "./SingleCourse.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons"
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Spinner } from "react-bootstrap";
 import CourseDetails from "./CourseDetails"
 import CourseOverview from "./CourseOverview"
+import { FormattedMessage } from "react-intl"
+import { useRecoilState } from "recoil"
+import { $Language } from "../../Store/Store"
 export default function SingleCourse() {
+    const [lang] = useRecoilState($Language)
     let { id } = useParams();
     const [array, setArray] = useState();
     const [isloading, setIsloading] = useState(false)
@@ -49,12 +53,12 @@ export default function SingleCourse() {
                     <div className="col-12 col-lg-7">
                         <div className="header col-12">
                             <div className=" col-12 d-flex flex-column align-items-start p-4 gap-4 gap-md-3  course-info">
-                                <p className="navigate align-self-start"><Link to={"/"}>Home</Link> <FontAwesomeIcon icon={faAngleRight} /> <Link to={"/courses"}>Course</Link> <FontAwesomeIcon icon={faAngleRight} /> {array.name}  </p>
+                                <p className="navigate align-self-start"><Link to={"/"}><FormattedMessage id="home" /></Link> {lang == "EN" ? <FontAwesomeIcon icon={faAngleRight} /> : <FontAwesomeIcon icon={faAngleLeft} />} <Link to={"/courses"}><FormattedMessage id="courses" /></Link> {lang == "EN" ? <FontAwesomeIcon icon={faAngleRight} /> : <FontAwesomeIcon icon={faAngleLeft} />} {array.name}  </p>
                                 <h1 className="mt-3">{array.name}</h1>
-                                <div className="info d-flex flex-column flex-md-row align-items-start justify-content-start gap-2 gap-md-0">
+                                <div className="info d-flex flex-column flex-md-row align-items-center justify-content-center gap-5 gap-md-0">
                                     <div className="d-flex gap-2 align-items-center instractuorName">
                                         <img src={instractuor} alt="" />
-                                        <p>By {array.Instructor}</p>
+                                        <p><FormattedMessage id="by" />  {array.Instructor}</p>
                                     </div>
                                     <div className="d-flex gap-2 align-items-center category">
                                         <img src={`../${category?.categoryImg}`} alt="category image" width={24} />

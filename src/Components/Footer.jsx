@@ -8,6 +8,7 @@ import youtube from "../assets/images/youtube.png";
 import linkedin from "../assets/images/linkedin(2).png";
 import instagram from "../assets/images/instagram.png";
 import "./Footer.scss";
+import { FormattedMessage } from "react-intl";
 export default function Footer() {
   return (
     <div className="col-12 px-5" id="Footer">
@@ -19,40 +20,59 @@ export default function Footer() {
             <p className="mt-3 siteName">EduJourney</p>
           </Link>
           <p className="platformDesc">
-            EduJourney is a comprehensive online learning platform offering a
-            wide range of courses to help you achieve your educational goals.
+            <FormattedMessage id="aboutFooter" />
           </p>
           <p className="contact">
-            <span>Add:</span> 70-80 Upper St Norwich NR2
+            <span>
+              <FormattedMessage id="ADD" />
+            </span>
+            70-80 Upper St Norwich NR2
           </p>
           <p className="contact">
-            <span>Call: </span> +01 123 5641 231
+            <span>
+              <FormattedMessage id="call" />
+
+            </span> +01 123 5641 231
           </p>
           <p className="contact">
-            <span> Email: </span> info@EduJourney.co
+            <span>
+              <FormattedMessage id="Email" />
+            </span> info@EduJourney.co
           </p>
         </div>
-        <div className="d-flex flex-column col-12 col-md-6 col-lg-2 gap-3 links">
-          <p className="top">LINKS</p>
+        <div className="d-flex flex-column col-12 col-md-6 col-lg-2 gap-3 links px-lg-5">
+          <p className="top">
+            <FormattedMessage id="Links" />
+          </p>
           <Link to={"/"} className="mt-3">
-            Home
+            <FormattedMessage id="home" />
           </Link>
-          <Link to={"/about"}>About</Link>
-          <Link to={"/Courses"}>Courses</Link>
-          <Link to={"/Instructors"}>Instractours</Link>
-          <Link to={"/Purchase"}>Subscribe</Link>
+          <Link to={"/about"}>
+            <FormattedMessage id="about" />
+          </Link>
+          <Link to={"/Courses"}>
+            <FormattedMessage id="courses" />
+          </Link>
+          <Link to={"/Instructors"}>
+            <FormattedMessage id="instructors" />
+          </Link>
+          <Link to={"/Purchase"}>
+            <FormattedMessage id="subscribe" />
+          </Link>
         </div>
-        <div className="d-flex flex-column col-12 col-md-6 col-lg-4 gap-3 contact px-5">
-          <p className="top">Contacts</p>
+        <div className="d-flex flex-column col-12 col-md-6 col-lg-4 gap-3 contact px-lg-5">
+          <p className="top">
+            <FormattedMessage id="Contacte" />
+          </p>
           <p>
-            You can send us messages via your email
+            <FormattedMessage id="emailMessage" />
           </p>
           <div className="d-flex gap-2 align-items-center flex-column flex-lg-row col-12">
-
-            <div className="position-relative Browse d-flex justify-content-center col-12 col-lg-5 mt-3">
+            <div className="position-relative Browse d-flex justify-content-center col-12 col-lg-8 mt-3">
               <button className="d-flex align-items-center gap-2 btn">
-                <Link to={"/contact"}>
-                  Contact Us <FontAwesomeIcon icon={faArrowRight} />
+                <Link to={"/contact"} className="d-flex align-items-center justify-content-center gap-2">
+                  <FormattedMessage id="contact" />
+                  <FontAwesomeIcon icon={faArrowRight} />
                 </Link>
               </button>
               <div className="position-absolute BTNFilter"></div>

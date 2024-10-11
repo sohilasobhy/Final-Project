@@ -1,4 +1,3 @@
-import SideMenu from "../../Components/SideMenu";
 import Categories from "./Categories";
 import Edges from "./Edges";
 import Features from "./Features";
@@ -12,12 +11,10 @@ import GetInTouch from "./GetInTouch";
 import HomeInstractor from "./HomeInstractor";
 import Add from "./Add";
 import Partners from "./Partners";
-import CircleProgress from "../../Components/CircleProgress";
 
 export default function HomePage() {
   return (
     <div className="col-12 HomePage position-relative">
-      <SideMenu />
       <Video />
       <HeroSection />
       <Features />

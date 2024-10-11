@@ -1,15 +1,16 @@
 import img2 from "../../assets/images/check-mark.png";
 import group from "../../assets/images/about-11.webp"
 import man from "../../assets/images/about-12.webp"
+import { FormattedMessage } from "react-intl";
 export default function Features() {
     return (
         <div id="AboutFeatures">
             <div className="d-flex flex-column flex-lg-row contentCon gap-lg-0 justify-content-center align-items-center container">
                 <div className="col-12 col-lg-4 d-flex flex-column justify-content-center gap-3">
-                    <p className="title text-center text-lg-start">About Us</p>
-                    <div className="col-12 d-flex flex-column align-items-center">
-                        <h2 className="col-11 text-center text-lg-start">We Providing The <span> Best Quality</span>  Online Courses.</h2>
-                        <div className="col-3 d-flex justify-content-center align-items-center">
+                    <p className="title text-center text-lg-start"><FormattedMessage id="about" /></p>
+                    <div className="col-12 d-flex flex-column ">
+                        <h2 className="col-11 text-center text-lg-start"><FormattedMessage id="qualityCourses" /></h2>
+                        <div className="col-3 d-flex justify-content-center align-items-center mt-3">
                             <svg
                                 style={{
                                     fill: "none",
@@ -29,18 +30,18 @@ export default function Features() {
                             </svg>
                         </div>
                     </div>
-                    <p className="desc col-11 text-center text-lg-start">At EduJourney, we're committed to helping you learn and grow your skills from anywhere, at any time. Whether you're looking to advance your career or explore new passions, we provide the tools and resources you need to succeed.</p>
+                    <p className="desc col-11 text-center text-lg-start"><FormattedMessage id="commited" /></p>
                     <div className="d-flex justify-content-start gap-2 align-content-center about">
                         <img src={img2} alt="check-mark" />
-                        <p>Flexible Classes</p>
+                        <p><FormattedMessage id="SATISFACTIONRATE" /></p>
                     </div>
                     <div className="d-flex justify-content-start gap-2 align-content-center about">
                         <img src={img2} alt="check-mark" />
-                        <p>Offline Classe Mode</p>
+                        <p><FormattedMessage id="OnlineRemoteLearning" /></p>
                     </div>
                     <div className="d-flex justify-content-start gap-2 align-content-center about">
                         <img src={img2} alt="check-mark" />
-                        <p>Educator Support</p>
+                        <p><FormattedMessage id="LifetimeAccess" /></p>
                     </div>
                 </div>
                 <div className="imgSec d-flex justify-content-center align-items-center position-relative">

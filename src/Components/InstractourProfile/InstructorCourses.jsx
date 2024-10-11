@@ -4,6 +4,7 @@ import course from "../../assets/images/noInprogress-light.png"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import SingleCourseComponent from "../SingleCourseComponent"
+import { FormattedMessage } from "react-intl"
 
 export default function InstructorCourses() {
     const [userInfo] = useRecoilState($UserInfo)
@@ -44,10 +45,10 @@ export default function InstructorCourses() {
     return (
         <div id="InstructorCourses" className="p-5 d-flex flex-column align-items-center">
             <div className="col-10 d-flex flex-column align-items-center ">
-                <h2 className=" align-self-start">My Courses</h2>
+                <h2 className=" align-self-start"><FormattedMessage id="myCourses" /></h2>
                 <div className={`${instructorCourses?.length == 0 ? `d-flex` : `d-none`} col-12 p-5 courses flex-column align-items-center justify-content-center mt-5 gap-2`}>
                     <img src={course} alt="no courses" width={200} />
-                    <p className="text-center">You do not have any courses</p>
+                    <p className="text-center"><FormattedMessage id="noCourses" /></p>
                 </div>
                 <div className={`${instructorCourses?.length == 0 ? "d-none" : ""} row p-5 col-12 g-4`}>
                     {

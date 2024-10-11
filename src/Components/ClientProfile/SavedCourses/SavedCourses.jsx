@@ -8,6 +8,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import axios from "axios"
 import SingleCourseComponent from "../../SingleCourseComponent"
+import { FormattedMessage } from "react-intl"
 export default function SavedCourses() {
     const [userInfo] = useRecoilState($UserInfo)
     const [courses, setCourses] = useState()
@@ -28,7 +29,7 @@ export default function SavedCourses() {
     console.log(userInfo)
     return (
         <div id="SavedCourses" className="p-5 d-flex flex-column">
-            <h4>Saved Courses</h4>
+            <h4><FormattedMessage id="savedCourses" /></h4>
             <div className={`${userInfo?.favouriteCoursesId?.length == 0 ? `d-flex` : `d-none`} flex-column align-items-center mt-3 col-12 gap-2 noCourses`}>
                 <div className="d-flex flex-column align-items-center mt-3 col-12 gap-2 noCourses">
                     <img src={saved} alt="empty-wishlist" />

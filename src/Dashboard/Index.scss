@@ -1,10 +1,18 @@
 #Dashboard {
   #Menu {
     left: 0;
+    [dir="rtl"] & {
+      left: auto;
+      right: 0;
+    }
     background-color: #2db87f;
     z-index: 9999;
     top: 0;
     transition: 0.8s;
+    .language {
+      color: white;
+      cursor: pointer;
+    }
     .LINKS {
       a {
         font-size: 20px;
@@ -54,6 +62,10 @@
   #MessagesDash,
   #SubPlans {
     right: 0;
+    [dir="rtl"] & {
+      right: auto;
+      left: 0;
+    }
     table {
       tr {
         td {

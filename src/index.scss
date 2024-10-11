@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +9,13 @@
   font-weight: 400;
   font-style: normal;
 }
-
+[dir="rtl"] body {
+  font-family: "Beiruti", sans-serif;
+  font-weight: 100;
+}
+.EN {
+  direction: ltr;
+}
 html {
   scroll-behavior: smooth;
 }

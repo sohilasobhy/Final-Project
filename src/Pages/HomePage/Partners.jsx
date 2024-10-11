@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import collage1 from "../../assets/images/brand-01.png";
 import collage2 from "../../assets/images/brand-02.png";
 import collage3 from "../../assets/images/brand-03.png";
@@ -12,8 +13,8 @@ export default function Partners() {
       className="col-12 d-flex justify-content-center gap-5 flex-column flex-lg-row p-5"
       id="Partners">
       <div className="col-12 col-lg-5 d-flex flex-column gap-3">
-        <p className="header">OUR PARTNERS</p>
-        <h2 className="col-12 col-lg-8">Learn with Our Partners</h2>
+        <p className="header"><FormattedMessage id="OURPARTNERS" /></p>
+        <h2 className="col-12 col-lg-8"><FormattedMessage id="learnWith" /></h2>
         <div className="col-3">
           <svg
             style={{
@@ -34,11 +35,7 @@ export default function Partners() {
           </svg>
         </div>
         <p className="contant col-12 col-lg-10">
-          We collaborate with top universities and educational organizations to
-          bring you the best learning experience. Our partners are renowned for
-          their academic excellence and commitment to quality education. Join us
-          and take advantage of their expertise to enhance your skills and
-          knowledge.
+          <FormattedMessage id="collaborate" />
         </p>
       </div>
       <div className="col-12 col-lg-6 d-flex flex-wrap justify-content-center">

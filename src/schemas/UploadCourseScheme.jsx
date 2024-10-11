@@ -1,41 +1,42 @@
+import { FormattedMessage } from "react-intl";
 import * as yup from "yup";
 
 export const UploadCourseScheme = yup.object().shape({
     obj: yup.string()
-        .required('Course objectives is required')
+        .required(<FormattedMessage id="required" />)
         .matches(/^[^,]+(,[^,]+)*$/, 'Input must be comma-separated values'),
     name: yup.string()
-        .required('Course name is required'),
+        .required(<FormattedMessage id="required" />),
     level: yup.string()
-        .required('Course Levels is required'),
+        .required(<FormattedMessage id="required" />),
     category: yup.string()
-        .required('Course Category is required'),
+        .required(<FormattedMessage id="required" />),
     lessons: yup.number()
-        .required('Please enter course lessons number'),
+        .required(<FormattedMessage id="required" />).typeError(<FormattedMessage id="typeNumber" />),
     price: yup.number()
-        .required('Please enter course Price '),
+        .required(<FormattedMessage id="required" />).typeError(<FormattedMessage id="typeNumber" />),
     Duration: yup.number()
-        .required('Please enter course duration'),
+        .required(<FormattedMessage id="required" />).typeError(<FormattedMessage id="typeNumber" />),
     Instructor: yup.string()
-        .required('Choose instrucor name'),
+        .required(<FormattedMessage id="required" />),
     Language: yup.string()
-        .required('Choose course language'),
+        .required(<FormattedMessage id="required" />),
     comVideo: yup.string()
-        .required('Course Promotional video is required'),
+        .required(<FormattedMessage id="required" />),
     img: yup.string()
-        .required('Course Promotional image is requried '),
+        .required(<FormattedMessage id="required" />),
     desc: yup.string()
-        .required('Course description is required'),
+        .required(<FormattedMessage id="required" />),
     Certification: yup.string()
-        .required('This is required'),
+        .required(<FormattedMessage id="required" />),
     courseContent: yup.array().of(
         yup.object().shape({
-            category: yup.string().required('Category name is required'),
+            category: yup.string().required(<FormattedMessage id="required" />),
             lessons: yup.array().of(
                 yup.object().shape({
-                    LessonName: yup.string().required('Lesson name is required'),
-                    desc: yup.string().required('Lesson description is required'),
-                    Link: yup.string().required('Lesson video is required'),
+                    LessonName: yup.string().required(<FormattedMessage id="required" />),
+                    desc: yup.string().required(<FormattedMessage id="required" />),
+                    Link: yup.string().required(<FormattedMessage id="required" />),
                 })
             ),
         })

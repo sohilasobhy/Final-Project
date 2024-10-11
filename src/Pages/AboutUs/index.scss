@@ -41,6 +41,9 @@
     .title {
       font-size: 18px;
       color: grey;
+      [dir="rtl"] & {
+        text-align: right !important;
+      }
     }
     h2 {
       font-size: 36px;
@@ -49,10 +52,16 @@
         color: #ee4a62;
         font-weight: 600;
       }
+      [dir="rtl"] & {
+        text-align: right !important;
+      }
     }
     .desc {
       color: gray;
       font-size: 18px;
+      [dir="rtl"] & {
+        text-align: right !important;
+      }
     }
     .about {
       p {
@@ -70,6 +79,10 @@
       .manPhoto {
         top: -25%;
         right: -15%;
+        [dir="rtl"] & {
+          left: -15%;
+          right: auto;
+        }
       }
     }
     @media (max-width: 768px) {
@@ -79,6 +92,10 @@
       .manPhoto {
         width: 50%;
         right: -9% !important;
+        [dir="rtl"] & {
+          left: -15%;
+          right: auto !important;
+        }
       }
     }
   }

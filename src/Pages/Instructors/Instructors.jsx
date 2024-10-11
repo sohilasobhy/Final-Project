@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import "./Instructors.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import SingleInstructor from "../../Components/SingleInstructorComponent/SingleInstructor";
 import ReactPaginate from "react-paginate";
+import { useRecoilState } from "recoil";
+import { $Language } from "../../Store/Store";
+import { FormattedMessage } from "react-intl";
 
 export default function InstructorsPage() {
     const [values, setValue] = useState();
@@ -14,7 +17,7 @@ export default function InstructorsPage() {
     const [itemOffset, setItemOffset] = useState(0);
     const [currentItems, setCurrentItems] = useState([]);
     const [Instructors, setInstructors] = useState();
-
+    const [lang] = useRecoilState($Language)
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
         setCurrentItems(Instructors?.slice(itemOffset, endOffset));
@@ -41,15 +44,17 @@ export default function InstructorsPage() {
         <div id="InstructorsPage">
             <div className="header">
                 <p>
-                    <Link to={"/"}>Home</Link>&nbsp;
-                    <FontAwesomeIcon icon={faAngleRight} />
-                    &nbsp; <Link to={"/courses"}>Instructors</Link>
+                    <Link to={"/"} className="home"><FormattedMessage id="home" /></Link>&nbsp;
+                    {
+                        lang == "EN" ? <FontAwesomeIcon icon={faAngleRight} /> : <FontAwesomeIcon icon={faAngleLeft} />
+                    }
+                    &nbsp; <Link to={"/courses"}><FormattedMessage id="instructors" /></Link>
                 </p>
             </div>
             <div className="col-12 d-flex justify-content-end pt-5 px-5 container position-relative">
                 <input
                     type="Search"
-                    placeholder="Search Instructors..."
+                    placeholder={`${lang == "EN" ? `Search Instructors...` : `ابحث عن المدربين...`}`}
                     className="py-3 px-4 col-md-6 col-lg-3"
                     onChange={(e) => { setValue(e.target.value); }}
                 />

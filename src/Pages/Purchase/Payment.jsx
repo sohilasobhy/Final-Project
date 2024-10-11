@@ -5,18 +5,19 @@ import { useRecoilState } from "recoil";
 import { $UserInfo, $checkoutPay, $subPlans } from "../../Store/Store";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { FormattedMessage } from "react-intl";
 
 export default function Payment() {
     const [subPlan] = useRecoilState($subPlans);
-    const [checkoutPay, setcheckoutPay] = useRecoilState($checkoutPay);
-    const [userInfo, setUserInfo] = useRecoilState($UserInfo)
+    const [, setcheckoutPay] = useRecoilState($checkoutPay);
+    const [userInfo] = useRecoilState($UserInfo)
     console.log(subPlan)
     function handlecheck() {
         if (userInfo != null) {
             navigate("/checkout")
             setcheckoutPay(subPlan)
         } else {
-            toast.error("Please login first")
+            toast.error(<FormattedMessage id="loginToast" />)
             setTimeout(() => { navigate("/login") }, 500)
         }
     }
@@ -32,7 +33,7 @@ export default function Payment() {
                                 <img src={visa} alt="visa" className="object-fit-contain" width={40} height={28} />
                             </div>
                             <p className="header">
-                                Pay with credit or debit card
+                                <FormattedMessage id="credit" />
                             </p>
                         </div>
                     </Accordion.Header>
@@ -40,7 +41,7 @@ export default function Payment() {
                         <div className="d-flex flex-column">
                             <div className="d-flex justify-content-between">
                                 <p className="body">
-                                    Pay with credit or debit card
+                                    <FormattedMessage id="credit" />
                                 </p>
                                 <div>
                                     <img src={Mastercard} alt="Mastercard" width={50} height={28} className="object-fit-contain" />
@@ -49,7 +50,7 @@ export default function Payment() {
                             </div>
                             <Button className="mt-3 mx-auto col-10" variant="danger" onClick={() => {
                                 handlecheck()
-                            }}>Pay {subPlan.price} EGP</Button>
+                            }}><FormattedMessage id="pay" /> {subPlan.price} <FormattedMessage id="EGP" /></Button>
                         </div>
                     </Accordion.Body>
                 </Accordion.Item>

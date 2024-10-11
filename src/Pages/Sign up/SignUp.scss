@@ -14,6 +14,12 @@
     padding: 40px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    [dir="rtl"] & {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -46,6 +52,10 @@
       .show {
         top: 50%;
         right: 5%;
+        [dir="rtl"] & {
+          right: auto;
+          left: 5%;
+        }
         display: none;
         cursor: pointer;
         z-index: 111;
@@ -73,6 +83,10 @@
         letter-spacing: 0.05em;
         transition: 0.5s;
         font-weight: 600;
+        [dir="rtl"] & {
+          right: 0;
+          left: auto;
+        }
       }
       i {
         position: absolute;
@@ -112,6 +126,9 @@
       }
       .signup {
         color: #fff;
+        &:hover {
+          color: black;
+        }
       }
     }
     .submitBTN {
@@ -134,12 +151,24 @@
     border: 1px solid #2eb980;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+    [dir="rtl"] & {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
     width: 30%;
     background-color: #fff;
     height: 100%;
     img {
       border-bottom-right-radius: 8px;
       border-top-right-radius: 8px;
+      [dir="rtl"] & {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
       height: 100%;
       width: 100%;
       object-fit: cover;

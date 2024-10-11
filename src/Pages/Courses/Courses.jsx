@@ -1,19 +1,18 @@
 import { Link, useParams } from "react-router-dom";
 import "./Courses.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import PaginatedCourses from "./CoursePagination";
 import { useRecoilState } from "recoil";
-import { $SearchResult } from "../../Store/Store";
+import { $Language, $SearchResult } from "../../Store/Store";
+import { FormattedMessage } from "react-intl";
 export default function Courses() {
   const [value, setValue] = useRecoilState($SearchResult)
-  const { page } = useParams();
   const [courses, setCourses] = useState([]);
-  const [SearchData, setSearchData] = useState([])
-
+  const [lang] = useRecoilState($Language)
   useEffect(() => {
     axios
       .get(`http://localhost:3000/Courses?q=${value}`)
@@ -29,15 +28,15 @@ export default function Courses() {
     <div className="col-12" id="Courses">
       <div className="header">
         <p>
-          <Link to={"/"}>Home</Link>&nbsp;
-          <FontAwesomeIcon icon={faAngleRight} />
-          &nbsp; <Link to={"/courses"}>Courses</Link>
+          <Link to={"/"} className="home"><FormattedMessage id="home" /></Link>&nbsp;
+          {lang == "EN" ? <FontAwesomeIcon icon={faAngleRight} /> : <FontAwesomeIcon icon={faAngleLeft} />}
+          &nbsp; <Link to={"/courses"}><FormattedMessage id="courses" /></Link>
         </p>
       </div>
       <div className="col-12 d-flex justify-content-end pt-5 px-5 container position-relative">
         <input
           type="Search"
-          placeholder="Search Courses..."
+          placeholder={lang == "EN" ? `Search Courses...` : `ابحث عن الدورات...`}
           className="py-3 px-4 col-md-6 col-lg-3"
           onChange={(e) => { setValue(e.target.value) }}
         />
