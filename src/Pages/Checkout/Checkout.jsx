@@ -11,6 +11,7 @@ import payment from "../../assets/images/63Z_2112.w012.n001.19C.p6.19.jpg"
 import { toast } from "react-toastify";
 import { useEffect } from "react";
 import { FormattedMessage } from "react-intl";
+import NavBarLogin from "../../Components/NavBarLogin";
 export default function Checkout() {
     const [lang] = useRecoilState($Language)
     const [checkoutPay] = useRecoilState($checkoutPay);
@@ -50,64 +51,67 @@ export default function Checkout() {
     };
     if (userInfo) {
         return (
-            <div id="Checkout" className="p-2 p-md-5 d-flex justify-content-center align-items-center">
-                <div className="d-flex col-md-10 m-auto formCon">
-                    <div className="bg-white col-12 col-md-6 p-3 d-flex flex-column align-items-center justify-content-center gap-1 courseInfo h-100">
-                        <h4 className="text-center"><FormattedMessage id="CourseInformation" /></h4>
-                        <p className=" text-center"><FormattedMessage id="CourseName" /> <br /> <span>{checkoutPay.name}</span> </p>
-                        <p className="   text-center "><FormattedMessage id="CoursePrice" /><br /> <span>{checkoutPay.price}</span> </p>
-                        <Formik
-                            initialValues={{ cardNumber: "", HolderName: "", date: "", cvv: "" }}
-                            onSubmit={handlePaymentSuccess}
-                            validationSchema={paymenScheme}>
-                            <Form className="d-flex flex-column align-items-start col-12 gap-3">
-                                <div className={`${checkoutPay?.price == "Free" ? "d-none" : "d-flex"} flex-column align-items-center col-12 gap-1`}>
-                                    <h4><FormattedMessage id="PaymentInformation" /></h4>
-                                    <div className="d-flex flex-column gap-2 col-12">
-                                        <p className=" align-self-start"><FormattedMessage id="Entercardnumber" /></p>
-                                        <Field type="number" required="required" name="cardNumber" placeholder={`${lang == "EN" ? "Card Number..." : "رقم البطاقة..."}`} className="col-12" />
-                                        <span className="error">
-                                            <ErrorMessage name={"cardNumber"} />
-                                        </span>
-                                    </div>
-                                    <div className="d-flex flex-column gap-2 col-12">
-                                        <p className=" align-self-start"><FormattedMessage id="holderName" /></p>
-                                        <Field type="text" required="required" name="HolderName" placeholder={`${lang == "EN" ? "Card Holder Name..." : "اسم حامل البطاقة..."}`} className="col-12" />
-                                        <span className="error">
-                                            <ErrorMessage name="HolderName" />
-                                        </span>
-                                    </div>
-                                    <div className="row g-2 col-12 justify-content-start col-11">
-                                        <div className="col-6">
-                                            <div>
-                                                <p><FormattedMessage id="Expirationdate" /></p>
-                                                <Field type="number" required="required" name="date" placeholder={`${lang == "EN" ? "MM/YY" : "شهر/سنة"}`} className="col-12 " />
+            <>
+                {/* <NavBarLogin /> */}
+                <div id="Checkout" className="p-2 p-md-5 d-flex justify-content-center align-items-center">
+                    <div className="d-flex col-md-10 m-auto formCon">
+                        <div className="bg-white col-12 col-md-6 p-3 d-flex flex-column align-items-center justify-content-center gap-1 courseInfo h-100">
+                            <h4 className="text-center"><FormattedMessage id="CourseInformation" /></h4>
+                            <p className=" text-center"><FormattedMessage id="CourseName" /> <br /> <span>{checkoutPay.name}</span> </p>
+                            <p className="   text-center "><FormattedMessage id="CoursePrice" /><br /> <span>{checkoutPay.price}</span> </p>
+                            <Formik
+                                initialValues={{ cardNumber: "", HolderName: "", date: "", cvv: "" }}
+                                onSubmit={handlePaymentSuccess}
+                                validationSchema={paymenScheme}>
+                                <Form className="d-flex flex-column align-items-start col-12 gap-3">
+                                    <div className={`${checkoutPay?.price == "Free" ? "d-none" : "d-flex"} flex-column align-items-center col-12 gap-1`}>
+                                        <h4><FormattedMessage id="PaymentInformation" /></h4>
+                                        <div className="d-flex flex-column gap-2 col-12">
+                                            <p className=" align-self-start"><FormattedMessage id="Entercardnumber" /></p>
+                                            <Field type="number" required="required" name="cardNumber" placeholder={`${lang == "EN" ? "Card Number..." : "رقم البطاقة..."}`} className="col-12" />
+                                            <span className="error">
+                                                <ErrorMessage name={"cardNumber"} />
+                                            </span>
+                                        </div>
+                                        <div className="d-flex flex-column gap-2 col-12">
+                                            <p className=" align-self-start"><FormattedMessage id="holderName" /></p>
+                                            <Field type="text" required="required" name="HolderName" placeholder={`${lang == "EN" ? "Card Holder Name..." : "اسم حامل البطاقة..."}`} className="col-12" />
+                                            <span className="error">
+                                                <ErrorMessage name="HolderName" />
+                                            </span>
+                                        </div>
+                                        <div className="row g-2 col-12 justify-content-start col-11">
+                                            <div className="col-6">
+                                                <div>
+                                                    <p><FormattedMessage id="Expirationdate" /></p>
+                                                    <Field type="number" required="required" name="date" placeholder={`${lang == "EN" ? "MM/YY" : "شهر/سنة"}`} className="col-12 " />
+                                                </div>
+                                            </div>
+                                            <div className="col-6">
+                                                <div>
+                                                    <p><FormattedMessage id="EnterCvv" /></p>
+                                                    <Field type="number" required="required" name="cvv" placeholder={`${lang == "EN" ? "CVV..." : "رمز التحقق من البطاقة..."}`} className="col-12" />
+                                                </div>
                                             </div>
                                         </div>
-                                        <div className="col-6">
-                                            <div>
-                                                <p><FormattedMessage id="EnterCvv" /></p>
-                                                <Field type="number" required="required" name="cvv" placeholder={`${lang == "EN" ? "CVV..." : "رمز التحقق من البطاقة..."}`} className="col-12" />
-                                            </div>
-                                        </div>
+                                        <span className="error">
+                                            <ErrorMessage name="date" />
+                                        </span>
+                                        <span className="error">
+                                            <ErrorMessage name="cvv" />
+                                        </span>
+                                        <Button type="submit" className="col-10"><FormattedMessage id="pay" /> {checkoutPay?.price} <FormattedMessage id="EGP" /></Button>
                                     </div>
-                                    <span className="error">
-                                        <ErrorMessage name="date" />
-                                    </span>
-                                    <span className="error">
-                                        <ErrorMessage name="cvv" />
-                                    </span>
-                                    <Button type="submit" className="col-10"><FormattedMessage id="pay" /> {checkoutPay?.price} <FormattedMessage id="EGP" /></Button>
-                                </div>
-                                <Button className={`${checkoutPay?.price == "Free" ? "d-block" : "d-none"} col-10`} onClick={() => handlePaymentSuccess()}><FormattedMessage id="EnrollNow" /> <FormattedMessage id="forFree" /></Button>
-                            </Form>
-                        </Formik>
+                                    <Button className={`${checkoutPay?.price == "Free" ? "d-block" : "d-none"} col-10`} onClick={() => handlePaymentSuccess()}><FormattedMessage id="EnrollNow" /> <FormattedMessage id="forFree" /></Button>
+                                </Form>
+                            </Formik>
+                        </div>
+                        <div className="bg-white d-none d-md-block imgCon">
+                            <img src={payment} className="w-100 h-100 object-fit-cover " />
+                        </div>
                     </div>
-                    <div className="bg-white d-none d-md-block imgCon">
-                        <img src={payment} className="w-100 h-100 object-fit-cover " />
-                    </div>
-                </div>
-            </div >
+                </div >
+            </>
         );
     }
     else {

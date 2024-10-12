@@ -221,4 +221,6 @@ export const english = {
     inProgressCourses: "In Progress Courses",
     noCoursesInst: "You have no courses",
     enrolled: "Enrolled",
+    hundred: "100%",
+    login: "Login",
 }  

@@ -41,6 +41,10 @@
     box-shadow: -1px 2px 11px 0px rgba(0, 0, 0, 0.5098039216);
     top: 5%;
     right: 5%;
+    [dir="rtl"] & {
+      right: auto;
+      left: 5%;
+    }
     cursor: pointer;
 
     svg {

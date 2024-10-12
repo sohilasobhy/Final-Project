@@ -6,9 +6,9 @@ export default function Features() {
     return (
         <div id="AboutFeatures">
             <div className="d-flex flex-column flex-lg-row contentCon gap-lg-0 justify-content-center align-items-center container">
-                <div className="col-12 col-lg-4 d-flex flex-column justify-content-center gap-3">
+                <div className="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-center gap-3">
                     <p className="title text-center text-lg-start"><FormattedMessage id="about" /></p>
-                    <div className="col-12 d-flex flex-column ">
+                    <div className="col-12 d-flex flex-column align-items-center">
                         <h2 className="col-11 text-center text-lg-start"><FormattedMessage id="qualityCourses" /></h2>
                         <div className="col-3 d-flex justify-content-center align-items-center mt-3">
                             <svg

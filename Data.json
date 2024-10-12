@@ -125,7 +125,7 @@
       "CtegoryId": "3",
       "price": "$50",
       "lessons": "11",
-      "students": 343,
+      "students": 344,
       "Duration": "12 Weeks",
       "Instructor": "Jane Seymour",
       "Language": "English",
@@ -239,7 +239,7 @@
       "CtegoryId": "6",
       "price": "Free",
       "lessons": "8",
-      "students": 515,
+      "students": 516,
       "Duration": "10 Weeks",
       "Instructor": "Jane Seymour",
       "Language": "English",
@@ -327,7 +327,7 @@
       "CtegoryId": "2",
       "price": "$40",
       "lessons": "6",
-      "students": 292,
+      "students": 293,
       "Duration": "8 Weeks",
       "Instructor": "Alice Johnson",
       "rates": 10,
@@ -2110,133 +2110,6 @@
         "Develop skills in database optimization and performance tuning."
       ],
       "desc": "This course builds on basic SQL knowledge, covering advanced topics such as complex queries, joins, normalization, and indexing. Participants will learn to optimize and tune database performance for efficient management."
-    },
-    {
-      "id": 23,
-      "level": "Advanced",
-      "name": "Cybersecurity: Protecting Your Digital Assets",
-      "rating": "4.9",
-      "category": "Computer Science",
-      "CtegoryId": "8",
-      "price": "$70",
-      "totalRating": 49,
-      "lessons": "7",
-      "students": "310",
-      "Duration": "12 Weeks",
-      "Instructor": "Henry Clark",
-      "Language": "English",
-      "Certification": "Yes",
-      "comVideo": "../../src/assets/images/Start your dreams with us!.mp4",
-      "instructorId": "11",
-      "courseContent": [
-        {
-          "category": "Digital Marketing Fundamentals",
-          "lessons": [
-            {
-              "LessonName": "Lesson 1: Introduction to Digital Marketing",
-              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
-              "desc": "This lesson introduces the fundamental concepts of digital marketing, including its significance in the modern business landscape, key strategies, and how it differs from traditional marketing. You'll gain an understanding of various digital marketing channels and their roles in a comprehensive marketing strategy."
-            },
-            {
-              "LessonName": "Lesson 2: Understanding Digital Marketing Channels",
-              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
-              "desc": "In this lesson, you'll explore different digital marketing channels such as SEO, PPC, social media, email marketing, and content marketing. You'll learn how each channel works, their unique benefits, and how to integrate them into a cohesive digital marketing strategy."
-            }
-          ]
-        },
-        {
-          "category": "Content Marketing",
-          "lessons": [
-            {
-              "LessonName": "Lesson 3: Creating Engaging Content",
-              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
-              "desc": "This lesson focuses on the principles of creating compelling and valuable content that resonates with your audience. You'll learn techniques for brainstorming content ideas, writing engaging copy, and using visuals effectively to capture and maintain audience interest."
-            },
-            {
-              "LessonName": "Lesson 4: Content Distribution Strategies",
-              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
-              "desc": "In this lesson, you'll explore strategies for distributing your content to maximize reach and engagement. Topics include leveraging social media platforms, email marketing, and content syndication. You'll also learn how to identify and target your audience to ensure your content reaches the right people."
-            }
-          ]
-        },
-        {
-          "category": "Social Media Marketing",
-          "lessons": [
-            {
-              "LessonName": "Lesson 5: Social Media Strategies",
-              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
-              "desc": "This lesson covers the development and implementation of effective social media strategies. You'll learn about setting goals, choosing the right platforms, creating content calendars, and engaging with your audience. The focus will be on building a strong social media presence that aligns with your marketing objectives."
-            },
-            {
-              "LessonName": "Lesson 6: Measuring Social Media Success",
-              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
-              "desc": "In this lesson, you'll explore methods for evaluating the success of your social media efforts. You'll learn about key performance indicators (KPIs), analytics tools, and techniques for tracking engagement, reach, and conversion rates. Understanding these metrics will help you refine your strategies and improve your social media campaigns."
-            }
-          ]
-        },
-        {
-          "category": "Search Engine Marketing",
-          "lessons": [
-            {
-              "LessonName": "Lesson 7: SEO and SEM Basics",
-              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
-              "desc": "This lesson introduces the fundamental concepts of Search Engine Optimization (SEO) and Search Engine Marketing (SEM). You'll learn about the differences and similarities between SEO and SEM, basic strategies for improving search engine rankings, and how to use paid search advertising effectively to drive traffic to your website."
-            },
-            {
-              "LessonName": "Lesson 8: Implementing and Analyzing Campaigns",
-              "Link": "src/assets/images/Start your dreams with us!.mp4",
-              "desc": "In this lesson, you'll explore the practical aspects of implementing and analyzing search engine marketing campaigns. Topics include setting up SEM campaigns, optimizing ad performance, and using analytics tools to track and measure campaign effectiveness. You'll learn how to adjust your strategies based on data to achieve better results."
-            }
-          ]
-        }
-      ],
-      "rates": 10,
-      "img": "src/assets/images/course2.jpg",
-      "obj": [
-        "Understand the fundamentals of cybersecurity.",
-        "Learn about common cyber threats and vulnerabilities.",
-        "Master techniques for protecting digital assets.",
-        "Develop skills in incident response and risk management."
-      ],
-      "desc": "This course provides an in-depth understanding of cybersecurity, covering common threats, vulnerabilities, and protection techniques. Participants will learn to respond to incidents and manage risks to safeguard digital assets."
-    },
-    {
-      "id": 25,
-      "name": "عنوان الدورة ",
-      "level": "Intermediat",
-      "category": "Business Management",
-      "totalRating": 0,
-      "CtegoryId": "1",
-      "price": "$40",
-      "lessons": 15,
-      "Duration": "6 weeks",
-      "Instructor": "Jane Seymour",
-      "Language": "Arabic",
-      "comVideo": "src/assets/images/certificate.png",
-      "instructorId": "1",
-      "rates": 0,
-      "img": "src/assets/images/course-07-590x430.jpg",
-      "obj": [
-        "الهدف الاول",
-        "الهدف الثاني",
-        "الهدف الثالث"
-      ],
-      "desc": "تتحدث هذه الدورة عن...",
-      "Certification": "Yes",
-      "rating": "0",
-      "students": 1,
-      "courseContent": [
-        {
-          "category": "العنوان الاول",
-          "lessons": [
-            {
-              "LessonName": "الدرس الاول",
-              "desc": "تفاصيل الدرس",
-              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4"
-            }
-          ]
-        }
-      ]
     }
   ],
   "HomeCourses": [
@@ -2614,450 +2487,6 @@
         "Develop a long-term financial plan."
       ],
       "desc": "This course provides a foundation in personal finance management, covering essential topics such as budgeting, saving, investing, and debt management. It is designed to help individuals build a secure financial future through practical strategies and effective planning."
-    },
-    {
-      "id": 19,
-      "level": "Beginner",
-      "name": "Basic HTML and CSS: Build Your First Web Page",
-      "rating": "4.8",
-      "category": "Personal Development",
-      "CtegoryId": "3",
-      "price": "$30",
-      "lessons": "8",
-      "students": "300",
-      "Duration": "6 Weeks",
-      "Instructor": "Daniel Harris",
-      "Language": "English",
-      "comVideo": "../../src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
-      "instructorId": "9",
-      "Certification": "Yes",
-      "courseContent": [
-        {
-          "category": "Introduction to Social Media Marketing",
-          "lessons": [
-            {
-              "LessonName": "Lesson 1: What is Social Media Marketing?",
-              "Link": "src/assets/images/Start your dreams with us!.mp4",
-              "desc": "This lesson introduces the concept of social media marketing, including its role in modern business strategies. You'll learn about the different social media platforms, their unique features, and how they can be leveraged for marketing purposes."
-            },
-            {
-              "LessonName": "Lesson 2: Benefits of Social Media for Business",
-              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
-              "desc": "In this lesson, you'll explore the various benefits that social media can offer to businesses. Topics include brand visibility, customer engagement, and how social media can drive sales and build a loyal customer base."
-            }
-          ]
-        },
-        {
-          "category": "Creating a Social Media Strategy",
-          "lessons": [
-            {
-              "LessonName": "Lesson 3: Setting Social Media Goals",
-              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
-              "desc": "This lesson focuses on setting clear and achievable goals for your social media marketing efforts. You'll learn how to define objectives, measure success, and align your social media strategy with your overall business goals."
-            },
-            {
-              "LessonName": "Lesson 4: Identifying Your Target Audience",
-              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
-              "desc": "In this lesson, you'll learn how to identify and understand your target audience. You'll explore methods for researching your audience's demographics, interests, and behaviors to tailor your social media content effectively."
-            }
-          ]
-        },
-        {
-          "category": "Content Creation and Curation",
-          "lessons": [
-            {
-              "LessonName": "Lesson 5: Creating Engaging Content",
-              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
-              "desc": "This lesson covers the principles of creating engaging and shareable content for social media. You'll learn about different types of content, including text, images, and videos, and how to craft posts that resonate with your audience."
-            },
-            {
-              "LessonName": "Lesson 6: Curating Content for Your Audience",
-              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
-              "desc": "In this lesson, you'll explore strategies for curating relevant content for your audience. You'll learn how to find, select, and share content that adds value to your followers and complements your original posts."
-            }
-          ]
-        },
-        {
-          "category": "Building Your Online Presence",
-          "lessons": [
-            {
-              "LessonName": "Lesson 7: Building a Social Media Presence",
-              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
-              "desc": "This lesson focuses on building and maintaining a strong social media presence for your business. You'll learn best practices for profile optimization, engagement strategies, and how to grow your follower base organically."
-            }
-          ]
-        }
-      ],
-      "img": "src/assets/images/course-07-590x430.jpg",
-      "obj": [
-        "Understand the basics of HTML and CSS.",
-        "Learn to create and style web pages.",
-        "Develop skills in responsive web design.",
-        "Apply best practices for web development."
-      ],
-      "desc": "This course is designed for beginners to learn the basics of HTML and CSS, enabling them to create and style web pages. Participants will also explore responsive web design and best practices in web development."
-    },
-    {
-      "id": 16,
-      "level": "Beginner",
-      "name": "Introduction to Cloud Computing: Basics and Applications",
-      "rating": "4.8",
-      "category": "Computer Science",
-      "CtegoryId": "8",
-      "price": "$45",
-      "lessons": "10",
-      "students": "350",
-      "Duration": "8 Weeks",
-      "Instructor": "James Wilson",
-      "Language": "English",
-      "instructorId": "7",
-      "comVideo": "../../src/assets/images/VIT University - 1Min Ad Film.mp4",
-      "Certification": "Yes",
-      "img": "src/assets/images/course1.jpg",
-      "courseContent": [
-        {
-          "category": "Digital Marketing Fundamentals",
-          "lessons": [
-            {
-              "LessonName": "Lesson 1: Introduction to Digital Marketing",
-              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
-              "desc": "This lesson introduces the fundamental concepts of digital marketing, including its significance in the modern business landscape, key strategies, and how it differs from traditional marketing. You'll gain an understanding of various digital marketing channels and their roles in a comprehensive marketing strategy."
-            },
-            {
-              "LessonName": "Lesson 2: Understanding Digital Marketing Channels",
-              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
-              "desc": "In this lesson, you'll explore different digital marketing channels such as SEO, PPC, social media, email marketing, and content marketing. You'll learn how each channel works, their unique benefits, and how to integrate them into a cohesive digital marketing strategy."
-            }
-          ]
-        },
-        {
-          "category": "Content Marketing",
-          "lessons": [
-            {
-              "LessonName": "Lesson 3: Creating Engaging Content",
-              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
-              "desc": "This lesson focuses on the principles of creating compelling and valuable content that resonates with your audience. You'll learn techniques for brainstorming content ideas, writing engaging copy, and using visuals effectively to capture and maintain audience interest."
-            },
-            {
-              "LessonName": "Lesson 4: Content Distribution Strategies",
-              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
-              "desc": "In this lesson, you'll explore strategies for distributing your content to maximize reach and engagement. Topics include leveraging social media platforms, email marketing, and content syndication. You'll also learn how to identify and target your audience to ensure your content reaches the right people."
-            }
-          ]
-        },
-        {
-          "category": "Social Media Marketing",
-          "lessons": [
-            {
-              "LessonName": "Lesson 5: Social Media Strategies",
-              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
-              "desc": "This lesson covers the development and implementation of effective social media strategies. You'll learn about setting goals, choosing the right platforms, creating content calendars, and engaging with your audience. The focus will be on building a strong social media presence that aligns with your marketing objectives."
-            },
-            {
-              "LessonName": "Lesson 6: Measuring Social Media Success",
-              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
-              "desc": "In this lesson, you'll explore methods for evaluating the success of your social media efforts. You'll learn about key performance indicators (KPIs), analytics tools, and techniques for tracking engagement, reach, and conversion rates. Understanding these metrics will help you refine your strategies and improve your social media campaigns."
-            }
-          ]
-        },
-        {
-          "category": "Search Engine Marketing",
-          "lessons": [
-            {
-              "LessonName": "Lesson 7: SEO and SEM Basics",
-              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
-              "desc": "This lesson introduces the fundamental concepts of Search Engine Optimization (SEO) and Search Engine Marketing (SEM). You'll learn about the differences and similarities between SEO and SEM, basic strategies for improving search engine rankings, and how to use paid search advertising effectively to drive traffic to your website."
-            },
-            {
-              "LessonName": "Lesson 8: Implementing and Analyzing Campaigns",
-              "Link": "src/assets/images/Start your dreams with us!.mp4",
-              "desc": "In this lesson, you'll explore the practical aspects of implementing and analyzing search engine marketing campaigns. Topics include setting up SEM campaigns, optimizing ad performance, and using analytics tools to track and measure campaign effectiveness. You'll learn how to adjust your strategies based on data to achieve better results."
-            }
-          ]
-        }
-      ],
-      "obj": [
-        "Understand the fundamentals of cloud computing.",
-        "Learn about various cloud service models (IaaS, PaaS, SaaS).",
-        "Master the use of popular cloud platforms like AWS and Azure.",
-        "Develop skills in deploying and managing cloud applications."
-      ],
-      "desc": "This course introduces beginners to the basics of cloud computing, covering key concepts, service models, and popular platforms like AWS and Azure. Participants will learn to deploy and manage applications in the cloud."
-    },
-    {
-      "id": 18,
-      "level": "Advanced",
-      "name": "Machine Learning: Advanced Techniques and Applications",
-      "rating": "4.9",
-      "category": "Data Science",
-      "CtegoryId": "5",
-      "price": "$75",
-      "lessons": "10",
-      "instructorId": "8",
-      "students": "310",
-      "Duration": "14 Weeks",
-      "Instructor": "Olivia Martinez",
-      "Language": "English",
-      "comVideo": "../../src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
-      "Certification": "Yes",
-      "img": "src/assets/images/course2.jpg",
-      "courseContent": [
-        {
-          "category": "Introduction to Data Science",
-          "lessons": [
-            {
-              "LessonName": "Lesson 1: What is Data Science?",
-              "Link": "src/assets/images/Start your dreams with us!.mp4",
-              "desc": "This lesson introduces the field of data science, covering its definition, importance, and key components. You'll learn about the role of data science in various industries, the skills required for data scientists, and the overall process of transforming data into actionable insights."
-            },
-            {
-              "LessonName": "Lesson 2: Applications of Data Science",
-              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
-              "desc": "In this lesson, you'll explore the various applications of data science across different sectors such as healthcare, finance, and marketing. You'll understand how data science techniques are used to solve real-world problems, make predictions, and drive business decisions."
-            }
-          ]
-        },
-        {
-          "category": "Data Basics",
-          "lessons": [
-            {
-              "LessonName": "Lesson 3: Data Collection and Cleaning",
-              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
-              "desc": "This lesson focuses on the fundamentals of data collection and cleaning. You'll learn techniques for gathering data from various sources, handling missing values, and ensuring data quality. Proper data cleaning is essential for accurate analysis and reliable results."
-            },
-            {
-              "LessonName": "Lesson 4: Exploratory Data Analysis (EDA)",
-              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
-              "desc": "In this lesson, you'll dive into exploratory data analysis (EDA) to understand and summarize the main characteristics of a dataset. Topics include data visualization, identifying patterns, and detecting anomalies. EDA is crucial for gaining insights and informing further analysis."
-            }
-          ]
-        },
-        {
-          "category": "Statistical Analysis",
-          "lessons": [
-            {
-              "LessonName": "Lesson 5: Introduction to Statistics for Data Science",
-              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
-              "desc": "This lesson introduces basic statistical concepts essential for data science. You'll cover topics such as descriptive statistics, probability distributions, and statistical inference. Understanding these concepts is fundamental for analyzing and interpreting data effectively."
-            },
-            {
-              "LessonName": "Lesson 6: Hypothesis Testing and Significance",
-              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
-              "desc": "In this lesson, you'll learn about hypothesis testing and significance testing in data analysis. You'll explore how to formulate and test hypotheses, interpret p-values, and understand confidence intervals. These techniques are key for making data-driven decisions and validating results."
-            }
-          ]
-        },
-        {
-          "category": "Machine Learning Basics",
-          "lessons": [
-            {
-              "LessonName": "Lesson 7: Introduction to Machine Learning",
-              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
-              "desc": "This lesson provides an overview of machine learning, including its types, algorithms, and applications. You'll learn about supervised and unsupervised learning, model training, and evaluation. This foundational knowledge is essential for building and understanding machine learning models."
-            },
-            {
-              "LessonName": "Lesson 8: Building Your First Machine Learning Model",
-              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
-              "desc": "In this lesson, you'll take your first steps in building a machine learning model. You'll follow a hands-on approach to select a dataset, choose an algorithm, train the model, and evaluate its performance. Practical experience with model building will help solidify your understanding of machine learning concepts."
-            }
-          ]
-        }
-      ],
-      "obj": [
-        "Understand advanced machine learning algorithms and techniques.",
-        "Learn to implement deep learning models using TensorFlow and Keras.",
-        "Master techniques for model optimization and evaluation.",
-        "Explore real-world applications of machine learning."
-      ],
-      "desc": "This course covers advanced machine learning techniques, including deep learning with TensorFlow and Keras, model optimization, and evaluation. Participants will gain practical experience through real-world applications of machine learning."
-    },
-    {
-      "id": 6,
-      "level": "Beginner",
-      "name": "Data Science for Everyone: A Beginner's Guide",
-      "rating": "3",
-      "category": "Data Science",
-      "CtegoryId": "5",
-      "totalRating": 30,
-      "price": "$60",
-      "lessons": "8",
-      "students": "410",
-      "rates": 10,
-      "Duration": "12 Weeks",
-      "Instructor": "Alice Johnson",
-      "Language": "English",
-      "instructorId": "2",
-      "Certification": "Yes",
-      "comVideo": "../../src/assets/images/VIT University - 1Min Ad Film.mp4",
-      "courseContent": [
-        {
-          "category": "Introduction to Data Science",
-          "lessons": [
-            {
-              "LessonName": "Lesson 1: What is Data Science?",
-              "Link": "src/assets/images/Start your dreams with us!.mp4",
-              "desc": "This lesson introduces the field of data science, covering its definition, importance, and key components. You'll learn about the role of data science in various industries, the skills required for data scientists, and the overall process of transforming data into actionable insights."
-            },
-            {
-              "LessonName": "Lesson 2: Applications of Data Science",
-              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
-              "desc": "In this lesson, you'll explore the various applications of data science across different sectors such as healthcare, finance, and marketing. You'll understand how data science techniques are used to solve real-world problems, make predictions, and drive business decisions."
-            }
-          ]
-        },
-        {
-          "category": "Data Basics",
-          "lessons": [
-            {
-              "LessonName": "Lesson 3: Data Collection and Cleaning",
-              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
-              "desc": "This lesson focuses on the fundamentals of data collection and cleaning. You'll learn techniques for gathering data from various sources, handling missing values, and ensuring data quality. Proper data cleaning is essential for accurate analysis and reliable results."
-            },
-            {
-              "LessonName": "Lesson 4: Exploratory Data Analysis (EDA)",
-              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
-              "desc": "In this lesson, you'll dive into exploratory data analysis (EDA) to understand and summarize the main characteristics of a dataset. Topics include data visualization, identifying patterns, and detecting anomalies. EDA is crucial for gaining insights and informing further analysis."
-            }
-          ]
-        },
-        {
-          "category": "Statistical Analysis",
-          "lessons": [
-            {
-              "LessonName": "Lesson 5: Introduction to Statistics for Data Science",
-              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
-              "desc": "This lesson introduces basic statistical concepts essential for data science. You'll cover topics such as descriptive statistics, probability distributions, and statistical inference. Understanding these concepts is fundamental for analyzing and interpreting data effectively."
-            },
-            {
-              "LessonName": "Lesson 6: Hypothesis Testing and Significance",
-              "Link": "src/assets/images/Digital Marketing Promotional Video - Marketing Agency Ad.mp4",
-              "desc": "In this lesson, you'll learn about hypothesis testing and significance testing in data analysis. You'll explore how to formulate and test hypotheses, interpret p-values, and understand confidence intervals. These techniques are key for making data-driven decisions and validating results."
-            }
-          ]
-        },
-        {
-          "category": "Machine Learning Basics",
-          "lessons": [
-            {
-              "LessonName": "Lesson 7: Introduction to Machine Learning",
-              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
-              "desc": "This lesson provides an overview of machine learning, including its types, algorithms, and applications. You'll learn about supervised and unsupervised learning, model training, and evaluation. This foundational knowledge is essential for building and understanding machine learning models."
-            },
-            {
-              "LessonName": "Lesson 8: Building Your First Machine Learning Model",
-              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
-              "desc": "In this lesson, you'll take your first steps in building a machine learning model. You'll follow a hands-on approach to select a dataset, choose an algorithm, train the model, and evaluate its performance. Practical experience with model building will help solidify your understanding of machine learning concepts."
-            }
-          ]
-        }
-      ],
-      "img": "src/assets/images/course-12-590x430.jpg",
-      "obj": [
-        "Understand the fundamentals of data science.",
-        "Learn to use data science tools such as Python and R.",
-        "Master data cleaning, visualization, and analysis techniques.",
-        "Develop skills in machine learning and predictive modeling."
-      ],
-      "desc": "This course introduces beginners to the exciting field of data science. It covers the basics of data analysis, visualization, and machine learning using popular tools like Python and R. Participants will learn to clean, analyze, and visualize data, and build predictive models."
-    },
-    {
-      "id": 12,
-      "level": "Beginner",
-      "name": "Introduction to Cooking: Basics of Culinary Arts",
-      "rating": "4.7",
-      "category": "Health and Fitness",
-      "CtegoryId": "4",
-      "totalRating": 47,
-      "price": "$30",
-      "lessons": "9",
-      "students": "510",
-      "Duration": "6 Weeks",
-      "Instructor": "David Brown",
-      "Language": "English",
-      "rates": 10,
-      "instructorId": "5",
-      "Certification": "Yes",
-      "comVideo": "../../src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
-      "courseContent": [
-        {
-          "category": "Introduction to Culinary Arts",
-          "lessons": [
-            {
-              "LessonName": "Lesson 1: What is Culinary Arts?",
-              "Link": "src/assets/images/Start your dreams with us!.mp4",
-              "desc": "This lesson introduces culinary arts, covering its definition, scope, and significance. You'll learn about the role of culinary arts in culture and society and how it combines creativity with technical skills."
-            },
-            {
-              "LessonName": "Lesson 2: History and Evolution of Cooking",
-              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
-              "desc": "In this lesson, you'll explore the history and evolution of cooking from ancient times to the modern era. You'll gain insights into how culinary practices have developed and influenced global cuisine."
-            }
-          ]
-        },
-        {
-          "category": "Kitchen Tools and Equipment",
-          "lessons": [
-            {
-              "LessonName": "Lesson 3: Essential Kitchen Tools",
-              "Link": "src/assets/images/Mississippi State University 2019 National Commercial.mp4",
-              "desc": "This lesson covers the essential tools used in the kitchen. You'll learn about various utensils, knives, and gadgets, and understand their functions and proper usage."
-            },
-            {
-              "LessonName": "Lesson 4: Understanding Kitchen Equipment",
-              "Link": "src/assets/images/invideo-ai-1080 Unlock Your Potential with EduJourney! 2024-06-15.mp4",
-              "desc": "In this lesson, you'll gain knowledge about different types of kitchen equipment, including appliances and cookware. You'll learn how to select, use, and maintain these tools effectively."
-            }
-          ]
-        },
-        {
-          "category": "Basic Cooking Techniques",
-          "lessons": [
-            {
-              "LessonName": "Lesson 5: Knife Skills and Cutting Techniques",
-              "Link": "src/assets/images/Great Ideas _ Spec Ad _ Post-it (2020).mp4",
-              "desc": "This lesson focuses on fundamental knife skills and cutting techniques. You'll learn proper chopping, dicing, and slicing methods to enhance efficiency and precision in the kitchen."
-            },
-            {
-              "LessonName": "Lesson 6: Cooking Methods (e.g., sautéing, baking)",
-              "Link": "src/assets/images/Coaching Institute Advertisement Video _ Coaching Institute Video _ Video Production agency in India.mp4",
-              "desc": "In this lesson, you'll explore various cooking methods such as sautéing, baking, roasting, and grilling. You'll understand the principles behind each method and how to apply them to different recipes."
-            }
-          ]
-        },
-        {
-          "category": "Ingredients and Flavor Profiles",
-          "lessons": [
-            {
-              "LessonName": "Lesson 7: Understanding Ingredients",
-              "Link": "src/assets/images/BMS College of Engineering _ Ad Film.mp4",
-              "desc": "This lesson covers the fundamental ingredients used in cooking. You'll learn about their types, characteristics, and how to select and store them for optimal results."
-            },
-            {
-              "LessonName": "Lesson 8: Flavor Profiles and Seasoning",
-              "Link": "src/assets/images/Start your dreams with us!.mp4",
-              "desc": "In this lesson, you'll delve into flavor profiles and seasoning techniques. You'll learn how to balance and enhance flavors in your dishes using herbs, spices, and other seasonings."
-            }
-          ]
-        },
-        {
-          "category": "Recipe Creation and Adaptation",
-          "lessons": [
-            {
-              "LessonName": "Lesson 9: Recipe Development and Adaptation",
-              "Link": "src/assets/images/REVA UNIVERSITY TV Commercial (TVC).mp4",
-              "desc": "This lesson focuses on creating and adapting recipes. You'll learn the principles of recipe development, including ingredient substitutions, scaling recipes, and customizing dishes to suit different tastes and dietary needs."
-            }
-          ]
-        }
-      ],
-      "img": "src/assets/images/course-35-590x430.jpg",
-      "obj": [
-        "Learn essential cooking techniques and skills.",
-        "Understand kitchen safety and hygiene practices.",
-        "Explore basic recipes and meal planning.",
-        "Develop skills in baking and cooking various cuisines."
-      ],
-      "desc": "This course is perfect for beginners looking to learn the basics of cooking. It covers essential techniques, kitchen safety, basic recipes, and tips for meal planning, helping you to develop your culinary skills confidently."
     }
   ],
   "Instructors": [
@@ -3281,9 +2710,7 @@
       "students": "29",
       "rating": "4.8",
       "About": "Hello, I'm Henry Clark, an AI Researcher with 6 years of experience. I specialize in developing intelligent algorithms and enjoy teaching others about AI and machine learning.",
-      "coursesID": [
-        23
-      ],
+      "coursesID": [],
       "Contact": {
         "address": "707 AI Lane, Los Angeles, CA",
         "Email": "henry@example.com",
@@ -3400,27 +2827,6 @@
         "twitter": "https://x.com/",
         "linkedIn": "https://www.linkedin.com/"
       }
-    },
-    {
-      "id": 7,
-      "name": "James Wilson",
-      "job": "Cloud Architect",
-      "img": "src/assets/images/tfs-quickstart-for-instructors.png",
-      "students": "40",
-      "rating": "5",
-      "About": "Hello, I'm James Wilson, a Cloud Architect with over 7 years of experience. I specialize in designing scalable cloud solutions and enjoy sharing my knowledge with others.",
-      "coursesID": [
-        16,
-        17
-      ],
-      "Contact": {
-        "address": "303 Cloud Ave, Denver, CO",
-        "Email": "james@example.com",
-        "phone": "4321098765",
-        "facebook": "https://www.facebook.com/profile.php?id=61559129840944",
-        "twitter": "https://www.linkedin.com/in/james-wilson-a3951917/",
-        "linkedIn": "https://x.com/per_incuriam2"
-      }
     }
   ],
   "HomeReviews": [
@@ -3455,30 +2861,6 @@
       "Job": "Graphic Designer",
       "rating": "5",
       "courseID": "4"
-    },
-    {
-      "id": 5,
-      "userId": "30",
-      "comment": "Great course material and excellent support from the instructors!",
-      "Job": "Project Manager",
-      "rating": "4",
-      "courseID": "5"
-    },
-    {
-      "id": 11,
-      "userId": "21",
-      "comment": "An excellent learning platform with well-structured courses.",
-      "Job": "Financial Analyst",
-      "rating": "4",
-      "courseID": "11"
-    },
-    {
-      "id": 6,
-      "userId": "18",
-      "comment": "The course content was current and relevant to industry standards.",
-      "Job": "Data Analyst",
-      "rating": "5",
-      "courseID": "6"
     }
   ],
   "Reviews": [
@@ -3577,34 +2959,6 @@
       "Job": "Digital Marketer",
       "rating": "4",
       "courseID": "13"
-    },
-    {
-      "comment": "22ffff",
-      "rating": 4,
-      "courseID": 3,
-      "userId": 46,
-      "id": 15
-    },
-    {
-      "comment": "ddddd",
-      "rating": 1,
-      "courseID": 3,
-      "userId": 46,
-      "id": 16
-    },
-    {
-      "comment": "kkkkkkkkkk",
-      "rating": 2,
-      "courseID": 3,
-      "userId": 46,
-      "id": 17
-    },
-    {
-      "comment": "qq",
-      "rating": 2,
-      "courseID": 2,
-      "userId": 46,
-      "id": 19
     }
   ],
   "Categories": [
@@ -3661,12 +3015,6 @@
       "categoryImg": "src/assets/images/gallery.png",
       "categoryImg2": "src/assets/images/gallery (1).png",
       "id": 9
-    },
-    {
-      "categoryName": "fffffff",
-      "categoryImg": "src/assets/images/bohemian-man-with-his-arms-crossed.jpg",
-      "categoryImg2": "src/assets/images/bohemian-man-with-his-arms-crossed.jpg",
-      "id": 10
     }
   ],
   "Users": [
@@ -3689,17 +3037,14 @@
     {
       "id": 2,
       "name": "John Doe",
-      "email": "john.doe@example.com",
+      "email": "user@gmail.com",
       "img": "src/assets/images/smiley-handsome-man-posing.jpg",
-      "password": "password123",
-      "subscribed": "1",
+      "password": "123",
+      "subscribed": "no",
       "role": "user",
       "completedCourses": [],
       "validCoursesId": [],
-      "favouriteCoursesId": [
-        7,
-        10
-      ]
+      "favouriteCoursesId": []
     },
     {
       "id": 3,
@@ -4322,6 +3667,34 @@
       "completedCourses": [],
       "confirmPassword": "22",
       "id": 50
+    },
+    {
+      "name": "ddd",
+      "email": "dd@dd",
+      "img": "src/assets/images/827201329b1341cbbb66baa358722553.webp",
+      "password": "ddd",
+      "subscribed": "no",
+      "favouriteCoursesId": [],
+      "validCoursesId": [],
+      "role": "user",
+      "completedCourses": [],
+      "confirmPassword": "ddd",
+      "id": 51
+    },
+    {
+      "name": "Dabo2100",
+      "email": "a_fattah_m@icloud.com",
+      "img": "src/assets/images/about-01.webp",
+      "password": "123456789",
+      "subscribed": 2,
+      "favouriteCoursesId": [],
+      "validCoursesId": [
+        2
+      ],
+      "role": "user",
+      "completedCourses": [],
+      "confirmPassword": "123456789",
+      "id": 52
     }
   ],
   "SubPlans": [

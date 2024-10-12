@@ -221,4 +221,6 @@ export const arabic = {
     inProgressCourses: "الدورات الحالية",
     noCoursesInst: "ليس لديك اي دورات",
     enrolled: "مسجل",
+    hundred: "۱۰۰%",
+    login: "تسجيل الدخول"
 }

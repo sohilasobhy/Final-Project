@@ -73,11 +73,10 @@ export default function LoginPage() {
                                 <ErrorMessage name="password" />
                             </span>
                             <div className="mt-4 wrongPass d-flex gap-1">
-                                <Field type="checkbox" name="remember" />
-                                <span><FormattedMessage id="rememberMe" /></span>
+                                <Field type="checkbox" name="remember" id="remember" />
+                                <label htmlFor="remember"><FormattedMessage id="rememberMe" /></label>
                             </div>
                             <div className="links">
-                                {/* <Link to={"/forget-password"}>Forget password</Link> */}
                                 <Link to={"/signup"} className="signup"><FormattedMessage id="Signup" /></Link>
                             </div>
                             <button type="submit" className="submitBTN"><FormattedMessage id="submit" /> </button>

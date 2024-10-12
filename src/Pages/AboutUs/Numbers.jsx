@@ -7,7 +7,7 @@ import { FormattedMessage } from "react-intl"
 export default function Numbers() {
     return (
         <div className="container py-5" id="Numbers">
-            <div className="row g-4">
+            <div className="row g-4" dir="ltr">
                 <div className="col-12 col-md-6 col-lg-3">
                     <div className="d-flex flex-column justify-content-center align-items-center gap-2 contentCon">
                         <div className="p-3 d-flex justify-content-center align-items-center" style={{ backgroundColor: "#e8f8f5", borderRadius: "50%" }}>

@@ -55,12 +55,18 @@
       [dir="rtl"] & {
         text-align: right !important;
       }
+      @media (max-width: 768px) {
+        font-size: 25px;
+      }
     }
     .desc {
       color: gray;
       font-size: 18px;
       [dir="rtl"] & {
         text-align: right !important;
+      }
+      @media (max-width: 768px) {
+        font-size: 14px;
       }
     }
     .about {

@@ -26,8 +26,8 @@ export default function Progress() {
                 console.log(err)
             })
     }, [])
-    const userCoursesInProgress = yourCourses?.filter(course => userInfo?.completedCourses?.includes(Number(course.id)));
-    const userCompletedCourses = yourCourses?.filter(course => userInfo?.validCoursesId?.includes(Number(course.id)));
+    const userCoursesInProgress = yourCourses?.filter(course => userInfo?.validCoursesId?.includes(Number(course.id)));
+    const userCompletedCourses = yourCourses?.filter(course => userInfo?.completedCourses?.includes(Number(course.id)));
     console.log(userInfo)
     return (
         <div id="Progress" className="p-2 p-lg-5 d-flex flex-column align-items-center">
@@ -77,6 +77,7 @@ export default function Progress() {
                 </div>
                 <div className={`${userInfo.validCoursesId.length == 0 ? "d-none" : "d-flex"}`}>
                     <div className="row p-5 col-12 g-4">
+                        {console.log(userCoursesInProgress)}
                         {
                             userCoursesInProgress?.map((course) => {
                                 return (

@@ -26,7 +26,7 @@ export default function Courses() {
 
   return (
     <div className="col-12" id="Courses">
-      <div className="header">
+      <div className="header col-12">
         <p>
           <Link to={"/"} className="home"><FormattedMessage id="home" /></Link>&nbsp;
           {lang == "EN" ? <FontAwesomeIcon icon={faAngleRight} /> : <FontAwesomeIcon icon={faAngleLeft} />}

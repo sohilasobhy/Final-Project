@@ -42,14 +42,13 @@ export default function NavBar() {
           <NavLink to={"/Instructors"}>{<FormattedMessage id="instructors" />}</NavLink>
           <NavLink to={"/purchase"}>{<FormattedMessage id="subscribe" />}</NavLink>
         </div>
-        <div className="d-flex justify-content-center align-items-center p-2 rounded-2 searchIcon">
+        <div className="d-none d-sm-flex justify-content-center align-items-center p-2 rounded-2 searchIcon">
           <img
             src={search}
             alt=""
             onClick={() => {
               setSearch(true);
             }}
-            
           />
         </div>
         <div onClick={handleLang} className="language">
@@ -57,11 +56,11 @@ export default function NavBar() {
         </div>
         {
           user == null ?
-            <div className="d-none d-sm-flex justify-content-center align-items-center py-2 px-3 rounded-2 bg-white menuIcon" onClick={() => navigate("/login")} >
+            <div className="d-flex justify-content-center align-items-center py-2 px-3 rounded-2 bg-white menuIcon" onClick={() => navigate("/login")} >
               <FontAwesomeIcon icon={faUser} />
             </div>
             :
-            <div className="d-none d-sm-flex justify-content-center align-items-center py-2 px-3 rounded-2 bg-white menuIcon" onClick={() => user ? setProfile(!profile) : ''} >
+            <div className="d-flex justify-content-center align-items-center py-2 px-1 rounded-2 bg-white menuIcon" onClick={() => user ? setProfile(!profile) : ''} >
               <img src={`../${user?.img == "" ? defaultImage : user?.img}`} alt="user Image" width={40} height={40} className="object-fit-cover rounded-5" />
             </div>
         }

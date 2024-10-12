@@ -13,8 +13,9 @@ export default function IsLoggedOut({ children }) {
             if (courseId != false) {
                 console.log(courseId)
                 navigate(`/single-course/${courseId}`)
+            } else if (user?.role == "admin") {
+                navigate("/dashboard/Home-page")
             } else {
-                console.log(courseId)
                 navigate("/")
             }
         }

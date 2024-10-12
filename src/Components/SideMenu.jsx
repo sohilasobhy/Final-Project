@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useRecoilState } from "recoil";
-import { $menu } from "../Store/Store";
+import { $UserInfo, $menu } from "../Store/Store";
+import { FormattedMessage } from "react-intl";
 export default function SideMenu() {
   const [menuIndex, setMenuIndex] = useRecoilState($menu);
+  const [user] = useRecoilState($UserInfo)
   if (menuIndex) {
     return (
       <div className="col-12 position-fixed" id="SideMenu">
@@ -37,38 +39,46 @@ export default function SideMenu() {
             <Link to={"/"} className="p-1"
               onClick={() => setMenuIndex(false)}
             >
-              Home
+              <FormattedMessage id="home" />
             </Link>
             <Link to={"/about"} className="p-1"
               onClick={() => setMenuIndex(false)}
             >
-              About
+              <FormattedMessage id="about" />
+
             </Link>
             <Link to={"/courses"} className="p-1"
               onClick={() => setMenuIndex(false)}
             >
-              Courses
+              <FormattedMessage id="courses" />
+
             </Link>
             <Link to={"/contact"} className="p-1"
               onClick={() => setMenuIndex(false)}
             >
-              Contact Us
+              <FormattedMessage id="contact" />
+
             </Link>
             <Link to={"/Instructors"} className="p-1"
               onClick={() => setMenuIndex(false)}
             >
-              Instructors
+              <FormattedMessage id="instructors" />
+
             </Link>
             <Link to={"/purchase"} className="p-1"
               onClick={() => setMenuIndex(false)}
             >
-              Subscribe
+              <FormattedMessage id="subscribe" />
+
             </Link>
-            <Link to={"/login"} className="p-1"
-              onClick={() => setMenuIndex(false)}
-            >
-              Login
-            </Link>
+            {
+              !user ? <Link to={"/login"} className="p-1"
+                onClick={() => setMenuIndex(false)}
+              >
+                <FormattedMessage id="login" />
+              </Link> : ""
+            }
+
           </div>
         </div>
       </div>
