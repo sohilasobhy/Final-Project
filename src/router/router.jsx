@@ -63,15 +63,15 @@ const router = createBrowserRouter([
             },
             {
                 path: "/progress",
-                element: <Progress />
+                element: <IsLoggedIn><Progress /></IsLoggedIn>
             },
             {
                 path: "/wishlist",
-                element: <SavedCourses />
+                element: <IsLoggedIn><SavedCourses /></IsLoggedIn>
             },
             {
                 path: "/myCourses",
-                element: <InstructorCourses />
+                element: <IsLoggedIn><InstructorCourses /></IsLoggedIn>
             },
             {
                 path: "/forget-password",

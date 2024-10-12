@@ -25,7 +25,7 @@ const PaginatedCourses = ({ courses }) => {
                     <SingleCourseComponent course={course} color={"#f7f5f2"} img={course.img} />
                 </div>
             ))}
-            <div className='col-12 d-flex justify-content-center'>
+            <div dir='ltr' className='col-12 d-flex justify-content-center'>
                 <ReactPaginate
                     breakLabel="..."
                     nextLabel=">"

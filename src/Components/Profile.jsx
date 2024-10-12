@@ -8,13 +8,11 @@ import AdminProfile from "./AdminProfile/AdminProfile";
 export default function Profile() {
     const [userInfo] = useRecoilState($UserInfo)
     return (
-        <IsLoggedIn>
-            {
-                userInfo?.role == "user" ? <ClientProfile />
-                    : userInfo?.role == "instructor" ? <InstractourProfile />
-                        : userInfo?.role == "admin" ? <AdminProfile />
-                            : ""
-            }
-        </IsLoggedIn>
+
+        userInfo?.role == "user" ? <ClientProfile />
+            : userInfo?.role == "instructor" ? <InstractourProfile />
+                : userInfo?.role == "admin" ? <AdminProfile />
+                    : ""
+
     )
 }
