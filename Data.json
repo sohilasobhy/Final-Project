@@ -239,7 +239,7 @@
       "CtegoryId": "6",
       "price": "Free",
       "lessons": "8",
-      "students": 516,
+      "students": 515,
       "Duration": "10 Weeks",
       "Instructor": "Jane Seymour",
       "Language": "English",
@@ -327,7 +327,7 @@
       "CtegoryId": "2",
       "price": "$40",
       "lessons": "6",
-      "students": 293,
+      "students": 294,
       "Duration": "8 Weeks",
       "Instructor": "Alice Johnson",
       "rates": 10,
@@ -678,7 +678,7 @@
       "price": "$70",
       "totalRating": 47,
       "lessons": "12",
-      "students": "280",
+      "students": 281,
       "Duration": "10 Weeks",
       "rates": 10,
       "Instructor": "Michael Smith",
@@ -3040,10 +3040,15 @@
       "email": "user@gmail.com",
       "img": "src/assets/images/smiley-handsome-man-posing.jpg",
       "password": "123",
-      "subscribed": "no",
+      "subscribed": 2,
       "role": "user",
       "completedCourses": [],
-      "validCoursesId": [],
+      "validCoursesId": [
+        3,
+        8,
+        null,
+        4
+      ],
       "favouriteCoursesId": []
     },
     {
@@ -3603,7 +3608,8 @@
         4,
         2,
         1,
-        10
+        10,
+        null
       ],
       "role": "user",
       "completedCourses": [
@@ -3745,6 +3751,20 @@
       "message": "Nostrud incidunt au",
       "email": "detypivocy@mailinator.com",
       "id": 5
+    },
+    {
+      "name": "sohila sobhy",
+      "subject": "xdd;l",
+      "message": "dddd",
+      "email": "sohilasobhysadek@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "sohila sobhy",
+      "subject": "xdd;l",
+      "message": "dddd",
+      "email": "sohilasobhysadek@gmail.com",
+      "id": 7
     }
   ]
 }

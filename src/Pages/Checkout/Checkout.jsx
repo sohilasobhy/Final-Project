@@ -52,7 +52,7 @@ export default function Checkout() {
     if (userInfo) {
         return (
             <>
-                {/* <NavBarLogin /> */}
+                <NavBarLogin />
                 <div id="Checkout" className="p-2 p-md-5 d-flex justify-content-center align-items-center">
                     <div className="d-flex col-md-10 m-auto formCon">
                         <div className="bg-white col-12 col-md-6 p-3 d-flex flex-column align-items-center justify-content-center gap-1 courseInfo h-100">

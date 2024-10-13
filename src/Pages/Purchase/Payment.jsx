@@ -11,7 +11,6 @@ export default function Payment() {
     const [subPlan] = useRecoilState($subPlans);
     const [, setcheckoutPay] = useRecoilState($checkoutPay);
     const [userInfo] = useRecoilState($UserInfo)
-    console.log(subPlan)
     function handlecheck() {
         if (userInfo != null) {
             navigate("/checkout")

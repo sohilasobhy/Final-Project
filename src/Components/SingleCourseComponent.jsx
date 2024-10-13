@@ -108,7 +108,7 @@ export default function SingleCourseComponent({ course, color }) {
         >
           <p className="py-1 px-2 level">{course?.level}</p>
           <p className="courseName">
-            {course?.name.length > 44
+            {course?.name?.length > 44
               ? course?.name.slice(0, 44) + "..."
               : course?.name}
           </p>
@@ -139,7 +139,7 @@ export default function SingleCourseComponent({ course, color }) {
           />
           <p className="py-1 px-2 levelHov">{course?.level}</p>
           <p className="courseNameHov">
-            {course?.name.length > 44
+            {course?.name?.length > 44
               ? course?.name.slice(0, 44) + "..."
               : course?.name}
           </p>
